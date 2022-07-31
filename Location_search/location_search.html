@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="location_search.css">
+    <title>Document</title>
+
+
+ 
+
+
+</head>
+<body>
+
+    <div id="map_wrapper_div">
+        <div id="map_tuts"></div>
+    </div>
+
+    <div id="container">
+        <h1>Hello</h1>
+    </div>
+   
+        
+
+</body>
+
+
+<script>
+    jQuery(function($) {
+    // Asynchronously Load the map API 
+    var script = document.createElement('script');
+    script.src = "https://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+    document.body.appendChild(script);
+    });
+    function initialize() {
+    var map;
+    var bounds = new google.maps.LatLngBounds();
+    var mapOptions = {
+    mapTypeId: 'roadmap'
+    };
+    // Display a map on the page
+    map = new google.maps.Map(document.getElementById("map_tuts"), mapOptions);
+    map.setTilt(45);
+    // Multiple Markers
+    var markers = [
+    ['Dhekiajuli', 26.6985,92.4851, ''],
+    ['Bihaguri', 26.6744,92.6810, ''],
+    ['Tezpur', 26.6528,92.7926,''],
+    ['Chutia', 26.7347,93.0463, ''],
+    ];
+    
+    // Display multiple markers on a map
+    var infoWindow = new google.maps.InfoWindow(), marker, i;
+    // Loop through our array of markers & place each one on the map  
+    for( i = 0; i < markers.length; i++ ) {
+    var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+    bounds.extend(position);
+    marker = new google.maps.Marker({
+    position: position,
+    map: map,
+    title: markers[i][0],
+    url: 'http://127.0.0.1:5500/Location_search/location_search.html'     
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+    window.location.href = this.url;
+    });
+
+    // Each marker to have an info window    
+    // google.maps.event.addListener(marker, 'click', (function(marker, i) {
+    // return function() {
+    // infoWindow.setContent(infoWindowContent[i][0]);
+    // infoWindow.open(map, marker);
+    // }
+    // })(marker, i));
+
+    // Automatically center the map fitting all markers on the screen
+    google.maps.event.addListenerOnce(map, 'idle', function() {
+    map.fitBounds(bounds);
+});
+
+    }
+    // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+    this.setZoom(5);
+    google.maps.event.removeListener(boundsListener);
+    });
+    }
+    </script>
+
+
+
+</html>

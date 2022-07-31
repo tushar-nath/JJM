@@ -1,0 +1,19 @@
+#map_tuts {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+} 
+      
+#container {
+    position: absolute;
+    top:60.7%;
+    left:21.5%;
+    width: 806px;
+    height: 324px;
+    background-color: white;
+}
+
+
+
