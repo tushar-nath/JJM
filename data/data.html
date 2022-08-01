@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="data.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar"></div>
+    <div class="logo">
+        <div class="logo-img" id="img-1">
+            <img src="../images/starting-page/logo-1.png" alt=""  width="100" height="87">
+        </div>
+        <div class="logo-img" id="img-2">
+            <img src="../images/starting-page/logo-2.png" alt=""  width="110" height="88">
+        </div>
+        <div class="logo-img" id="img-3">
+            <img src="../images/starting-page/logo-3.png" alt=""  width="100" height="82">
+        </div>
+        <div class="logo-img" id="img-4">
+            <img src="../images/starting-page/logo-4.png" alt=""  width="80" height="90">
+        </div>
+    </div>
+
+    <div class="upper-container">
+        <div class="left-container">
+            <div class="uc-lc-upper">
+                <p id="uc-lc-caption">TOTAL WATER SUPPLY : </p>
+                <p id="uc-lc-desc">1500LT</p>
+            </div>
+            <div class="uc-lc-mid">
+                <p id="uc-lc-caption">AVERAGE WATER SUPPLY (LPCD): </p>
+                <select class="dropdown" id="uc-lc-dropdown">
+                    <option value="days">By Days</option>
+                    <option value="hour">By Hour</option>
+                    <option value="minute">By Minute</option>
+                    <option value="months">By Months</option>
+                    <option value="year">By Year</option>
+                </select>
+                <button id="uc-lc-water">Water Consumption</button>
+            </div>
+            <div class="uc-lc-lower">
+                <p id="uc-lc-date">17 July - 24 July</p>
+                <p id="uc-lc-litres">212.4L</p>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div class="rc-ur">
+                <div class="rc-ur-1">
+                    <p> DAILY WATER SUPPLY TREND (LPCD)</p>
+                </div>
+                <div class="rc-ur-2">
+                    <select class="rc-dropdown" id="rc-dropdown">
+                        <option value="month">By Months</option>
+                        <option value="hour">By Hour</option>
+                        <option value="minute">By Minute</option>
+                        <option value="days">By Days</option>
+                        <option value="year">By Year</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="rc-lr">
+                <img src="../images/data/rc-graph.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="lower-container">
+
+        <div class="lower-container-col1">
+            <div>
+                <p>RESIDUAL CHLORINE</br>(mg/l)</p>
+            </div>
+            <div class="lower-container-col2">
+                <ul>
+					<li>Minimum limit:0.02Mg/L</li>
+					<li>Permisible limit:1.00Mg/L</li>
+          	    </ul>
+            </div>
+            <div class="lower-container-col3">
+                <select class="lc-dropdown" id="lc-dropdown">
+                    <option value="month">By Months</option>
+                    <option value="hour">By Hour</option>
+                    <option value="minute">By Minute</option>
+                    <option value="days">By Days</option>
+                    <option value="year">By Year</option>
+                </select>
+            </div>
+        </div>
+        <div class="lc-image">
+            <img src="../images/data/lc-graph.png">
+        </div>
+    </div>
+
+  </body>
+</html>
