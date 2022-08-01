@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
 #map_tuts {
     height: 100%;
     width: 100%;
@@ -9,11 +12,43 @@
 #container {
     position: absolute;
     top:60.7%;
-    left:21.5%;
+    left:25%;
     width: 806px;
-    height: 324px;
+    height: 290px;
     background-color: white;
+    overflow-y: scroll;
+   
 }
 
+.tile{
+background-color: transparent;
+width: auto;
+height: 60px;
+text-align: left;
+/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+font-weight: 100;
 
+
+margin-left: 8%;
+margin-right: 8%;
+margin-top: 2%;
+margin-bottom: 2%;
+
+padding-top: 2%;
+padding-bottom: 5%;
+padding-right: 1.5%;
+padding-left: 3%;
+
+font-family: 'Roboto';
+font-style: normal;
+
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.btn{
+    float: right;
+    
+
+}
 
