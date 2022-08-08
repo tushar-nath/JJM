@@ -38,15 +38,24 @@ dummyChart();
 //Fetch Data from API
 
 async function getDummyData() {
-	const apiUrl = "https://mocki.io/v1/be7d9952-7760-44ca-a5ac-8968e2040268";
+	try {
+		const apiUrl = "https://mocki.io/v1/be7d9952-7760-44ca-a5ac-8968e2040268";
 
-	const response = await fetch(apiUrl);
-	const barChatData = await response.json();
+		const response = await fetch(apiUrl);
+		const barChatData = await response.json();
 
-	const dataA = barChatData.data.map((x) => x.a);
-	console.log(dataA);
-	const dataB = barChatData.data.map((x) => x.b);
+		const dataA = barChatData.data.map((x) => x.a);
+		console.log(dataA);
+		const dataB = barChatData.data.map((x) => x.b);
 
-	userDataA = dataA;
-	userDataB = dataB;
+		userDataA = dataA;
+		userDataB = dataB;
+	}
+	catch(err) {
+		alert("No data available for Graph 2");
+		chart.destroy();
+	}
 }
+
+
+window.setInterval(getDummyData(), 30000);
