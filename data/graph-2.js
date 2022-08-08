@@ -1,6 +1,4 @@
-var employeeLabel = [],
-	employeeSalaryData = [],
-	employeeAgeData = [];
+var userDataA = [], userDataB = [];
 
 async function dummyChart() {
 	await getDummyData();
@@ -9,29 +7,25 @@ async function dummyChart() {
 
 	const chart = new Chart(ctx, {
 		// The type of chart we want to create
-		type: "bar",
+		type: "line",
 
 		// The data for our dataset
 		data: {
-			labels: employeeLabel,
+			labels: userDataA,
 			datasets: [
 				{
-					label: "Employee Salary",
-					backgroundColor: "blue",
-					borderColor: "rgb(255, 99, 132)",
-					data: employeeSalaryData,
-				},
-				{
-					label: "Employee Age",
-					backgroundColor: "pink",
-					borderColor: "rgb(255, 99, 132)",
-					data: employeeAgeData,
-				},
+					fill: false,
+					lineTension: 0,
+      				backgroundColor: "rgba(0,0,255,1.0)",
+      				borderColor: "rgba(0,0,255,0.1)",
+					data: userDataB,
+				}
 			],
 		},
 
 		// Configuration options go here
 		options: {
+			legend: {display: false},
 			tooltips: {
 				mode: "index",
 			},
@@ -44,19 +38,15 @@ dummyChart();
 //Fetch Data from API
 
 async function getDummyData() {
-	const apiUrl = "http://dummy.restapiexample.com/api/v1/employees";
+	const apiUrl = "https://mocki.io/v1/be7d9952-7760-44ca-a5ac-8968e2040268";
 
 	const response = await fetch(apiUrl);
 	const barChatData = await response.json();
 
-	const salary = barChatData.data.map((x) => x.employee_salary);
-	console.log(salary);
-	const age = barChatData.data.map((x) => x.employee_age);
-	const name = barChatData.data.map((x) => x.employee_name);
+	const dataA = barChatData.data.map((x) => x.a);
+	console.log(dataA);
+	const dataB = barChatData.data.map((x) => x.b);
 
-	employeeSalaryData = salary;
-	employeeAgeData = age;
-	employeeLabel = name;
+	userDataA = dataA;
+	userDataB = dataB;
 }
-
-window.setInterval(getDummyData(), 30000); 

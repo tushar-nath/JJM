@@ -1,6 +1,4 @@
-var userDataC = [],
-	userDataA = [],
-	userDataB = [];
+var userDataA = [], userDataB = [];
 
 async function dummyChart() {
 	await getDummyData();
@@ -9,29 +7,25 @@ async function dummyChart() {
 
 	const chart = new Chart(ctx, {
 		// The type of chart we want to create
-		type: "bar",
+		type: "line",
 
 		// The data for our dataset
 		data: {
-			labels: userDataC,
+			labels: userDataA,
 			datasets: [
 				{
-					label: "Label-1",
-					backgroundColor: "blue",
-					borderColor: "rgb(255, 99, 132)",
-					data: userDataA,
-				},
-				{
-					label: "Label-2",
-					backgroundColor: "pink",
-					borderColor: "rgb(255, 99, 132)",
+					fill: false,
+					lineTension: 0,
+      				backgroundColor: "rgba(0,0,255,1.0)",
+      				borderColor: "rgba(0,0,255,0.1)",
 					data: userDataB,
-				},
+				}
 			],
 		},
 
 		// Configuration options go here
 		options: {
+			legend: {display: false},
 			tooltips: {
 				mode: "index",
 			},
@@ -44,7 +38,7 @@ dummyChart();
 //Fetch Data from API
 
 async function getDummyData() {
-	const apiUrl = "https://jjmendpoint.free.beeceptor.com/data";
+	const apiUrl = "https://mocki.io/v1/e5430db8-d183-4682-8c18-bd27dc749ccc";
 
 	const response = await fetch(apiUrl);
 	const barChatData = await response.json();
@@ -52,9 +46,7 @@ async function getDummyData() {
 	const dataA = barChatData.data.map((x) => x.a);
 	console.log(dataA);
 	const dataB = barChatData.data.map((x) => x.b);
-	const dataC = barChatData.data.map((x) => x.c);
 
 	userDataA = dataA;
 	userDataB = dataB;
-	userDataC = dataC;
 }
