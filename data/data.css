@@ -6,7 +6,8 @@ body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 
@@ -71,7 +72,7 @@ body{
     position: relative;
     bottom: 250px;
     width: 40%;
-    height: 276px;
+    height: 370px;
     margin: 3%;
     border-style: solid;
     border-color: rgba(10, 104, 255, 1);

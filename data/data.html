@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script> -->
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <link rel="stylesheet" href="data.css" />
     <title>Document</title>
   </head>
@@ -64,7 +67,8 @@
             </div>
 
             <div class="rc-lr">
-                <img src="../images/data/rc-graph.png">
+                    
+                    <canvas id="myChart-1" ></canvas>
             </div>
         </div>
     </div>
@@ -92,9 +96,13 @@
             </div>
         </div>
         <div class="lc-image">
-            <img src="../images/data/lc-graph.png">
+            <canvas id="myChart-2" ></canvas>
         </div>
     </div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="graph-1.js"></script>
+<script src="graph-2.js"></script>
+
 
   </body>
 </html>
