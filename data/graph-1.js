@@ -29,6 +29,11 @@ async function dummyChart() {
 			tooltips: {
 				mode: "index",
 			},
+			scales: {
+				yAxes: [{
+				ticks: { min: 0},
+				}], 
+			},
 		},
 	});
 }
@@ -53,7 +58,8 @@ async function getDummyData() {
 	}
 	catch(err) {
 		alert("No data available for Graph 1");
-		chart.destroy();
+		userDataA = [1,2,3,4,5];
+		userDataB = [0,0,0,0,0];
 	}
 }
 
