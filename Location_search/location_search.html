@@ -63,7 +63,7 @@
     jQuery(function($) {
     // Asynchronously Load the map API 
     var script = document.createElement('script');
-    script.src = "https://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&sensor=false&callback=initialize";
     document.body.appendChild(script);
     });
     function initialize() {
@@ -96,7 +96,7 @@
     position: position,
     map: map,
     title: markers[i][0],
-    url: 'http://127.0.0.1:5500/Location_search/location_search.html'     
+    url: 'https://steady-hummingbird-b74900.netlify.app/Location_search/location_search.html'     
     });
 
     google.maps.event.addListener(marker, 'click', function() {
