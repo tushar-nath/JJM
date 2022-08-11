@@ -5,12 +5,13 @@
 body{
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     background-image: url(../images/starting-page/starting-page-bg.png) !important; 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
+    height : 100%
 }
 
 
