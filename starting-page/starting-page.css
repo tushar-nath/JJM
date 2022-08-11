@@ -8,7 +8,7 @@ body{
     box-sizing: border-box;
     background-image: url(../images/starting-page/starting-page-bg.png) !important; 
     background-position: center;
-    background-size: auto;
+    background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
 }
