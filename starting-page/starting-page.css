@@ -5,7 +5,7 @@
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
     background-image: url(../images/starting-page/starting-page-bg.png) !important; 
     background-position: center;
     background-size: cover;
