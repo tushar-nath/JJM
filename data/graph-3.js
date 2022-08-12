@@ -39,7 +39,7 @@ async function dummyChart() {
 	});
 }
 
-dummyChart();
+setInterval(dummyChart(),5000);
 
 //Fetch Data from API
 
