@@ -50,7 +50,7 @@ async function getDummyData() {
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
 
-		const dataA = barChatData.data.map((x) => x.a);
+		const dataA = barChatData.data.map((x) => x.time);
 		console.log(dataA);
 		const dataB = barChatData.data.map((x) => x.y);
 
