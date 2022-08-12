@@ -17,13 +17,14 @@ body{
     -o-background-size: cover;
     background-size: cover;
     position: relative;
+    height: 100vh;
+    overflow: hidden;
 }
-
 
 .navbar {
     background-color: #0a68ff;
     width: 100%;
-    height: 51px;
+    /* height: 51px; */
 }
 
 .logo {
@@ -31,12 +32,12 @@ body{
     /* height: 116.5px; */
     width: 100%;
     display: table;
-    padding-left: 1%;
+    padding: 1%;
     margin-bottom: 2%;
 }
 
 .logo-img {
-    padding: 2%;
+    margin-right: 2rem;
     height: 50px;
     width: 50px;
 }
@@ -64,8 +65,9 @@ body{
     border-color: rgba(10, 104, 255, 1);
     border-width: 2px;
     border-radius: 20px;
-    background-color: #ffff;
+    background-color: rgb(255 255 255 / 70%);
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    opacity: 0.9;
 }
 
 .map {
@@ -109,19 +111,19 @@ ul li::before {
     height: 385px;
     margin-top: 3%;
     border-radius: 20px;
-    background-color: rgba(10, 104, 255, 0.7);
+    background-color: rgb(255 255 255 / 80%);
     border-width: 2px;
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .form-header {
-    margin-left: 2.5%;
-    color: #ffff;
+    margin-left: 5%;
+    color: black;
 }
 
 
 .form-field{
-    width: 70%;
+    width: 90%;
 }
 
 .double-field {
@@ -182,7 +184,7 @@ ul li::before {
 }
 
 .total-result{
-    background-color: white;
+    background-color: rgb(255 255 255 / 80%);
     padding: 10px;
     width: 40%;
     margin: auto;
@@ -211,7 +213,7 @@ ul li::before {
     border-color: rgba(10, 104, 255, 1);
     border-width: 2px;
     border-radius: 20px;
-    background-color: #ffff;
+    background-color: rgb(255 255 255 / 85%);
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     margin: auto;
 }
