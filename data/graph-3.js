@@ -47,8 +47,8 @@ setInterval(dummyChart(),5000);
 	try {
 		const apiUrl = "http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=30";
 
-		const response = await fetch(apiUrl);
-		const barChatData = await response.json();
+		const response = fetch(apiUrl);
+		const barChatData = response.json();
 		
 
 		const dataA = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
