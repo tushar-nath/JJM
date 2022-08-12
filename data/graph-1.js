@@ -49,11 +49,11 @@ async function getDummyData() {
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
+		
 
-		const dataA = barChatData.data.map((x) => x.a);
-		console.log(dataA);
-		const dataB = barChatData.data.map((x) => x.y);
-	
+		const dataA = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+
+    const dataB = barChatData.data.map((x) => x.a);
 
 		userDataA = dataA;
 		userDataB = dataB;
