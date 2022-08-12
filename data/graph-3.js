@@ -41,7 +41,8 @@ var userDataA = [], userDataB = [];
 
 setInterval(dummyChart(),5000);
 
-//Fetch Data from API
+//Fetch Data from API 
+
 
  function getDummyData() {
 	try {
