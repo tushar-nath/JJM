@@ -25,6 +25,7 @@ async function dummyChart() {
 
 		// Configuration options go here
 		options: {
+			maintainAspectRatio: false,
 			legend: {display: false},
 			tooltips: {
 				mode: "index",
