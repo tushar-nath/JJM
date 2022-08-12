@@ -266,7 +266,7 @@ ul li::before {
 
 .rc-lr {
     /* width: 100%; */
-    height: 370px;
+    /* height: 370px; */
 }
 
 .rc-lr img {
@@ -276,7 +276,7 @@ ul li::before {
 }
 
 .rc-lr canvas {
-    height: 360px;
+    
 }
 
 #btn {
