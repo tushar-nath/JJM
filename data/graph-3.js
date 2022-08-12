@@ -45,14 +45,15 @@ dummyChart();
 
 async function getDummyData() {
 	try {
-		const apiUrl = "https://mocki.io/v1/be7d9952-7760-44ca-a5ac-8968e2040268";
+		const apiUrl = "http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=30";
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
+		
 
-		const dataA = barChatData.data.map((x) => x.a);
-		console.log(dataA);
-		const dataB = barChatData.data.map((x) => x.b);
+		const dataA = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+
+    	const dataB = barChatData.data.map((x) => x.x);
 
 		userDataA = dataA;
 		userDataB = dataB;
