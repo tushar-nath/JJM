@@ -1,6 +1,6 @@
 var userDataA = [], userDataB = [];
  function dummyChart() {
-	await getDummyData();
+	 getDummyData();
 	console.log('Hello');
 
 	const ctx = document.getElementById("myChart-3").getContext("2d");
