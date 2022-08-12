@@ -2,6 +2,7 @@ var userDataA = [], userDataB = [];
 
 async function dummyChart() {
 	await getDummyData();
+	console.log('Hello');
 
 	const ctx = document.getElementById("myChart-3").getContext("2d");
 
