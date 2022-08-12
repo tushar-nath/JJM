@@ -16,8 +16,8 @@ body{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /* height: 100vh;
-    overflow: hidden; */
+    height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -58,7 +58,7 @@ body{
 
 .container-1 {
     width: 45%;
-    height: 400px;
+    height: 250px;
     margin-top: 3%;
     border-radius: 20px;
     border-style: solid;
@@ -73,7 +73,7 @@ body{
     display: block;
     position: relative;
     width: 40%;
-    height: 370px;
+    height: 250px;
     margin: 3%;
     border-style: solid;
     border-color: rgba(10, 104, 255, 1);
@@ -87,7 +87,7 @@ body{
     /* display: inline-block; */
     position: relative;
     width: 40%;
-    height: 370px;
+    height: 250px;
     margin: auto;
     border-style: solid;
     border-color: rgba(10, 104, 255, 1);

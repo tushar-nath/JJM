@@ -25,6 +25,7 @@ async function dummyChart() {
 
 		// Configuration options go here
 		options: {
+			maintainAspectRatio: false,
 			legend: {display: false},
 			tooltips: {
 				mode: "index",
@@ -46,7 +47,12 @@ async function getDummyData() {
 	try {
 		const apiUrl = "https://mocki.io/v1/be7d9952-7760-44ca-a5ac-8968e2040268";
 
-		const response = await fetch(apiUrl);
+		const response = await fetch(apiUrl, {
+			mode: 'cors',
+			headers: {
+			  'Access-Control-Allow-Origin':'*'
+			}
+		});
 		const barChatData = await response.json();
 
 		const dataA = barChatData.data.map((x) => x.a);
