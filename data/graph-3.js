@@ -1,6 +1,5 @@
 var userDataA = [], userDataB = [];
-
-async function dummyChart() {
+ function dummyChart() {
 	await getDummyData();
 	console.log('Hello');
 
