@@ -65,4 +65,4 @@ async function getDummyData() {
 	}
 }
 
-window.setInterval(getDummyData(), 30000);
+//window.setInterval(getDummyData(), 30000);
