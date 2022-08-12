@@ -8,7 +8,7 @@ body{
     box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;
-    background-image: url(../images/starting-page/starting-page-bg.png) !important; 
+    background-image: url(../images/starting-page/new-bg.jpg) !important; 
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -296,6 +296,7 @@ ul li::before {
     text-align: left;
     padding-left: 1%;
     box-shadow: 5px -5px 0px 2px rgba(10,104,255,1);
+    border: 1px solid #0A68FF;
 }
 
 

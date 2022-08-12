@@ -53,7 +53,7 @@ async function getDummyData() {
 
 		const dataA = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    const dataB = barChatData.data.map((x) => x.a);
+    	const dataB = barChatData.data.map((x) => x.y);
 
 		userDataA = dataA;
 		userDataB = dataB;
