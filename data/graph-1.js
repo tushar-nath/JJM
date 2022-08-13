@@ -48,18 +48,22 @@ async function getDummyData() {
 		const apiUrl = "https://cors-everywhere.herokuapp.com/http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=30";
 
 		const response = await fetch(apiUrl);
-		console.log(response);
+		console.log("This is response: ", response);
 		
 		const barChatData = await response.json();
-		console.log(barChatData);
+		console.log("This is barCharData: ", barChatData);
 		
 
 		const dataA = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+		console.log("This is dataA: ", dataA);
 
     	const dataB = barChatData.data.map((x) => x.y);
+		console.log("This is dataB: ", dataB);
 
 		userDataA = dataA;
+		console.log("This is userDataA: ", userDataA);
 		userDataB = dataB;
+		console.log("This is userDataB: ", userDataB);
 	}
 	catch(err) {
 		alert("No data available for Graph 1");
