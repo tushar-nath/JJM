@@ -45,7 +45,9 @@ dummyChart();
 
 async function getDummyData() {
 	try {
-		const apiUrl = "http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=30";
+		const timeInterval6 = sessionStorage.getItem("timeinterval6")
+		console.log(timeInterval6);
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=${timeInterval6}`;
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
@@ -59,7 +61,7 @@ async function getDummyData() {
 		userDataB = dataB;
 	}
 	catch(err) {
-		alert("No data available for Graph 2");
+		alert("No data available for Graph 3");
 		userDataA = [1,2,3,4,5];
 		userDataB = [0,0,0,0,0];
 	}

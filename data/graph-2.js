@@ -45,7 +45,10 @@ dummyChart();
 
 async function getDummyData() {
 	try {
-		const apiUrl = "http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=30";
+		const timeInterval2 = sessionStorage.getItem("timeinterval2")
+		console.log(timeInterval2);
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=${timeInterval2}`;
+		console.log(apiUrl);
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();

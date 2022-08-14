@@ -34,11 +34,11 @@
                     <p> DAILY WATER SUPPLY TREND (LPCD)</p>
                 </div>
                 <div class="rc-ur-2">
-                    <select class="rc-dropdown" id="rc-dropdown">
-                        <option value="30-secs">30 Secs</option>
-                        <option value="1-min">1 Min</option>
-                        <option value="30-min">30 Mins</option>
-                        <option value="1-hour">1 hour</option>
+                    <select class="rc-dropdown" onchange="dropDownChange4()" id="rc-dropdown">
+                        <option value="30">30 Secs</option>
+                        <option value="60">1 Min</option>
+                        <option value="1800">30 Mins</option>
+                        <option value="3600">1 hour</option>
                     </select>
                 </div>
             </div>
@@ -61,11 +61,11 @@
                       </ul>
                 </div>
                 <div class="lower-container-col3">
-                    <select class="lc-dropdown" id="lc-dropdown">
-                        <option value="30-secs">30 Secs</option>
-                        <option value="1-min">1 Min</option>
-                        <option value="30-min">30 Mins</option>
-                        <option value="1-hour">1 hour</option>
+                    <select class="lc-dropdown" onchange="dropDownChange5()" id="lc-dropdown">
+                        <option value="30">30 Secs</option>
+                        <option value="60">1 Min</option>
+                        <option value="1800">30 Mins</option>
+                        <option value="3600">1 hour</option>
                     </select>
                 </div>
             </div>
@@ -82,11 +82,11 @@
                 <p>Period Data by Month</p>
             </div>
             <div class="lower-container-col3">
-                <select class="lc-dropdown" id="lc-dropdown">
-                    <option value="30-secs">30 Secs</option>
-                    <option value="1-min">1 Min</option>
-                    <option value="30-min">30 Mins</option>
-                    <option value="1-hour">1 hour</option>
+                <select class="lc-dropdown" onchange="dropDownChange6()" id="dlc-dropdown">
+                    <option value="30">30 Secs</option>
+                    <option value="60">1 Min</option>
+                    <option value="1800">30 Mins</option>
+                    <option value="3600">1 hour</option>
                 </select>
             </div>
         </div>
@@ -101,6 +101,7 @@
         }, 60000);
     </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="dropdown.js"></script>
 <script src="graph-1.js"></script>
 <script src="graph-2.js"></script>
 <script src="graph-3.js"></script>
