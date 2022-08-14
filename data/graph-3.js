@@ -1,7 +1,6 @@
 var userDataA = [], userDataB = [];
  function dummyChart() {
 	 getDummyData();
-	console.log('Hello');
 
 	const ctx = document.getElementById("myChart-3").getContext("2d");
 
@@ -46,7 +45,10 @@ setInterval(dummyChart(),5000);
 
  function getDummyData() {
 	try {
-		const apiUrl = "http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=30";
+		const timeInterval3 = sessionStorage.getItem("timeinterval3")
+		console.log(timeInterval3);
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=${timeInterval3}`;
+		console.log(apiUrl);
 
 		const response = fetch(apiUrl);
 		const barChatData = response.json();
