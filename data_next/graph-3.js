@@ -47,8 +47,8 @@ async function getDummyData() {
 	try {
 		const timeInterval6 = sessionStorage.getItem("timeinterval6")
 		console.log(timeInterval6);
-		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=${timeInterval6}`;
-
+		const sensorId = sessionStorage.getItem("sensorId") || "1";
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=${timeInterval6}`;
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
 		
