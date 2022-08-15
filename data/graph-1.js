@@ -16,8 +16,9 @@ async function dummyChart() {
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "rgba(0,0,255,1.0)",
-      				borderColor: "rgba(0,0,255,0.1)",
+      				backgroundColor: "rgba(255, 0, 0, 1)",
+					borderColor: 'rgba(255, 0, 0, 1)',
+					borderWidth: 1,
 					data: userDataB,
 				}
 			],
@@ -45,7 +46,7 @@ dummyChart();
 
 async function getDummyData() {
 	try {
-		const timeInterval1 = sessionStorage.getItem("timeinterval1");
+		const timeInterval1 = sessionStorage.getItem("timeinterval1") || "30";
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
 		// console.log(sensorId);
 		console.log(timeInterval1);
