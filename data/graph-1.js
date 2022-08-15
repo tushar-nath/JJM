@@ -32,6 +32,10 @@ async function dummyChart() {
 				mode: "index",
 			},
 			scales: {
+				xAxis: {
+      
+                             type: 'time',
+                               },
 				yAxes: [{
 				ticks: { min: 0},
 				}], 
