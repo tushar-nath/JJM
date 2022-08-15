@@ -45,10 +45,12 @@ dummyChart();
 
 async function getDummyData() {
 	try {
-		const timeInterval1 = sessionStorage.getItem("timeinterval1")
+		const timeInterval1 = sessionStorage.getItem("timeinterval1");
+		const sensorId = sessionStorage.getItem("sensorId") || "1";
+		// console.log(sensorId);
 		console.log(timeInterval1);
-		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=1&timeInterval=${timeInterval1}`;
-		console.log(apiUrl);
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=${timeInterval1}`;
+		console.log("This is Graph-1: ", apiUrl);
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
