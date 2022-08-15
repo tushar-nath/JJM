@@ -2,9 +2,9 @@ var dropdown4 = document.getElementById("rc-dropdown");
 var dropdown5 = document.getElementById("lc-dropdown");
 var dropdown6 = document.getElementById("dlc-dropdown");
 
-dropdown4.value = sessionStorage.getItem('timeinterval4');
-dropdown5.value = sessionStorage.getItem('timeinterval5');
-dropdown6.value = sessionStorage.getItem('timeinterval6');
+dropdown4.value = sessionStorage.getItem('timeinterval4') || "30";
+dropdown5.value = sessionStorage.getItem('timeinterval5') || "30";
+dropdown6.value = sessionStorage.getItem('timeinterval6') || "30";
 
 
 function dropDownChange4() {

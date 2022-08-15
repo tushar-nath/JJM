@@ -16,8 +16,9 @@ async function dummyChart() {
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "rgba(0,0,255,1.0)",
-      				borderColor: "rgba(0,0,255,0.1)",
+      				backgroundColor: "rgba(0, 255, 0, 1)",
+      				borderColor: "rgba(0, 255, 0, 1)",
+					borderWidth: 1,
 					data: userDataB,
 				}
 			],
@@ -46,7 +47,7 @@ dummyChart();
 
 async function getDummyData() {
 	try {
-		const timeInterval3 = sessionStorage.getItem("timeinterval3")
+		const timeInterval3 = sessionStorage.getItem("timeinterval3") || "30";
 		console.log(timeInterval3);
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
 		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=${timeInterval3}`;
