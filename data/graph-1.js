@@ -92,8 +92,8 @@ async function getDummyData1() {
 	catch(err) {
 		alert("No data available for Graph 1");
 		userDataA1 = [1,2,3,4,5];
-		userDataB1 = [0,0,0,0,0];
+		userDataB1 = [0.8,0,0,0,0];
 	}
 }
 
-//window.setInterval(getDummyData(), 30000);
+window.setInterval(getDummyData(), 30000);
