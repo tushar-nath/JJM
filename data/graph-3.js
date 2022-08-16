@@ -1,7 +1,8 @@
-var userDataA = [], userDataB = [];
+var userDataA3 = [], userDataB3 = [];
+var dataA3, dataB3;
 
 async function dummyChart() {
-	await getDummyData();
+	await getDummyData3();
 
 	const ctx = document.getElementById("myChart-3").getContext("2d");
 
@@ -11,7 +12,7 @@ async function dummyChart() {
 
 		// The data for our dataset
 		data: {
-			labels: userDataA,
+			labels: userDataA3,
 			datasets: [
 				{
 					fill: false,
@@ -19,7 +20,7 @@ async function dummyChart() {
       				backgroundColor: "rgba(0, 255, 0, 1)",
       				borderColor: "rgba(0, 255, 0, 1)",
 					borderWidth: 1,
-					data: userDataB,
+					data: userDataB3,
 				}
 			],
 		},
@@ -32,12 +33,34 @@ async function dummyChart() {
 				mode: "index",
 			},
 			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: "Time",
+					},
+				}],
 				yAxes: [{
 				ticks: { min: 0},
+				scaleLabel: {
+					display: true,
+					labelString: 'Y-AXIS'
+				  }
 				}], 
 			},
 		},
 	});
+	setInterval(() => {
+		getDummyData2()
+		userDataA3.push(dataA3.pop());
+		userDataB3.push(dataB3.pop());
+		if (userDataB3.length > 30) {
+			userDataA3.shift();
+			userDataB3.shift();
+		}
+		console.log(userDataA3);
+		console.log(userDataB3);
+		chart.update();
+	} , 30000);
 }
 
 dummyChart();
@@ -45,7 +68,7 @@ dummyChart();
 //Fetch Data from API 
 
 
-async function getDummyData() {
+async function getDummyData3() {
 	try {
 		const timeInterval3 = sessionStorage.getItem("timeinterval3") || "30";
 		console.log(timeInterval3);
@@ -57,17 +80,19 @@ async function getDummyData() {
 		const barChatData = await response.json();
 		
 
-		const dataA = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+		dataA3 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	const dataB = barChatData.data.map((x) => x.x);
+    	dataB3 = barChatData.data.map((x) => x.y);
 
-		userDataA = dataA;
-		userDataB = dataB;
+		if (userDataA3.length == 0 && userDataB3.length == 0) {
+			userDataA3 = dataA3;
+			userDataB3 = dataB3;
+		}
 	}
 	catch(err) {
 		alert("No data available for Graph 2");
-		userDataA = [1,2,3,4,5];
-		userDataB = [0,0,0,0,0];
+		userDataA3 = [1,2,3,4,5];
+		userDataB3 = [0,0,0,0,0];
 	}
 }
 
