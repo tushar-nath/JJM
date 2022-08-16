@@ -17,8 +17,8 @@ async function dummyChart() {
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "rgba(0, 255, 0, 1)",
-      				borderColor: "rgba(0, 255, 0, 1)",
+      				backgroundColor: "rgba(19, 136, 8, 1)",
+      				borderColor: "rgba(19, 136, 8, 1)",
 					borderWidth: 1,
 					data: userDataB3,
 				}
