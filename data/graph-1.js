@@ -18,8 +18,8 @@ async function dummyChart() {
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "rgba(255, 0, 0, 1)",
-					borderColor: 'rgba(255, 0, 0, 1)',
+      				backgroundColor: "rgba(255, 153, 51, 1)",
+					borderColor: 'rgba(255, 153, 51, 1)',
 					borderWidth: 1,
 					data: userDataB1,
 				}
@@ -35,6 +35,7 @@ async function dummyChart() {
 			},
 			scales: {
 				xAxes: [{
+          type: "time",
 					scaleLabel: {
 						display: true,
 						labelString: "Time",
