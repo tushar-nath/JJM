@@ -1,8 +1,8 @@
-var userDataA3 = [], userDataB3 = [];
-var dataA3, dataB3;
+var userDataA6 = [], userDataB6 = [];
+var dataA6, dataB6;
 
 async function dummyChart() {
-	await getDummyData3();
+	await getDummyData6();
 
 	const ctx = document.getElementById("myChart-3").getContext("2d");
 
@@ -12,7 +12,7 @@ async function dummyChart() {
 
 		// The data for our dataset
 		data: {
-			labels: userDataA3,
+			labels: userDataA6,
 			datasets: [
 				{
 					fill: false,
@@ -20,7 +20,7 @@ async function dummyChart() {
       				backgroundColor: "rgba(0, 255, 0, 1)",
       				borderColor: "rgba(0, 255, 0, 1)",
 					borderWidth: 1,
-					data: userDataB3,
+					data: userDataB6,
 				}
 			],
 		},
@@ -50,15 +50,15 @@ async function dummyChart() {
 		},
 	});
 	setInterval(() => {
-		getDummyData2()
-		userDataA3.push(dataA3.pop());
-		userDataB3.push(dataB3.pop());
-		if (userDataB3.length > 30) {
-			userDataA3.shift();
-			userDataB3.shift();
+		getDummyData6()
+		userDataA6.push(dataA6.pop());
+		userDataB6.push(dataB6.pop());
+		if (userDataB6.length > 30) {
+			userDataA6.shift();
+			userDataB6.shift();
 		}
-		console.log(userDataA3);
-		console.log(userDataB3);
+		console.log(userDataA6);
+		console.log(userDataB6);
 		chart.update();
 	} , 30000);
 }
@@ -67,9 +67,9 @@ dummyChart();
 
 //Fetch Data from API
 
-async function getDummyData3() {
+async function getDummyData6() {
 	try {
-		const timeInterval6 = sessionStorage.getItem("timeinterval6")
+		const timeInterval6 = sessionStorage.getItem("timeinterval6") || "30";
 		console.log(timeInterval6);
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
 		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=${timeInterval6}`;
@@ -77,19 +77,19 @@ async function getDummyData3() {
 		const barChatData = await response.json();
 		
 
-		dataA3 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+		dataA6 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	dataB3 = barChatData.data.map((x) => x.y);
+    	dataB6 = barChatData.data.map((x) => x.y);
 
-		if (userDataA3.length == 0 && userDataB3.length == 0) {
-			userDataA3 = dataA3;
-			userDataB3 = dataB3;
+		if (userDataA6.length == 0 && userDataB6.length == 0) {
+			userDataA6 = dataA6;
+			userDataB6 = dataB6;
 		}
 	}
 	catch(err) {
 		alert("No data available for Graph 3");
-		userDataA = [1,2,3,4,5];
-		userDataB = [0,0,0,0,0];
+		userDataA6 = [1,2,3,4,5];
+		userDataB6 = [0,0,0,0,0];
 	}
 }
 
