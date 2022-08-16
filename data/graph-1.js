@@ -1,5 +1,6 @@
 var userDataA1 = [], userDataB1 = [];
 var dataA1, dataB1;
+var timeInterval1;
 
 async function dummyChart() {
 	await getDummyData1();
@@ -51,7 +52,6 @@ async function dummyChart() {
 		},
 	});
 	setInterval(() => {
-		getDummyData1()
 		userDataA1.push(dataA1.pop());
 		userDataB1.push(dataB1.pop());
 		if (userDataB1.length > 30) {
@@ -60,6 +60,7 @@ async function dummyChart() {
 		}
 		console.log(userDataA1);
 		chart.update();
+		getDummyData1()
 	} , 30000);
 }
 
@@ -69,7 +70,7 @@ dummyChart();
 
 async function getDummyData1() {
 	try {
-		const timeInterval1 = sessionStorage.getItem("timeinterval1") || "30";
+		timeInterval1 = sessionStorage.getItem("timeinterval1") || "30";
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
 		// console.log(sensorId);
 		console.log(timeInterval1);

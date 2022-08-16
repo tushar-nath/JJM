@@ -50,7 +50,7 @@ async function dummyChart() {
 		},
 	});
 	setInterval(() => {
-		getDummyData2()
+		getDummyData3()
 		userDataA3.push(dataA3.pop());
 		userDataB3.push(dataB3.pop());
 		if (userDataB3.length > 30) {
@@ -90,7 +90,7 @@ async function getDummyData3() {
 		}
 	}
 	catch(err) {
-		alert("No data available for Graph 2");
+		alert("No data available for Graph 3");
 		userDataA3 = [1,2,3,4,5];
 		userDataB3 = [0,0,0,0,0];
 	}

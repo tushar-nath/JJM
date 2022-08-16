@@ -1,8 +1,8 @@
-var userDataA2 = [], userDataB2 = [];
-var dataA2, dataB2;
+var userDataA5 = [], userDataB5 = [];
+var dataA5, dataB5;
 
 async function dummyChart() {
-	await getDummyData2();
+	await getDummyData5();
 
 	const ctx = document.getElementById("myChart-2").getContext("2d");
 
@@ -12,7 +12,7 @@ async function dummyChart() {
 
 		// The data for our dataset
 		data: {
-			labels: userDataA2,
+			labels: userDataA5,
 			datasets: [
 				{
 					fill: false,
@@ -20,7 +20,7 @@ async function dummyChart() {
       				backgroundColor: "rgba(0, 0, 255, 1)",
       				borderColor: "rgba(0, 0, 255, 1)",
 					borderWidth: 1,
-					data: userDataB2,
+					data: userDataB5,
 				}
 			],
 		},
@@ -50,15 +50,15 @@ async function dummyChart() {
 		},
 	});
 	setInterval(() => {
-		getDummyData2()
-		userDataA2.push(dataA2.pop());
-		userDataB2.push(dataB2.pop());
-		if (userDataB2.length > 30) {
-			userDataA2.shift();
-			userDataB2.shift();
+		getDummyData5()
+		userDataA5.push(dataA5.pop());
+		userDataB5.push(dataB5.pop());
+		if (userDataB5.length > 30) {
+			userDataA5.shift();
+			userDataB5.shift();
 		}
-		console.log(userDataA2);
-		console.log(userDataB2);
+		console.log(userDataA5);
+		console.log(userDataB5);
 		chart.update();
 	} , 30000);
 }
@@ -67,9 +67,9 @@ dummyChart();
 
 //Fetch Data from API
 
-async function getDummyData2() {
+async function getDummyData5() {
 	try {
-		const timeInterval5 = sessionStorage.getItem("timeinterval5")
+		const timeInterval5 = sessionStorage.getItem("timeinterval5") || "30";
 		console.log(timeInterval5);
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
 		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=${timeInterval5}`;
@@ -78,19 +78,19 @@ async function getDummyData2() {
 		const barChatData = await response.json();
 		
 
-		dataA2 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+		dataA5 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	dataB2 = barChatData.data.map((x) => x.y);
+    	dataB5 = barChatData.data.map((x) => x.y);
 
-		if (userDataA2.length == 0 && userDataB2.length == 0) {
-			userDataA2 = dataA2;
-			userDataB2 = dataB2;
+		if (userDataA5.length == 0 && userDataB5.length == 0) {
+			userDataA5 = dataA5;
+			userDataB5 = dataB5;
 		}
 	}
 	catch(err) {
 		alert("No data available for Graph 2");
-		userDataA = [1,2,3,4,5];
-		userDataB = [0,0,0,0,0];
+		userDataA5 = [1,2,3,4,5];
+		userDataB5 = [0,0,0,0,0];
 	}
 }
 
