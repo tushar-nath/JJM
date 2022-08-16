@@ -1,7 +1,8 @@
-var userDataA = [], userDataB = [];
+var userDataA1 = [], userDataB1 = [];
+var dataA1, dataB1;
 
 async function dummyChart() {
-	await getDummyData();
+	await getDummyData1();
 
 	const ctx = document.getElementById("myChart-1").getContext("2d");
 
@@ -11,7 +12,7 @@ async function dummyChart() {
 
 		// The data for our dataset
 		data: {
-			labels: userDataA,
+			labels: userDataA1,
 			datasets: [
 				{
 					fill: false,
@@ -19,7 +20,7 @@ async function dummyChart() {
       				backgroundColor: "rgba(255, 153, 51, 1)",
 					borderColor: 'rgba(255, 153, 51, 1)',
 					borderWidth: 1,
-					data: userDataB,
+					data: userDataB1,
 				}
 			],
 		},
@@ -32,23 +33,41 @@ async function dummyChart() {
 				mode: "index",
 			},
 			scales: {
-				xAxis: {
-      
-                             type: 'time',
-                               },
+				xAxes: [{
+          type: "time",
+					scaleLabel: {
+						display: true,
+						labelString: "Time",
+					},
+				}],
 				yAxes: [{
-				ticks: { min: 0},
+					ticks: { min: 0},
+					scaleLabel: {
+						display: true,
+						labelString: 'Y-AXIS'
+					  }
 				}], 
 			},
 		},
 	});
+	setInterval(() => {
+		getDummyData1()
+		userDataA1.push(dataA1.pop());
+		userDataB1.push(dataB1.pop());
+		if (userDataB1.length > 30) {
+			userDataA1.shift();
+			userDataB1.shift();
+		}
+		console.log(userDataA1);
+		chart.update();
+	} , 30000);
 }
 
 dummyChart();
 
 //Fetch Data from API
 
-async function getDummyData() {
+async function getDummyData1() {
 	try {
 		const timeInterval1 = sessionStorage.getItem("timeinterval1") || "30";
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
@@ -60,17 +79,20 @@ async function getDummyData() {
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
 		
-		const dataA = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+		dataA1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	const dataB = barChatData.data.map((x) => x.y);
+    	dataB1 = barChatData.data.map((x) => x.y);
 
-		userDataA = dataA;
-		userDataB = dataB;
+		if (userDataA1.length == 0 && userDataB1.length == 0) {
+			userDataA1 = dataA1;
+			userDataB1 = dataB1;
+		}
+
 	}
 	catch(err) {
 		alert("No data available for Graph 1");
-		userDataA = [1,2,3,4,5];
-		userDataB = [0,0,0,0,0];
+		userDataA1 = [1,2,3,4,5];
+		userDataB1 = [0,0,0,0,0];
 	}
 }
 

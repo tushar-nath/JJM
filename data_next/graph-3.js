@@ -1,7 +1,8 @@
-var userDataA = [], userDataB = [];
+var userDataA3 = [], userDataB3 = [];
+var dataA3, dataB3;
 
 async function dummyChart() {
-	await getDummyData();
+	await getDummyData3();
 
 	const ctx = document.getElementById("myChart-3").getContext("2d");
 
@@ -11,14 +12,15 @@ async function dummyChart() {
 
 		// The data for our dataset
 		data: {
-			labels: userDataA,
+			labels: userDataA3,
 			datasets: [
 				{
 					fill: false,
 					lineTension: 0,
-					backgroundColor: "rgba(0, 255, 0, 1)",
-					borderColor: "rgba(0, 255, 0, 1)",
-					data: userDataB,
+      				backgroundColor: "rgba(0, 255, 0, 1)",
+      				borderColor: "rgba(0, 255, 0, 1)",
+					borderWidth: 1,
+					data: userDataB3,
 				}
 			],
 		},
@@ -31,19 +33,41 @@ async function dummyChart() {
 				mode: "index",
 			},
 			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: "Time",
+					},
+				}],
 				yAxes: [{
 				ticks: { min: 0},
+				scaleLabel: {
+					display: true,
+					labelString: 'Y-AXIS'
+				  }
 				}], 
 			},
 		},
 	});
+	setInterval(() => {
+		getDummyData2()
+		userDataA3.push(dataA3.pop());
+		userDataB3.push(dataB3.pop());
+		if (userDataB3.length > 30) {
+			userDataA3.shift();
+			userDataB3.shift();
+		}
+		console.log(userDataA3);
+		console.log(userDataB3);
+		chart.update();
+	} , 30000);
 }
 
 dummyChart();
 
 //Fetch Data from API
 
-async function getDummyData() {
+async function getDummyData3() {
 	try {
 		const timeInterval6 = sessionStorage.getItem("timeinterval6")
 		console.log(timeInterval6);
@@ -53,12 +77,14 @@ async function getDummyData() {
 		const barChatData = await response.json();
 		
 
-		const dataA = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+		dataA3 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	const dataB = barChatData.data.map((x) => x.z);
+    	dataB3 = barChatData.data.map((x) => x.y);
 
-		userDataA = dataA;
-		userDataB = dataB;
+		if (userDataA3.length == 0 && userDataB3.length == 0) {
+			userDataA3 = dataA3;
+			userDataB3 = dataB3;
+		}
 	}
 	catch(err) {
 		alert("No data available for Graph 3");
