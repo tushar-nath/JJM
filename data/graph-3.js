@@ -49,18 +49,20 @@ async function dummyChart() {
 			},
 		},
 	});
-	setInterval(() => {
-		getDummyData3()
-		userDataA3.push(dataA3.pop());
-		userDataB3.push(dataB3.pop());
+	function updateChart() {
+		getDummyData1()
+		userDataA3.push(dataA4.pop());
+		userDataB3.push(dataB4.pop());
 		if (userDataB3.length > 30) {
 			userDataA3.shift();
 			userDataB3.shift();
 		}
 		console.log(userDataA3);
-		console.log(userDataB3);
 		chart.update();
-	} , 30000);
+		setTimeout(updateChart, 30000);
+	}
+
+	updateChart();
 }
 
 dummyChart();
