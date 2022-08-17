@@ -1,0 +1,110 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 0%;
+    margin-top: 10px 0% 0% 0%;
+    overflow-y: scroll !important;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hindi-text{
+    position: relative;
+    margin-top: 10px;
+    width: 90% ;
+    height: auto;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.hindi-img{
+    position: relative !important;
+    width: 100% !important;
+    height: auto;
+    left: 0% !important;
+    top: 0% !important;
+}
+
+.info-tab{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.map-container{
+    position: relative;
+    width: 90% !important;
+    height: fit-content !important;
+    margin-top: 10px;
+}
+
+.form{
+    width: 90% !important;
+    height: fit-content !important;
+    padding-bottom: 20px;
+}
+
+.field{
+    height: fit-content !important;
+}
+
+.double-field{
+    display: flex;
+    flex-direction: column;
+    height: fit-content !important;
+}
+
+.double-field div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-top: 5px;
+    height: auto;
+}
+
+.data-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80% !important;
+    margin-top: 30px !important;
+    height: fit-content !important;
+}
+
+.uc-lc-mid{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.uc-lc-lower{
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+}
+
+#uc-lc-dropdown{
+    height: 30px !important;
+}
+
+#uc-lc-water{
+    height: 30px !important;
+}
+
+#btn{
+    position: relative !important;
+    bottom: 0%;
+    margin:40px  40%;
+}
