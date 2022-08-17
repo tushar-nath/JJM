@@ -1,8 +1,8 @@
-var userDataA5 = [], userDataB5 = [];
+var userDataA8 = [], userDataB8 = [];
 var dataA5, dataB5;
 
 async function dummyChart() {
-	await getDummyData5();
+	await getDummyData8();
 
 	const ctx = document.getElementById("myChart-2").getContext("2d");
 
@@ -12,7 +12,7 @@ async function dummyChart() {
 
 		// The data for our dataset
 		data: {
-			labels: userDataA5,
+			labels: userDataA8,
 			datasets: [
 				{
 					fill: false,
@@ -20,7 +20,7 @@ async function dummyChart() {
       				backgroundColor: "rgba(0, 0, 255, 1)",
       				borderColor: "rgba(0, 0, 255, 1)",
 					borderWidth: 1,
-					data: userDataB5,
+					data: userDataB8,
 				}
 			],
 		},
@@ -50,15 +50,15 @@ async function dummyChart() {
 		},
 	});
 	setInterval(() => {
-		getDummyData5()
-		userDataA5.push(dataA5.pop());
-		userDataB5.push(dataB5.pop());
-		if (userDataB5.length > 30) {
-			userDataA5.shift();
-			userDataB5.shift();
+		getDummyData8()
+		userDataA8.push(dataA5.pop());
+		userDataB8.push(dataB5.pop());
+		if (userDataB8.length > 30) {
+			userDataA8.shift();
+			userDataB8.shift();
 		}
-		console.log(userDataA5);
-		console.log(userDataB5);
+		console.log(userDataA8);
+		console.log(userDataB8);
 		chart.update();
 	} , 30000);
 }
@@ -67,7 +67,7 @@ dummyChart();
 
 //Fetch Data from API
 
-async function getDummyData5() {
+async function getDummyData8() {
 	try {
 		const timeInterval5 = sessionStorage.getItem("timeinterval5") || "30";
 		console.log(timeInterval5);
@@ -82,15 +82,15 @@ async function getDummyData5() {
 
     	dataB5 = barChatData.data.map((x) => x.y);
 
-		if (userDataA5.length == 0 && userDataB5.length == 0) {
-			userDataA5 = dataA5;
-			userDataB5 = dataB5;
+		if (userDataA8.length == 0 && userDataB8.length == 0) {
+			userDataA8 = dataA5;
+			userDataB8 = dataB5;
 		}
 	}
 	catch(err) {
 		alert("No data available for Graph 2");
-		userDataA5 = [1,2,3,4,5];
-		userDataB5 = [0,0,0,0,0];
+		userDataA8 = [1,2,3,4,5];
+		userDataB8 = [0,0,0,0,0];
 	}
 }
 

@@ -312,3 +312,47 @@ ul li::before {
     color: rgba(12,100,52);
     box-shadow: 5px -5px 0px 2px rgba(12,100,52);
 }
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .upper-container{
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+    }
+    .container-1 , .container-2 , .container-3 {
+        width: 95%;
+        height: auto;
+        margin-top: 50px;
+    }
+    #lc-dropdown{
+        margin-left: auto;
+    }
+
+    #btn{
+        position: relative;
+        margin:40px  40%;
+    }
+    .lower-container-col1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        }
+    .lower-container-col3{
+        display: flex;
+        justify-content: right;
+        margin-right: 5%;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+}

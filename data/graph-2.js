@@ -49,7 +49,7 @@ async function dummyChart() {
 			},
 		},
 	});
-	setInterval(() => {
+	function updateChart() {
 		getDummyData2()
 		userDataA2.push(dataA2.pop());
 		userDataB2.push(dataB2.pop());
@@ -58,9 +58,11 @@ async function dummyChart() {
 			userDataB2.shift();
 		}
 		console.log(userDataA2);
-		console.log(userDataB2);
 		chart.update();
-	} , 30000);
+		setTimeout(updateChart, 30000);
+	}
+
+	updateChart();
 }
 
 dummyChart();
