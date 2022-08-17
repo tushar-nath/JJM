@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="starting-page.css" />
     <title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="navbar"></div>
@@ -71,27 +72,27 @@
 				<div class="form-field">
 					<div class="double-field">
 						<div id="first" class="double-field-item">
-							<p>BLOCK : PORUWA CHARIALI</p>
+							<p id="block_data">BLOCK : PORUWA CHARIALI</p>
 						</div>
 						<div id="second" class="double-field-item">
-							<p>DISTRICT:SONITPUR</p>
+							<p id="district_data">DISTRICT:SONITPUR</p>
 						</div>
 					</div>
 
 
 					<div class="double-field">
 						<div id="first" class="double-field-item">
-							<p>VILLAGE : PORUWA CHARIALI</p>
+							<p id="village_data">VILLAGE : PORUWA CHARIALI</p>
 						</div>
 						<div id="second" class="double-field-item ">
-							<p>PANCHAYAT : PORUWA CHARIALI</p>
+							<p id="panchayat_data">PANCHAYAT : PORUWA CHARIALI</p>
 						</div>
 					</div>
 
 
 					<div class="double-field">
 						<div id="first" class="double-field-item">
-							<p>NO OF INHABITANTS: 2500</p>
+							<p id="inhab_data">NO OF INHABITANTS: 2500</p>
 						</div>
 						<div id="second" id="empty" class="double-field-item empty">
 							
@@ -100,19 +101,19 @@
 
 
 					<div class="field">
-						<p>POPULATION  SERVED THROUGH SCHEME: 2500</p>
+						<p id="served_data">POPULATION  SERVED THROUGH SCHEME: 2500</p>
 					</div>
 					<div class="field">
-						<p>POPULATION  SERVED THROUGH SCHEME: 2500</p>
+						<p id="served_data">POPULATION  SERVED THROUGH SCHEME: 2500</p>
 					</div>
 					<div class="field">
-						<p>SCHEME : JAL JEEVAN MISSION ASSAM UNDER BJP ASSAM GOVERMENT </p>
+						<p id="scheme_data">SCHEME : JAL JEEVAN MISSION ASSAM UNDER BJP ASSAM GOVERMENT </p>
 					</div>
 					<div class="field">
-						<p>YEAR OF COMMISION : 2022-2023</p>
+						<p id="year_data">YEAR OF COMMISION : 2022-2023</p>
 					</div>
 					<div class="field">
-						<p>SUPERVISOR NAME : HAREN DAS</p> 
+						<p id="supervisor_data">SUPERVISOR NAME : HAREN DAS</p> 
 					</div>
 				</div>
 			</div>
@@ -152,6 +153,7 @@
 			</button>
 		</a>
 	</div>
-
+	<script src="data.json"></script>
+	<script src ="data_load.js"></script>
   </body>
 </html>
