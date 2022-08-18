@@ -1,0 +1,143 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* navbar css starts here */
+
+.logo {
+    overflow: hidden;
+    display: flex !important;
+    width: 100%;
+    display: table;
+    padding: 1%;
+    margin-bottom: 2%;
+}
+
+.logo-img {
+    margin-right: 2rem;
+    height: 50px;
+    width: 50px;
+}
+
+.logo-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#img-2 {
+    padding-left: 0% !important;
+}
+/* navbar css ends here */
+
+
+/* footer css starts here */
+.footer {
+
+    bottom: 0;
+    left: 0;
+    display: grid;
+}
+
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+/* footer css ends here */
+
+
+.dashboard-container {
+    padding: 1%;
+    margin: auto;
+    width: 100%;
+}
+
+.map-container {
+    border-radius: 4px;
+    margin: auto;
+    width: 70%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding-bottom: 1.5%;
+}
+
+.map {
+    padding: 4% 6% 0% 6%;
+}
+
+.map-place {
+    margin: 2% 2% 1% 6%;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.drop {
+    margin: 1% 2% 2% 6%;
+}
+
+#dropdown {
+    border-radius: 3px;
+    width: 25%;
+    padding: 1% 1% 1% 0%;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgba(113, 113, 113, 1);
+}
+
+.dashboard-container {
+    margin-top: 5%;
+    width: 90%;
+}
+
+.box-row {
+    display: flex;
+    margin: 3%;
+}
+
+.left-box {
+    margin: auto;
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 2%;
+}
+
+.right-box {
+    margin: auto;
+    width: 40%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 2%;
+}
+
+.box-header {
+    display: flex;
+    padding-top: 10%;
+}
+
+.box-para {
+    margin-top: 5%;
+    margin-bottom: 25%;
+}
+
+.box-header-key {
+    white-space: nowrap;
+    font-family: DM Sans;
+    font-size: 28px;
+    font-weight: 500;
+    width: 90%;
+}
+
+.box-header-value {
+    color: red;
+    font-family: DM Sans;
+    font-size: 18px;
+    font-weight: 500;
+    width: 10%;
+}
+
+.box-button {
+    margin-left: 95%;
+}
