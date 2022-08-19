@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="graph_page.css">
     <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="p5.js"></script>
     <title>Document</title>
 </head>
 <body class="test">
@@ -21,8 +22,9 @@
             <h5>PH DATA</h5>
             <div class="interval_indicator"> By Hour</div>
             </div>
-            <div class="lc-image">
-                <canvas id="myChart-1" ></canvas>
+            <div class="graphy_1">
+                <main class="graph_1">
+                </main>
             </div>
     </div>
     <div class="graph_card">
@@ -31,7 +33,7 @@
             <div class="interval_indicator"> By Hour</div>
             </div>
             <div class="lc-image">
-                <canvas id="myChart-2" ></canvas>
+                <canvas id="myChart-2" style="width: auto; height: 200px;"></canvas>
             </div>
     </div>
     <div class="graph_card">
@@ -54,8 +56,10 @@
     </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="./graph-1.js"></script>
 <script src="./graph-2.js"></script>
 <script src="./graph-3.js"></script>
+<script src="sketch.js"></script>
 </body>
 
 </html>
