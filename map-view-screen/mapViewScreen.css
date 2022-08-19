@@ -1,7 +1,76 @@
-#map_tuts {
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@700&display=swap');
+
+#dvMap {
     height: 100%;
     width: 100%;
     position:absolute;
     top: 0;
     left: 0;
 }
+
+#popup {
+    width: 100%;
+}
+
+#popup-header {
+    margin: 2% 0% 0% 0%;
+    font-family: Poppins;
+    font-size: 17px;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#popup-place {
+    display: flex;
+}
+
+#state {
+    color: rgba(244, 92, 32, 1);
+}
+
+#popup-img {
+    border-radius: 15px;
+    text-align: center;
+    margin: 3% 2% 3% 2%;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#popup-tile {
+    opacity: 50%;
+    font-size: 12px;
+    display: flex !important;
+    margin: 2%;
+    font-family: Poppins;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#popup-key {
+    width: 80%;
+    padding-left: 3%;
+}
+
+#popup-value {
+    width: 20%;
+    text-align: center;
+    position: relative;
+    top: 13px;
+}
+
+#popup-btn {
+    padding: 3%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+#popup-btn button {
+    cursor: pointer;
+    border-style: none;
+    padding: 2% 5% 2% 5%;
+    border-radius: 7px;
+    color: white;
+    background-color: #0A68FF;
+}
+

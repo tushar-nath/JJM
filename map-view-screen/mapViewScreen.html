@@ -16,70 +16,122 @@
 <div id="map_wrapper_div">
     <div id="map_tuts"></div>
 </div>
-
-</body>
-
-<script>
-    jQuery(function($) {
-    // Asynchronously Load the map API 
-    var script = document.createElement('script');
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&sensor=false&callback=initialize";
-    document.body.appendChild(script);
-    });
-    function initialize() {
-    var map;
-    var bounds = new google.maps.LatLngBounds();
-    var mapOptions = {
-    mapTypeId: 'roadmap'
-    };
-    // Display a map on the page
-    map = new google.maps.Map(document.getElementById("map_tuts"), mapOptions);
-    map.setTilt(45);
-    // Multiple Markers
+<body>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&sensor=false&callback=initialize"></script>
+<script type="text/javascript">
     var markers = [
-    ['Dhekiajuli', 26.6985,92.4851, ''],
-    ['Bihaguri', 26.6744,92.6810, ''],
-    ['Tezpur', 26.6528,92.7926,''],
-    ['Chutia', 26.7347,93.0463, ''],
+    {
+        "title": 'Dhekiajuli',
+        "lat": '26.6985',
+        "lng": '92.4851',
+        "total": '1500',
+        "active": '1250',
+        "iot": '1000',
+        "upcoming": '237'
+    },
+    {
+        "title": 'Bihaguri',
+        "lat": '26.6744',
+        "lng": '92.6810',
+        "total": '1500',
+        "active": '1250',
+        "iot": '1000',
+        "upcoming": '237'
+    },
+    {
+        "title": 'Tezpur',
+        "lat": '26.6528',
+        "lng": '92.7926',
+        "total": '1500',
+        "active": '1250',
+        "iot": '1000',
+        "upcoming": '237'
+    },
+    {
+        "title": 'Chutia',
+        "lat": '26.7347',
+        "lng": '93.0463',
+        "total": '1500',
+        "active": '1250',
+        "iot": '1000',
+        "upcoming": '237'
+    }
     ];
-    
-    // Display multiple markers on a map
-    var infoWindow = new google.maps.InfoWindow(), marker, i;
-    // Loop through our array of markers & place each one on the map  
-    for( i = 0; i < markers.length; i++ ) {
-    var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-    bounds.extend(position);
-    marker = new google.maps.Marker({
-    position: position,
-    map: map,
-    title: markers[i][0],
-    url: '/Location_search/location_search.html'     
-    });
-
-    google.maps.event.addListener(marker, 'click', function() {
-    window.location.href = this.url;
-    });
-
-    // Each marker to have an info window    
-    // google.maps.event.addListener(marker, 'click', (function(marker, i) {
-    // return function() {
-    // infoWindow.setContent(infoWindowContent[i][0]);
-    // infoWindow.open(map, marker);
-    // }
-    // })(marker, i));
-
-    // Automatically center the map fitting all markers on the screen
-    google.maps.event.addListenerOnce(map, 'idle', function() {
-    map.fitBounds(bounds);
-});
-
+    window.onload = function () {
+        LoadMap();
     }
-    // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-    this.setZoom(5);
-    google.maps.event.removeListener(boundsListener);
-    });
-    }
-    </script>
+    function LoadMap() {
+        var bounds = new google.maps.LatLngBounds();
+        var mapOptions = {
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
 
+        //Create and open InfoWindow.
+        var infoWindow = new google.maps.InfoWindow();
+
+        for (var i = 0; i < markers.length; i++) {
+            var data = markers[i];
+            var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+
+            //extend the bounds to include each marker's position
+            bounds.extend(myLatlng);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: data.title
+            });
+
+            const contentString =
+            '<div id="popup">' +
+                '<div id="popup-header">' +
+                    '<div id="title">' + 'Tap Water Supply In Household' + '</div>' +
+                    '<div id="popup-place">' +
+                        '<div id="city">' + data.title + '</div>' +
+                        '<div id="state">' + '&nbspAssam' + '</div>' +
+                    '</div>' +
+                '</div>' +
+                '<div id="popup-img">' + '<img width="250px" src="../images/mini-map.png"/>' + '</div>' +
+                '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.total + '</div>' +
+                '</div>' +
+                '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total Active Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.active + '</div>' +
+                '</div>' +
+                '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total IOT Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.iot + '</div>' +
+                '</div>' +
+                '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Upcoming Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.upcoming + '</div>' +
+                '</div>' +
+                '<div id="popup-btn">' + '<a href="../Location_search/location_search.html"><button>Map View</button></a>' + '</div>' +
+
+            '</div>';
+            
+
+            //Attach click event to the marker.
+            (function (marker, data) {
+                google.maps.event.addListener(marker, "click", function (e) {
+                    //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                    infoWindow.setContent(contentString);
+                    infoWindow.open(map, marker);
+                });
+            })(marker, data);
+
+            //now fit the map to the newly inclusive bounds
+            google.maps.event.addListenerOnce(map, 'idle', function() {
+            map.fitBounds(bounds);
+        });
+        }
+        
+    }
+</script>
+<div id="dvMap">
+</div>
+</body>
 </html>
