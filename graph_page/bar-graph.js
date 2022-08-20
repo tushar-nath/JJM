@@ -1,8 +1,8 @@
-var userDataA5 = [], userDataB5 = [];
-var dataA5, dataB5;
+var barUserDataA_1 = [], barUserDataB_1 = [];
+var barDataA_1, barDataB_1;
 
 async function dummyChart() {
-	await getDummyData5();
+	await getDummyBarData_1();
 
 	const ctx = document.getElementById("myChart-2").getContext("2d");
 
@@ -12,15 +12,15 @@ async function dummyChart() {
 
 		// The data for our dataset
 		data: {
-			labels: userDataA5,
+			labels: barUserDataA_1,
 			datasets: [
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "rgba(0, 255, 0, 1)",
-      				borderColor: "rgba(0, 255, 0, 1)",
+      				backgroundColor: "#FFA500",
+      				borderColor: "#FFA500",
 					borderWidth: 1,
-					data: userDataB5,
+					data: barUserDataB_1,
 				}
 			],
 		},
@@ -50,15 +50,15 @@ async function dummyChart() {
 		},
 	});
 	setInterval(() => {
-		getDummyData5()
-		userDataA5.push(dataA5.pop());
-		userDataB5.push(dataB5.pop());
-		if (userDataB5.length > 30) {
-			userDataA5.shift();
-			userDataB5.shift();
+		getDummyBarData_1()
+		barUserDataA_1.push(barDataA_1.pop());
+		barUserDataB_1.push(barDataB_1.pop());
+		if (barUserDataB_1.length > 10) {
+			barUserDataA_1.shift();
+			barUserDataB_1.shift();
 		}
-		console.log(userDataA5);
-		console.log(userDataB5);
+		console.log(barUserDataA_1);
+		console.log(barUserDataB_1);
 		chart.update();
 	} , 30000);
 }
@@ -67,30 +67,31 @@ dummyChart();
 
 //Fetch Data from API
 
-async function getDummyData5() {
+async function getDummyBarData_1() {
 	try {
-		const timeInterval5 = sessionStorage.getItem("timeinterval5") || "30";
-		console.log(timeInterval5);
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
-		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=${timeInterval5}`;
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=3600`;
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
 		
 
-		dataA5 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+		barDataA_1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	dataB5 = barChatData.data.map((x) => x.y);
+    	barDataB_1 = barChatData.data.map((x) => x.y);
 
-		if (userDataA5.length == 0 && userDataB5.length == 0) {
-			userDataA5 = dataA5;
-			userDataB5 = dataB5;
+		if (barUserDataA_1.length == 0 && barUserDataB_1.length == 0) {
+			barUserDataA_1 = barDataA_1;
+			barUserDataB_1 = barDataB_1;
 		}
+
+		console.log(barDataA_1);
+		console.log(barDataB_1);
 	}
 	catch(err) {
 		alert("No data available for Graph 2");
-		userDataA5 = [1,2,3,4,5];
-		userDataB5 = [10,30,20,11,12];
+		barUserDataA_1 = [1,2,3,4,5];
+		barUserDataB_1 = [10,30,20,11,12];
 	}
 }
 
