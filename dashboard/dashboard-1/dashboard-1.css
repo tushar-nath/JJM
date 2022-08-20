@@ -1,0 +1,117 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* navbar css starts here */
+.navbar {
+    background-color: #0a68ff;
+    width: 100%;
+}
+
+.logo {
+    display: flex !important;
+    width: 100%;
+    display: table;
+    padding: 1%;
+    margin-bottom: 2%;
+}
+
+.logo-img {
+    margin-right: 2rem;
+    height: 50px;
+    width: 50px;
+}
+
+.logo-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#img-2 {
+    padding-left: 0% !important;
+}
+/* navbar css ends here */
+
+/* footer css starts here */
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: grid;
+}
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+/* footer css ends here */
+
+.dashboard-content {
+    display: flex;
+    padding: 6%;
+    margin: auto;
+    width: 50%;
+}
+
+.left-panel {
+    padding: 5%;
+}
+
+.right-panel {
+    padding: 5%;
+}
+
+.center-panel {
+    width: 100%;
+    background-color: #EBF6F8;
+    border-radius: 20px;
+    z-index: 0;
+}
+
+#total {
+    font-size: 60px;   
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 105px;
+    letter-spacing: 0em;
+}
+
+#upcoming {
+    font-size: 60px;   
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 105px;
+    letter-spacing: 0em;
+}
+
+#iot {
+    font-size: 60px;   
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 105px;
+    letter-spacing: 0em;
+}
+
+#active {
+    font-size: 60px;   
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 105px;
+    letter-spacing: 0em;
+}
+
+.dashboard-content p {
+    white-space: nowrap;
+}
+
+.center-circle {
+    border-radius: 100%;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    display: inline-block;
+    background-color: #6B53FD;
+}
