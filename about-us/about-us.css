@@ -1,5 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Lato&600family=Poppins:wght&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@700&display=swap');
+
 
 html, body {
     height: 100%;
@@ -38,19 +40,7 @@ html, body {
 }
 /* navbar css ends here */
 
-/* footer css starts here */
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: grid;
-}
-.center-fit {
-    max-width: 100%;
-    max-height: 100vh;
-    margin: auto;
-}
-/* footer css ends here */
+
 
 .container {
     width: 100%;
@@ -179,7 +169,6 @@ h2{
 
 /* 4th Slide Ends */
 
-  
   /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
@@ -206,3 +195,55 @@ h2{
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
 }
+
+/* Slides ends here */
+
+
+
+h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.section-1{
+    font-family: Poppins;
+    padding: 4% 5% 4% 5%;
+}
+
+
+.btn-section1{
+    width: 191.59px;
+    height: 54.34px;
+    border-radius: 50px;
+    color: white;
+    background-color: orange;
+    border: none;
+
+}
+.btn-section1:hover{
+cursor: pointer;
+}
+
+.vision{
+     font-family: Poppins;
+     padding: 4% 5% 7% 5%;
+}
+.objectives{
+    font-family: Poppins;
+    padding: 4% 5% 15% 5%;
+}
+
+
+/* footer css starts here */
+.footer {
+   
+    bottom: 0;
+    left: 0;
+    display: grid;
+}
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+/* footer css ends here */
