@@ -1,6 +1,7 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Lato&600family=Poppins:wght&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@300&display=swap');
 
 
 html, body {
@@ -77,6 +78,7 @@ html, body {
     letter-spacing: 0em;
     text-align: center;
     white-space: nowrap;
+    font-weight: 600;
 }
 
 .banner-img {
@@ -124,18 +126,28 @@ p{
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 200;
 }
 .col-3{
     color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 200;
+}
+.heading{
+    font-size: 35px;
+    font-weight: 600;
 }
 
-h2{
-    font-size: 30px;
-    font-weight: 700;
+.col-1{
+    padding-top: 4%;
+}
+.upper-row{
+    padding-bottom: 2%;
+}
+
+.col-3{
+    padding-top: 4%;
 }
 
 /* Second slide ends here */
@@ -165,6 +177,7 @@ h2{
     letter-spacing: 0em;
     text-align: center;
     white-space: nowrap;
+    font-weight: 600;
 }
 
 /* 4th Slide Ends */
@@ -209,6 +222,9 @@ h2{
     font-family: Poppins;
     padding: 4% 5% 4% 5%;
 }
+.section-1-desc{
+    font-weight: 600;
+}
 
 
 .btn-section1{
@@ -228,11 +244,19 @@ cursor: pointer;
      font-family: Poppins;
      padding: 4% 5% 7% 5%;
 }
+
+.vision-desc{
+    font-weight: 600;
+}
+
 .objectives{
     font-family: Poppins;
     padding: 4% 5% 15% 5%;
 }
 
+.objective-desc{
+    font-weight: 600;
+}
 
 /* footer css starts here */
 .footer {
