@@ -49,7 +49,7 @@ async function dummyChart() {
 			},
 		},
 	});
-	setInterval(() => {
+	function updateChart() {
 		getDummyBarData_1()
 		barUserDataA_1.push(barDataA_1.pop());
 		barUserDataB_1.push(barDataB_1.pop());
@@ -60,7 +60,8 @@ async function dummyChart() {
 		console.log(barUserDataA_1);
 		console.log(barUserDataB_1);
 		chart.update();
-	} , 30000);
+		setTimeout(updateChart, 30000);
+	} 
 }
 
 dummyChart();
@@ -93,6 +94,7 @@ async function getDummyBarData_1() {
 		console.log("barDataA_1",barDataB_1);
 	}
 	catch(err) {
+		console.log(err);
 		alert("No data available for Graph 2");
 		barUserDataA_1 = [1,2,3,4,5];
 		barUserDataB_1 = [10,30,20,11,12];
@@ -100,4 +102,4 @@ async function getDummyBarData_1() {
 }
 
 
-// window.setInterval(getDummyData(), 30000);
+// window.setInterval(getDummyData()

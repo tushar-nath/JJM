@@ -49,7 +49,7 @@ async function dummyChart() {
 			},
 		},
 	});
-	setInterval(() => {
+	function updateChart() {
 		getDummyBarData_5()
 		barUserDataA_5.push(barDataA_5.pop());
 		barUserDataB_5.push(barDataB_5.pop());
@@ -60,7 +60,8 @@ async function dummyChart() {
 		console.log(barUserDataA_5);
 		console.log(barUserDataB_5);
 		chart.update();
-	} , 30000);
+		setTimeout(updateChart, 30000);
+	} 
 }
 
 dummyChart();
@@ -100,4 +101,4 @@ async function getDummyBarData_5() {
 }
 
 
-// window.setInterval(getDummyData(), 30000);
+// window.setInterval(getDummyData()

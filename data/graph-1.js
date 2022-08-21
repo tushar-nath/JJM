@@ -50,27 +50,15 @@ async function dummyChart() {
 			},
 		},
 	});
-	// setInterval(() => {
-	// 	getDummyData1();
-	// 	userDataA1.push(dataA1.pop());
-	// 	userDataB1.push(dataB1.pop());
-	// 	if (userDataB1.length > 30) {
-	// 		userDataA1.shift();
-	// 		userDataB1.shift();
-	// 	}
-	// 	console.log(userDataA1);
-	// 	chart.update();
-	// } , 30000);
-
 	function updateChart() {
 		getDummyData1()
-		userDataA4.push(dataA4.pop());
-		userDataB4.push(dataB4.pop());
-		if (userDataB4.length > 30) {
-			userDataA4.shift();
-			userDataB4.shift();
+		userDataA1.push(dataA4.pop());
+		userDataB1.push(dataB4.pop());
+		if (userDataB1.length > 30) {
+			userDataA1.shift();
+			userDataB1.shift();
 		}
-		console.log(userDataA4);
+		console.log(userDataA1);
 		chart.update();
 		setTimeout(updateChart, 30000);
 	}

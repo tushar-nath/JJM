@@ -49,7 +49,7 @@ async function dummyChart() {
 			},
 		},
 	});
-	setInterval(() => {
+	function updateChart() {
 		getDummyHourData_3()
 		hourUserDataA_3.push(hourDataA_3.pop());
 		hourUserDataB_3.push(hourDataB_3.pop());
@@ -60,7 +60,8 @@ async function dummyChart() {
 		console.log(hourUserDataA_3);
 		console.log(hourUserDataB_3);
 		chart.update();
-	} , 30000);
+		setTimeout(updateChart, 30000);
+	} 
 }
 
 dummyChart();
@@ -93,4 +94,4 @@ async function getDummyHourData_3() {
 }
 
 
-// window.setInterval(getDummyData(), 30000);
+// window.setInterval(getDummyData()
