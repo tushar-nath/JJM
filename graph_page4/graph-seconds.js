@@ -1,26 +1,26 @@
-var barUserDataA_1 = [], barUserDataB_1 = [];
-var barDataA_1, barDataB_1;
+var secUserDataA_4 = [], secUserDataB_4 = [];
+var secDataA_4, secDataB_4;
 
 async function dummyChart() {
-	await getDummyBarData_1();
+	await getDummySecData_4();
 
-	const ctx = document.getElementById("myChart-2").getContext("2d");
+	const ctx = document.getElementById("myChart-3").getContext("2d");
 
 	const chart = new Chart(ctx, {
 		// The type of chart we want to create
-		type: "bar",
+		type: "line",
 
 		// The data for our dataset
 		data: {
-			labels: barUserDataA_1,
+			labels: secUserDataA_4,
 			datasets: [
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "#FFA500",
-      				borderColor: "#FFA500",
+      				backgroundColor: "rgba(0, 0, 255, 1)",
+      				borderColor: "rgba(0, 0, 255, 1)",
 					borderWidth: 1,
-					data: barUserDataB_1,
+					data: secUserDataB_4,
 				}
 			],
 		},
@@ -50,15 +50,15 @@ async function dummyChart() {
 		},
 	});
 	setInterval(() => {
-		getDummyBarData_1()
-		barUserDataA_1.push(barDataA_1.pop());
-		barUserDataB_1.push(barDataB_1.pop());
-		if (barUserDataB_1.length > 10) {
-			barUserDataA_1.shift();
-			barUserDataB_1.shift();
+		getDummySecData_4()
+		secUserDataA_4.push(secDataA_4.pop());
+		secUserDataB_4.push(secDataB_4.pop());
+		if (secUserDataB_4.length > 30) {
+			secUserDataA_4.shift();
+			secUserDataB_4.shift();
 		}
-		console.log(barUserDataA_1);
-		console.log(barUserDataB_1);
+		console.log(secUserDataA_4);
+		console.log(secUserDataB_4);
 		chart.update();
 	} , 30000);
 }
@@ -67,7 +67,7 @@ dummyChart();
 
 //Fetch Data from API
 
-async function getDummyBarData_1() {
+async function getDummySecData_4() {
 	try {
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
 		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=30`;
@@ -76,26 +76,19 @@ async function getDummyBarData_1() {
 		const barChatData = await response.json();
 		
 
-		barDataA_1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+		secDataA_4 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	barDataB_1 = barChatData.data.map((x) => x.y);
+    	secDataB_4 = barChatData.data.map((x) => x.y);
 
-		if (barUserDataA_1.length == 0 && barUserDataB_1.length == 0) {
-			barUserDataA_1 = barDataA_1;
-			barUserDataB_1 = barDataB_1;
+		if (secUserDataA_4.length == 0 && secUserDataB_4.length == 0) {
+			secUserDataA_4 = secDataA_4;
+			secUserDataB_4 = secDataB_4;
 		}
-		while(barDataA_1.length > 10 || barDataB_1.length > 10) {
-			barDataA_1.shift();
-			barDataB_1.shift();
-		}
-		
-		console.log("barDataA_1",barDataA_1);
-		console.log("barDataA_1",barDataB_1);
 	}
 	catch(err) {
 		alert("No data available for Graph 2");
-		barUserDataA_1 = [1,2,3,4,5];
-		barUserDataB_1 = [10,30,20,11,12];
+		secUserDataA_4 = [1,2,3,4,5];
+		secUserDataB_4 = [0,0,0,0,0];
 	}
 }
 
