@@ -36,8 +36,41 @@
         </div>
         <div class="center-panel">
             <div class="center-circle">
-                <!-- <h1>hello world</h1> -->
+
+            <svg id="arrow-up" onclick="scrollUpButton()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+            </svg>
+
+            <ul class="ul-class">
+            <li class="items">
+                <a style="text-decoration: none; color: white;" href="../dashboard-2/dashboard-2.html">Nagaon</a>
+            </li>
+            <li>
+                <a style="text-decoration: none; color: white;" href="../dashboard-2/dashboard-2.html">Kaliabor</a>
+            </li>
+            <li class="active items">
+                <a style="text-decoration: none; color: white;" href="../dashboard-2/dashboard-2.html">Tezpur</a>
+            </li>
+            <li class="items">
+                <a style="text-decoration: none; color: white;" href="../dashboard-2/dashboard-2.html">Dhekiajuli</a>
+            </li>
+            <li class="items">
+                <a style="text-decoration: none; color: white;" href="../dashboard-2/dashboard-2.html">Balipara</a>
+            </li>
+            <li class="items">
+                <a style="text-decoration: none; color: white;" href="../dashboard-2/dashboard-2.html">Sootea</a>
+            </li>
+            <li class="items">
+                <a style="text-decoration: none; color: white;" href="../dashboard-2/dashboard-2.html">Amoni</a>
+            </li>
+            </ul>
+            
+            <svg id="arrow-down" onclick="scrollDownButton()" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+            </svg>
+
             </div>
+            
         </div>
         <div class="right-panel">
             <div class="lp-upper">
@@ -50,7 +83,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="footer">
         <img class="center-fit" src="../../images/dashboard/dashboard-footer-img.png">
     </div>
@@ -59,12 +92,14 @@
         fetch("dashboard-1-details.json")
             .then(response => response.json())
             .then(data => {
-                document.querySelector("#total").innerText = data.total
-                document.querySelector("#upcoming").innerText = data.upcoming
-                document.querySelector("#iot").innerText = data.iot
-                document.querySelector("#active").innerText = data.active
+                for (let i = 0; i < data.length; i++) {
+                    document.querySelector("#total").innerText = data[i].total
+                    document.querySelector("#upcoming").innerText = data[i].upcoming
+                    document.querySelector("#iot").innerText = data[i].iot
+                    document.querySelector("#active").innerText = data[i].active
+                }
             })
     </script>
-
+    <script src="container.js"></script>
 </body>
 </html>
