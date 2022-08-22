@@ -83,7 +83,8 @@
                 google.maps.event.addListener(marker, "click", function (e) {
                     //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
                     infoWindow.setContent(contentString);
-                    infoWindow.open(map, marker);
+                    infoWindow.open(map, marker); 
+                    sessionStorage.cityId = data.id;
                 });
             })(marker, data);
 
