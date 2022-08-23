@@ -1,5 +1,6 @@
 var markers = [
     {
+        "id": "1",
         "title": 'Dhekiajuli',
         "lat": '26.6985',
         "lng": '92.4851',
@@ -9,6 +10,7 @@ var markers = [
         "upcoming": '237'
     },
     {
+        "id": "2",
         "title": 'Bihaguri',
         "lat": '26.6744',
         "lng": '92.6810',
@@ -18,6 +20,7 @@ var markers = [
         "upcoming": '237'
     },
     {
+        "id": "3",
         "title": 'Tezpur',
         "lat": '26.6528',
         "lng": '92.7926',
@@ -27,6 +30,7 @@ var markers = [
         "upcoming": '237'
     },
     {
+        "id": "4",
         "title": 'Chutia',
         "lat": '26.7347',
         "lng": '93.0463',

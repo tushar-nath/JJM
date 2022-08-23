@@ -69,6 +69,9 @@
         };
         var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
 
+        const cityId = sessionStorage.getItem("cityId") || "0";
+	    var markers = city[cityId];
+
         //Create and open InfoWindow.
         var infoWindow = new google.maps.InfoWindow();
 
