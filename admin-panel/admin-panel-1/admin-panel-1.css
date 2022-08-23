@@ -14,7 +14,7 @@ body {
 /* BACKGROUND */
 
 .bg{
-    background-image: url(../../images/minister-panel/bg-1.png);
+    background-image: url(../../images/admin-panel/admin-bg.png);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
@@ -27,8 +27,8 @@ body {
 .ministers{
     position: relative;
     width: 450px;
-    top: 35%;
-    left: 40%;
+    top: 45%;
+    left: 48%;
 
 }
 
@@ -47,6 +47,7 @@ body {
     top: 20%;
     left: 10%;
     border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 p{

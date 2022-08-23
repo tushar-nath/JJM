@@ -6,7 +6,7 @@
 		<meta name="viewport" ,content="width=device-width", initial-scale="1.0" />
 
 
-		<link rel="stylesheet" href="minister-panel-1.css" />
+		<link rel="stylesheet" href="admin-panel-1.css" />
 		<title>Document</title>
 	</head>
 	<body>
@@ -14,18 +14,24 @@
 
         <div class="bg">
             <div class="ministers">
-                <img src="../../images/minister-panel/minister.png" width="920px">
+                <img src="../../images/admin-panel/ministers.png" width="800px">
             </div>           
         </div>
 
-        <div class="login-form">
-             <form name="form1" action="#" onsubmit="required()">
+
+		<div class="login-form">
+             <form name="form" action="#" onsubmit="required()">
     
-                <p>Panel Area</p>
+                <p>Admin Area</p>
                 <div class="input">
-                    <input id="credential" type="text" placeholder="Enter your password" name="uname"  required >
+                    <input id="credential" type="text" placeholder="Enter your district name" name="uname"  required >
                     
                 </div>
+
+                <div class="input">
+                    <input id="credential" type="text" placeholder="Enter your JJM center location" name="uname"  required >
+                    
+                </div>				
                 <div class="checkbox">
                     <label>
                         <input type="checkbox" checked="checked" name="remember"> Keep me logged in
@@ -40,10 +46,8 @@
     
             </form>
         </div>
+        
 
-
-
-
-     <script src="./minister-panel.js"></script>     
+     <script src="admin-panel-1.js"></script>     
 	</body>
 </html>
