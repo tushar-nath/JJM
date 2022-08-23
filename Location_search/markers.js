@@ -7,7 +7,8 @@ var city = {
             "total": "1500",
             "date": "17/08/2022",
             "ph": "7.56",
-            "lpcd": "4.5"
+            "lpcd": "4.5",
+            "query": [1,2,3]
         },
         {
             "title": "Bihaguri",
