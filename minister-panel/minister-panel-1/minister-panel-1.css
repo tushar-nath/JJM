@@ -66,9 +66,8 @@ p{
 ::placeholder {
   font-family: 'DM Mono', monospace;
   color: #ABC9ED;
-
   font-size: 18px;
-  opacity: 1;
+ 
 }
 
 input[type=text], select {
