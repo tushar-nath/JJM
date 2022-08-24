@@ -20,44 +20,7 @@
 <body>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&sensor=false&callback=initialize"></script>
     <script type="text/javascript">
-    var markers = [
-    {
-        "title": 'Dhekiajuli',
-        "lat": '26.6985',
-        "lng": '92.4851',
-        "total": '1500',
-        "active": '1250',
-        "iot": '1000',
-        "upcoming": '237'
-    },
-    {
-        "title": 'Bihaguri',
-        "lat": '26.6744',
-        "lng": '92.6810',
-        "total": '1500',
-        "active": '1250',
-        "iot": '1000',
-        "upcoming": '237'
-    },
-    {
-        "title": 'Tezpur',
-        "lat": '26.6528',
-        "lng": '92.7926',
-        "total": '1500',
-        "active": '1250',
-        "iot": '1000',
-        "upcoming": '237'
-    },
-    {
-        "title": 'Chutia',
-        "lat": '26.7347',
-        "lng": '93.0463',
-        "total": '1500',
-        "active": '1250',
-        "iot": '1000',
-        "upcoming": '237'
-    }
-    ];
+    
     window.onload = function () {
         LoadMap();
     }
@@ -120,7 +83,8 @@
                 google.maps.event.addListener(marker, "click", function (e) {
                     //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
                     infoWindow.setContent(contentString);
-                    infoWindow.open(map, marker);
+                    infoWindow.open(map, marker); 
+                    sessionStorage.cityId = data.id;
                 });
             })(marker, data);
 
@@ -134,5 +98,7 @@
 </script>
 <div id="dvMap">
 </div>
+<script src="./data.js"></script>
+<script src="./city.js"></script>
 </body>
 </html>
