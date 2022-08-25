@@ -171,3 +171,13 @@ li {
     position: relative;
     bottom: 17px;
 }
+
+#arrow-up:hover {
+    transform: scale(2);
+    cursor: pointer;
+}
+
+#arrow-down:hover {
+    transform: scale(2);
+    cursor: pointer;
+}
