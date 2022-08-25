@@ -29,10 +29,12 @@ body{
 
 .graphs_container{
     display : grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     width: 80%;
     padding: 0px 5%;
-    height: calc(80% - 70px);
+    height: 80%;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .graphs_container .graph_card{
