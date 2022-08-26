@@ -1,92 +1,111 @@
-body{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: space-evenly;
+body {
     background-image: url('../images/starting-page/new-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0%;
     padding: 0%;
 }
-.top_bar{
+
+.graph-page {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    row-gap: 20px;
+    margin-bottom: 2%;
+}
+
+.top_bar {
     display: flex;
     flex-direction: row;
-    width: fit-content;
-    height: 70px;
-}
-
-.top_bar img{
-    width: auto;
-    height: 36px;
-    margin: 4px 20px;
-}
-
-
-/* .test{
-} */
-
-.graphs_container{
-    position: relative;
-    left: 5%;
-    display : grid;
-    grid-template-columns: 50% 50%;
-    width: 80%;
-    padding: 0px 5%;
-    height: 80%;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
-
-.graphs_container .graph_card{
-    background-color: #eee;
-    margin-left: 6px;
-    margin-right: 6px;
-    margin-top: 6px;
-    margin-bottom: 6px;
-    border-radius: 4px;
-    padding: 10px;
-    box-shadow: 0px 0px 6px #888;
-}
-
-.graphs_container .graph_card:hover{
-    box-shadow: 0px 1px 6px #666;
-}
-
-.top_container_graph{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    width: 87%;
-    padding: 0px 10%;
+    justify-content: center;
+    width: 350px;
+    height: max-content;
+    column-gap: 30px;
+}
+
+.top_bar img {
+    width: 15%;
+    height: max-content;
+}
+
+.graphs {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.graph-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: max-content;
+    column-gap: 30px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.graph-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 45%;
+    height: max-content;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #eee;
+    padding: 1.5%;
+    row-gap: 20px;
+}
+
+.top_container_graph {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
 }
 
 .top-container-graph-info {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     align-items: center;
-    width: 60%;
-    padding: 0px 2%;
+    justify-content: center;
+    width: 80%;
+}
+
+.top-container-graph-info p,
+.top-container-graph-info li
+{
     font-size: 12px;
 }
 
-.interval_indicator{
-font-size: small;
-border: 1px solid #ccc;
-padding: 5px 20px;
-border-radius: 4px;
-}
-
-.graphy_1{
+.graphy_1 {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 300px;
-    margin: auto;   
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+}
+
+.interval_indicator {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.lc-image {
+    width: 100%;
+    height: max-content;
 }
 
 .btn {
@@ -113,22 +132,27 @@ border-radius: 4px;
     box-shadow: 5px -5px 0px 2px rgba(12,100,52);
 }
 
-.btn-next {
-    right: 3%;
-    bottom: 5%;
-    position: absolute;
+.graphs-button {
+    margin: 10px;
 }
 
-.btn-back {
-    position: absolute;
-    left: 3%;
-    bottom: 5%;
-}
-
-@media screen and (max-width: 768px){
-    .graphs_container{
+@media screen and (max-width: 991px) {
+    .graphs{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
     }
-    
+
+    .graph-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        flex-wrap: nowrap;
+    }
+
+    .graph-card {
+        width: 100%
+    }
 }

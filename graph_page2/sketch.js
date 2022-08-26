@@ -1,3 +1,10 @@
+var randomVariable2 = 0
+setInterval(function() {
+    randomVariable2 = Math.floor(Math.random() * 12 + 1);
+    console.log(randomVariable2);
+} , 1000);
+
+
 let x = 3.14 / 14;
 let ph_colors = ['#ff0000','#FF2626','#FF5656' ,'#FF914C', '#FFBD58' , '#FFDE59' , '#C9E264' , '#008805' , '#02979E' , '#02669E' , '#1C6EDB' , '#8041A8' , '#9F21EF' , '#4F00FF'];
 function setup() {
@@ -22,7 +29,7 @@ function draw() {
   fill(255)
   arc(width/2 , (height/1.25) , 90 , 90 , 3.14 , 6.28);
   fill(0)
-  createPointer(10);
+  createPointer(randomVariable2);
   noStroke()
   text("PH SCALE" , (width-65)/2 , (height/1.05));
 }

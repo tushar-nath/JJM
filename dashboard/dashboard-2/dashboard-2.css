@@ -125,7 +125,7 @@ html, body {
 .box-header-key {
     white-space: nowrap;
     font-family: DM Sans;
-    font-size: 28px;
+    font-size: 2vw;
     font-weight: 500;
     width: 90%;
 }
@@ -133,11 +133,96 @@ html, body {
 .box-header-value {
     color: red;
     font-family: DM Sans;
-    font-size: 18px;
+    font-size: 1.5vw;
     font-weight: 500;
     width: 10%;
 }
 
 .box-button {
     margin-left: 95%;
+}
+
+@media screen and (min-width: 768px) {
+    .btn-row {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        height: 70vh;
+        overflow: scroll;
+    }
+
+    .box-row {
+        display: flex;
+        flex-direction: column;
+        margin: 3%;
+        font-size: 18px;
+        row-gap: 10px;
+    }
+
+    .box-header-key {
+        font-size: 20px;
+    }
+
+    .box-header-value {
+        font-size: 18px;
+    }
+
+    .left-box {
+        width: 100%;
+        border-radius: 10px;
+        height: max-content;
+    }
+
+    .right-box {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .box-para {
+        width: 80%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .box-button {
+        margin-left: 90%;
+    }
+
+    .btn-row {
+        position: relative;
+        left: 10%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 50px;
+        width: 80%;
+    }
+
+    .btn {
+        width: 100px;
+        height: 30px;
+        background-color: white;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        font-size: 12px;
+        color: #0A68FF;
+        text-align: left;
+        padding-left: 1%;
+        box-shadow: 5px -5px 0px 2px rgba(10,104,255,1);
+        border: 1px solid #0A68FF;
+    }
+    
+    
+    .btn:hover {
+        cursor: pointer;
+        color: rgba(12,100,52);
+        box-shadow: 5px -5px 0px 2px rgba(12,100,52);
+    }
 }
