@@ -1,10 +1,8 @@
 // Create a random variable
-var randomVariable
+var randomVariable = 1
 setInterval(function() {
-    randomVariable = Math.floor(Math.random() * 14 + 1);
-    console.log(randomVariable);
+    randomVariable = Math.floor(Math.random() * 12 + 1);
 } , 1000);
-
 
 
 let x = 3.14 / 14;

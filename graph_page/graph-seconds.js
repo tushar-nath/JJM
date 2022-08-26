@@ -40,11 +40,11 @@ async function dummyChart() {
 					},
 				}],
 				yAxes: [{
-				ticks: { min: 0},
-				scaleLabel: {
-					display: true,
-					labelString: 'Y-AXIS'
-				  }
+					ticks: { min: 0},
+					scaleLabel: {
+						display: true,
+						labelString: 'Y-AXIS'
+					}
 				}], 
 			},
 		},
@@ -62,6 +62,8 @@ async function dummyChart() {
 		chart.update();
 		setTimeout(updateChart, 30000);
 	} 
+
+	updateChart();
 }
 
 dummyChart();
@@ -80,6 +82,9 @@ async function getDummySecData_1() {
 		secDataA_1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
     	secDataB_1 = barChatData.data.map((x) => x.y);
+		secDataA_1 = secDataA_1.slice(0, 21);
+		console.log(secDataA_1);
+		console.log(secDataB_1);
 
 		if (secUserDataA_1.length == 0 && secUserDataB_1.length == 0) {
 			secUserDataA_1 = secDataA_1;
