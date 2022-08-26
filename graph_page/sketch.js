@@ -1,8 +1,34 @@
+var sketchUserDataA_1 = [], sketchUserDataB_1 = [];
+var sketchDataA_1 = 0, sketchDataB_1 = 0;
+var sketchUserDataB_1 = 1
+
+async function getDummySketchData_1() {
+	try {
+		const sensorId = sessionStorage.getItem("sensorId") || "1";
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=60`;
+
+		const response = await fetch(apiUrl);
+		const barChatData = await response.json();
+		
+
+		sketchDataA_1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+    sketchDataB_1 = barChatData.data.map((x) => x.y);
+		sketchUserDataB_1 = Math.floor(sketchDataB_1.pop());
+    // console.log("This is B: " + sketchUserDataB_1);
+	}
+	catch(err) {
+		// alert("No data available for Graph 2");
+		sketchUserDataA_1 = [1,2,3,4,5];
+		sketchUserDataB_1 = [0,0,0,0,0];
+	}
+}
+
+getDummySketchData_1();
+
 // Create a random variable
-var randomVariable = 1
 setInterval(function() {
-    randomVariable = Math.floor(Math.random() * 12 + 1);
-} , 1000);
+    getDummySketchData_1();
+} , 13000);
 
 
 let x = 3.14 / 14;
@@ -29,9 +55,10 @@ function draw() {
   fill(255)
   arc(width / 2, (height / 1.25), 90, 90, 3.14, 6.28);
   fill(0)
-  createPointer(randomVariable);
+  createPointer(sketchUserDataB_1);
+  console.log("This is B: " + sketchUserDataB_1);
   noStroke()
-  text("PH SCALE", (width - 65) / 2, (height / 1.05));
+  text("PH SCALE: " + sketchUserDataB_1, (width - 65) / 2, (height / 1.05));
 }
 
 function createPointer(val) {

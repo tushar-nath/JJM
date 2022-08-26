@@ -60,8 +60,10 @@ async function dummyChart() {
 		console.log(hourUserDataA_2);
 		console.log(hourUserDataB_2);
 		chart.update();
-		setTimeout(updateChart, 30000);
+		setTimeout(updateChart, 600000);
 	} 
+
+	updateChart();
 }
 
 dummyChart();
@@ -80,6 +82,9 @@ async function getDummyHourData_2() {
 		hourDataA_2 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
     	hourDataB_2 = barChatData.data.map((x) => x.y);
+
+		hourDataA_2 = hourDataA_2.slice(0, 21);
+		hourDataB_2 = hourDataB_2.slice(0, 21);
 
 		if (hourUserDataA_2.length == 0 && hourUserDataB_2.length == 0) {
 			hourUserDataA_2 = hourDataA_2;
