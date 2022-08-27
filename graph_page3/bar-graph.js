@@ -1,5 +1,5 @@
 var barUserDataA_3 = [], barUserDataB_3 = [];
-var barDataA_3, barDataB_3;
+var barDataA_3, barDataB_3, barDataDay_3, barDataDate_3;
 
 async function dummyChart() {
 	await getDummyBarData_3();
@@ -51,7 +51,7 @@ async function dummyChart() {
 	});
 	function updateChart() {
 		getDummyBarData_3()
-		barUserDataA_3.push(barDataA_3.pop());
+		barUserDataA_3.push(barDataDay_3.pop());
 		barUserDataB_3.push(barDataB_3.pop());
 		if (barUserDataB_3.length > 10) {
 			barUserDataA_3.shift();
@@ -77,22 +77,25 @@ async function getDummyBarData_3() {
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
-		
+
+		const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
 		barDataA_3 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+		barDataDate_3 = barChatData.data.map((x) => (x.time).slice(0, 9));
+		barDataDay_3 = barChatData.data.map((x) => weekday[(new Date(x.time)).getDay()]);
 
     	barDataB_3 = barChatData.data.map((x) => x.y);
 
 		if (barUserDataA_3.length == 0 && barUserDataB_3.length == 0) {
-			barUserDataA_3 = barDataA_3;
+			barUserDataA_3 = barDataDay_3;
 			barUserDataB_3 = barDataB_3;
 		}
-		while(barDataA_3.length > 10 || barDataB_3.length > 10) {
-			barDataA_3.shift();
+		while(barDataDay_3.length > 10 || barDataB_3.length > 10) {
+			barDataDay_3.shift();
 			barDataB_3.shift();
 		}
 		
-		console.log("barDataA_3",barDataA_3);
+		console.log("barDataDay_3",barDataDay_3);
 		console.log("barDataA_3",barDataB_3);
 	}
 	catch(err) {
