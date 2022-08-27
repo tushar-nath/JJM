@@ -3,6 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    
 }
 
 /* navbar css starts here */
@@ -16,7 +17,7 @@ html, body {
     width: 100%;
     display: table;
     padding: 1%;
-    margin-bottom: 2%;
+    margin-bottom: 0.5%;
 }
 
 .logo-img {
@@ -51,7 +52,7 @@ html, body {
 
 .dashboard-content {
     display: flex;
-    padding: 2%;
+    padding: 0.5% 2% 0.5% 2%;
     margin: auto;
     width: 80%;
     height: 500px;

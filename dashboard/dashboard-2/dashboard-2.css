@@ -74,7 +74,10 @@ html, body {
 }
 
 .map-container:hover {
-    background-color: #0A68FF;
+    /* background-color: #0A68FF; */
+    -ms-transform: scale(0.8); /* IE 9 */
+    -webkit-transform: scale(0.8); /* Safari 3-8 */
+    transform: scale(1.17); 
 }
 
 .map {
@@ -123,8 +126,10 @@ html, body {
 }
 
 .left-box:hover {
-    background-color: #0A68FF;
-    color: #fff;
+    -ms-transform: scale(0.8); /* IE 9 */
+    -webkit-transform: scale(0.8); /* Safari 3-8 */
+    transform: scale(1.17); 
+    
 }
 
 .right-box {
@@ -138,8 +143,10 @@ html, body {
 }
 
 .right-box:hover {
-    background-color: #0A68FF;
-    color: #fff;
+    -ms-transform: scale(0.8); /* IE 9 */
+    -webkit-transform: scale(0.8); /* Safari 3-8 */
+    transform: scale(1.17); 
+    
 }
 
 .box-header {

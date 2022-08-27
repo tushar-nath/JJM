@@ -122,6 +122,7 @@
             (function (marker, data) {
                 google.maps.event.addListener(marker, "click", function (e) {
                     //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                    console.log('mujhe ghar jana hein')
                     infoWindow.setContent(contentString);
                     infoWindow.open(map, marker);
                 });
