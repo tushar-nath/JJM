@@ -74,6 +74,7 @@ async function getDummySecData_2() {
 	try {
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
 		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=30`;
+		console.log(apiUrl);
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
@@ -82,8 +83,8 @@ async function getDummySecData_2() {
 		secDataA_2 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
     	secDataB_2 = barChatData.data.map((x) => x.y);
-		secDataA_2 = secDataA_1.slice(0, 21);
-		secDataB_2 = secDataB_1.slice(0, 21);
+		secDataA_2 = secDataA_2.slice(0, 21);
+		secDataB_2 = secDataB_2.slice(0, 21);
 
 		if (secUserDataA_2.length == 0 && secUserDataB_2.length == 0) {
 			secUserDataA_2 = secDataA_2;
