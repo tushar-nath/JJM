@@ -198,4 +198,8 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
+    .container__item a {
+        text-decoration: none;
+    }
 }
