@@ -172,6 +172,17 @@ li {
     bottom: 17px;
 }
 
+#arrow-up:hover {
+    transform: scale(2);
+    cursor: pointer;
+}
+
+#arrow-down:hover {
+    transform: scale(2);
+    cursor: pointer;
+} 	
+
+
 @media screen and (max-width: 991px) {
     .center-panel {
         width: 80vh;
