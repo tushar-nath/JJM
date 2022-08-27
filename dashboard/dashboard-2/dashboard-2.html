@@ -28,8 +28,7 @@
     </div>
 
     <div class="map-container">
-            <div class="map">
-                <div style="width: 100%"><iframe width="100%" height="342" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=342&amp;hl=en&amp;q=Tezpur+(My%20Business%20Name)&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe></div>
+            <div id="dvMap">
             </div>
             <div class="map-place">Select Place</div>
             <div class="drop">
@@ -165,20 +164,118 @@
         <img class="center-fit" src="../../images/dashboard/dashboard-footer-img.png">
     </div>
 
-    <script>
-        fetch("dashboard-2-details.json")
-            .then(response => response.json())
-            .then(data => {
-                document.querySelector("#total").innerText = data.total
-                document.querySelector("#active").innerText = data.active
-                document.querySelector("#household").innerText = data.household
-                document.querySelector("#upcoming").innerText = data.upcoming
-                document.querySelector("#current-ph").innerText = data.ph
-                document.querySelector("#residual-chlorine").innerText = data.chlorine
-                document.querySelector("#tds").innerText = data.tds
-                document.querySelector("#water-flow").innerText = data.flow
-            })
-    </script>
+    <script src="../../Location_search/markers.js"></script>
 
 </body>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&sensor=false&callback=initialize"></script>
+    <script type="text/javascript">
+    
+    window.onload = function () {
+        LoadMap();
+    }
+    function LoadMap() {
+        var bounds = new google.maps.LatLngBounds();
+        var mapOptions = {
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+
+        //Create and open InfoWindow.
+        var infoWindow = new google.maps.InfoWindow();
+
+        var markers = [
+            {
+                id: "1",
+                title: "Guwahati",
+                lat: "26.1158",
+                lng: "91.7086",
+                total: "1500",
+                active: "1250",
+                iot: "1000",
+                upcoming: "237",
+            },
+            {
+                id: "2",
+                title: "Nalbari",
+                lat: "26.4446",
+                lng: "91.4411",
+                total: "1500",
+                active: "1250",
+                iot: "1000",
+                upcoming: "237",
+            },
+            {
+                id: "3",
+                title: "Tezpur",
+                lat: "26.6528",
+                lng: "92.7926",
+                total: "1500",
+                active: "1250",
+                iot: "1000",
+                upcoming: "237",
+            },
+        ];
+
+        for (var i = 0; i < markers.length; i++) {
+            var data = markers[i];
+            var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+
+            //extend the bounds to include each marker's position
+            bounds.extend(myLatlng);
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                title: data.title
+            });
+
+            const contentString =
+            '<div id="popup">' +
+                '<div id="popup-header">' +
+                    '<div id="title">' + 'Tap Water Supply In Household' + '</div>' +
+                    '<div id="popup-place">' +
+                        '<div id="city">' + data.title + '</div>' +
+                        '<div id="state">' + '&nbspAssam' + '</div>' +
+                    '</div>' +
+                '</div>' +
+                '<div id="popup-img">' + '<img width="250px" src="../images/mini-map.png"/>' + '</div>' +
+                '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.total + '</div>' +
+                '</div>' +
+                '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total Active Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.active + '</div>' +
+                '</div>' +
+                '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total IOT Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.iot + '</div>' +
+                '</div>' +
+                '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Upcoming Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.upcoming + '</div>' +
+                '</div>' +
+                '<div id="popup-btn">' + '<a href="../Location_search/location_search.html"><button>Map View</button></a>' + '</div>' +
+
+            '</div>';
+            
+
+            //Attach click event to the marker.
+            (function (marker, data) {
+                google.maps.event.addListener(marker, "click", function (e) {
+                    //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                    infoWindow.setContent(contentString);
+                    infoWindow.open(map, marker); 
+                    sessionStorage.cityId = data.id;
+                });
+            })(marker, data);
+
+            //now fit the map to the newly inclusive bounds
+            google.maps.event.addListenerOnce(map, 'idle', function() {
+            map.fitBounds(bounds);
+        });
+        }
+        
+    }
+</script>
 </html>

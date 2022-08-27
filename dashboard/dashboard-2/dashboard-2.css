@@ -80,8 +80,9 @@ html, body {
     transform: scale(1.17); 
 }
 
-.map {
-    padding: 4% 6% 0% 6%;
+#dvMap {
+    width: 100%;
+    height: 300px;
 }
 
 .map-place {
