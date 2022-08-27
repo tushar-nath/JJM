@@ -48,7 +48,7 @@ function draw() {
     for(let i=2; i < 16 ; i++){
      let ang = map(i , 2 , 16 , 3.14 , 6.48);
       fill(0);
-     text(i-1 , (width-65)/2+108*cos(ang) , (height/1.25)+108*sin(ang));
+     text(i-1 , (width-10)/2+108*cos(ang) , (height/1.25)+108*sin(ang));
   }
  
   fill(255)
