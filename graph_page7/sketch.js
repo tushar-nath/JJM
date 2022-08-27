@@ -1,3 +1,35 @@
+var sketchUserDataA_7 = [], sketchUserDataB_7 = [];
+var sketchDataA_7 = 0, sketchDataB_7 = 0;
+var sketchUserDataB_7 = 1
+
+async function getDummySketchData_7() {
+	try {
+		const sensorId = sessionStorage.getItem("sensorId") || "1";
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=60`;
+
+		const response = await fetch(apiUrl);
+		const barChatData = await response.json();
+		
+
+		sketchDataA_7 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+    sketchDataB_7 = barChatData.data.map((x) => x.y);
+		sketchUserDataB_7 = Math.floor(sketchDataB_7.pop());
+    // console.log("This is B: " + sketchUserDataB_7);
+	}
+	catch(err) {
+		// alert("No data available for Graph 2");
+		sketchUserDataA_7 = [1,2,3,4,5];
+		sketchUserDataB_7 = [0,0,0,0,0];
+	}
+}
+
+getDummySketchData_7();
+
+// Create a random variable
+setInterval(function() {
+    getDummySketchData_7();
+} , 13000);
+
 let x = 3.14 / 14;
 let ph_colors = ['#ff0000','#FF2626','#FF5656' ,'#FF914C', '#FFBD58' , '#FFDE59' , '#C9E264' , '#008805' , '#02979E' , '#02669E' , '#1C6EDB' , '#8041A8' , '#9F21EF' , '#4F00FF'];
 function setup() {
@@ -22,7 +54,7 @@ function draw() {
   fill(255)
   arc(width/2 , (height/1.25) , 90 , 90 , 3.14 , 6.28);
   fill(0)
-  createPointer(10);
+  createPointer(sketchUserDataB_7);
   noStroke()
   text("PH SCALE" , (width-65)/2 , (height/1.05));
 }

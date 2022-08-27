@@ -2,7 +2,7 @@ var sketchUserDataA_2 = [], sketchUserDataB_2 = [];
 var sketchDataA_2 = 0, sketchDataB_2 = 0;
 var sketchUserDataB_2 = 1
 
-async function getDummySketchData_1() {
+async function getDummySketchData_2() {
 	try {
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
 		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=60`;
@@ -23,11 +23,11 @@ async function getDummySketchData_1() {
 	}
 }
 
-getDummySketchData_1();
+getDummySketchData_2();
 
 // Create a random variable
 setInterval(function() {
-    getDummySketchData_1();
+    getDummySketchData_2();
 } , 13000);
 
 
