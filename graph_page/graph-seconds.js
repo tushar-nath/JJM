@@ -83,6 +83,7 @@ async function getDummySecData_1() {
 
     	secDataB_1 = barChatData.data.map((x) => x.y);
 		secDataA_1 = secDataA_1.slice(0, 21);
+		secDataB_1 = secDataB_1.slice(0, 21);
 		console.log(secDataA_1);
 		console.log(secDataB_1);
 

@@ -62,6 +62,8 @@ async function dummyChart() {
 		chart.update();
 		setTimeout(updateChart, 30000);
 	} 
+
+	updateChart();
 }
 
 dummyChart();
@@ -80,6 +82,8 @@ async function getDummySecData_2() {
 		secDataA_2 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
     	secDataB_2 = barChatData.data.map((x) => x.y);
+		secDataA_2 = secDataA_1.slice(0, 21);
+		secDataB_2 = secDataB_1.slice(0, 21);
 
 		if (secUserDataA_2.length == 0 && secUserDataB_2.length == 0) {
 			secUserDataA_2 = secDataA_2;
