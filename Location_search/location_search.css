@@ -192,3 +192,29 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: absolute ;
     top: 70px;
 }
+
+@media screen and (max-width: 1250px) {
+    #container {
+        position: absolute;
+        top:60.7%;
+        left:12%;
+        width: 806px;
+        height: 290px;
+        background-color: white;
+        overflow-y: scroll;
+       
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    #container {
+        position: absolute;
+        top:60.7%;
+        left:6%;
+        width: 80%;
+        height: 290px;
+        background-color: white;
+        overflow-y: scroll;
+       
+    }
+}

@@ -1,5 +1,5 @@
 var barUserDataA_1 = [], barUserDataB_1 = [];
-var barDataDay_1, barDataB_1, barDataDay_1, barDataDate_1;
+var barDataA_1, barDataB_1, barDataDay_1, barDataDate_1;
 
 async function dummyChart() {
 	await getDummyBarData_1();
