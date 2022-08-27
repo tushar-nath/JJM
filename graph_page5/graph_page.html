@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,57 +10,106 @@
     <script src="../script/p5.js"></script>
     <title>Document</title>
 </head>
-<body class="test">
-    <div class="top_bar test">
-        <img src="../images/starting-page/logo-1.png" alt="logo" class="logo">
-        <img src="../images/starting-page/logo-5.png" alt="logo" class="logo">
-        <img src="../images/starting-page/logo-3.png" alt="logo" class="logo">
-        <img src="../images/starting-page/logo-4.png" alt="logo" class="logo">
-    </div>
-<div class="graphs_container test">
-    <div class="graph_card">
-        <div class="top_container_graph">
-            <h5>PH DATA</h5>
-            <div class="interval_indicator"> By Hour</div>
-            </div>
-            <div class="graphy_1">
-                <main class="graph_1">
-                </main>
-            </div>
-    </div>
-    <div class="graph_card">
-        <div class="top_container_graph">
-            <h5>PH DATA(BAR)</h5>
-            <div class="interval_indicator"> By Hour</div>
-            </div>
-            <div class="lc-image">
-                <canvas id="myChart-2" style="width: auto; height: 200px;"></canvas>
-            </div>
-    </div>
-    <div class="graph_card">
-        <div class="top_container_graph">
-        <h5>PH DATA</h5>
-        <div class="interval_indicator"> By Sec</div>
+
+<body>
+    <div class="graph-page">
+        <div class="top_bar">
+            <img src="../images/starting-page/logo-1.png" alt="logo" class="logo">
+            <img src="../images/starting-page/logo-5.png" alt="logo" class="logo">
+            <img src="../images/starting-page/logo-3.png" alt="logo" class="logo">
+            <img src="../images/starting-page/logo-4.png" alt="logo" class="logo">
         </div>
-        <div class="lc-image">
-            <canvas id="myChart-3" style="width: auto; height: 200px;"></canvas>
+        <div class="graphs">
+            <div class="graphs-button">
+                <a href="/graph_page4/graph_page.html">
+                    <button type="button" class="btn btn-back">Back &#10229;</button>
+                </a>
+            </div>
+            <div class="graph-container">
+                <div class="graph-card">
+                    <div class="top_container_graph">
+                        <div class="top-container-graph-info">
+                            <p> DAILY WATER SUPPLY TREND (LPCD)</p>
+                            <div class="lower-container-col2">
+                                <ul>
+                                    <li>Minimum limit:0.02Mg/L</li>
+                                    <li>Permisible limit:1.00Mg/L</li>
+                                  </ul>
+                            </div>
+                        </div>
+                        <div class="interval_indicator"> 
+                            <p>By Hour</p>
+                        </div>
+                    </div>
+                    <div class="graphy_1">
+                        <main class="graph_1">
+                        </main>
+                    </div>
+                </div>
+                <div class="graph-card">
+                    <div class="top_container_graph">
+                        <div class="top-container-graph-info">
+                            <p> DAILY WATER SUPPLY TREND (LPCD)</p>
+                            <div class="lower-container-col2">
+                                <ul>
+                                    <li>Minimum limit:0.02Mg/L</li>
+                                    <li>Permisible limit:1.00Mg/L</li>
+                                  </ul>
+                            </div>
+                        </div>
+                        <div class="interval_indicator"> By Hour</div>
+                    </div>
+                    <div class="lc-image">
+                        <canvas id="myChart-2" style=" height: 200px;"></canvas>
+                    </div>
+                </div>
+                <div class="graph-card">
+                    <div class="top_container_graph">
+                        <div class="top-container-graph-info">
+                            <p> DAILY WATER SUPPLY TREND (LPCD)</p>
+                            <div class="lower-container-col2">
+                                <ul>
+                                    <li>Minimum limit:0.02Mg/L</li>
+                                    <li>Permisible limit:1.00Mg/L</li>
+                                  </ul>
+                            </div>
+                        </div>
+                        <div class="interval_indicator"> By Sec</div>
+                    </div>
+                    <div class="lc-image">
+                        <canvas id="myChart-3" style=" height: 200px;"></canvas>
+                    </div>
+                </div>
+                <div class="graph-card">
+                    <div class="top_container_graph">
+                        <div class="top-container-graph-info">
+                            <p> DAILY WATER SUPPLY TREND (LPCD)</p>
+                            <div class="lower-container-col2">
+                                <ul>
+                                    <li>Minimum limit:0.02Mg/L</li>
+                                    <li>Permisible limit:1.00Mg/L</li>
+                                  </ul>
+                            </div>
+                        </div>
+                        <div class="interval_indicator"> By Hour</div>
+                    </div>
+                    <div class="lc-image">
+                        <canvas id="myChart-4" style=" height: 200px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="graphs-button">
+                <a href="/graph_page6/graph_page.html">
+                    <button type="button" class="btn btn-next">Next &#10230;</button>
+                </a>
+            </div>
         </div>
     </div>
-    <div class="graph_card">
-        <div class="top_container_graph">
-            <h5>PH DATA</h5>
-            <div class="interval_indicator"> By Hour</div>
-        </div>
-        <div class="lc-image">
-            <canvas id="myChart-4" style="width: auto; height: 200px;"></canvas>
-        </div>
-    </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-<script src="./bar-graph.js"></script>
-<script src="./graph-seconds.js"></script>
-<script src="./graph-hour.js"></script>
-<script src="sketch.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="./bar-graph.js"></script>
+    <script src="./graph-seconds.js"></script>
+    <script src="./graph-hour.js"></script>
+    <script src="sketch.js"></script>
 </body>
 
 </html>

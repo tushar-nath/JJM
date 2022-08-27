@@ -1,6 +1,5 @@
 var userDataA1 = [], userDataB1 = [];
 var dataA1, dataB1;
-var timeInterval1;
 
 async function dummyChart() {
 	await getDummyData1();
@@ -52,8 +51,8 @@ async function dummyChart() {
 	});
 	function updateChart() {
 		getDummyData1()
-		userDataA1.push(dataA4.pop());
-		userDataB1.push(dataB4.pop());
+		userDataA1.push(dataA1.pop());
+		userDataB1.push(dataB1.pop());
 		if (userDataB1.length > 30) {
 			userDataA1.shift();
 			userDataB1.shift();
@@ -76,7 +75,7 @@ async function getDummyData1() {
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
 		// console.log(sensorId);
 		console.log(timeInterval1);
-		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=${timeInterval1}`;
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=30`;
 		console.log("This is Graph-1: ", apiUrl);
 
 		const response = await fetch(apiUrl);

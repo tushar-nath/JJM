@@ -74,7 +74,7 @@ async function getDummyData2() {
 		const timeInterval2 = sessionStorage.getItem("timeinterval2") || "30";
 		console.log(timeInterval2);
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
-		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=${timeInterval2}`;
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=3600`;
 		console.log("This is Graph-2: ", apiUrl);
 
 		const response = await fetch(apiUrl);
