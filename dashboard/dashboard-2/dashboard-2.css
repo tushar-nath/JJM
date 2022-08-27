@@ -154,14 +154,14 @@ html, body {
 .box-header-key {
     white-space: nowrap;
     font-family: DM Sans;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 500;
     width: 100%;
 }
 
 .box-header-value {
     font-family: DM Sans;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 500;
     width: 80%;
 }
