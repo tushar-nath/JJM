@@ -78,6 +78,7 @@ html, body {
     -ms-transform: scale(0.8); /* IE 9 */
     -webkit-transform: scale(0.8); /* Safari 3-8 */
     transform: scale(1.17); 
+    transition: 0.5s;
 }
 
 #dvMap {
@@ -120,7 +121,7 @@ html, body {
     background-color: #fff;
     margin: auto;
     width: 40%;
-    height: 300px;
+    height: max-content;
     box-shadow: #F45C20 0px 4px 6px -1px, #F45C20 0px 2px 4px -1px;
     padding: 2%;
     border-radius: 12px;
@@ -130,6 +131,7 @@ html, body {
     -ms-transform: scale(0.8); /* IE 9 */
     -webkit-transform: scale(0.8); /* Safari 3-8 */
     transform: scale(1.17); 
+    transition: 0.5s;
     
 }
 
@@ -137,7 +139,7 @@ html, body {
     background-color: #fff;
     margin: auto;
     width: 40%;
-    height: 300px;
+    height: max-content;
     box-shadow: #F45C20 0px 4px 6px -1px, #F45C20 0px 2px 4px -1px;
     padding: 2%;
     border-radius: 12px;
@@ -147,7 +149,7 @@ html, body {
     -ms-transform: scale(0.8); /* IE 9 */
     -webkit-transform: scale(0.8); /* Safari 3-8 */
     transform: scale(1.17); 
-    
+    transition: 0.5s; 
 }
 
 .box-header {
@@ -162,7 +164,7 @@ html, body {
 .box-header-key {
     white-space: nowrap;
     font-family: DM Sans;
-    font-size: 36px;
+    font-size: 2.2vw;
     font-weight: 500;
     width: 100%;
 }
@@ -233,6 +235,7 @@ html, body {
         width: 100%;
         border-radius: 10px;
         height: max-content;
+        padding: 0% 5% 8% 5%;
     }
 
     .right-box {
