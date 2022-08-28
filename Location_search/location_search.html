@@ -22,34 +22,6 @@
 
     <div id="container">
 
-        <div class="tile">
-            Porua Chariali
-             <a href="../starting-page/starting-page.html" id="porua-chariali" value="1" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>
-        </div>
-        <div class="tile">
-            Dhekiajuli
-            <a href="../starting-page/starting-page.html" id="dhekiajuli" value="2" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>
-        </div>
-        <div class="tile">
-            Bihaguri
-            <a href="../starting-page/starting-page.html" id="bihaguri" value="3" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>
-        </div>
-        <div class="tile">
-            Chutia
-            <a href="../starting-page/starting-page.html" id="chutia" value="4" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>
-        </div>
-        <div class="tile">
-            Tezpur
-            <a href="../starting-page/starting-page.html" id="tezpur" value="5" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>
-        </div>
-        <div class="tile">
-            Dolabari
-            <a href="../starting-page/starting-page.html" id="dolabari" value="6" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>
-        </div>
-        <div class="tile">
-            Batamari
-            <a href="../starting-page/starting-page.html" id="batamari" value="7" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>
-        </div>
     </div>
    <script src="./sensor.js"></script>
     <script src="./markers.js"></script>
@@ -113,7 +85,7 @@
                     '<div id="popup-key">' + '<p>LPCD</p>' + '</div>' +
                     '<div id="popup-value">' + data.lpcd + '</div>' +
                 '</div>' +
-                '<div id="popup-btn">' + '<a href="../starting-page/starting-page.html"><button>Show Detail Analysis</button></a>' + '</div>' +
+                '<div id="popup-btn">' + '<a href="../starting-page/starting-page.html"><button onclick="storeSensorId(this)" value = "' + (i+1) + '">Show Detail Analysis</button></a>' + '</div>' +
 
             '</div>';
             
@@ -131,9 +103,35 @@
             //now fit the map to the newly inclusive bounds
             google.maps.event.addListenerOnce(map, 'idle', function() {
             map.fitBounds(bounds);
+
+            function storeSensorId(e) {
+                var id = e.getAttribute('value');
+                sessionStorage.sensorId = id;
+            }
         });
         }
         
+    }
+
+    var cityId = sessionStorage.getItem("cityId") || "0";
+    var area = city[cityId];
+    buildTiles(area)
+    function buildTiles(data) {
+        var containerElm = document.getElementById("container");
+        var str = '';
+        for (var i = 0; i<area.length; i++) {
+            var divStr = '<div class="tile">' +
+                            data[i].title +
+                            '<a onclick="storeSensorId(this)" href="../starting-page/starting-page.html" id="porua-chariali" value="' + (i+1) + '" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>' +
+                            '</div>';
+            str = str + divStr;
+        }
+        containerElm.innerHTML = str;
+    }
+
+    function storeSensorId(e) {
+        var id = e.getAttribute('value');
+        sessionStorage.sensorId = id;
     }
 </script>
 </html>
