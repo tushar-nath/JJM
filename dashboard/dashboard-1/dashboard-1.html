@@ -103,12 +103,7 @@
 
     <div class="dashboard">
         <div class="dashboard-select">
-            <select>
-                <option value="" disabled selected hidden>Select State</option>
-                <option value="coffee">Coffee</option>
-                <option value="tea">Tea</option>
-                <option value="milk">Milk</option>
-            </select>
+            <select id="dashboard-select" name="dashboard-select"></select>
             <div class="select-white"></div>
             <div class="select-shadow"></div>
         </div>
@@ -147,8 +142,12 @@
         </div>
 
         <div class="dashboard-footer-buttons">
-            <button type="button" class="btn btn-back">Back &#10229;</button>
-            <button type="button" class="btn btn-next">Next &#10230;</button>
+            <a href="/second-page-view/second-page-view.html">
+                <button type="button" class="btn btn-back">Back &#10229;</button>
+            </a>
+            <a href="/dashboard/dashboard-2/dashboard-2.html">
+                <button type="button" class="btn btn-next">Next &#10230;</button>
+            </a>
         </div>
     </div>
 
@@ -163,6 +162,30 @@
                     document.querySelector("#active").innerText = data[i].active
                 }
             })
+    </script>
+    <script>
+        let dropdown = document.getElementById('dashboard-select');
+        dropdown.length = 0;
+
+        let defaultOption = document.createElement('option');
+        defaultOption.text = 'Select State';
+
+        dropdown.add(defaultOption);
+        dropdown.selectedIndex = 0;
+
+        fetch("dashboard-1-details.json")
+            .then(response => response.json())
+            .then(data => {
+                let option;
+    
+                for (let i = 0; i < data.length; i++) {
+                option = document.createElement('option');
+                option.text = data[i].city;
+                option.value = data[i].city;
+                dropdown.add(option);
+                }    
+            })
+
     </script>
     <script src="container.js"></script>
 </body>
