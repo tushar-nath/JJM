@@ -2,27 +2,28 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dashboard-1.css" />
     <title>Document</title>
     <script src="https://kit.fontawesome.com/6c0f35acb6.js" crossorigin="anonymous"></script>
+    <!-- <script src="./dashboard-1.js"></script> -->
 </head>
 
 <body>
     <div class="logo">
         <div class="logo-img" id="img-1">
-            <img src="../../images/starting-page/logo-1.png" alt="" width="100" height="87">
+            <img src="../../images/starting-page/logo-1.png" alt="" width="100" height="87" />
         </div>
         <div class="logo-img" id="img-2">
-            <img src="../../images/starting-page/logo-5.png" alt="" width="110" height="88">
+            <img src="../../images/starting-page/logo-5.png" alt="" width="110" height="88" />
         </div>
         <div class="logo-img" id="img-3">
-            <img src="../../images/starting-page/logo-3.png" alt="" width="100" height="82">
+            <img src="../../images/starting-page/logo-3.png" alt="" width="100" height="82" />
         </div>
         <div class="logo-img" id="img-4">
-            <img src="../../images/starting-page/logo-4.png" alt="" width="80" height="90">
+            <img src="../../images/starting-page/logo-4.png" alt="" width="80" height="90" />
         </div>
     </div>
 
@@ -39,40 +40,40 @@
         </div>
         <div class="center-panel">
             <div class="center-circle">
-
                 <svg id="arrow-up" onclick="scrollUpButton()" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                     fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
                     <path
                         d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
                 </svg>
 
-                <ul class="ul-class">
+                <ul id="scroll" class="ul-class">
                     <li class="items">
-                        <a style="text-decoration: none; color: white;"
-                            href="../dashboard-2/dashboard-2.html">Nagaon</a>
+                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
+                            href="../dashboard-2/dashboard-2.html" value="1" id="1">Guwahati</a>
                     </li>
                     <li>
-                        <a style="text-decoration: none; color: white;"
-                            href="../dashboard-2/dashboard-2.html">Kaliabor</a>
+                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white" value="2" id="2"
+                            href="../dashboard-2/dashboard-2.html">Nalbari</a>
                     </li>
                     <li class="active items">
-                        <a style="text-decoration: none; color: white;"
-                            href="../dashboard-2/dashboard-2.html">Tezpur</a>
+                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
+                            href="../dashboard-2/dashboard-2.html" value="3">Tezpur</a>
                     </li>
                     <li class="items">
-                        <a style="text-decoration: none; color: white;"
-                            href="../dashboard-2/dashboard-2.html">Dhekiajuli</a>
+                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
+                            href="../dashboard-2/dashboard-2.html" value="1" >Dhekiajuli</a>
                     </li>
                     <li class="items">
-                        <a style="text-decoration: none; color: white;"
-                            href="../dashboard-2/dashboard-2.html">Balipara</a>
+                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
+                            href="../dashboard-2/dashboard-2.html" value="2" >Balipara</a>
                     </li>
                     <li class="items">
-                        <a style="text-decoration: none; color: white;"
-                            href="../dashboard-2/dashboard-2.html">Sootea</a>
+                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
+                            href="../dashboard-2/dashboard-2.html" value="3" >Sootea</a>
                     </li>
                     <li class="items">
-                        <a style="text-decoration: none; color: white;" href="../dashboard-2/dashboard-2.html">Amoni</a>
+                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
+                            href="../dashboard-2/dashboard-2.html" value="1" >Amoni</a>
                     </li>
                 </ul>
 
@@ -81,9 +82,7 @@
                     <path
                         d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
                 </svg>
-
             </div>
-
         </div>
         <div class="right-panel">
             <div class="lp-upper">
@@ -98,7 +97,7 @@
     </div>
 
     <div class="footer">
-        <img class="center-fit" src="../../images/dashboard/dashboard-footer-img.png">
+        <img class="center-fit" src="../../images/dashboard/dashboard-footer-img.png" />
     </div>
 
     <div class="dashboard">
@@ -110,7 +109,7 @@
         <div class="dashboard-body">
             <div class="dashboard-body-info">
                 <div class="dashboard-body-info-icon-text">
-                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue;"></i>
+                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue"></i>
 
                     <p>Total Centres</p>
                 </div>
@@ -118,7 +117,7 @@
             </div>
             <div class="dashboard-body-info">
                 <div class="dashboard-body-info-icon-text">
-                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue;"></i>
+                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue"></i>
 
                     <p>Active IOT Centres</p>
                 </div>
@@ -126,14 +125,14 @@
             </div>
             <div class="dashboard-body-info">
                 <div class="dashboard-body-info-icon-text">
-                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue;"></i>
+                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue"></i>
                     <p>Upcoming Events</p>
                 </div>
                 <p class="dashboard-body-info-value">540</p>
             </div>
             <div class="dashboard-body-info">
                 <div class="dashboard-body-info-icon-text">
-                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue;"></i>
+                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue"></i>
 
                     <p>Active Centres</p>
                 </div>
@@ -143,50 +142,65 @@
 
         <div class="dashboard-footer-buttons">
             <a href="/second-page-view/second-page-view.html">
-                <button type="button" class="btn btn-back">Back &#10229;</button>
+                <button type="button" class="btn btn-back">
+                    Back &#10229;
+                </button>
             </a>
             <a href="/dashboard/dashboard-2/dashboard-2.html">
-                <button type="button" class="btn btn-next">Next &#10230;</button>
+                <button type="button" class="btn btn-next">
+                    Next &#10230;
+                </button>
             </a>
         </div>
     </div>
 
     <script>
         fetch("dashboard-1-details.json")
-            .then(response => response.json())
-            .then(data => {
+            .then((response) => response.json())
+            .then((data) => {
                 for (let i = 0; i < data.length; i++) {
-                    document.querySelector("#total").innerText = data[i].total
-                    document.querySelector("#upcoming").innerText = data[i].upcoming
-                    document.querySelector("#iot").innerText = data[i].iot
-                    document.querySelector("#active").innerText = data[i].active
+                    document.querySelector("#total").innerText =
+                        data[i].total;
+                    document.querySelector("#upcoming").innerText =
+                        data[i].upcoming;
+                    document.querySelector("#iot").innerText = data[i].iot;
+                    document.querySelector("#active").innerText =
+                        data[i].active;
                 }
-            })
+            });
     </script>
     <script>
-        let dropdown = document.getElementById('dashboard-select');
+        let dropdown = document.getElementById("dashboard-select");
         dropdown.length = 0;
 
-        let defaultOption = document.createElement('option');
-        defaultOption.text = 'Select State';
+        let defaultOption = document.createElement("option");
+        defaultOption.text = "Select State";
 
         dropdown.add(defaultOption);
         dropdown.selectedIndex = 0;
 
         fetch("dashboard-1-details.json")
-            .then(response => response.json())
-            .then(data => {
+            .then((response) => response.json())
+            .then((data) => {
                 let option;
-    
+
                 for (let i = 0; i < data.length; i++) {
-                option = document.createElement('option');
-                option.text = data[i].city;
-                option.value = data[i].city;
-                dropdown.add(option);
-                }    
-            })
+                    option = document.createElement("option");
+                    option.text = data[i].city;
+                    option.value = data[i].city;
+                    dropdown.add(option);
+                }
+            });
+    </script>
+
+    <script>
+        function storeCityId(e) {
+        var id = e.getAttribute('value');
+        sessionStorage.cityId = id;
+    }
 
     </script>
+
     <script src="container.js"></script>
 </body>
 
