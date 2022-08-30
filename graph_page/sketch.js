@@ -12,7 +12,7 @@ async function getDummySketchData_1() {
 		
 
 		sketchDataA_1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
-    sketchDataB_1 = barChatData.data.map((x) => x.y);
+    sketchDataB_1 = barChatData.data.map((x) => x.x);
 		sketchUserDataB_1 = Math.floor(sketchDataB_1.pop());
     // console.log("This is B: " + sketchUserDataB_1);
 	}
