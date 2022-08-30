@@ -74,11 +74,11 @@ html, body {
 }
 
 .map-container:hover {
-    /* background-color: #0A68FF; */
     -ms-transform: scale(0.8); /* IE 9 */
     -webkit-transform: scale(0.8); /* Safari 3-8 */
-    transform: scale(1.17); 
+    transform: scale(1.01); 
     transition: 0.5s;
+    cursor: pointer;
 }
 
 #dvMap {
@@ -97,7 +97,39 @@ html, body {
     margin: 1% 2% 2% 6%;
 }
 
-#dropdown {
+#link {
+    border: none;
+    border-radius: 3px;
+    width: 3%;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(113, 113, 113, 1);
+    border: none;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin: 2%;
+}
+
+button:hover {
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1); /* Safari 3-8 */
+    transform: scale(1.17); 
+    transition: 0.1s; 
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+button{
+    border: none;
+    background-color: #fff;
+    padding: 1%;
+}
+
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    border: none;
     border-radius: 3px;
     width: 25%;
     padding: 1% 1% 1% 0%;
@@ -105,7 +137,10 @@ html, body {
     font-size: 13px;
     font-weight: 400;
     color: rgba(113, 113, 113, 1);
+    justify-content: space-around;
 }
+
+
 
 .dashboard-container {
     margin-top: 5%;
@@ -130,7 +165,7 @@ html, body {
 .left-box:hover {
     -ms-transform: scale(0.8); /* IE 9 */
     -webkit-transform: scale(0.8); /* Safari 3-8 */
-    transform: scale(1.17); 
+    transform: scale(1.05); 
     transition: 0.5s;
     
 }
@@ -148,7 +183,7 @@ html, body {
 .right-box:hover {
     -ms-transform: scale(0.8); /* IE 9 */
     -webkit-transform: scale(0.8); /* Safari 3-8 */
-    transform: scale(1.17); 
+    transform: scale(1.05); 
     transition: 0.5s; 
 }
 

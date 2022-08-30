@@ -21,7 +21,8 @@
 			"chlorine": "4.1 mg/l",
 			"waterflow": "22.40 cm",
 			"tap": "1200",
-			"iot": "500"
+			"iot": "500",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Chandmari",
@@ -44,7 +45,8 @@
 			"chlorine": "4.2 mg/l",
 			"waterflow": "22.41 cm",
 			"tap": "1210",
-			"iot": "510"
+			"iot": "510",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Maligaon",
@@ -67,13 +69,14 @@
 			"chlorine": "4.3 mg/l",
 			"waterflow": "22.42 cm",
 			"tap": "1220",
-			"iot": "520"
+			"iot": "520",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Uzan Bazar",
 			"lat": "26.1924",
 			"lng": "91.7565",
-			"total": "1520",
+			"total": "1530",
 			"date": "17/08/2022",
 			"ph": ".57",
 			"lpcd": "4.52",
@@ -90,13 +93,14 @@
 			"chlorine": "4.4 mg/l",
 			"waterflow": "22.43 cm",
 			"tap": "1230",
-			"iot": "530"
+			"iot": "530",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Lokhra",
 			"lat": "26.1116",
 			"lng": " 91.7496",
-			"total": "1520",
+			"total": "1540",
 			"date": "17/08/2022",
 			"ph": ".57",
 			"lpcd": "4.52",
@@ -113,7 +117,8 @@
 			"chlorine": "4.5 mg/l",
 			"waterflow": "22.44 cm",
 			"tap": "1240",
-			"iot": "540"
+			"iot": "540",
+			"upcoming": "1000"
 		}
 	],
 	"2": [
@@ -121,7 +126,7 @@
 			"title": "Chamata",
 			"lat": "26.4058",
 			"lng": "91.3337",
-			"total": "1530",
+			"total": "1550",
 			"date": "17/08/2022",
 			"ph": "7.56",
 			"lpcd": "4.53",
@@ -138,13 +143,14 @@
 			"chlorine": "4.6 mg/l",
 			"waterflow": "22.45 cm",
 			"tap": "1250",
-			"iot": "550"
+			"iot": "550",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Belsor",
 			"lat": "26.3982",
 			"lng": "91.3638",
-			"total": "1540",
+			"total": "1560",
 			"date": "17/08/2022",
 			"ph": "7.56",
 			"lpcd": "4.54",
@@ -161,13 +167,14 @@
 			"chlorine": "4.7 mg/l",
 			"waterflow": "22.45 cm",
 			"tap": "1260",
-			"iot": "560"
+			"iot": "560",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Charabari",
 			"lat": "26.3147",
 			"lng": "92.3493",
-			"total": "1545",
+			"total": "1570",
 			"date": "17/08/2022",
 			"ph": "7.56",
 			"lpcd": "4.5",
@@ -184,13 +191,14 @@
 			"chlorine": "4.8 mg/l",
 			"waterflow": "22.46 cm",
 			"tap": "1270",
-			"iot": "570"
+			"iot": "570",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Tihu",
 			"lat": "26.4758",
 			"lng": "91.2674",
-			"total": "1545",
+			"total": "1580",
 			"date": "17/08/2022",
 			"ph": "7.56",
 			"lpcd": "4.5",
@@ -207,13 +215,14 @@
 			"chlorine": "4.9 mg/l",
 			"waterflow": "22.47 cm",
 			"tap": "1280",
-			"iot": "580"
+			"iot": "580",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Marowa",
 			"lat": "26.3736",
 			"lng": "91.4652",
-			"total": "1545",
+			"total": "1590",
 			"date": "17/08/2022",
 			"ph": "7.56",
 			"lpcd": "4.5",
@@ -230,7 +239,8 @@
 			"chlorine": "5 mg/l",
 			"waterflow": "22.48 cm",
 			"tap": "1290",
-			"iot": "590"
+			"iot": "590",
+			"upcoming": "1000"
 		}
 	],
 	"3": [
@@ -238,7 +248,7 @@
 			"title": "Batamari",
 			"lat": "26.4215",
 			"lng": "92.5706",
-			"total": "1550",
+			"total": "1600",
 			"date": "17/08/2022",
 			"ph": "7.56",
 			"lpcd": "4.57",
@@ -255,13 +265,14 @@
 			"chlorine": "5.1 mg/l",
 			"waterflow": "22.51 cm",
 			"tap": "1300",
-			"iot": "600"
+			"iot": "600",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Biswanath Charali",
 			"lat": "26.7267",
 			"lng": "93.1479",
-			"total": "1560",
+			"total": "1610",
 			"date": "17/08/2022",
 			"ph": "7.56",
 			"lpcd": "4.58",
@@ -278,13 +289,14 @@
 			"chlorine": "5.2 mg/l",
 			"waterflow": "22.6 cm",
 			"tap": "1310",
-			"iot": "610"
+			"iot": "610",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Majgaon",
 			"lat": "26.6487",
 			"lng": "92.7904",
-			"total": "1570",
+			"total": "1620",
 			"date": "17/08/2022",
 			"ph": "7.56",
 			"lpcd": "4.59",
@@ -301,13 +313,14 @@
 			"chlorine": "5.3 mg/l",
 			"waterflow": "22.65 cm",
 			"tap": "1320",
-			"iot": "620"
+			"iot": "620",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Jamugurihat",
 			"lat": "26.7314",
 			"lng": "92.9276",
-			"total": "1570",
+			"total": "1630",
 			"date": "17/08/2022",
 			"ph": "7.56",
 			"lpcd": "4.59",
@@ -324,13 +337,14 @@
 			"chlorine": "5.4 mg/l",
 			"waterflow": "22.7 cm",
 			"tap": "1330",
-			"iot": "630"
+			"iot": "630",
+			"upcoming": "1000"
 		},
 		{
 			"title": "Napaam",
 			"lat": "26.7040",
 			"lng": "92.8228",
-			"total": "1570",
+			"total": "1640",
 			"date": "17/08/2022",
 			"ph": "7.56",
 			"lpcd": "4.59",
@@ -347,7 +361,8 @@
 			"chlorine": "5.5 mg/l",
 			"waterflow": "22.8 cm",
 			"tap": "1340",
-			"iot": "640"
+			"iot": "640",
+			"upcoming": "1000"
 		}
 	]
 }

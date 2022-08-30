@@ -43,12 +43,11 @@
         </div>
         <div class="map-place">Select Place</div>
         <div class="drop">
-
-
-            
-            <select onchange="scheduleA.call(this, event)" class="dropdown" id="dropdown">
-
-            </select>
+            <div class="dropdown">
+                <div id="dropdown">
+                    <!-- Dynamic data from JSON file -->
+                </div>
+            </div>
         </div>
     </div>
     <div class="dashboard-container">
@@ -178,13 +177,6 @@
 
 </body>
 
-<script>
- function scheduleA(event) {
-
-}
-
-
-</script>
 
 
 <script type="text/javascript"
@@ -310,23 +302,39 @@
     var markers = city[cityId];
     dropItem()
     function dropItem(data) {
-        console.log(markers[0])
         var containerElm = document.getElementById("dropdown");
         var str = '';
         for (var i = 0; i < markers.length; i++) {
-            var divStr = '<div class="subplace">' +
-                '<option onchange="storeAreaId(this)" value="' + (i+1) + '">' + markers[i].title + '</option>'+
-            '</div>';
+            var divStr = '<a id="link">' +
+                '<button onclick="storeAreaId(this);" value="' + (i + 1) + '">' + markers[i].title + '</button>' +
+                '</a>';
             str = str + divStr;
         }
         containerElm.innerHTML = str;
     }
 
     function storeAreaId(e) {
-        
         var id = e.getAttribute('value');
         sessionStorage.areaId = id;
+        location.reload();
     }
+
+    fetch("subplaces.json")
+        .then((response) => response.json())
+        .then((data) => {
+            var areaId = sessionStorage.getItem("areaId") || "0";
+            console.log(data[cityId][areaId-1]);
+            document.querySelector("#total").innerText = data[cityId][areaId-1].total;
+            document.querySelector("#active").innerText = data[cityId][areaId-1].iot;
+            document.querySelector("#household").innerText = data[cityId][areaId-1].household;
+            document.querySelector("#upcoming").innerText = data[cityId][areaId-1].upcoming;
+            document.querySelector("#current-ph").innerText = data[cityId][areaId-1].ph;
+            document.querySelector("#residual-chlorine").innerText = data[cityId][areaId-1].chlorine;
+            document.querySelector("#tds").innerText = data[cityId][areaId-1].lpcd;
+            document.querySelector("#water-flow").innerText = data[cityId][areaId-1].waterflow;
+        }
+    )
+
 
 </script>
 
