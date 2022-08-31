@@ -12,8 +12,9 @@ async function getDummySketchData_4() {
 		
 
 		sketchDataA_4 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
-    sketchDataB_4 = barChatData.data.map((x) => x.y);
-		sketchUserDataB_4 = Math.floor(sketchDataB_4.pop());
+    sketchDataB_4 = barChatData.data.map((x) => x.b);
+		sketchUserDataB_4 = sketchDataB_4.pop();
+    sketchUserDataB_4 = sketchUserDataB_4.toFixed(3);
     // console.log("This is B: " + sketchUserDataB_4);
 	}
 	catch(err) {
@@ -32,7 +33,7 @@ setInterval(function() {
 
 let x = 3.14 / 3;
 let tds_colors = ['#00ff00', '#FFA500' , '#ff0000'];
-val_list = ['0','20','50' , '100']
+val_list = ['0','1','5' , '']
 function setup() {
   createCanvas(300, 170);
 }
@@ -55,23 +56,23 @@ function draw() {
   fill(255)
   arc(width/2 , (height/1.25) , 90 , 90 , 3.14 , 6.28);
   fill(0)
-  createPointer(sketchDataB_4);
+  createPointer(sketchUserDataB_4);
   noStroke()
-  text("Temperature Scale : " + sketchDataB_4 , (width-65)/2 , (height/1.05));
+  text("Turbidity SCALE : " + float(sketchUserDataB_4) , (width-65)/2 , (height/1.05));
 }
 
 function createPointer(val){
   fill(0);
   strokeWeight(4);
   stroke(0);
-  if(val < 20){
-    ang = map(val , 0 , 20 , 3.14 , 3.14+(3.14/3));
-  }else if(val < 50){
-    ang = map(val , 20 , 50 , 3.14+(3.14/3) , 3.14+2*(3.14/3));
+  if(val < 1){
+    ang = map(val , 0 , 1 , 3.14 , 3.14+(3.14/3));
+  }else if(val < 5){
+    ang = map(val , 1 , 5 , 3.14+(3.14/3) , 3.14+2*(3.14/3));
   }else{
-    ang = map(val , 50 , 100 , 3.14+2*(3.14/3) , 6.28);
+    ang = map(val , 5 , 10 , 3.14+2*(3.14/3) , 6.28);
   }
-  colorv = round(map(val , 0 , 100 , 0 , 2));
+  colorv = round(map(val , 0 , 10 , 0 , 2));
   line(width/2 , (height/1.25) , (width)/2+100*cos(ang) , (height/1.25)+100*sin(ang));
   fill(tds_colors[colorv]);
   circle(width/2 , (height/1.25) , 15)

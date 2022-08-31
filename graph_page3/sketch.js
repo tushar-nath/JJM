@@ -12,8 +12,8 @@ async function getDummySketchData_3() {
 		
 
 		sketchDataA_3 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
-    sketchDataB_3 = barChatData.data.map((x) => x.y);
-		sketchUserDataB_3 = Math.floor(sketchDataB_3.pop());
+    sketchDataB_3 = barChatData.data.map((x) => x.a);
+		sketchUserDataB_3 = sketchDataB_3.pop();
     // console.log("This is B: " + sketchUserDataB_3);
 	}
 	catch(err) {
@@ -32,7 +32,7 @@ setInterval(function() {
 
 let x = 3.14 / 3;
 let tds_colors = ['#00ff00', '#FFA500' , '#ff0000'];
-val_list = ['0','0.2','1' , '']
+val_list = ['0','500','2000' , '']
 function setup() {
   createCanvas(300, 170);
 }
@@ -55,23 +55,23 @@ function draw() {
   fill(255)
   arc(width/2 , (height/1.25) , 90 , 90 , 3.14 , 6.28);
   fill(0)
-  createPointer(sketchDataB_3);
+  createPointer(sketchUserDataB_3);
   noStroke()
-  text("Residual Chlorine : " + sketchDataB_3 , (width-65)/2 , (height/1.05));
+  text("TDS SCALE : " + sketchUserDataB_3 , (width-65)/2 , (height/1.05));
 }
 
 function createPointer(val){
   fill(0);
   strokeWeight(4);
   stroke(0);
-  if(val < 0.2){
-    ang = map(val , 0 , 0.2 , 3.14 , 3.14+(3.14/3));
-  }else if(val < 1){
-    ang = map(val , 0.2 , 1 , 3.14+(3.14/3) , 3.14+2*(3.14/3));
+  if(val < 500){
+    ang = map(val , 0 , 500 , 3.14 , 3.14+(3.14/3));
+  }else if(val < 2000){
+    ang = map(val , 500 , 2000 , 3.14+(3.14/3) , 3.14+2*(3.14/3));
   }else{
-    ang = map(val , 1 , 2 , 3.14+2*(3.14/3) , 6.28);
+    ang = map(val , 2000 , 4000 , 3.14+2*(3.14/3) , 6.28);
   }
-  colorv = round(map(val , 0 , 2 , 0 , 2));
+  colorv = round(map(val , 0 , 4000 , 0 , 2));
   line(width/2 , (height/1.25) , (width)/2+100*cos(ang) , (height/1.25)+100*sin(ang));
   fill(tds_colors[colorv]);
   circle(width/2 , (height/1.25) , 15)

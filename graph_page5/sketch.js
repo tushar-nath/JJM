@@ -12,7 +12,7 @@ async function getDummySketchData_5() {
 		
 
 		sketchDataA_5 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
-    sketchDataB_5 = barChatData.data.map((x) => x.y);
+    sketchDataB_5 = barChatData.data.map((x) => x.d);
 		sketchUserDataB_5 = Math.floor(sketchDataB_5.pop());
     // console.log("This is B: " + sketchUserDataB_5);
 	}
@@ -55,9 +55,9 @@ function draw() {
   fill(255)
   arc(width/2 , (height/1.25) , 90 , 90 , 3.14 , 6.28);
   fill(0)
-  createPointer(sketchDataB_5);
+  createPointer(sketchUserDataB_5);
   noStroke()
-  text("Water Flow: " + sketchDataB_5 , (width-65)/2 , (height/1.05));
+  text("Water Flow: " + sketchUserDataB_5 , (width-65)/2 , (height/1.05));
 }
 
 function createPointer(val){

@@ -1,6 +1,6 @@
 var sketchUserDataA_2 = [], sketchUserDataB_2 = [];
 var sketchDataA_2 = 0, sketchDataB_2 = 0;
-var sketchUserDataB_2 = 1
+var sketchUserDataB_2 = 0
 
 async function getDummySketchData_2() {
 	try {
@@ -13,8 +13,8 @@ async function getDummySketchData_2() {
 
 		sketchDataA_2 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
     sketchDataB_2 = barChatData.data.map((x) => x.y);
-		sketchUserDataB_2 = Math.floor(sketchDataB_2.pop());
-    // console.log("This is B: " + sketchUserDataB_2);
+		sketchUserDataB_2 = sketchDataB_2.pop();
+    sketchUserDataB_2 = sketchUserDataB_2.toFixed(3);
 	}
 	catch(err) {
 		// alert("No data available for Graph 2");
@@ -33,7 +33,7 @@ setInterval(function() {
 
 let x = 3.14 / 3;
 let tds_colors = ['#00ff00', '#FFA500' , '#ff0000'];
-val_list = ['0','1','5' , '']
+val_list = ['0','0.2','1' , '']
 function setup() {
   createCanvas(300, 170);
 }
@@ -56,23 +56,23 @@ function draw() {
   fill(255)
   arc(width/2 , (height/1.25) , 90 , 90 , 3.14 , 6.28);
   fill(0)
-  createPointer(sketchDataB_2);
+  createPointer(sketchUserDataB_2);
   noStroke()
-  text("Turbidity SCALE : " + sketchDataB_2 , (width-65)/2 , (height/1.05));
+  text("Residual Chlorine : " + sketchUserDataB_2 , (width-65)/2 , (height/1.05));
 }
 
 function createPointer(val){
   fill(0);
   strokeWeight(4);
   stroke(0);
-  if(val < 1){
-    ang = map(val , 0 , 1 , 3.14 , 3.14+(3.14/3));
-  }else if(val < 5){
-    ang = map(val , 1 , 5 , 3.14+(3.14/3) , 3.14+2*(3.14/3));
+  if(val < 0.2){
+    ang = map(val , 0 , 0.2 , 3.14 , 3.14+(3.14/3));
+  }else if(val < 1){
+    ang = map(val , 0.2 , 1 , 3.14+(3.14/3) , 3.14+2*(3.14/3));
   }else{
-    ang = map(val , 5 , 10 , 3.14+2*(3.14/3) , 6.28);
+    ang = map(val , 1 , 2 , 3.14+2*(3.14/3) , 6.28);
   }
-  colorv = round(map(val , 0 , 10 , 0 , 2));
+  colorv = round(map(val , 0 , 2 , 0 , 2));
   line(width/2 , (height/1.25) , (width)/2+100*cos(ang) , (height/1.25)+100*sin(ang));
   fill(tds_colors[colorv]);
   circle(width/2 , (height/1.25) , 15)
