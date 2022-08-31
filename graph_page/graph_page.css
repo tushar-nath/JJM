@@ -6,6 +6,17 @@ body {
     padding: 0%;
 }
 
+.graph-page-title {
+    position: relative;
+    top: -20px;
+}
+
+.graph-page-title h1 {
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+}
+
 .graph-page {
     display: flex;
     flex-direction: column;
@@ -154,5 +165,10 @@ body {
 
     .graph-card {
         width: 100%
+    }
+
+    .graph-page-title {
+        position: relative;
+        top: 10px;
     }
 }

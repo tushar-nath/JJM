@@ -12,7 +12,7 @@ async function getDummySketchData_5() {
 		
 
 		sketchDataA_5 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
-    sketchDataB_5 = barChatData.data.map((x) => x.y);
+    sketchDataB_5 = barChatData.data.map((x) => x.d);
 		sketchUserDataB_5 = Math.floor(sketchDataB_5.pop());
     // console.log("This is B: " + sketchUserDataB_5);
 	}
@@ -30,8 +30,9 @@ setInterval(function() {
     getDummySketchData_5();
 } , 13000);
 
-let x = 3.14 / 14;
-let ph_colors = ['#ff0000','#FF2626','#FF5656' ,'#FF914C', '#FFBD58' , '#FFDE59' , '#C9E264' , '#008805' , '#02979E' , '#02669E' , '#1C6EDB' , '#8041A8' , '#9F21EF' , '#4F00FF'];
+let x = 3.14 / 3;
+let tds_colors = ['#ff0000', '#FFA500','#00ff00'];
+val_list = ['0','60','150' , '']
 function setup() {
   createCanvas(300, 170);
 }
@@ -40,15 +41,15 @@ function draw() {
   background('#EEE');
   noStroke();
   textSize(14)
-  for(let i=2; i < 16 ; i++){
-    fill(ph_colors[i-2])
+  for(let i=2; i < 5 ; i++){
+    fill(tds_colors[i-2])
   arc(width/2,(height/1.25),200,200,3.14+((i-2)*x),3.14+((i-1)*x))
     
   }
-    for(let i=2; i < 16 ; i++){
-     let ang = map(i , 2 , 16 , 3.14 , 6.48);
+    for(let i=0; i < 4 ; i++){
+     let ang = map(i , 0 , 3 , 3.14 , 6.38);
       fill(0);
-     text(i-1 , (width-10)/2+108*cos(ang) , (height/1.25)+108*sin(ang));
+     text(val_list[i] , (width-10)/2+108*cos(ang) , (height/1.25)+108*sin(ang));
   }
  
   fill(255)
@@ -56,15 +57,22 @@ function draw() {
   fill(0)
   createPointer(sketchUserDataB_5);
   noStroke()
-  text("PH SCALE" , (width-65)/2 , (height/1.05));
+  text("Water Flow: " + sketchUserDataB_5 , (width-65)/2 , (height/1.05));
 }
 
 function createPointer(val){
   fill(0);
   strokeWeight(4);
   stroke(0);
-  ang = map(val , 1 , 14 , 3.14 , 6.28);
+  if(val < 60){
+    ang = map(val , 0 , 60 , 3.14 , 3.14+(3.14/3));
+  }else if(val < 150){
+    ang = map(val , 60 , 150 , 3.14+(3.14/3) , 3.14+2*(3.14/3));
+  }else{
+    ang = map(val , 150 , 300 , 3.14+2*(3.14/3) , 6.28);
+  }
+  colorv = round(map(val , 0 , 300 , 0 , 2));
   line(width/2 , (height/1.25) , (width)/2+100*cos(ang) , (height/1.25)+100*sin(ang));
-  fill(ph_colors[val])
+  fill(tds_colors[colorv]);
   circle(width/2 , (height/1.25) , 15)
 }
