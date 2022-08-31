@@ -18,6 +18,7 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <title>Document</title>
+    <script src="../../map-view-screen/data.js"></script>
     <script src="../../Location_search/markers.js"></script>
     <script src="subplaces.js"></script>
 </head>
@@ -187,126 +188,35 @@
         LoadMap();
     }
     function LoadMap() {
-        var bounds = new google.maps.LatLngBounds();
+        const cityId = sessionStorage.getItem("cityId") || "0";
+        var data = markers[cityId - 1];
+        console.log(data.lat);
+        var myLatlng = new google.maps.LatLng(data.lat, data.lng);
         var mapOptions = {
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            // mapTypeId: google.maps.MapTypeId.ROADMAP,
+            zoom: 12,
+            center: myLatlng
         };
         var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
 
-        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            title: data.title
+        });
 
-        const cityId = sessionStorage.getItem("cityId") || "0";
-        var markers = city[cityId];
-
-        for (var i = 0; i < markers.length; i++) {
-            var data = markers[i];
-            var myLatlng = new google.maps.LatLng(data.lat, data.lng);
-
-            //extend the bounds to include each marker's position
-            bounds.extend(myLatlng);
-
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: data.title
-            });
-
-
-
-            //Attach click event to the marker.
-            (function (marker, data) {
-                google.maps.event.addListener(marker, "click", function (e) {
-                    //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
-
-                    infoWindow.setContent(contentString);
-                    infoWindow.open(map, marker);
-                });
-            })(marker, data);
-
-            //now fit the map to the newly inclusive bounds
-            google.maps.event.addListenerOnce(map, 'idle', function () {
-                map.fitBounds(bounds);
-
-                function storeSensorId(e) {
-                    var id = e.getAttribute('value');
-                    sessionStorage.sensorId = id;
-                }
-            });
-        }
-
-
-
-        for (var i = 0; i < markers.length; i++) {
-            var data = markers[i];
-            var myLatlng = new google.maps.LatLng(data.lat, data.lng);
-
-            //extend the bounds to include each marker's position
-            bounds.extend(myLatlng);
-
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: data.title
-            });
-
-            const contentString =
-                '<div id="popup">' +
-                '<div id="popup-header">' +
-                '<div id="title">' + 'Tap Water Supply In Household' + '</div>' +
-                '<div id="popup-place">' +
-                '<div id="city">' + data.title + '</div>' +
-                '<div id="state">' + '&nbspAssam' + '</div>' +
-                '</div>' +
-                '</div>' +
-                '<div id="popup-img">' + '<img width="250px" src="../images/mini-map.png"/>' + '</div>' +
-                '<div id="popup-tile">' +
-                '<div id="popup-key">' + '<p>Total Centres</p>' + '</div>' +
-                '<div id="popup-value">' + data.total + '</div>' +
-                '</div>' +
-                '<div id="popup-tile">' +
-                '<div id="popup-key">' + '<p>Total Active Centres</p>' + '</div>' +
-                '<div id="popup-value">' + data.active + '</div>' +
-                '</div>' +
-                '<div id="popup-tile">' +
-                '<div id="popup-key">' + '<p>Total IOT Centres</p>' + '</div>' +
-                '<div id="popup-value">' + data.iot + '</div>' +
-                '</div>' +
-                '<div id="popup-tile">' +
-                '<div id="popup-key">' + '<p>Upcoming Centres</p>' + '</div>' +
-                '<div id="popup-value">' + data.upcoming + '</div>' +
-                '</div>' +
-                '<div id="popup-btn">' + '<a href="../Location_search/location_search.html"><button>Map View</button></a>' + '</div>' +
-
-                '</div>';
-
-
-            //Attach click event to the marker.
-            (function (marker, data) {
-                google.maps.event.addListener(marker, "click", function (e) {
-                    //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
-                    // infoWindow.setContent(contentString);
-                    // infoWindow.open(map, marker); 
-                    sessionStorage.cityId = data.id;
-                });
-            })(marker, data);
-
-            //now fit the map to the newly inclusive bounds
-            google.maps.event.addListenerOnce(map, 'idle', function () {
-                map.fitBounds(bounds);
-            });
-        }
+        marker.setMap(map);
 
     }
 
     const cityId = sessionStorage.getItem("cityId") || "0";
-    var markers = city[cityId];
+    var pointers = city[cityId];
     dropItem()
     function dropItem(data) {
         var containerElm = document.getElementById("dropdown");
         var str = '';
-        for (var i = 0; i < markers.length; i++) {
+        for (var i = 0; i < pointers.length; i++) {
             var divStr = '<a id="link">' +
-                '<button onclick="storeAreaId(this);" value="' + (i + 1) + '">' + markers[i].title + '</button>' +
+                '<button onclick="storeAreaId(this);" value="' + (i + 1) + '">' + pointers[i].title + '</button>' +
                 '</a>';
             str = str + divStr;
         }
