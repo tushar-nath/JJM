@@ -67,5 +67,6 @@ function createPointer(val){
   ang = map(val , 1 , 14 , 3.14 , 6.28);
   line(width/2 , (height/1.25) , (width)/2+100*cos(ang) , (height/1.25)+100*sin(ang));
   fill(ph_colors[val])
-  circle(width/2 , (height/1.25) , 15)
+
+  circle(width / 2, (height / 1.25), 15)
 }
