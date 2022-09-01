@@ -25,6 +25,17 @@ body {
     column-gap: 30px;
 }
 
+.graph-page-title {
+    position: relative;
+    top: -20px;
+}
+
+.graph-page-title h1 {
+    margin: 0;
+    padding: 0;
+    text-decoration: underline;
+}
+
 .top_bar img {
     width: 15%;
     height: max-content;
@@ -154,5 +165,10 @@ body {
 
     .graph-card {
         width: 100%
+    }
+
+    .graph-page-title {
+        position: relative;
+        top: 10px;
     }
 }
