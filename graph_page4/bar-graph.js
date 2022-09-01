@@ -84,7 +84,7 @@ async function getDummyBarData_4() {
 		barDataDate_4 = barChatData.data.map((x) => (x.time).slice(0, 9));
 		barDataDay_4 = barChatData.data.map((x) => weekday[(new Date(x.time)).getDay()]);
 
-    	barDataB_4 = barChatData.data.map((x) => x.y);
+    	barDataB_4 = barChatData.data.map((x) => x.b);
 
 		if (barUserDataA_4.length == 0 && barUserDataB_4.length == 0) {
 			barUserDataA_4 = barDataDay_4;

@@ -81,7 +81,7 @@ async function getDummySecData_4() {
 
 		secDataA_4 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	secDataB_4 = barChatData.data.map((x) => x.y);
+    	secDataB_4 = barChatData.data.map((x) => x.b);
 		secDataA_4 = secDataA_4.slice(0, 21);
 		secDataB_4 = secDataB_4.slice(0, 21);
 
