@@ -5,7 +5,7 @@ var sketchUserDataB_1 = 1
 async function getDummySketchData_1() {
 	try {
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
-		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=60`;
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=30`;
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
@@ -57,7 +57,7 @@ function draw() {
   fill(0)
   createPointer(sketchUserDataB_1);
   noStroke()
-  text("PH SCALE: " + sketchUserDataB_1 , (width-65)/2 , (height/1.05));
+  text("PH VALUE: " + sketchUserDataB_1 , (width-65)/2 , (height/1.05));
 }
 
 function createPointer(val){
