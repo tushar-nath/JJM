@@ -13,7 +13,8 @@ async function getDummySketchData_1() {
 
 		sketchDataA_1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
     sketchDataB_1 = barChatData.data.map((x) => x.x);
-		sketchUserDataB_1 = Math.floor(sketchDataB_1.pop());
+		sketchUserDataB_1 = sketchDataB_1.pop();
+    sketchUserDataB_1 = sketchUserDataB_1.toFixed(3);
     console.log("This is B: " + sketchUserDataB_1);
 	}
 	catch(err) {
@@ -55,7 +56,7 @@ function draw() {
   fill(255)
   arc(width/2 , (height/1.25) , 90 , 90 , 3.14 , 6.28);
   fill(0)
-  createPointer(sketchUserDataB_1);
+  createPointer(Math.floor(sketchUserDataB_1));
   noStroke()
   text("PH VALUE: " + sketchUserDataB_1 , (width-65)/2 , (height/1.05));
 }
