@@ -41,93 +41,100 @@
         };
         var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
 
-        const cityId = sessionStorage.getItem("cityId") || "0";
-	    var markers = city[cityId];
-
         //Create and open InfoWindow.
         var infoWindow = new google.maps.InfoWindow();
 
-        for (var i = 0; i < markers.length; i++) {
-            var data = markers[i];
-            var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+        fetch("markers.json")
+            .then((response) => response.json())
+            .then((info) => {
+                const cityId = sessionStorage.getItem("cityId") || "0";
+                for (var i = 1; i < 3; i++) {
+                    var data = info[cityId][i];
+                    var myLatlng = new google.maps.LatLng(data.lat, data.lng);
 
-            //extend the bounds to include each marker's position
-            bounds.extend(myLatlng);
+                    //extend the bounds to include each marker's position
+                    bounds.extend(myLatlng);
 
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: data.title
-            });
+                    var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        title: data.title
+                    });
 
-            const contentString =
-            '<div id="popup">' +
-                '<div id="popup-header">' +
-                    '<div id="title">' + 'Tap Water Supply In Household' + '</div>' +
-                    '<div id="popup-place">' +
-                        '<div id="city">' + data.title + '</div>' +
-                        '<div id="state">' + '&nbspAssam' + '</div>' +
-                    '</div>' +
-                '</div>' +
-                '<div id="popup-tile">' +
-                    '<div id="popup-key">' + '<p>Total Household Connections</p>' + '</div>' +
-                    '<div id="popup-value">' + data.total + '</div>' +
-                '</div>' +
-                '<div id="popup-tile">' +
-                    '<div id="popup-key">' + '<p>Sensor Installation Date</p>' + '</div>' +
-                    '<div id="popup-value">' + data.date + '</div>' +
-                '</div>' +
-                '<div id="popup-tile">' +
-                    '<div id="popup-key">' + '<p>Current pH Scale</p>' + '</div>' +
-                    '<div id="popup-value">' + data.ph + '</div>' +
-                '</div>' +
-                '<div id="popup-tile">' +
-                    '<div id="popup-key">' + '<p>LPCD</p>' + '</div>' +
-                    '<div id="popup-value">' + data.lpcd + '</div>' +
-                '</div>' +
-                '<div id="popup-btn">' + '<a href="../starting-page/starting-page.html"><button onclick="storeSensorId(this)" value = "' + (i+1) + '">Show Detail Analysis</button></a>' + '</div>' +
+                    const contentString =
+                    '<div id="popup">' +
+                        '<div id="popup-header">' +
+                            '<div id="title">' + 'Tap Water Supply In Household' + '</div>' +
+                            '<div id="popup-place">' +
+                                '<div id="city">' + data.title + '</div>' +
+                                '<div id="state">' + '&nbspAssam' + '</div>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div id="popup-tile">' +
+                            '<div id="popup-key">' + '<p>Total Household Connections</p>' + '</div>' +
+                            '<div id="popup-value">' + data.total + '</div>' +
+                        '</div>' +
+                        '<div id="popup-tile">' +
+                            '<div id="popup-key">' + '<p>Sensor Installation Date</p>' + '</div>' +
+                            '<div id="popup-value">' + data.date + '</div>' +
+                        '</div>' +
+                        '<div id="popup-tile">' +
+                            '<div id="popup-key">' + '<p>Current pH Scale</p>' + '</div>' +
+                            '<div id="popup-value">' + data.ph + '</div>' +
+                        '</div>' +
+                        '<div id="popup-tile">' +
+                            '<div id="popup-key">' + '<p>LPCD</p>' + '</div>' +
+                            '<div id="popup-value">' + data.lpcd + '</div>' +
+                        '</div>' +
+                        '<div id="popup-btn">' + '<a href="../starting-page/starting-page.html"><button onclick="storeSensorId(this)" value = "' + (i) + '">Show Detail Analysis</button></a>' + '</div>' +
 
-            '</div>';
-            
+                    '</div>';
+                    
 
-            //Attach click event to the marker.
-            (function (marker, data) {
-                google.maps.event.addListener(marker, "click", function (e) {
-                    //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
-                    console.log('mujhe ghar jana hein')
-                    infoWindow.setContent(contentString);
-                    infoWindow.open(map, marker);
+                    //Attach click event to the marker.
+                    (function (marker, data) {
+                        google.maps.event.addListener(marker, "click", function (e) {
+                            //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                            infoWindow.setContent(contentString);
+                            infoWindow.open(map, marker);
+                        });
+                    })(marker, data);
+
+                    //now fit the map to the newly inclusive bounds
+                    google.maps.event.addListenerOnce(map, 'idle', function() {
+                    map.fitBounds(bounds);
+
+                    function storeSensorId(e) {
+                        var id = e.getAttribute('value');
+                        sessionStorage.sensorId = id;
+                    }
                 });
-            })(marker, data);
-
-            //now fit the map to the newly inclusive bounds
-            google.maps.event.addListenerOnce(map, 'idle', function() {
-            map.fitBounds(bounds);
-
-            function storeSensorId(e) {
-                var id = e.getAttribute('value');
-                sessionStorage.sensorId = id;
+                }
             }
-        });
-        }
+        )
         
     }
 
-    var cityId = sessionStorage.getItem("cityId") || "0";
-    var area = city[cityId];
-    buildTiles(area)
-    function buildTiles(data) {
-        var containerElm = document.getElementById("container");
-        var str = '';
-        for (var i = 0; i<area.length; i++) {
-            var divStr = '<div class="tile">' +
-                            data[i].title +
-                            '<a onclick="storeSensorId(this)" href="../starting-page/starting-page.html" id="porua-chariali" value="' + (i+1) + '" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>' +
-                            '</div>';
-            str = str + divStr;
-        }
-        containerElm.innerHTML = str;
-    }
+    fetch("markers.json")
+            .then((response) => response.json())
+            .then((info) => {
+                var cityId = sessionStorage.getItem("cityId") || "0";
+                buildTiles(info[cityId])
+                console.log(info[cityId]);
+                function buildTiles(data) {
+                    var containerElm = document.getElementById("container");
+                    var str = '';
+                    for (var i = 1; i<3; i++) {
+                        var divStr = '<div class="tile">' +
+                                        data[i].title +
+                                        '<a onclick="storeSensorId(this)" href="../starting-page/starting-page.html" id="porua-chariali" value="' + (i) + '" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>' +
+                                        '</div>';
+                        str = str + divStr;
+                    }
+                    containerElm.innerHTML = str;
+                }
+            }      
+    )
 
     function storeSensorId(e) {
         var id = e.getAttribute('value');

@@ -10,9 +10,11 @@ body {
     width: 100%;
     height: 50px;
     text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
-.page-title {
+/* .page-title {
     margin: auto;
     padding-top: 0.5%;
     width: 10%;
@@ -23,12 +25,9 @@ body {
     font-size: 25px;
     font-weight: 600;
     opacity: 75%;
-}
+} */
 
 .graph-page {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
     row-gap: 20px;
     margin-bottom: 2%;
@@ -128,6 +127,51 @@ body {
 }
 
 .btn {
+    text-align: center !important;
+    background-color: #8462E1 !important;
+    border-radius: 10px !important;
+    margin-left: 1%;
+    margin-right: 1%;
+    width: 11%;
+}
+
+#active {
+    background-color: #F45C20 !important;
+}
+
+.btn:hover {
+    background-color: #F45C20 !important;
+}
+
+.buttons {
+    width: 20%;
+    margin: auto;
+    padding: 2%;
+    display: flex;
+}
+
+#btn-next {
+    width: 100px;
+    height: 30px;
+    position: relative;
+    left: 50%;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #0A68FF;
+    border: 1px solid #0020C2;
+    text-align: left;
+    padding-left: 1%;
+    box-shadow: 5px -5px 0px 2px rgba(10,104,255,1);
+    text-align: center;
+}
+
+#btn-back {
+    margin-right: 40%;
     width: 100px;
     height: 30px;
     background-color: white;
@@ -138,21 +182,23 @@ body {
     font-weight: 700;
     font-size: 12px;
     color: #0A68FF;
+    border: 1px solid #0020C2;
     text-align: left;
     padding-left: 1%;
     box-shadow: 5px -5px 0px 2px rgba(10,104,255,1);
-    border: 1px solid #0A68FF;
+    text-align: center;
 }
 
-
-.btn:hover {
+#btn-next:hover {
     cursor: pointer;
     color: rgba(12,100,52);
     box-shadow: 5px -5px 0px 2px rgba(12,100,52);
 }
 
-.graphs-button {
-    margin: 10px;
+#btn-back:hover {
+    cursor: pointer;
+    color: rgba(12,100,52);
+    box-shadow: 5px -5px 0px 2px rgba(12,100,52);
 }
 
 @media screen and (max-width: 991px) {

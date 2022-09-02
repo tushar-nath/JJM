@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="division.css" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6c0f35acb6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="logo">
+        <div class="logo-img" id="img-1">
+            <img src="../../images/starting-page/logo-1.png" alt="" width="100" height="87" />
+        </div>
+        <div class="logo-img" id="img-2">
+            <img src="../../images/starting-page/logo-5.png" alt="" width="110" height="88" />
+        </div>
+        <div class="logo-img" id="img-3">
+            <img src="../../images/starting-page/logo-3.png" alt="" width="100" height="82" />
+        </div>
+        <div class="logo-img" id="img-4">
+            <img src="../../images/starting-page/logo-4.png" alt="" width="80" height="90" />
+        </div>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="left-panel">
+            <div class="square-box-container">
+                <div class="square-box">
+                    <div class="tile"><a onclick="storeDivisionId(this);" value="1">DIVISION 1</a></div>
+                    <div class="tile"><a onclick="storeDivisionId(this);" value="2">DIVISION 2</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="center-circle-container">
+                <div class="center-circle">
+                    <svg id="arrow-up" onclick="scrollUpButton()" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                    </svg>
+
+                    <ul id="scroll" class="ul-class">
+                        <li class="items">
+                            <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white" id="city3"
+                                href="../dashboard-2/dashboard-2.html" value="3"></a>
+                        </li>
+                        <li class="active items">
+                            <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white" id="city1"
+                                href="../dashboard-2/dashboard-2.html" value="1"></a>
+                        </li>
+                        <li class="items">
+                            <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white" id="city2"
+                                href="../dashboard-2/dashboard-2.html" value="2"></a>
+                        </li>
+                    </ul>
+
+                    <svg id="arrow-down" onclick="scrollDownButton()" xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img class="center-fit" src="../../images/dashboard/dashboard-footer-img.png" />
+    </div>
+
+    <div class="dashboard">
+        <div class="dashboard-select">
+            <select id="dashboard-select" name="dashboard-select"></select>
+            <div class="select-white"></div>
+            <div class="select-shadow"></div>
+        </div>
+        <div class="dashboard-body">
+            <div class="dashboard-body-info">
+                <div class="dashboard-body-info-icon-text">
+                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue"></i>
+
+                    <p>Total Centres</p>
+                </div>
+                <p class="dashboard-body-info-value">1500</p>
+            </div>
+            <div class="dashboard-body-info">
+                <div class="dashboard-body-info-icon-text">
+                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue"></i>
+
+                    <p>Active IOT Centres</p>
+                </div>
+                <p class="dashboard-body-info-value">346</p>
+            </div>
+            <div class="dashboard-body-info">
+                <div class="dashboard-body-info-icon-text">
+                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue"></i>
+                    <p>Upcoming Events</p>
+                </div>
+                <p class="dashboard-body-info-value">540</p>
+            </div>
+            <div class="dashboard-body-info">
+                <div class="dashboard-body-info-icon-text">
+                    <i class="fa-solid fa-grip-lines-vertical" style="color: blue"></i>
+
+                    <p>Active Centres</p>
+                </div>
+                <p class="dashboard-body-info-value">705</p>
+            </div>
+        </div>
+
+        <div class="dashboard-footer-buttons">
+            <a href="/second-page-view/second-page-view.html">
+                <button type="button" class="btn btn-back">
+                    Back &#10229;
+                </button>
+            </a>
+            <a href="/dashboard/dashboard-2/dashboard-2.html">
+                <button type="button" class="btn btn-next">
+                    Next &#10230;
+                </button>
+            </a>
+        </div>
+    </div>
+    <script>
+
+        function storeDivisionId(e) {
+            var id = e.getAttribute('value');
+            sessionStorage.divisionId = id;
+            location.reload();  
+        }
+
+        fetch("../division.json")
+            .then((response) => response.json())
+            .then((data) => {
+                var districtId = sessionStorage.getItem("districtId") || "0";
+                var divisionId = sessionStorage.getItem("divisionId") || "0";
+                console.log(data[districtId][divisionId]);
+                document.querySelector("#city1").innerText = data[districtId][divisionId][1];
+                document.querySelector("#city2").innerText = data[districtId][divisionId][2];
+                document.querySelector("#city3").innerText = data[districtId][divisionId][3];
+            }
+        )
+
+    </script>
+    <script src="container.js"></script>
+</body>
+
+</html>

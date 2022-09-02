@@ -48,32 +48,24 @@
 
                 <ul id="scroll" class="ul-class">
                     <li class="items">
-                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
-                            href="../dashboard-2/dashboard-2.html" value="1" id="1">Guwahati</a>
+                        <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white"
+                            href="../division/division.html" value="4">Dibrugarh</a>
                     </li>
-                    <li>
-                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white" value="2" id="2"
-                            href="../dashboard-2/dashboard-2.html">Nalbari</a>
+                    <li class="items">
+                        <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white" value="2" id="2"
+                            href="../division/division.html" value="5">Baksa</a>
                     </li>
                     <li class="active items">
-                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
-                            href="../dashboard-2/dashboard-2.html" value="3">Tezpur</a>
+                        <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white"
+                            href="../division/division.html" value="1">Kamrup</a>
                     </li>
                     <li class="items">
-                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
-                            href="../dashboard-2/dashboard-2.html" value="1" >Dhekiajuli</a>
+                        <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white"
+                            href="../division/division.html" value="2">Sonitpur</a>
                     </li>
                     <li class="items">
-                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
-                            href="../dashboard-2/dashboard-2.html" value="2" >Balipara</a>
-                    </li>
-                    <li class="items">
-                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
-                            href="../dashboard-2/dashboard-2.html" value="3" >Sootea</a>
-                    </li>
-                    <li class="items">
-                        <a onclick="storeCityId(this);" style="text-decoration: none; color: white"
-                            href="../dashboard-2/dashboard-2.html" value="1" >Amoni</a>
+                        <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white"
+                            href="../division/division.html" value="3">Nalbari</a>
                     </li>
                 </ul>
 
@@ -170,34 +162,11 @@
             });
     </script>
     <script>
-        let dropdown = document.getElementById("dashboard-select");
-        dropdown.length = 0;
 
-        let defaultOption = document.createElement("option");
-        defaultOption.text = "Select State";
-
-        dropdown.add(defaultOption);
-        dropdown.selectedIndex = 0;
-
-        fetch("dashboard-1-details.json")
-            .then((response) => response.json())
-            .then((data) => {
-                let option;
-
-                for (let i = 0; i < data.length; i++) {
-                    option = document.createElement("option");
-                    option.text = data[i].city;
-                    option.value = data[i].city;
-                    dropdown.add(option);
-                }
-            });
-    </script>
-
-    <script>
-        function storeCityId(e) {
-        var id = e.getAttribute('value');
-        sessionStorage.cityId = id;
-    }
+        function storeDistrictId(e) {
+            var id = e.getAttribute('value');
+            sessionStorage.districtId = id;
+        }
 
     </script>
 

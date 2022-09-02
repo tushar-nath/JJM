@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="graph_page.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="../script/p5.js"></script>
@@ -19,12 +23,16 @@
             <img src="../images/starting-page/logo-3.png" alt="logo" class="logo">
             <img src="../images/starting-page/logo-4.png" alt="logo" class="logo">
         </div>
+         <div class="graph-page-title">
+            <a href="../graph_page/graph_page.html"  class="btn btn-primary btn-lg active" role="button" aria-pressed="true">pH</a>
+            <a href="../graph_page2/graph_page.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">TDS</a>
+            <a href="../graph_page3/graph_page.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Turbidity</a>
+            <a href="../graph_page4/graph_page.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Chlorine</a>
+            <a href="../graph_page5/graph_page.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Waterflow</a>
+            <a href="../graph_page6/graph_page.html" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Residual Chlorine</a>
+            <a href="../graph_page7/graph_page.html" id="active" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Temperature</a>
+        </div>
         <div class="graphs">
-            <div class="graphs-button">
-                <a href="/graph_page6/graph_page.html">
-                    <button type="button" class="btn btn-back">Back &#10229;</button>
-                </a>
-            </div>
             <div class="graph-container">
                 <div class="graph-card">
                     <div class="top_container_graph">
@@ -98,11 +106,14 @@
                     </div>
                 </div>
             </div>
-            <div class="graphs-button">
-                <a href="../second-page-view/second-page-view.html">
-                    <button type="button" class="btn btn-next">Home &#10230;</button>
-                </a>
-            </div>
+        </div>
+        <div class="buttons">
+            <a href="/starting-page/starting-page.html">
+                <button class="btn-back" type="button" id="btn-back">Back</button>
+            </a>
+            <a href="../second-page-view/second-page-view.html">
+                <button class="btn-next" type="button" id="btn-next">Home</button>
+            </a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>

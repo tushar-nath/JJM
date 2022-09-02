@@ -56,71 +56,88 @@ body {
 
 .dashboard-content {
     display: flex;
-    padding: 0.5% 2% 0.5% 2%;
+    padding: 4% 2% 4% 2%;
     margin: auto;
     width: 80%;
     height: 500px;
 }
 
 .left-panel {
-    padding: 5%;
+    width: 50%;
+}
+
+.square-box-container {
+    width: 68%;
+    margin: 4% 2% 5% 16%;
+    height: 400px;
+    background-color: #EBF6F8;
+    border-radius: 80px;
+}
+
+.square-box {
+    position: relative;
+    width: 88%;
+    height: 340px;
+    margin: auto;
+    background-color: #FF5D44;
+    border-radius: 80px;
+    top: 8%;
+    text-align: center;
+}
+
+.tile {
+    width: 70%;
+    height: 80px;
+    margin-left: 15%;
+    margin-top: 5%;
+    position: relative;
+    top: 25%;
+    background-color: rgba(217, 217, 217, 0.4);
+    border-radius: 30px;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-align: center;
+}
+
+.tile a {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 40%;
+    cursor: pointer;
 }
 
 .right-panel {
-    padding: 5%;
-}
-
-.center-panel {
+    width: 50%;
     text-align: center;
-    width: 100%;
-    background-color: #EBF6F8;
-    border-radius: 20px;
-    z-index: 0;
-}
-
-#total {
-    font-size: 60px;
-    font-family: Poppins;
-    font-weight: 600;
-    line-height: 105px;
-    letter-spacing: 0em;
-}
-
-#upcoming {
-    font-size: 60px;
-    font-family: Poppins;
-    font-weight: 600;
-    line-height: 105px;
-    letter-spacing: 0em;
-}
-
-#iot {
-    font-size: 60px;
-    font-family: Poppins;
-    font-weight: 600;
-    line-height: 105px;
-    letter-spacing: 0em;
-}
-
-#active {
-    font-size: 60px;
-    font-family: Poppins;
-    font-weight: 600;
-    line-height: 105px;
-    letter-spacing: 0em;
 }
 
 .dashboard-content p {
     white-space: nowrap;
 }
 
+.center-circle-container{
+    width: 68%;
+    margin: 4% 2% 5% 16%;
+    height: 400px;
+    background-color: #EBF6F8;
+    border-radius: 80px;
+}
+
 .center-circle {
-    border-radius: 100%;
-    height: 500px;
-    width: 500px;
+    position: relative;
+    width: 88%;
+    height: 340px;
+    margin: auto;
+    top: 8%;
+    border-radius: 80px;
     margin: auto;
     display: inline-block;
-    background-color: #6B53FD;
+    background-color: #FF5D44;
 }
 
 #next-btn {
@@ -132,17 +149,16 @@ body {
 }
 
 .ul-class {
+    position: relative;
+    bottom: 15%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 70px;
     padding: 0px;
-    height: 450px;
+    height: 240px;
     overflow: hidden;
-    bottom: 90px;
-    position: relative;
 }
-
 
 
 li {
@@ -183,7 +199,7 @@ li {
 
 #arrow-down {
     position: relative;
-    bottom: 85px;
+    bottom: 1.5%;
 }
 
 #arrow-up:hover {

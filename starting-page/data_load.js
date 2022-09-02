@@ -4,7 +4,7 @@ jQuery.getJSON('./data.json', function(data) {
     // get local storage data named sensor id
     const sensorId = sessionStorage.getItem("sensorId") || "0";
     console.log(sensorId);
-    loadedData = data[sensorId-1];
+    loadedData = data[sensorId - 1];
     afterLoaded();
 }).fail(function() {
     console.log('error');
