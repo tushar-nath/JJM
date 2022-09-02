@@ -21,6 +21,14 @@ async function dummyChart() {
       				borderColor: "rgba(0, 0, 255, 1)",
 					borderWidth: 1,
 					data: secUserDataB_1,
+				},
+				{
+					fill: false,
+					lineTension: 0,
+      				backgroundColor: "rgba(255, 0, 0, 1)",
+      				borderColor: "rgba(255, 0, 0, 1)",
+					borderWidth: 1,
+					data: [8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5],
 				}
 			],
 		},
@@ -81,7 +89,7 @@ async function getDummySecData_1() {
 
 		secDataA_1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	secDataB_1 = barChatData.data.map((x) => x.y);
+    	secDataB_1 = barChatData.data.map((x) => x.x);
 		secDataA_1 = secDataA_1.slice(0, 21);
 		secDataB_1 = secDataB_1.slice(0, 21);
 		console.log(secDataA_1);

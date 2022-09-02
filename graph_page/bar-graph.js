@@ -73,7 +73,7 @@ dummyChart();
 async function getDummyBarData_1() {
 	try {
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
-		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=3600`;
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=43200`;
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
@@ -84,7 +84,7 @@ async function getDummyBarData_1() {
 		barDataDate_1 = barChatData.data.map((x) => (x.time).slice(0, 9));
 		barDataDay_1 = barChatData.data.map((x) => weekday[(new Date(x.time)).getDay()]);
 
-    	barDataB_1 = barChatData.data.map((x) => x.y);
+    	barDataB_1 = barChatData.data.map((x) => x.x);
 
 		if (barUserDataA_1.length == 0 && barUserDataB_1.length == 0) {
 			barUserDataA_1 = barDataDay_1;

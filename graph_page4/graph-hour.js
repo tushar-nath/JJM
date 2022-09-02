@@ -81,7 +81,7 @@ async function getDummyHourData_4() {
 
 		hourDataA_4 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	hourDataB_4 = barChatData.data.map((x) => x.y);
+    	hourDataB_4 = barChatData.data.map((x) => x.b);
 		hourDataA_4 = hourDataA_4.slice(0, 21);
 		hourDataB_4 = hourDataB_4.slice(0, 21);
 

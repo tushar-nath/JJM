@@ -81,7 +81,7 @@ async function getDummyHourData_1() {
 
 		hourDataA_1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-    	hourDataB_1 = barChatData.data.map((x) => x.y);
+    	hourDataB_1 = barChatData.data.map((x) => x.x);
 		console.log("This is horDatB: ", hourDataB_1);
 		hourDataA_1 = hourDataA_1.slice(0, 21);
 		hourDataB_1 = hourDataB_1.slice(0, 21);
