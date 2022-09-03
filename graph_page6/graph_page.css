@@ -168,6 +168,7 @@ body {
 
 #active {
     background-color: #F45C20 !important;
+    box-shadow: rgb(47,79,79) 0px 3px;
 }
 
 .btn:hover {

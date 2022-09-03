@@ -39,9 +39,9 @@
         fetch("data.json")
             .then((response) => response.json())
             .then((info) => {
-                var districtId = sessionStorage.getItem("districtId") || "0";
+                var districtId = 1;
                 console.log(info);
-                for (var i = 1; i < 6; i++) {
+                for (var i = 1; i < 7; i++) {
                     var data = info[districtId][i];
                     var myLatlng = new google.maps.LatLng(data.lat, data.lng);
 

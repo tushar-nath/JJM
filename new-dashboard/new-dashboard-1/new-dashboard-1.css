@@ -1,0 +1,706 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+}
+
+/* navbar css starts here */
+.nav-bar {
+    width: 100%;
+    display: flex;
+}
+
+.logo {
+    display: flex !important;
+    width: 65% !important;
+    display: table;
+    padding: 1%;
+}
+
+.logo-img {
+    margin-right: 2%;
+    height: 50px;
+    width: 50px;
+}
+
+.logo-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#img-2 {
+    padding-left: 0% !important;
+}
+
+.toggle {
+    height: 225px;
+    width: 35%;
+    border-radius: 10px;
+    background-color: #EAEBFF;
+}
+
+.toggle-header {
+    height: 40px;
+    font-family: Josefin Sans;
+    padding-left: 2%;
+    padding-top: 2%;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #3699FF;
+    margin-left: 2.5%;
+}
+
+.school {
+    margin-top: 1%;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    cursor: pointer;
+}
+
+.household {
+    margin-top: 1%;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    cursor: pointer;
+}
+
+.toggle-logo {
+    width: 20%;
+    text-align: center;
+}
+
+.toggle-desc {
+    width: 77%;
+    font-family: Josefin Sans;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 400;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-left: 3%;
+    color: #F53D1C;
+    margin-top: 4.5%;
+}
+
+.toggle-active {
+    width: 3%;
+    height: 75px;
+    background-color: #F45C20;
+    border-radius: 5px 0px 0px 5px;
+}
+
+.school:hover {
+    background-color: #BCEBC6;
+}
+
+.household:hover {
+    background-color: #BCEBC6;
+}
+
+/* navbar css ends here */
+
+
+
+
+/* MAP CONTAINER STARTS */
+
+.map-container{
+    margin: 2% 0% 2% 0%;
+    width: 100%;
+    height: 850px;
+}
+
+.map-container-box{
+    background: #E7E7E7;
+    width: 75%;
+    height: 700px;
+    margin: auto;
+    background-color: #E7E7E7;
+    padding: 2%;
+    border-radius: 5px;
+}
+#dvMap{
+    width: 97%;
+    height: 700px; 
+    margin: auto;
+}
+
+/* Marker Popup Design starts */
+
+#popup {
+    width: 340px;
+}
+
+#popup-header {
+    margin: 2% 0% 0% 2%;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#popup-place {
+    display: flex;
+    font-family: Poppins;
+    font-weight: 500;
+
+}
+
+#state {
+    color: rgba(244, 92, 32, 1);
+}
+
+#popup-img {
+    border-radius: 15px;
+    text-align: center;
+    margin: 3% 2% 3% 2%;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#popup-tile {
+    font-size: 12px;
+    display: flex !important;
+    margin: 2%;
+    font-family: Poppins;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #0A68FF;
+    color: white;
+}
+
+#popup-key {
+    width: 80%;
+    padding-left: 3%;
+}
+
+#popup-value {
+    width: 20%;
+    text-align: center;
+    position: relative;
+    top: 13px;
+}
+
+#popup-btn {
+    padding: 3%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+#popup-btn button {
+    cursor: pointer;
+    border-style: none;
+    padding: 2% 5% 2% 5%;
+    border-radius: 7px;
+    color: white;
+    background-color: #0A68FF;
+}
+
+/* Marker Popup Design ends */
+
+
+/* MAP CONTAINER ENDS */
+
+
+/* stats designs starts here */
+.dashboard-stats {
+    width: 100%;
+    height: 800px;
+    padding-top: 2%;
+}
+
+.stats-container {
+    margin: auto;
+    width: 85%;
+    height: 720px;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 25px;
+    padding: 2%;
+}
+
+.stat-header {
+    font-family: Poppins;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 57px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F45C20;
+    margin: 1% 1% 0% 1%;
+}
+
+.stat-desc {
+    font-family: Poppins;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0A3170;
+    margin: 0% 1% 5% 1%;
+}
+
+.stat-tile-container {
+    margin: auto;
+    width: 90%;
+    height: 500px;
+}
+
+.upper-tile {
+    display: flex;
+    height: 250px;
+}
+
+.left-tile {
+    padding: 1%;
+    width: 50%;
+    background-color: #0A68FF;
+}
+
+.right-tile {
+    padding: 1%;
+    width: 50%;
+    background-color: #9D4DB1;
+}
+
+.lower-tile {
+    padding: 1%;
+    height: 250px;
+    background-color: #A2D6A1;
+}
+
+.lt-header {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 2%;
+}
+
+.lt-desc {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 7% 2% 2% 2%;
+}
+
+
+.rt-header {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 2%;
+}
+
+.rt-desc {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 7% 2% 2% 2%;
+}
+
+.lower-header {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 2%;
+}
+
+.lower-desc {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 7% 2% 2% 2%;
+}
+
+/* stat style ends here */
+
+
+/* status starts */
+
+.dashboard-status{
+    width: 100%;
+    height: 1000px;
+    padding-top: 5%;
+}
+.status-container{
+    width: 75%;
+    margin: auto;
+    height: 900px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.status-logo{
+    position: relative;
+    left: 88%;
+    top: 5%;
+}
+.staus-header{
+    color: #F45C20;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+}
+.certifield-state{
+    height: 30px;
+    width: 70%;
+    margin: 1% 10% 1% 15%;
+    font-family: Poppins;
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 0% 0% 2% 1%;
+    border-radius: 5px;
+}
+
+.certifield-state:hover{
+    background-color:#F45C20 ;
+    color: white ;
+}
+
+.reported-state{
+    height: 30px;
+    width: 70%;
+    margin: 1% 10% 1% 15%;
+    font-family: Poppins;
+    font-weight: 600;
+    border: 1px solid black;
+    padding: 0% 0% 2% 1%;
+    border-radius: 5px;
+}
+
+.reported-state:hover{
+    background-color:#F45C20 ;
+    color: white ;
+}
+.status-ur{
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 5% 1% 5%;
+}
+
+.status-lr{
+    display: flex;
+    justify-content: space-around;
+    margin: 2% 5% 1% 5%;
+}
+
+.district{
+    height: 250px;
+    width: 35%;
+    background-color: #EAEBFF;
+    /* border: 0.08px solid black; */
+}
+
+.block{
+    height: 250px;
+    width: 35%;
+    background-color:#FDBC64;
+    /* border: 0.5px solid black; */
+}
+.panchayats{
+     height: 250px;
+    width: 35%;
+    background-color: #F8E5E5;
+    /* border: 0.5px solid black;    */
+}
+
+.villages{
+    height: 250px;
+    width: 35%;
+    background-color: #BDBDBD;
+    /* border: 0.5px solid black;     */
+}
+
+.district-header{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    /* border: 0.5px solid black;   */
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 25px;
+    padding: 5% 0% 1% 0%;
+}
+.block-header{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    /* border: 0.5px solid black;   */
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 25px;
+    padding: 5% 0% 1% 0%;
+}
+.panchayats-header{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    /* border: 0.5px solid black;   */
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 25px;
+    padding: 5% 0% 1% 0%;
+}
+.villages-header{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    /* border: 0.5px solid black;   */
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 25px;
+    padding: 5% 0% 1% 0%;
+}
+
+.district-detail{
+    display: flex;
+}
+.block-detail{
+    display: flex;
+}
+
+.panchayats-detail{
+    display: flex;
+}
+
+.village-detail{
+    display: flex;
+}
+.district-reported{
+    width: 50%;
+    height:176px;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black; 
+    border-style: solid solid none none;
+}
+
+.district-reported p{
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.district-certified{
+    width: 50%;
+    height:176px;
+    font-family: Poppins;
+     text-align: center;
+    border: 2px solid black; 
+    border-style: solid none none none;
+}
+
+.district-certified p{
+    font-size: 23px;
+}
+
+.block-reported{
+    width: 50%;
+    height:176px;
+    font-family: Poppins;
+     text-align: center;
+    border: 2px solid black; 
+    border-style: solid solid none none;
+}
+
+.block-reported p{
+   font-size: 23px;
+}
+
+.block-certified{
+    width: 50%;
+    height:176px;
+    font-family: Poppins;
+     text-align: center;
+    border: 2px solid black; 
+    border-style: solid none none none;
+}
+
+.block-certified p{
+    font-size: 23px;
+}
+
+.panchayat-reported{
+    width: 50%;
+    height:176px;
+    font-family: Poppins;
+     text-align: center;
+   border: 2px solid black; 
+    border-style: solid solid none none;
+}
+
+.panchayat-reported p{
+    font-size: 23px; 
+}
+
+.panchayat-certified{
+    width: 50%;
+    height:176px;
+    font-family: Poppins;
+     text-align: center;
+    border: 2px solid black; 
+    border-style: solid none none none;
+}
+
+.panchayat-certified p{
+   font-size: 23px; 
+}
+
+.panchayat-certified p{
+   font-size: 23px; 
+}
+
+.village-reported{
+    width: 50%;
+    height:176px;
+    font-family: Poppins;
+     text-align: center;
+    border: 2px solid black; 
+    border-style: solid solid none none;
+}
+
+.village-reported p{
+   font-size: 23px; 
+}
+
+.village-certified{
+    width: 50%;
+    height:176px;
+    font-family: Poppins;
+     text-align: center;
+     border: 2px solid black; 
+    border-style: solid none none none;
+}
+
+.village-certified p{
+    font-size: 23px; 
+}
+
+
+
+/* status ends */
+
+
+/* table-style starts here */
+.dashboard-table {
+    width: 100%;
+    height: 2000px;
+    padding-top: 1%;
+}
+.table-header {
+    width: 95%;
+    height: 75px;
+    margin: 1% 1% 1% 2.5%;
+}
+.title {
+    font-family: Poppins;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 1%;
+}
+.desc {
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #B5B5C3;
+}
+table td {
+    border:1px solid #000;
+}
+.trColor1{
+  background-color:pink;
+}
+.trColor2{
+ background-color:red; 
+}
+.trColor3{
+ background-color:green; 
+}
+.trColor4{
+ background-color:blue; 
+}
+.container {
+    margin: auto;
+    width: 95%;
+    height: 800px;
+    /* transform: translate(-50%,-50%); */
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+th, td {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    color: #464E5F;
+    cursor: pointer;
+}
+th {
+    text-align: left;
+}
+thead th {
+    background-color: #F3F6F9;
+}
+tbody tr:hover {
+    /* background-color: rgba(255,255,255,0.3); */
+    background-color: #3699FF;
+}
+tbody td {
+    position: relative;
+}
+tbody td:hover:before {
+    /* position: absolute;
+    left: 0;
+    right: 0; */
+    /* top: -9999px;
+    bottom: -9999px; */
+    background-color: rgba(255,255,255,0.2);
+    z-index: -1;
+}
+/* table-style ends here */
