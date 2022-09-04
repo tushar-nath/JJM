@@ -15,6 +15,7 @@
     <title>Document</title>
     <script src="../household-json/district.json"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
 </head>
 
@@ -193,15 +194,19 @@
                     </tr>
                 </thead>
                 <tbody id="buildTable">
-                    <!-- <tr>
-                        <td>1</td>
-                        <td>Name 1</td>
-                        <td><span>73023-04041</span></td>
-                        </tr> -->
+                    <!-- Populate the table from a JSON file -->
                 </tbody>
             </table>
         </div>
     </div>
+
+    <div class="dashboard-graph">
+        <div class="graph-container">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <img id="footer" width="100%" height="400px" src="../../images/new-dashboard/footer.png">
 
     <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&sensor=false&callback=initialize"></script>
@@ -229,14 +234,52 @@
                     function buildTable(data) {
                         var table = document.getElementById("buildTable");
                         for (var i = 1; i < 36; i++) {
-                            var row = `<tr onclick="storeDistrictId(this)" value="${data[i].id}">
+                            if (i < 8) {
+                                var row = `<tr bgcolor="#1E90FF" onclick="storeDistrictId(this)" value="${data[i].id}">
                                             <td>${data[i].title}</td>
                                             <td>${data[i].total}</td>
                                             <td>${data[i].tap}</td>
                                             <td><span>${data[i].tapPer}</span></td>
                                             <td>${data[i].progress}</td>
                                         </tr>`;
-                            table.innerHTML += row;
+                                table.innerHTML += row;
+                            } else if (i < 15) {
+                                var row = `<tr bgcolor="#00BFFF" onclick="storeDistrictId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                                table.innerHTML += row;
+                            } else if (i < 22) {
+                                var row = `<tr bgcolor="#87CEEB" onclick="storeDistrictId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                                table.innerHTML += row;
+                            } else if (i < 30) {
+                                var row = `<tr bgcolor="#87CEFA" onclick="storeDistrictId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                                table.innerHTML += row;
+                            } else {
+                                var row = `<tr bgcolor="#ADD8E6" onclick="storeDistrictId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                                table.innerHTML += row;
+                            }
                         }
                     }
                     for (var i = 1; i < 36; i++) {
@@ -282,13 +325,17 @@
 
                         //Attach click event to the marker.
                         (function (marker, data) {
-                            google.maps.event.addListener(marker, "click", function (e) {
+                            google.maps.event.addListener(marker, 'mouseover', function (e) {
                                 //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
                                 infoWindow.setContent(contentString);
                                 infoWindow.open(map, marker);
                                 sessionStorage.districtId = data.id;
                             });
                         })(marker, data);
+
+                        marker.addListener('mouseout', function () {
+                            infowindow.close(map, marker);
+                        });
 
                         //now fit the map to the newly inclusive bounds
                         google.maps.event.addListenerOnce(map, 'idle', function () {
@@ -319,31 +366,73 @@
             sessionStorage.districtId = id;
         }
 
-        //JS function for changing the gradient in table rows
-        // var colorMap = {};
-        // $("table tr td:nth-child(3)").each(function () {
-        //     var tdVal = $(this).find("span").text();
-        //     //alert(tdVal);
+        //JS function for Chart JS
+        var ctx = document.getElementById('myChart').getContext("2d");
 
-        //     if (checkItemExist(tdVal, colorMap) == false)
-        //         colorMap[tdVal] = 'trColor' + (Object.keys(colorMap).length + 1) + '';
+        var gradientStroke = ctx.createLinearGradient(300, 0, 100, 0);
+        gradientStroke.addColorStop(0, '#87CEEB');
+        gradientStroke.addColorStop(1, '#ADD8E6');
 
-        //     //alert(JSON.stringify(colorMap));
+        var gradientFill = ctx.createLinearGradient(500, 0, 100, 0);
+        gradientFill.addColorStop(0, "rgba(30, 144, 255, 0.72)");
+        gradientFill.addColorStop(1, "rgba(135, 206, 235, 0.3)");
 
-        //     $(this).parent("tr").addClass(colorMap[tdVal]);
-        // });
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+                datasets: [{
+                    label: "PROGRESS WITH TAP WATER SUPPLY IN HH’S",
+                    borderColor: gradientStroke,
+                    pointBorderColor: gradientStroke,
+                    pointBackgroundColor: gradientStroke,
+                    pointHoverBackgroundColor: gradientStroke,
+                    pointHoverBorderColor: gradientStroke,
+                    pointBorderWidth: 10,
+                    pointHoverRadius: 10,
+                    pointHoverBorderWidth: 1,
+                    pointRadius: 3,
+                    fill: true,
+                    backgroundColor: gradientFill,
+                    borderWidth: 4,
+                    data: [100, 120, 150, 170, 180, 170, 160]
+                }]
+            },
+            options: {
+                animation: {
+                    easing: "easeInOutBack"
+                },
+                legend: {
+                    position: "bottom"
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            fontColor: "rgba(0,0,0,0.5)",
+                            fontStyle: "bold",
+                            beginAtZero: true,
+                            maxTicksLimit: 5,
+                            padding: 20
+                        },
+                        gridLines: {
+                            drawTicks: false,
+                            display: false
+                        }
 
-        // function checkItemExist(item, array) {
-
-        //     for (var k in array) {
-        //         if (k == item) {
-        //             return true;
-        //         }
-        //     }
-
-        //     return false;
-        //     //colorMap.indexOf(tdVal) == -1
-        // }
+                    }],
+                    xAxes: [{
+                        gridLines: {
+                            zeroLineColor: "transparent"
+                        },
+                        ticks: {
+                            padding: 20,
+                            fontColor: "rgba(0,0,0,0.5)",
+                            fontStyle: "bold"
+                        }
+                    }]
+                }
+            }
+        });
     </script>
 </body>
 

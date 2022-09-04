@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-
 }
 
 /* navbar css starts here */
@@ -613,16 +612,13 @@ body {
 .village-certified p{
     font-size: 23px; 
 }
-
-
-
 /* status ends */
 
 
 /* table-style starts here */
 .dashboard-table {
     width: 100%;
-    height: 2000px;
+    height: 1950px;
     padding-top: 1%;
 }
 .table-header {
@@ -651,23 +647,10 @@ body {
 table td {
     border:1px solid #000;
 }
-.trColor1{
-  background-color:pink;
-}
-.trColor2{
- background-color:red; 
-}
-.trColor3{
- background-color:green; 
-}
-.trColor4{
- background-color:blue; 
-}
 .container {
     margin: auto;
     width: 95%;
     height: 800px;
-    /* transform: translate(-50%,-50%); */
 }
 table {
     width: 100%;
@@ -678,7 +661,7 @@ table {
 th, td {
     padding: 15px;
     background-color: rgba(255,255,255,0.2);
-    color: #464E5F;
+    color: black;
     cursor: pointer;
 }
 th {
@@ -688,19 +671,39 @@ thead th {
     background-color: #F3F6F9;
 }
 tbody tr:hover {
-    /* background-color: rgba(255,255,255,0.3); */
     background-color: #3699FF;
 }
 tbody td {
     position: relative;
 }
 tbody td:hover:before {
-    /* position: absolute;
-    left: 0;
-    right: 0; */
-    /* top: -9999px;
-    bottom: -9999px; */
     background-color: rgba(255,255,255,0.2);
     z-index: -1;
 }
 /* table-style ends here */
+
+
+/* graph style starts here */
+.dashboard-graph {
+    width: 100%;
+    height: 800px;
+    /* background-color: black; */
+    padding-top: 5%;
+}
+.graph-container {
+    width: 80%;
+    height: 700px;
+    margin: auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* graph style ends here */
+
+/* footer style starts here */
+#footer {
+    margin: 0% !important;
+    padding: 0% !important;
+    position: relative;
+    top: 1%;
+}
+/* footer style ends here */
