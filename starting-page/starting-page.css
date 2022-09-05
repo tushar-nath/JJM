@@ -65,7 +65,7 @@ body{
 
 .map-container {
     width: 40%;
-    height: 355px;
+    height: 400px;
     margin: 3%;
     border-style: solid;
     border-color: rgba(10, 104, 255, 1);
@@ -114,7 +114,7 @@ ul li::before {
 
 .form {
     width: 51%;
-    height: 385px;
+    height: 400px;
     margin-top: 3%;
     border-radius: 20px;
     background-color: rgb(255 255 255 / 80%);

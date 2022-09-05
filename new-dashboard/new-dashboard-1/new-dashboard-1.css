@@ -279,7 +279,7 @@ body {
 
 .upper-tile {
     display: flex;
-    height: 31.2vw;
+    height: 15.6vw;
 }
 
 .left-tile {
@@ -293,7 +293,7 @@ body {
     padding: 1%;
     width: 50%;
     background-color: #9D4DB1;
-     height: 15.6vw;
+    height: 15.6vw;
 }
 
 .lower-tile {
@@ -383,15 +383,22 @@ body {
 
 
 @media only screen and (max-width: 1000px) {
+    /* .stats-container {
+        height:100vw;
+    } */
     .upper-tile{
         flex-direction: y;
         flex-wrap: wrap;
+        height: 35vw;
     }
     .left-tile{
         width: 100%;
     }
     .right-tile{
        width: 100%;
+    }
+    .lower-header{
+        line-height: 13px;
     }
 }
 
@@ -1125,7 +1132,8 @@ thead th {
     background-color: #F3F6F9;
 }
 tbody tr:hover {
-    background-color: #3699FF;
+    /* background-color: #3699FF; */
+    background-color: whitesmoke;
 }
 tbody td {
     position: relative;

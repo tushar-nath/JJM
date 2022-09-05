@@ -911,7 +911,8 @@ thead th {
     background-color: #F3F6F9;
 }
 tbody tr:hover {
-    background-color: #3699FF;
+    /* background-color: #3699FF; */
+    background-color: whitesmoke;
 }
 tbody td {
     position: relative;

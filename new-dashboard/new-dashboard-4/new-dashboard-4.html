@@ -394,12 +394,12 @@
             var ctx = document.getElementById('myChart').getContext("2d");
 
             var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-            gradientStroke.addColorStop(0, '#80b6f4');
-            gradientStroke.addColorStop(1, '#f49080');
+            gradientStroke.addColorStop(0, '#87CEFA');
+            gradientStroke.addColorStop(1, '#87CEFA');
 
             var gradientFill = ctx.createLinearGradient(500, 0, 100, 0);
-            gradientFill.addColorStop(0, "rgba(128, 182, 244, 0.6)");
-            gradientFill.addColorStop(1, "rgba(244, 144, 128, 0.6)");
+            gradientFill.addColorStop(0, "rgba(30, 144, 255, 0.7)");
+            gradientFill.addColorStop(1, "rgba(0, 191, 255, 0.3)");
 
             var myChart = new Chart(ctx, {
                 type: 'line',

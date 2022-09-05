@@ -67,7 +67,7 @@
 
     <div class="dashboard-stats">
         <div class="stats-container">
-            <div id="stat-header" class="stat-header">Assam</div>
+            <div id="stat-header" class="stat-header"></div>
             <div class="stat-desc">Status of Tap Water Supply in Rural Homes</div>
             <div class="stat-tile-container">
                 <div class="upper-tile">
@@ -107,7 +107,7 @@
                     <div class="status-ur">
                         <div class="district">
                             <div class="district-header">
-                                DISTRICTS
+                                CITIES
                             </div>
                             <div class="district-detail">
                                 <div class="district-reported">
@@ -251,10 +251,12 @@
         <div class="dashboard-table">
             <div class="table-header-main">
                 <div class="table-header">
-                    <div class="title">ASSAM</div>
+                    <div id="table-header1" class="title"></div>
                     <div class="desc">Status of Total Household Connections</div>
                 </div>
-                <div class="table-division"><p>DIVISION 1</p></div>
+                <div class="table-division">
+                    <p>DIVISION 1</p>
+                </div>
             </div>
             <div class="container">
                 <table id="table1">
@@ -277,10 +279,12 @@
         <div class="dashboard-table">
             <div class="table-header-main">
                 <div class="table-header">
-                    <div class="title">ASSAM</div>
+                    <div id="table-header2" class="title"></div>
                     <div class="desc">Status of Total Household Connections</div>
                 </div>
-                <div class="table-division"><p>DIVISION 2</p></div>
+                <div class="table-division">
+                    <p>DIVISION 2</p>
+                </div>
             </div>
             <div class="container">
                 <table id="table2">
@@ -330,7 +334,6 @@
                         var data = city[districtId][i];
                     }
 
-                    console.log(data);
                     var myLatlng = new google.maps.LatLng(data.lat, data.lng);
 
                     //extend the bounds to include each marker's position
@@ -402,14 +405,34 @@
                 // console.log(data);
                 var table = document.getElementById("buildDivOne");
                 for (var i = 1; i < 4; i++) {
-                    var row = `<tr bgcolor="#1E90FF" onclick="storeAreaId(this)" value="${data[i].id}">
+                    if (i == 1) {
+                        var row = `<tr bgcolor="#1E90FF" onclick="storeAreaId(this)" value="${data[i].id}">
                                             <td>${data[i].title}</td>
                                             <td>${data[i].total}</td>
                                             <td>${data[i].tap}</td>
                                             <td><span>${data[i].tapPer}</span></td>
                                             <td>${data[i].progress}</td>
                                         </tr>`;
-                    table.innerHTML += row;
+                        table.innerHTML += row;
+                    } else if (i == 2) {
+                        var row = `<tr bgcolor="#00BFFF" onclick="storeAreaId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                        table.innerHTML += row;
+                    } else {
+                        var row = `<tr bgcolor="#87CEEB" onclick="storeAreaId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                        table.innerHTML += row;
+                    }
                 }
             }
 
@@ -419,14 +442,34 @@
                 // console.log(data);
                 var table = document.getElementById("buildDivTwo");
                 for (var i = 1; i < 4; i++) {
-                    var row = `<tr bgcolor="#1E90FF" onclick="storeAreaId(this)" value="${data[i].id}">
+                    if (i == 1) {
+                        var row = `<tr bgcolor="#1E90FF" onclick="storeAreaId(this)" value="${data[i].id}">
                                             <td>${data[i].title}</td>
                                             <td>${data[i].total}</td>
                                             <td>${data[i].tap}</td>
                                             <td><span>${data[i].tapPer}</span></td>
                                             <td>${data[i].progress}</td>
                                         </tr>`;
-                    table.innerHTML += row;
+                        table.innerHTML += row;
+                    } else if (i == 2) {
+                        var row = `<tr bgcolor="#00BFFF" onclick="storeAreaId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                        table.innerHTML += row;
+                    } else {
+                        var row = `<tr bgcolor="#87CEEB" onclick="storeAreaId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                        table.innerHTML += row;
+                    }
                 }
             }
 
@@ -458,18 +501,25 @@
                 sessionStorage.areaId = id;
                 location.href = "../new-dashboard-3/new-dashboard-3.html";
             }
+
+            //JS function for status header from JSON
+            var district = districts[districtId];
+            document.querySelector("#stat-header").innerHTML = district.title + " | Assam";
+            document.querySelector("#table-header1").innerHTML = district.title;
+            document.querySelector("#table-header2").innerHTML = district.title;
+
         </script>
         <script>
             //JS function for Chart JS
             var ctx = document.getElementById('myChart').getContext("2d");
 
             var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
-            gradientStroke.addColorStop(0, '#80b6f4');
-            gradientStroke.addColorStop(1, '#f49080');
+            gradientStroke.addColorStop(0, '#87CEFA');
+            gradientStroke.addColorStop(1, '#87CEFA');
 
             var gradientFill = ctx.createLinearGradient(500, 0, 100, 0);
-            gradientFill.addColorStop(0, "rgba(128, 182, 244, 0.6)");
-            gradientFill.addColorStop(1, "rgba(244, 144, 128, 0.6)");
+            gradientFill.addColorStop(0, "rgba(30, 144, 255, 0.7)");
+            gradientFill.addColorStop(1, "rgba(0, 191, 255, 0.3)");
 
             var myChart = new Chart(ctx, {
                 type: 'line',
