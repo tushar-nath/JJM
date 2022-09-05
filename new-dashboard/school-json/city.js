@@ -1,4 +1,4 @@
-var markers = {
+var schoolCity = {
     1: {
       1: {
         id: "1",
@@ -25,8 +25,8 @@ var markers = {
       3: {
         id: "3",
         title: "Rani",
-        lat: "25.7905",
-        lng: "91.2626",
+        lat: "26.0852",
+        lng: "91.6102",
         total: "1520",
         active: "1250",
         iot: "1000",
@@ -47,8 +47,8 @@ var markers = {
       5: {
         id: "5",
         title: "Chandrapur",
-        lat: "19.9615",
-        lng: "79.2961",
+        lat: "26.2295",
+        lng: "91.9197",
         total: "1540",
         active: "1250",
         iot: "1000",
@@ -150,8 +150,8 @@ var markers = {
       2: {
         id: "2",
         title: "Madhupur",
-        lat: "24.2659",
-        lng: "86.6467",
+        lat: "26.4497",
+        lng: "91.3771",
         total: "1630",
         active: "1250",
         iot: "1000",
@@ -229,8 +229,8 @@ var markers = {
       3: {
         id: "3",
         title: "Joypur",
-        lat: "23.0552",
-        lng: "87.4480",
+        lat: "27.2682",
+        lng: "95.3885",
         total: "1700",
         active: "1250",
         iot: "1000",
@@ -285,9 +285,9 @@ var markers = {
       },
       2: {
         id: "2",
-        title: "Baska",
-        lat: "44.9711",
-        lng: "14.7522",
+        title: "Baksa",
+        lat: "26.6829",
+        lng: "91.1761",
         total: "1500",
         active: "1250",
         iot: "1000",

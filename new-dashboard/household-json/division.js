@@ -1,0 +1,364 @@
+var division = {
+    1: {
+        1: {
+            1: {
+                id: 1,
+                title: "Dispur",
+                total: "1500",
+                active: "1200",
+                iot: "1000",
+                upcoming: "200",
+                tap: "1500",
+                tapPer: "100%",
+                progress: "100"
+            },
+            2: {
+                id: 2,
+                title: "North Guwahati",
+                total: "1510",
+                active: "1210",
+                iot: "1010",
+                upcoming: "210",
+                tap: "1510",
+                tapPer: "100%",
+                progress: "100"
+            },
+            3: {
+                id: 3,
+                title: "Rani",
+                total: "1520",
+                active: "1220",
+                iot: "1020",
+                upcoming: "220",
+                tap: "1520",
+                tapPer: "100%",
+                progress: "100"
+            }
+        },
+        2: {
+            1: {
+                id: 4,
+                title: "Azara",
+                total: "1530",
+                active: "1230",
+                iot: "1030",
+                upcoming: "230",
+                tap: "1530",
+                tapPer: "100%",
+                progress: "100"
+            },
+            2: {
+                id: 5,
+                title: "Chandrapur",
+                total: "1540",
+                active: "1240",
+                iot: "1040",
+                upcoming: "240",
+                tap: "1540",
+                tapPer: "100%",
+                progress: "100"
+            },
+            3: {
+                id: 6,
+                title: "Dimoria",
+                total: "1500",
+                active: "1200",
+                iot: "1000",
+                upcoming: "200",
+                tap: "1500",
+                tapPer: "100%",
+                progress: "100"
+            }
+        }
+    },
+    2: {
+        1: {
+            1: {
+                id: 7,
+                title: "Tezpur",
+                total: "1510",
+                active: "1210",
+                iot: "1010",
+                upcoming: "210",
+                tap: "1510",
+                tapPer: "100%",
+                progress: "100"
+            },
+            2: {
+                id: 8,
+                title: "Dhekiajuli",
+                total: "1525",
+                active: "1220",
+                iot: "1020",
+                upcoming: "220",
+                tap: "1510",
+                tapPer: "99%",
+                progress: "100"
+            },
+            3: {
+                id: 9,
+                title: "Rangapara",
+                lat: "26.543956",
+                lng: "91.187",
+                total: "1515",
+                active: "1230",
+                iot: "1030",
+                upcoming: "230",
+                tap: "1500",
+                tapPer: "99%",
+                progress: "100"
+            }
+        },
+        2: {
+            1: {
+                id: 10,
+                title: "Bihaguri",
+                total: "1515",
+                active: "1240",
+                iot: "1040",
+                upcoming: "240",
+                tap: "1500",
+                tapPer: "99%",
+                progress: "100"
+            },
+            2: {
+                id: 11,
+                title: "Chariduar",
+                total: "1515",
+                active: "1200",
+                iot: "1000",
+                upcoming: "200",
+                tap: "1500",
+                tapPer: "99%",
+                progress: "100"
+            },
+            3: {
+                id: 12,
+                title: "Gabharu",
+                total: "1515",
+                active: "1210",
+                iot: "1010",
+                upcoming: "210",
+                tap: "1500",
+                tapPer: "99%",
+                progress: "100"
+            }
+        }
+    },
+    3: {
+        1: {
+            1: {
+                id: 13,
+                title: "Tihu",
+                total: "1515",
+                active: "1220",
+                iot: "1020",
+                upcoming: "220",
+                tap: "1500",
+                tapPer: "99%",
+                progress: "100"
+            },
+            2: {
+                id: 14,
+                title: "Madhapur",
+                total: "1515",
+                active: "1230",
+                iot: "1030",
+                upcoming: "230",
+                tap: "1500",
+                tapPer: "99%",
+                progress: "100"
+            },
+            3: {
+                id: 15,
+                title: "Borbahg",
+                total: "1530",
+                active: "1240",
+                iot: "1040",
+                upcoming: "240",
+                tap: "1500",
+                tapPer: "98%",
+                progress: "100"
+            }
+        },
+        2: {
+            1: {
+                id: 16,
+                title: "Barkhetri",
+                total: "1530",
+                active: "1200",
+                iot: "1000",
+                upcoming: "200",
+                tap: "1500",
+                tapPer: "98%",
+                progress: "100"
+            },
+            2: {
+                id: 17,
+                title: "Banekuchi",
+                total: "1530",
+                active: "1210",
+                iot: "1010",
+                upcoming: "210",
+                tap: "1500",
+                tapPer: "98%",
+                progress: "100"
+            },
+            3: {
+                id: 18,
+                title: "Ghograpar",
+                total: "1530",
+                active: "1220",
+                iot: "1020",
+                upcoming: "220",
+                tap: "1500",
+                tapPer: "98%",
+                progress: "100"
+            }
+        }
+    },
+    4: {
+        1: {
+            1: {
+                id: 19,
+                title: "Barbaruah",
+                total: "1530",
+                active: "1230",
+                iot: "1030",
+                upcoming: "230",
+                tap: "1500",
+                tapPer: "98%",
+                progress: "100"
+            },
+            2: {
+                id: 20,
+                title: "Panitola",
+                total: "1530",
+                active: "1240",
+                iot: "1040",
+                upcoming: "240",
+                tap: "1500",
+                tapPer: "98%",
+                progress: "100"
+            },
+            3: {
+                id: 21,
+                title: "Joypur",
+                total: "1530",
+                active: "1200",
+                iot: "1000",
+                upcoming: "200",
+                tap: "1500",
+                tapPer: "98%",
+                progress: "100"
+            }
+        },
+        2: {
+            1: {
+                id: 22,
+                title: "Chabua",
+                total: "1545",
+                active: "1210",
+                iot: "1010",
+                upcoming: "210",
+                tap: "1500",
+                tapPer: "97%",
+                progress: "100"
+            },
+            2: {
+                id: 23,
+                title: "Moran",
+                total: "1545",
+                active: "1220",
+                iot: "1020",
+                upcoming: "220",
+                tap: "1500",
+                tapPer: "97%",
+                progress: "100"
+            },
+            3: {
+                id: 24,
+                title: "Naharkatiya",
+                total: "1545",
+                active: "1230",
+                iot: "1030",
+                upcoming: "230",
+                tap: "1500",
+                tapPer: "97%",
+                progress: "100"
+            }
+        }
+    },
+    5: {
+        1: {
+            1: {
+                id: 25,
+                title: "Barama",
+                total: "1545",
+                active: "1240",
+                iot: "1040",
+                upcoming: "240",
+                tap: "1500",
+                tapPer: "97%",
+                progress: "100"
+            },
+            2: {
+                id: 26,
+                title: "Baska",
+                total: "1545",
+                active: "1200",
+                iot: "1000",
+                upcoming: "200",
+                tap: "1500",
+                tapPer: "97%",
+                progress: "100"
+            },
+            3: {
+                id: 27,
+                title: "Tamulpur",
+                total: "1545",
+                active: "1210",
+                iot: "1010",
+                upcoming: "210",
+                tap: "1500",
+                tapPer: "97%",
+                progress: "100"
+            }
+        },
+        2: {
+            1: {
+                id: 28,
+                title: "Rangia",
+                total: "1545",
+                active: "1220",
+                iot: "1020",
+                upcoming: "220",
+                tap: "1500",
+                tapPer: "97%",
+                progress: "100"
+            },
+            2: {
+                id: 29,
+                title: "Baganpara",
+                total: "1545",
+                active: "1230",
+                iot: "1030",
+                upcoming: "230",
+                tap: "1500",
+                tapPer: "97%",
+                progress: "100"
+            },
+            3: {
+                id: 30,
+                title: "Goreswar",
+                total: "1560",
+                active: "1240",
+                iot: "1040",
+                upcoming: "240",
+                tap: "1500",
+                tapPer: "96%",
+                progress: "100"
+            }
+        }
+    }
+}

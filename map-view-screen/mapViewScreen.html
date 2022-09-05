@@ -1,112 +1,102 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="csrf-token" content="{{ csrf_token() }}">
-<script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="mapViewScreen.css">
-  <script src="./markers.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="mapViewScreen.css">
+    <!-- <script src="./data.js"></script> -->
 </head>
-<body>
-
-<div id="map_wrapper_div">
-    <div id="map_tuts"></div>
-</div>
 
 <body>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&sensor=false&callback=initialize"></script>
+
+    <div id="dvMap">
+    </div>
+
     <script type="text/javascript">
-    
-    window.onload = function () {
-        LoadMap();
-    }
-    function LoadMap() {
-        var bounds = new google.maps.LatLngBounds();
-        var mapOptions = {
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
 
-        //Create and open InfoWindow.
-        var infoWindow = new google.maps.InfoWindow();
-        // console.log(markers[1]);
+        function LoadMap() {
+            var bounds = new google.maps.LatLngBounds();
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
 
-        fetch("data.json")
-            .then((response) => response.json())
-            .then((info) => {
-                var districtId = 1;
-                console.log(info);
-                for (var i = 1; i < 7; i++) {
-                    var data = info[districtId][i];
-                    var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+            //Create and open InfoWindow.
+            var infoWindow = new google.maps.InfoWindow();
+            // console.log(markers[1]);
 
-                    //extend the bounds to include each marker's position
-                    bounds.extend(myLatlng);
+            var districtId = sessionStorage.getItem("districtId") || "0";
+            
+            for (var i = 1; i < 7; i++) {
+                var data = cities[districtId][i];
+                var myLatlng = new google.maps.LatLng(data.lat, data.lng);
 
-                    var marker = new google.maps.Marker({
-                        position: myLatlng,
-                        map: map,
-                        title: data.title
-                    });
+                //extend the bounds to include each marker's position
+                bounds.extend(myLatlng);
 
-                    const contentString =
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: data.title
+                });
+
+                const contentString =
                     '<div id="popup">' +
-                        '<div id="popup-header">' +
-                            '<div id="title">' + 'Tap Water Supply In Household' + '</div>' +
-                            '<div id="popup-place">' +
-                                '<div id="city">' + data.title + '</div>' +
-                                '<div id="state">' + '&nbspAssam' + '</div>' +
-                            '</div>' +
-                        '</div>' +
-                        '<div id="popup-img">' + '<img width="250px" src="../images/mini-map.png"/>' + '</div>' +
-                        '<div id="popup-tile">' +
-                            '<div id="popup-key">' + '<p>Total Centres</p>' + '</div>' +
-                            '<div id="popup-value">' + data.total + '</div>' +
-                        '</div>' +
-                        '<div id="popup-tile">' +
-                            '<div id="popup-key">' + '<p>Total Active Centres</p>' + '</div>' +
-                            '<div id="popup-value">' + data.active + '</div>' +
-                        '</div>' +
-                        '<div id="popup-tile">' +
-                            '<div id="popup-key">' + '<p>Total IOT Centres</p>' + '</div>' +
-                            '<div id="popup-value">' + data.iot + '</div>' +
-                        '</div>' +
-                        '<div id="popup-tile">' +
-                            '<div id="popup-key">' + '<p>Upcoming Centres</p>' + '</div>' +
-                            '<div id="popup-value">' + data.upcoming + '</div>' +
-                        '</div>' +
-                        '<div id="popup-btn">' + '<a href="../Location_search/location_search.html"><button>Map View</button></a>' + '</div>' +
+                    '<div id="popup-header">' +
+                    '<div id="title">' + 'Tap Water Supply In Household' + '</div>' +
+                    '<div id="popup-place">' +
+                    '<div id="city">' + data.title + '</div>' +
+                    '<div id="state">' + '&nbspAssam' + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div id="popup-img">' + '<img width="250px" src="../images/mini-map.png"/>' + '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.total + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total Active Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.active + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total IOT Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.iot + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Upcoming Centres</p>' + '</div>' +
+                    '<div id="popup-value">' + data.upcoming + '</div>' +
+                    '</div>' +
+                    '<div id="popup-btn">' + '<a href="../Location_search/location_search.html"><button>Map View</button></a>' + '</div>' +
 
                     '</div>';
-                    
 
-                    //Attach click event to the marker.
-                    (function (marker, data) {
-                        google.maps.event.addListener(marker, "click", function (e) {
-                            //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
-                            infoWindow.setContent(contentString);
-                            infoWindow.open(map, marker); 
-                            sessionStorage.cityId = data.id;
-                        });
-                    })(marker, data);
 
-                    //now fit the map to the newly inclusive bounds
-                    google.maps.event.addListenerOnce(map, 'idle', function() {
+                //Attach click event to the marker.
+                (function (marker, data) {
+                    google.maps.event.addListener(marker, "click", function (e) {
+                        //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                        infoWindow.setContent(contentString);
+                        infoWindow.open(map, marker);
+                        sessionStorage.cityId = data.id;
+                    });
+                })(marker, data);
+
+                //now fit the map to the newly inclusive bounds
+                google.maps.event.addListenerOnce(map, 'idle', function () {
                     map.fitBounds(bounds);
                 });
-                }
             }
-        )
-    }
-</script>
-<div id="dvMap">
-</div>
-<script src="./data.js"></script>
-<script src="./city.js"></script>
+        }
+        
+    </script>
+    <script src="./city.js"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&callback=LoadMap"></script>
 </body>
+
 </html>
