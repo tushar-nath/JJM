@@ -110,27 +110,29 @@
         }
     }
 
-    fetch("markers.json")
-        .then((response) => response.json())
-        .then((info) => {
-            var cityId = sessionStorage.getItem("cityId") || "0";
-            buildTiles(info[cityId])
-            // console.log(info[cityId]);
-            function buildTiles(data) {
-                var containerElm = document.getElementById("container");
-                var str = '';
-                for (var i = 1; i < 3; i++) {
-                    var divStr = '<div class="tile">' +
-                        data[i].title +
-                        '<a onclick="storeSensorId(this)" href="../starting-page/starting-page.html" id="porua-chariali" value="' + (i) + '" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>' +
-                        '</div>';
-                    str = str + divStr;
-                }
-                containerElm.innerHTML = str;
-            }
-        }
-        )
+    
 
+    var cityId = sessionStorage.getItem("cityId") || "0";
+    var info = subplaces[cityId];
+    buildTiles(info)
+    function buildTiles(data) {
+        var containerElm = document.getElementById("container");
+        var str = '';
+        if (cityId == 7) {
+            var l = 6;
+        } else {
+            var l = 3;
+        }
+        for (var i = 1; i < l; i++) {
+            var divStr = '<div class="tile">' +
+                data[i].title +
+                '<a onclick="storeSensorId(this)" href="../starting-page/starting-page.html" id="porua-chariali" value="' + (i) + '" class="btn btn-secondary btn-sm" role="button" aria-disabled="true">Search</a>' +
+                '</div>';
+            str = str + divStr;
+        }
+        containerElm.innerHTML = str;
+    }
+    
     function storeSensorId(e) {
         var id = e.getAttribute('value');
         sessionStorage.sensorId = id;

@@ -69,7 +69,7 @@ var cities = {
   },
   2: {
     1: {
-      id: "1",
+      id: "7",
       title: "Tezpur",
       lat: "26.6528",
       lng: "92.7926",
@@ -80,7 +80,7 @@ var cities = {
       division: "1"
     },
     2: {
-      id: "2",
+      id: "8",
       title: "Dhekiajuli",
       lat: "26.6985",
       lng: "92.4851",
@@ -91,7 +91,7 @@ var cities = {
       division: "1"
     },
     3: {
-      id: "3",
+      id: "9",
       title: "Rangapara",
       lat: "26.8125",
       lng: "92.6934",
@@ -102,7 +102,7 @@ var cities = {
       division: "1"
     },
     4: {
-      id: "4",
+      id: "10",
       title: "Bihaguri",
       lat: "26.7034",
       lng: "92.7048",
@@ -113,7 +113,7 @@ var cities = {
       division: "2"
     },
     5: {
-      id: "5",
+      id: "11",
       title: "Chariduar",
       lat: "26.8668",
       lng: "92.7805",
@@ -124,7 +124,7 @@ var cities = {
       division: "2"
     },
     6: {
-      id: "6",
+      id: "12",
       title: "Gabharu",
       lat: "26.6833",
       lng: "92.6500",
@@ -137,7 +137,7 @@ var cities = {
   },
   3: {
     1: {
-      id: "1",
+      id: "13",
       title: "Tihu",
       lat: "26.4758",
       lng: "91.2674",
@@ -148,7 +148,7 @@ var cities = {
       division: "1"
     },
     2: {
-      id: "2",
+      id: "14",
       title: "Madhupur",
       lat: "26.4497",
       lng: "91.3771",
@@ -159,7 +159,7 @@ var cities = {
       division: "1"
     },
     3: {
-      id: "3",
+      id: "14",
       title: "Borbhag",
       lat: "26.5336",
       lng: "91.5318",
@@ -170,7 +170,7 @@ var cities = {
       division: "1"
     },
     4: {
-      id: "4",
+      id: "16",
       title: "Barkheti",
       lat: "26.3979",
       lng: "91.3928",
@@ -181,7 +181,7 @@ var cities = {
       division: "2"
     },
     5: {
-      id: "5",
+      id: "17",
       title: "Banekuchi",
       lat: "26.4620",
       lng: "91.3910",
@@ -192,7 +192,7 @@ var cities = {
       division: "2"
     },
     6: {
-      id: "6",
+      id: "18",
       title: "Ghograpar",
       lat: "26.4539",
       lng: "91.5246",
@@ -205,7 +205,7 @@ var cities = {
   },
   4: {
     1: {
-      id: "1",
+      id: "19",
       title: "Barbaruah",
       lat: "27.3048",
       lng: "94.7485",
@@ -216,7 +216,7 @@ var cities = {
       division: "1"
     },
     2: {
-      id: "2",
+      id: "20",
       title: "Panitola",
       lat: "27.4931",
       lng: "95.2567",
@@ -227,7 +227,7 @@ var cities = {
       division: "1"
     },
     3: {
-      id: "3",
+      id: "21",
       title: "Joypur",
       lat: "27.2682",
       lng: "95.3885",
@@ -238,7 +238,7 @@ var cities = {
       division: "1"
     },
     4: {
-      id: "4",
+      id: "22",
       title: "Chabua",
       lat: "27.4861",
       lng: "95.1719",
@@ -249,7 +249,7 @@ var cities = {
       division: "2"
     },
     5: {
-      id: "5",
+      id: "23",
       title: "Moran",
       lat: "27.1757",
       lng: " 94.9195",
@@ -260,7 +260,7 @@ var cities = {
       division: "2"
     },
     6: {
-      id: "6",
+      id: "24",
       title: "Naharkatiya",
       lat: "27.2870",
       lng: "95.2476",
@@ -273,7 +273,7 @@ var cities = {
   },
   5: {
     1: {
-      id: "1",
+      id: "25",
       title: "Barama",
       lat: "26.5220",
       lng: "91.3551",
@@ -284,7 +284,7 @@ var cities = {
       division: "1"
     },
     2: {
-      id: "2",
+      id: "26",
       title: "Baksa",
       lat: "26.6829",
       lng: "91.1761",
@@ -295,7 +295,7 @@ var cities = {
       division: "1"
     },
     3: {
-      id: "3",
+      id: "27",
       title: "Tamulpur",
       lat: "26.6437",
       lng: "91.5766",
@@ -306,7 +306,7 @@ var cities = {
       division: "1"
     },
     4: {
-      id: "4",
+      id: "28",
       title: "Rangia",
       lat: "26.4470",
       lng: "91.6179",
@@ -317,7 +317,7 @@ var cities = {
       division: "2"
     },
     5: {
-      id: "5",
+      id: "29",
       title: "Baganpara",
       lat: "26.6540",
       lng: "91.4386",
@@ -328,7 +328,7 @@ var cities = {
       division: "2"
     },
     6: {
-      id: "6",
+      id: "30",
       title: "Goreswar",
       lat: "26.5329",
       lng: "91.7296",

@@ -269,7 +269,8 @@
                 var infoWindow = new google.maps.InfoWindow();
                 var toggleId = sessionStorage.getItem("toggleId") || "0";
                 var areaId = sessionStorage.getItem("areaId") || "0";
-                var subAreaId = sessionStorage.getItem("areaId") || "0";
+                var subAreaId = sessionStorage.getItem("subAreaId") || "0";
+                console.log(subplaces[areaId][subAreaId]);
 
 
                 if (toggleId == 2) {
@@ -341,8 +342,8 @@
             var areaId = sessionStorage.getItem("areaId") || "0";
 
             var area = subplaces;
-            console.log(areaId);
-            console.log(area[areaId]);
+            // console.log(areaId);
+            // console.log(area[areaId]);
             // JS function to build the subplaces 1 table
             buildTable(area[areaId]);
             function buildTable(data) {

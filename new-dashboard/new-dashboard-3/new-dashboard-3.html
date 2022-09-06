@@ -10,6 +10,7 @@
     <script src="../household-json/subplaces.js"></script>
     <script src="../household-json/subplaces.js"></script>
     <script src="../school-json/subplaces.js"></script>
+    <script src="../household-json/city.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../household-json/district.js"></script>
@@ -67,7 +68,7 @@
 
     <div class="dashboard-stats">
         <div class="stats-container">
-            <div id="stat-header" class="stat-header">Assam</div>
+            <div id="stat-header" class="stat-header"></div>
             <div class="stat-desc">Status of Tap Water Supply in Rural Homes</div>
             <div class="stat-tile-container">
                 <div class="upper-tile">
@@ -250,7 +251,7 @@
 
         <div class="dashboard-table">
             <div class="table-header">
-                <div class="title">ASSAM</div>
+                <div id="table-header"class="title"></div>
                 <div class="desc">Status of Total Household Connections</div>
             </div>
             <div class="container">
@@ -293,6 +294,7 @@
                 var infoWindow = new google.maps.InfoWindow();
                 var toggleId = sessionStorage.getItem("toggleId") || "0";
                 var areaId = sessionStorage.getItem("areaId") || "0";
+                // console.log(areaId);
 
                 for (var i = 1; i < 7; i++) {
                     if (toggleId == 2) {
@@ -365,8 +367,8 @@
             var areaId = sessionStorage.getItem("areaId") || "0";
 
             var area = subplaces;
-            console.log(areaId);
-            console.log(area[areaId]);
+            // console.log(areaId);
+            // console.log(area[areaId]);
             // JS function to build the subplaces 1 table
             buildTable(area[areaId]);
             function buildTable(data) {
@@ -422,6 +424,11 @@
                 sessionStorage.subAreaId = id;
                 location.href = "../new-dashboard-4/new-dashboard-4.html";
             }
+            //JS function for status header from JSON
+            var area = city[1][areaId];
+            console.log(area);
+            document.querySelector("#stat-header").innerHTML = area.title + " | Assam";
+            document.querySelector("#table-header").innerHTML = area.title;
         </script>
         <script>
             //JS function for Chart JS

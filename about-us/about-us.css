@@ -314,6 +314,7 @@
 @media screen and (max-width: 586px) {
 	.about-us-desktop {
 		display: none;
+		overflow: scroll;
 	}
 
 	* {
