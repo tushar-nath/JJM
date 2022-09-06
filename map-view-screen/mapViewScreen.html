@@ -34,6 +34,7 @@
             
             for (var i = 1; i < 7; i++) {
                 var data = cities[districtId][i];
+                console.log(data);
                 var myLatlng = new google.maps.LatLng(data.lat, data.lng);
 
                 //extend the bounds to include each marker's position

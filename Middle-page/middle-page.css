@@ -1,4 +1,8 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
+html,
+body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -12,7 +16,7 @@ html, body {
     display: flex;
 }
 
-.button{
+.button {
     width: 15%;
     margin: 1% 2% 1% 20%;
 }
@@ -40,51 +44,281 @@ html, body {
 #img-2 {
     padding-left: 0% !important;
 }
+
 /* navbar css ends here */
+
+/* MAP CONTAINER STARTS */
+
+.map-container {
+    margin: 2% 0% 2% 0%;
+    width: 100%;
+    height: 850px;
+}
+
+.map-container-box {
+    background: #E7E7E7;
+    width: 75%;
+    height: 770px;
+    margin: auto;
+    background-color: #E7E7E7;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+#dvMap {
+    width: 97%;
+    height: 700px;
+    margin: auto;
+}
+
+/* Marker Popup Design starts */
+
+#popup {
+    width: 340px;
+}
+
+#popup-header {
+    margin: 2% 0% 0% 2%;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#popup-place {
+    display: flex;
+    font-family: Poppins;
+    font-weight: 500;
+
+}
+
+#state {
+    color: rgba(244, 92, 32, 1);
+}
+
+#popup-img {
+    border-radius: 15px;
+    text-align: center;
+    margin: 3% 2% 3% 2%;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#popup-tile {
+    font-size: 0.75vw;
+    display: flex !important;
+    margin: 2%;
+    font-family: Poppins;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #0A68FF;
+    color: white;
+}
+
+#popup-key {
+    width: 80%;
+    padding-left: 3%;
+}
+
+#popup-value {
+    width: 20%;
+    text-align: center;
+    position: relative;
+    top: 13px;
+}
+
+#popup-btn {
+    padding: 3%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+#popup-btn button {
+    cursor: pointer;
+    border-style: none;
+    padding: 2% 5% 2% 5%;
+    border-radius: 7px;
+    color: white;
+    background-color: #0A68FF;
+}
+
+@media only screen and (max-width: 700px) {
+    .map-container {
+        height: 100vw;
+    }
+    .map-container-box {
+        height: 90vw;
+    }
+    #dvMap {
+        height: 90vw;
+    }
+}
+
+/* Marker Popup Design ends */
+
+
+/* MAP CONTAINER ENDS */
 
 /* footer css starts here */
 .footer {
-
     bottom: 0;
     left: 0;
     display: grid;
 }
 
 .center-fit {
-    max-width: 100%;
-    max-height: 100vh;
+    width: 100%;
+    max-height: 140vh;
     margin: auto;
 }
+
 /* footer css ends here */
 
-/* Map starts */
-.map-container{
+/* achievement starts */
+
+.achievement-container {
+    height: 1500px;
     width: 100%;
-    height: 850px;
-    padding-top: 45px;
+    margin: 3% 0% 5% 0%;
+}
+
+.tab {
+    width: 100%;
+    height: 220px;
+}
+
+.tab-container {
+    margin: 0.5% 70% 0% 5%;
+    height: 220px;
+    width: 414px;
+    background-color: black;
+    padding: 0.7%;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.detail {
+    width: 100%;
+    height: 200px;
+    background-color: #F45C20;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.header {
+    width: 40%;
+    font-size: 3vw;
+    font-weight: 700;
+    padding: 1% 0% 0% 2%;
+}
+
+.desc {
+    padding: 1% 0% 0% 2%;
+    width: 30%;
+    font-size: 1.2vw;
+    text-align: left;
+}
+
+.tap {
+    width: 100%;
+    height: 750px;
+    display: flex;
+}
+
+.tap img {
+    z-index: 0;
+}
+
+.achievement-tile {
+    width: 47%;
+    height: 600px;
+    position: relative;
+    bottom: 35%;
+    left: 50%;
+    z-index: 1;
+    font-family: Poppins;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0% 0% 0% 3%;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+}
+
+.ac-header {
+    font-family: Poppins;
+    font-size: 3vw;
+    font-weight: 700;
+    /* line-height: 135px; */
+    letter-spacing: 0em;
+    text-align: left; 
+    padding: 6% 0% 0% 3%;
+}
+
+hr.hr {
+    border: 3px block #0A68FF;
+    height: 2.5px;
+    background: #0A68FF;
+    width: 60%;
+    text-align: left;
     margin: 0%;
 }
 
-.map-container-box{
-    width: 71%;
-    margin: auto;
-    height: 740px;
-    background-color: #E7E7E7;
-    padding: 1.3% 1% 2% 1% ;
-    border-radius: 10px;
+
+.ac-tile-1{
+    width: 88%;
+    font-family: Poppins;
+     font-size: 1.2vw;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: left;
+    background-color: rgba(166,204,221,0.6);
+    height: 7vw;
+    margin: 4% 0% 2% 0%;
+    padding: 1% 0% 0% 3.5%;
+    border-radius: 0px 10px 10px 0px;
 }
 
-/* Map ends */
+.ac-tile-2{
+    width: 88%;   
+    font-family: Poppins;
+     font-size: 1.2vw;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: left;
+    background-color: rgba(222,197,221,0.6);
+    height: 7vw;
+    margin-bottom: 2%;
+    padding: 1% 0% 0% 3.5%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.ac-tile-3{
+    width: 88%;  
+    font-family: Poppins;
+     font-size: 1.2vw;
+    font-weight: 500;
+    letter-spacing: 0em;
+    text-align: left; 
+    background-color: rgba(255,173,168,0.6);
+    height: 7vw;
+    padding: 1% 0% 0% 3.5%;
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* achievement ends */
+
 
 /* Timeline starts */
 
-.timeline{
+.timeline {
     width: 100%;
     height: 700px;
     padding-top: 45px;
 }
 
-.timeline-container{
+.timeline-container {
     width: 85%;
     margin: auto;
     height: 600px;
@@ -92,7 +326,8 @@ html, body {
     border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.timeline-container img{
+
+.timeline-container img {
     margin: 1% 0% 0% 6%;
 }
 
@@ -102,7 +337,7 @@ html, body {
 /* stats designs starts here */
 .dashboard-stats {
     width: 100%;
-    height: 800px;
+    height: 1000px;
     padding-top: 2%;
     margin-bottom: 20%;
 }
@@ -110,7 +345,7 @@ html, body {
 .stats-container {
     margin: auto;
     width: 85%;
-    height: 720px;
+    height: 900px;
     background-color: #fff;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     border-radius: 25px;
@@ -123,9 +358,9 @@ html, body {
     font-weight: 600;
     line-height: 57px;
     letter-spacing: 0em;
-    text-align: left;
     color: #F45C20;
-    margin: 1% 1% 0% 1%;
+    margin: 0% 1% 0% 1%;
+    text-align: center;
 }
 
 .stat-desc {
@@ -134,9 +369,9 @@ html, body {
     font-weight: 400;
     line-height: 39px;
     letter-spacing: 0em;
-    text-align: left;
     color: #0A3170;
-    margin: 0% 1% 5% 1%;
+    margin: 0% 1% 2% 1%;
+    text-align: center;
 }
 
 .stat-tile-container {
@@ -145,94 +380,100 @@ html, body {
     height: 500px;
 }
 
-.upper-tile {
+.row-1 {
+    width: 100%;
     display: flex;
-    height: 250px;
+    justify-content: space-between;
+    height: 12vw;
+    margin-bottom: 2%;
+    font-family: Poppins;
 }
 
-.left-tile {
-    padding: 1%;
-    width: 50%;
+.row-2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 12vw;
+    margin-bottom: 2%;
+    font-family: Poppins;
+}
+
+.row-3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 12vw;
+    font-family: Poppins;
+}
+
+.left-1 {
+    width: 45%;
     background-color: #0A68FF;
+    border-radius: 27px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    color: white;
 }
 
-.right-tile {
-    padding: 1%;
-    width: 50%;
-    background-color: #9D4DB1;
+.right-1 {
+    width: 45%;
+    background-color: #FC3D3D;
+    border-radius: 27px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    color: white;
 }
 
-.lower-tile {
-    padding: 1%;
-    height: 250px;
-    background-color: #A2D6A1;
+.left-2 {
+    width: 45%;
+    background-color: #1B5354;
+    border-radius: 27px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    color: white;
+}
+
+.right-2 {
+    width: 45%;
+    background-color: #583DFC;
+    border-radius: 27px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    color: white;
+}
+
+.left-3 {
+    width: 45%;
+    background-color: #1D0AFF;
+    border-radius: 27px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    color: white;
+}
+
+.right-3 {
+    width: 45%;
+    background-color: #9C14B2;
+    border-radius: 27px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    color: white;
 }
 
 .lt-header {
-    font-family: Poppins;
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 34px;
-    letter-spacing: 0em;
     text-align: center;
-    margin: 2%;
+    margin: 3% 0% 4% 0%;
+    font-size: 1.3vw;
 }
 
 .lt-desc {
-    font-family: Poppins;
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 34px;
-    letter-spacing: 0em;
     text-align: center;
-    margin: 7% 2% 2% 2%;
+    font-size: 2vw;
 }
 
-
 .rt-header {
-    font-family: Poppins;
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 34px;
-    letter-spacing: 0em;
     text-align: center;
-    margin: 2%;
+    margin: 3% 0% 4% 0%;
+    font-size: 1.3vw;
 }
 
 .rt-desc {
-    font-family: Poppins;
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 34px;
-    letter-spacing: 0em;
     text-align: center;
-    margin: 7% 2% 2% 2%;
-}
-
-.lower-header {
-    font-family: Poppins;
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 34px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin: 2%;
-}
-
-.lower-desc {
-    font-family: Poppins;
-    color: #fff;
-    font-size: 26px;
-    font-weight: 600;
-    line-height: 34px;
-    letter-spacing: 0em;
-    text-align: center;
-    margin: 7% 2% 2% 2%;
+    font-size: 2vw;
 }
 
 /* stat style ends here */

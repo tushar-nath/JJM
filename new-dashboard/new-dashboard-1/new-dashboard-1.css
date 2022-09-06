@@ -63,7 +63,7 @@ body {
 .school {
     margin-top: 0%;
     width: 100%;
-   height: 4.7vw;
+    height: 4.7vw;
     display: flex;
     cursor: pointer;
 }
@@ -114,28 +114,24 @@ body {
 /* toggle media query starts */
 
 @media only screen and (max-width:1200px) {
-    .toggle-logo  {
-            display: none;
+    .toggle-logo {
+        display: none;
     }
 }
-
 
 /* toggle media query ends */
 
 /* navbar css ends here */
 
-
-
-
 /* MAP CONTAINER STARTS */
 
-.map-container{
+.map-container {
     margin: 2% 0% 2% 0%;
     width: 100%;
     height: 850px;
 }
 
-.map-container-box{
+.map-container-box {
     background: #E7E7E7;
     width: 75%;
     height: 700px;
@@ -144,9 +140,10 @@ body {
     padding: 2%;
     border-radius: 5px;
 }
-#dvMap{
+
+#dvMap {
     width: 97%;
-    height: 700px; 
+    height: 700px;
     margin: auto;
 }
 
@@ -223,6 +220,18 @@ body {
     background-color: #0A68FF;
 }
 
+@media only screen and (max-width: 700px) {
+    .map-container {
+        height: 100vw;
+    }
+    .map-container-box {
+        height: 90vw;
+    }
+    #dvMap {
+        height: 90vw;
+    }
+}
+
 /* Marker Popup Design ends */
 
 
@@ -286,7 +295,7 @@ body {
     padding: 1%;
     width: 50%;
     background-color: #0A68FF;
-     height: 15.6vw;
+    height: 15.6vw;
 }
 
 .right-tile {
@@ -298,7 +307,7 @@ body {
 
 .lower-tile {
     padding: 1%;
-   height: 15.6vw;
+    height: 15.6vw;
     background-color: #A2D6A1;
 }
 
@@ -328,9 +337,9 @@ body {
 .rt-header {
     font-family: Poppins;
     color: #fff;
-     font-size: 1.62vw;
+    font-size: 1.62vw;
     font-weight: 600;
-   line-height: 2.2vw;
+    line-height: 2.2vw;
     letter-spacing: 0em;
     text-align: center;
     margin: 2%;
@@ -339,9 +348,9 @@ body {
 .rt-desc {
     font-family: Poppins;
     color: #fff;
-     font-size: 1.62vw;
+    font-size: 1.62vw;
     font-weight: 600;
-   line-height: 2.2vw;
+    line-height: 2.2vw;
     letter-spacing: 0em;
     text-align: center;
     margin: 4% 2% 2% 2%;
@@ -350,7 +359,7 @@ body {
 .lower-header {
     font-family: Poppins;
     color: #fff;
-     font-size: 1.62vw;
+    font-size: 1.62vw;
     font-weight: 600;
     line-height: 34px;
     letter-spacing: 0em;
@@ -373,35 +382,51 @@ body {
 /* stats meadia-query starts */
 
 @media only screen and (min-width: 1600px) {
-    .stats-container  {
-            height: 48vw;
+    .stats-container {
+        height: 48vw;
     }
-    .dashboard-stats  {
-       margin-bottom: 20%;
+
+    .dashboard-stats {
+        margin-bottom: 20%;
     }
 }
 
 
 @media only screen and (max-width: 1000px) {
-    /* .stats-container {
-        height:100vw;
-    } */
-    .upper-tile{
+    .dashboard-stats {
+        height: 90vw;
+    }
+
+    .stats-container {
+        height: 80vw;
+    }
+
+    .upper-tile {
         flex-direction: y;
         flex-wrap: wrap;
         height: 35vw;
     }
-    .left-tile{
+
+    .left-tile {
         width: 100%;
     }
-    .right-tile{
-       width: 100%;
+
+    .right-tile {
+        width: 100%;
     }
-    .lower-header{
+
+    .lower-header {
         line-height: 13px;
     }
-}
 
+    .stat-header {
+        height: 7vw;
+    }
+
+    .stat-desc {
+        height: 7vw;
+    }
+}
 
 /* stats meadia-query ends */
 
@@ -412,51 +437,35 @@ body {
 
 /* status starts */
 
-.dashboard-status{
+.dashboard-status {
     width: 100%;
     height: 1200px;
     height: max-content;
-    padding-top: 10%;
+    padding-top: 5%;
 }
-.status-container{
+
+.status-container {
     width: 75%;
     margin: auto;
     height: 900px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.status-logo{
+.status-logo {
     position: relative;
     left: 88%;
     top: 5%;
 }
-.staus-header{
+
+.staus-header {
     color: #F45C20;
     font-family: Poppins;
     font-weight: 600;
     font-size: 1.56vw;
     text-align: center;
 }
-.certifield-state{
-    font-size: 1.5vw;
-    width: 70%;
-    margin: 1% 10% 1% 15%;
-    font-family: Poppins;
-    font-weight: 500;
-    border: 1px solid black;
-    padding: 0% 0% 1% 1%;
-    border-radius: 5px;
-}
-.certifield-state p{
-    margin: 0%;
-    padding: 0%;
-}
-.certifield-state:hover{
-    background-color:#F45C20 ;
-    color: white ;
-}
 
-.reported-state{
+.certifield-state {
     font-size: 1.5vw;
     width: 70%;
     margin: 1% 10% 1% 15%;
@@ -467,55 +476,78 @@ body {
     border-radius: 5px;
 }
 
-.reported-state p{
+.certifield-state p {
     margin: 0%;
     padding: 0%;
 }
 
-.reported-state:hover{
-    background-color:#F45C20 ;
-    color: white ;
+.certifield-state:hover {
+    background-color: #F45C20;
+    color: white;
 }
-.status-ur{
+
+.reported-state {
+    font-size: 1.5vw;
+    width: 70%;
+    margin: 1% 10% 1% 15%;
+    font-family: Poppins;
+    font-weight: 500;
+    border: 1px solid black;
+    padding: 0% 0% 1% 1%;
+    border-radius: 5px;
+}
+
+.reported-state p {
+    margin: 0%;
+    padding: 0%;
+}
+
+.reported-state:hover {
+    background-color: #F45C20;
+    color: white;
+}
+
+.status-ur {
     display: flex;
     justify-content: space-around;
     margin: 5% 0% 1% 0%;
 }
 
-.status-lr{
+.status-lr {
     display: flex;
     justify-content: space-around;
     margin: 2% 0% 1% 0%;
 }
 
-.district{
+.district {
     height: 16vw;
     width: 35%;
     background-color: #EAEBFF;
     /* border: 0.08px solid black; */
 }
 
-.block{
+.block {
     height: 16vw;
     width: 35%;
-    background-color:#FDBC64;
+    background-color: #FDBC64;
     /* border: 0.5px solid black; */
 }
-.panchayats{
+
+.panchayats {
     height: 16vw;
     width: 35%;
     background-color: #F8E5E5;
     /* border: 0.5px solid black;    */
 }
 
-.villages{
+.villages {
     height: 16vw;
     width: 35%;
     background-color: #BDBDBD;
     /* border: 0.5px solid black;     */
 }
 
-.district-header{
+.district-header {
     width: 100%;
     height: 3vw;
     text-align: center;
@@ -525,7 +557,8 @@ body {
     font-size: 1.56vw;
     padding: 5% 0% 1% 0%;
 }
-.block-header{
+
+.block-header {
     width: 100%;
     height: 3vw;
     text-align: center;
@@ -535,7 +568,8 @@ body {
     font-size: 1.56vw;
     padding: 5% 0% 1% 0%;
 }
-.panchayats-header{
+
+.panchayats-header {
     width: 100%;
     height: 3vw;
     text-align: center;
@@ -545,9 +579,10 @@ body {
     font-size: 1.56vw;
     padding: 5% 0% 1% 0%;
 }
-.villages-header{
+
+.villages-header {
     width: 100%;
-   height: 3vw;
+    height: 3vw;
     text-align: center;
     /* border: 0.5px solid black;   */
     font-family: Poppins;
@@ -556,127 +591,129 @@ body {
     padding: 5% 0% 1% 0%;
 }
 
-.district-detail{
-    display: flex;
-}
-.block-detail{
+.district-detail {
     display: flex;
 }
 
-.panchayats-detail{
+.block-detail {
     display: flex;
 }
 
-.village-detail{
+.panchayats-detail {
     display: flex;
 }
-.district-reported{
+
+.village-detail {
+    display: flex;
+}
+
+.district-reported {
     width: 50%;
-    height:11vw;
+    height: 11vw;
     font-family: Poppins;
     text-align: center;
-    border: 2px solid black; 
+    border: 2px solid black;
     border-style: solid solid none none;
 }
 
-.district-reported p{
+.district-reported p {
     font-size: 1.44vw;
     font-weight: 400;
 }
 
-.district-certified{
+.district-certified {
     width: 50%;
-    height:11vw;
+    height: 11vw;
     font-family: Poppins;
-     text-align: center;
-    border: 2px solid black; 
+    text-align: center;
+    border: 2px solid black;
     border-style: solid none none none;
 }
 
-.district-certified p{
+.district-certified p {
     font-size: 1.44vw;
 }
 
-.block-reported{
+.block-reported {
     width: 50%;
-    height:11vw;
+    height: 11vw;
     font-family: Poppins;
-     text-align: center;
-    border: 2px solid black; 
+    text-align: center;
+    border: 2px solid black;
     border-style: solid solid none none;
 }
 
-.block-reported p{
-   font-size: 1.44vw;
-}
-
-.block-certified{
-    width: 50%;
-   height:11vw;
-    font-family: Poppins;
-     text-align: center;
-    border: 2px solid black; 
-    border-style: solid none none none;
-}
-
-.block-certified p{
+.block-reported p {
     font-size: 1.44vw;
 }
 
-.panchayat-reported{
+.block-certified {
     width: 50%;
-    height:11vw;
+    height: 11vw;
     font-family: Poppins;
-     text-align: center;
-   border: 2px solid black; 
-    border-style: solid solid none none;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid none none none;
 }
 
-.panchayat-reported p{
+.block-certified p {
     font-size: 1.44vw;
 }
 
-.panchayat-certified{
+.panchayat-reported {
     width: 50%;
-    height:11vw;
+    height: 11vw;
     font-family: Poppins;
-     text-align: center;
-    border: 2px solid black; 
-    border-style: solid none none none;
-}
-
-.panchayat-certified p{
-   font-size: 1.44vw; 
-}
-
-
-.village-reported{
-    width: 50%;
-    height:11vw;
-    font-family: Poppins;
-     text-align: center;
-    border: 2px solid black; 
+    text-align: center;
+    border: 2px solid black;
     border-style: solid solid none none;
 }
 
-.village-reported p{
-   font-size: 1.44vw;
+.panchayat-reported p {
+    font-size: 1.44vw;
 }
 
-.village-certified{
+.panchayat-certified {
     width: 50%;
-    height:11vw;
+    height: 11vw;
     font-family: Poppins;
-     text-align: center;
-     border: 2px solid black; 
+    text-align: center;
+    border: 2px solid black;
     border-style: solid none none none;
 }
 
-.village-certified p{
-   font-size: 1.44vw;
+.panchayat-certified p {
+    font-size: 1.44vw;
 }
 
-h3{
+
+.village-reported {
+    width: 50%;
+    height: 11vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid solid none none;
+}
+
+.village-reported p {
+    font-size: 1.44vw;
+}
+
+.village-certified {
+    width: 50%;
+    height: 11vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid none none none;
+}
+
+.village-certified p {
+    font-size: 1.44vw;
+}
+
+h3 {
     font-size: 1vw;
 }
 
@@ -684,16 +721,26 @@ h3{
 
 @media only screen and (min-width: 1780px) {
     .status-container {
-            height: 58vw;
-        }
+        height: 58vw;
+    }
 }
+
 @media only screen and (max-width: 1200px) {
     .status-logo {
-            display: none;
-        }
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 700px) {
+    .dashboard-status {
+        height: 120vw;
+    }
+
+    .status-container {
+        height: 105vw;
+        padding: 1%;
+    }
+
     .status-ur {
         flex-direction: column;
         flex-wrap: wrap;
@@ -702,14 +749,16 @@ h3{
         padding: 0%;
         margin-top: 2%;
     }
+
     .status-lr {
         flex-direction: column;
         flex-wrap: wrap;
         width: 100%;
-         font-size: 10px;
-         padding: 0%;
+        font-size: 10px;
+        padding: 0%;
         margin-top: 2%;
     }
+
     .district {
         flex-direction: column;
         flex-wrap: wrap;
@@ -720,30 +769,32 @@ h3{
         margin-bottom: 2%;
     }
 
-    .block{
-       flex-direction: column;
-        flex-wrap: wrap;
-        width: 80%;
-        margin: auto;
-        padding: 0%;
-         height: 20vw;
-    }
-    .panchayats{
+    .block {
         flex-direction: column;
         flex-wrap: wrap;
         width: 80%;
         margin: auto;
         padding: 0%;
-         height: 20vw;
-          margin-bottom: 2%;
+        height: 20vw;
     }
-    .villages{
+
+    .panchayats {
         flex-direction: column;
         flex-wrap: wrap;
         width: 80%;
         margin: auto;
         padding: 0%;
-         height: 20vw;
+        height: 20vw;
+        margin-bottom: 2%;
+    }
+
+    .villages {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+        padding: 0%;
+        height: 20vw;
     }
 }
 
@@ -756,22 +807,22 @@ h3{
 
 /* village-dashboard starts */
 
-.dashboard-village{
+.dashboard-village {
     width: 100%;
     height: 1250px;
     margin: 6% 0% 4% 0%;
 }
 
-.dashboard-village-container{
+.dashboard-village-container {
     width: 90%;
     margin: auto;
     height: 1200px;
     border-radius: 12px;
-   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-   flex: wrap;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    flex: wrap;
 }
 
-.village-dashboard-header{
+.village-dashboard-header {
     padding-top: 2%;
     color: #F45C20;
     font-family: Poppins;
@@ -780,7 +831,7 @@ h3{
     text-align: center;
 }
 
-.village-dashboard-count{
+.village-dashboard-count {
     height: 60px;
     width: 70%;
     margin: 1% 10% 1% 15%;
@@ -791,31 +842,34 @@ h3{
     border-radius: 5px;
     text-align: center;
     color: #F45C20;
-   font-size: 1.5625vw;
+    font-size: 1.5625vw;
 }
 
-.village-row-1{
+.village-row-1 {
     display: flex;
     justify-content: space-around;
     margin: 5% 5% 1% 5%;
 }
 
-.village-row-2{
+.village-row-2 {
     display: flex;
     justify-content: space-around;
     margin: 2% 5% 1% 5%;
 }
-.village-row-3{
+
+.village-row-3 {
     display: flex;
     justify-content: space-around;
     margin: 2% 5% 1% 5%;
 }
-.hh-tap{
+
+.hh-tap {
     height: 250px;
     width: 35%;
     background-color: #EAEBFF;
 }
-.hh-tap-header{
+
+.hh-tap-header {
     width: 100%;
     height: 3.75vw;
     text-align: center;
@@ -824,27 +878,30 @@ h3{
     font-size: 1.25vw;
     padding: 5% 0% 1% 0%;
 }
-.hh-tap-detail{
+
+.hh-tap-detail {
     width: 100%;
-    height:8vw;
+    height: 8vw;
     font-family: Poppins;
     text-align: center;
-    border: 3px solid black; 
-    border-style: solid none none none; 
+    border: 3px solid black;
+    border-style: solid none none none;
 }
 
-.hh-tap-detail p{
+.hh-tap-detail p {
     font-size: 1.5625vw;
     padding-top: 6%;
     font-family: 'Poppins', sans-serif;
 }
-.ws-progress{
+
+.ws-progress {
     height: 250px;
     width: 35%;
     background-color: #FDBC64;
 
 }
-.ws-progress-header{
+
+.ws-progress-header {
     width: 100%;
     height: 3.75vw;
     text-align: center;
@@ -853,28 +910,30 @@ h3{
     font-size: 1.25vw;
     padding: 5% 0% 1% 0%;
 }
-.ws-progress-detail{
+
+.ws-progress-detail {
     width: 100%;
-    height:8vw;
+    height: 8vw;
     font-family: Poppins;
     text-align: center;
-    border: 3px solid black; 
-    border-style: solid none none none; 
+    border: 3px solid black;
+    border-style: solid none none none;
 }
 
-.ws-progress-detail p{
+.ws-progress-detail p {
     font-size: 1.5625vw;
     padding-top: 6%;
     font-family: 'Poppins', sans-serif;
 }
 
-.ws-start{
+.ws-start {
     height: 250px;
     width: 35%;
     background-color: #E5F8F6;
 
 }
-.ws-start-header{
+
+.ws-start-header {
     width: 100%;
     height: 3.75vw;
     text-align: center;
@@ -883,28 +942,30 @@ h3{
     font-size: 1.25vw;
     padding: 5% 0% 1% 0%;
 }
-.ws-start-detail{
+
+.ws-start-detail {
     width: 100%;
-    height:8vw;
+    height: 8vw;
     font-family: Poppins;
     text-align: center;
-    border: 3px solid black; 
-    border-style: solid none none none; 
+    border: 3px solid black;
+    border-style: solid none none none;
 }
 
-.ws-start-detail p{
- font-size: 1.56vw;
+.ws-start-detail p {
+    font-size: 1.56vw;
     padding-top: 6%;
     font-family: 'Poppins', sans-serif;
 }
 
-.vwsc{
+.vwsc {
     height: 250px;
     width: 35%;
     background-color: #EEDFD8;
 
 }
-.vwsc-header{
+
+.vwsc-header {
     width: 100%;
     height: 3.75vw;
     text-align: center;
@@ -913,28 +974,30 @@ h3{
     font-size: 1.25vw;
     padding: 5% 0% 1% 0%;
 }
-.vwsc-detail{
+
+.vwsc-detail {
     width: 100%;
-    height:8vw;
+    height: 8vw;
     font-family: Poppins;
     text-align: center;
-    border: 3px solid black; 
-    border-style: solid none none none; 
+    border: 3px solid black;
+    border-style: solid none none none;
 }
 
-.vwsc-detail p{
- font-size: 1.5625vw;
+.vwsc-detail p {
+    font-size: 1.5625vw;
     padding-top: 6%;
     font-family: 'Poppins', sans-serif;
 }
 
-.plan-made{
+.plan-made {
     height: 250px;
     width: 35%;
     background-color: #F8E5E5;
 
 }
-.plan-made-header{
+
+.plan-made-header {
     width: 100%;
     height: 3.75vw;
     text-align: center;
@@ -943,28 +1006,30 @@ h3{
     font-size: 1.25vw;
     padding: 5% 0% 1% 0%;
 }
-.plan-made-detail{
+
+.plan-made-detail {
     width: 100%;
-    height:8vw;
+    height: 8vw;
     font-family: Poppins;
     text-align: center;
-    border: 3px solid black; 
-    border-style: solid none none none; 
+    border: 3px solid black;
+    border-style: solid none none none;
 }
 
-.plan-made-detail p{
- font-size: 1.56vw;
+.plan-made-detail p {
+    font-size: 1.56vw;
     padding-top: 6%;
     font-family: 'Poppins', sans-serif;
 }
 
-.grey-water{
+.grey-water {
     height: 250px;
     width: 35%;
     background-color: #FFC7CC;
 
 }
-.grey-water-header{
+
+.grey-water-header {
     width: 100%;
     height: 3.75vw;
     text-align: center;
@@ -973,17 +1038,18 @@ h3{
     font-size: 1.25vw;
     padding: 5% 0% 1% 0%;
 }
-.grey-water-detail{
+
+.grey-water-detail {
     width: 100%;
-    height:8vw;
+    height: 8vw;
     font-family: Poppins;
     text-align: center;
-    border: 3px solid black; 
-    border-style: solid none none none; 
+    border: 3px solid black;
+    border-style: solid none none none;
 }
 
-.grey-water-detail p{
- font-size: 1.56vw;
+.grey-water-detail p {
+    font-size: 1.56vw;
     padding-top: 6%;
     font-family: 'Poppins', sans-serif;
 }
@@ -992,71 +1058,95 @@ h3{
 
 @media only screen and (min-width: 1780px) {
     .dashboard-village-container {
-            height: 75vw;
-        }
+        height: 75vw;
+    }
 }
+
 @media only screen and (min-width: 2200px) {
-    .hh-tap p{
-       padding-top: 0.4%;
-    }
-    .ws-progress p{
-       padding-top: 0.4%;
-    }
-    .ws-start p{
+    .hh-tap p {
         padding-top: 0.4%;
     }
-    .vwsc p{
-       padding-top: 0.4%;
+
+    .ws-progress p {
+        padding-top: 0.4%;
     }
-    .plan-made p{
-       padding-top: 0.4%;
+
+    .ws-start p {
+        padding-top: 0.4%;
     }
-    .grey-water p{
+
+    .vwsc p {
+        padding-top: 0.4%;
+    }
+
+    .plan-made p {
+        padding-top: 0.4%;
+    }
+
+    .grey-water p {
         padding-top: 0.4%;
     }
 }
 
 
 @media only screen and (max-width: 700px) {
-    .village-dashboard-count{
+    .dashboard-village {
+        height: 150vw;
+    }
+
+    .dashboard-village-container {
+        height: 170vw;
+    }
+
+    .village-dashboard-count {
+        height: 1vw;
         box-shadow: none;
     }
+
     .village-row-1 {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    .village-row-2  {
+
+    .village-row-2 {
         flex-direction: column;
         flex-wrap: wrap;
     }
+
     .village-row-3 {
         flex-direction: column;
         flex-wrap: wrap;
     }
-    .hh-tap{
+
+    .hh-tap {
         width: 100%;
         height: 22vw;
         margin-bottom: 2%;
     }
-    .ws-progress{
+
+    .ws-progress {
         width: 100%;
         height: 22vw;
     }
-    .ws-start{
-        width: 100%;
-        height: 22vw;
-        margin-bottom: 2%;
-    }
-    .vwsc{
-        width: 100%;
-        height: 22vw;
-    }
-    .plan-made{
+
+    .ws-start {
         width: 100%;
         height: 22vw;
         margin-bottom: 2%;
     }
-    .grey-water{
+
+    .vwsc {
+        width: 100%;
+        height: 22vw;
+    }
+
+    .plan-made {
+        width: 100%;
+        height: 22vw;
+        margin-bottom: 2%;
+    }
+
+    .grey-water {
         width: 100%;
         height: 22vw;
     }
@@ -1076,11 +1166,13 @@ h3{
     padding-bottom: 2%;
     margin-bottom: 5%;
 }
+
 .table-header {
     width: 95%;
     height: 4.7vw;
     margin: 4% 1% 1% 2.5%;
 }
+
 .title {
     font-family: Poppins;
     font-size: 1.56vw;
@@ -1090,6 +1182,7 @@ h3{
     text-align: left;
     margin-bottom: 1%;
 }
+
 .desc {
     font-family: Poppins;
     font-size: 1.125vw;
@@ -1099,47 +1192,58 @@ h3{
     text-align: left;
     color: #B5B5C3;
 }
+
 table td {
     border-bottom: 2px solid #fff;
 }
+
 .container {
     margin: auto;
     width: 95%;
     height: 50vw;
 }
+
 table {
     width: 100%;
     border-collapse: collapse;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
-th, td {
+
+th,
+td {
     padding: 15px;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     color: black;
     cursor: pointer;
 }
+
 th {
     text-align: left;
 }
+
 tr {
-  height: 2vw;
-  display: table-row;
-  vertical-align: inherit;
-  border-color: inherit;
+    height: 2vw;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
 }
+
 thead th {
     background-color: #F3F6F9;
 }
+
 tbody tr:hover {
     /* background-color: #3699FF; */
     background-color: whitesmoke;
 }
+
 tbody td {
     position: relative;
 }
+
 tbody td:hover:before {
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     z-index: -1;
 }
 
@@ -1147,14 +1251,19 @@ tbody td:hover:before {
 /* table meadia query starts */
 
 @media only screen and (max-width: 600px) {
-    .dashboard-table{
+    .dashboard-table {
         overflow-x: scroll;
         overflow-y: hidden;
     }
 }
+
 @media only screen and (max-width: 300px) {
-    .dashboard-table{
+    .dashboard-table {
         height: 125vw;
+    }
+
+    .graph-container {
+        height: 10vw;
     }
 }
 
@@ -1170,6 +1279,7 @@ tbody td:hover:before {
     /* background-color: black; */
     padding-top: 5%;
 }
+
 .graph-container {
     width: 80%;
     height: 700px;
@@ -1177,6 +1287,17 @@ tbody td:hover:before {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+@media only screen and (max-width: 700px) {
+    .dashboard-graph {
+        height: 70vw;
+    }
+
+    .graph-container {
+        height: 50vw;
+    }
+}
+
 /* graph style ends here */
 
 /* footer style starts here */
@@ -1186,4 +1307,11 @@ tbody td:hover:before {
     position: relative;
     top: 1%;
 }
+
+@media only screen and (max-width: 700px) {
+    #footer {
+        height: 40vw;
+    }
+}
+
 /* footer style ends here */

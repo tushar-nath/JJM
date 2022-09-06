@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="middle-page.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="../new-dashboard/household-json/district.js"></script>
     <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </head>
+
 <body>
     <div class="nav-bar">
         <div class="logo">
@@ -30,13 +40,16 @@
             </div>
         </div>
         <div class="button">
-            <a href="../second-page-view/second-page-view.html" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Next Page</a>
+            <a href="../second-page-view/second-page-view.html" class="btn btn-primary btn-lg" role="button"
+                aria-pressed="true">Next Page</a>
         </div>
     </div>
 
     <div class="map-container">
         <div class="map-container-box">
-                <img src="../images/Middle-page/map.png" alt="" width="1047" height="700">
+            <div id="dvMap">
+                <!-- MAP from JSON -->
+            </div>
         </div>
     </div>
 
@@ -46,32 +59,160 @@
         </div>
     </div>
 
+    <div class="achievement-container">
+        <div class="tab">
+            <div class="tab-container">
+                <img src="../images/middle-page/tab.png" alt="" width="394" height="200">
+            </div>
+        </div>
+        <div class="detail">
+            <div class="header">JAL JEEVAN MISSION </br> ASSAM</div>
+            <div class="desc">
+                Jal Jeevan Mission, is envisioned to provide safe and adequate drinking water through individual
+                household tap connections by 2024 to all households in rural India.
+            </div>
+        </div>
+        <div class="tap">
+            <div class="bg">
+                <img src="../images/middle-page/tap.png" alt="" width="100%">
+            </div>
+        </div>
+        <div class="achievement-tile">
+            <div class="ac-header">
+                ACHIEVEMENTS
+                <hr class="hr">
+            </div>
+            <div class="ac-tile-1">Assam gonna be the first state to implement 20,000+ Active IOT Centres with advance management water quality system.</div>
+            <div class="ac-tile-2">
+                Seperate Admin panels for PHE Minister and PHE Officials SMS/Email Notifications for PHE Department.
+            </div>
+            <div class="ac-tile-3">
+                SMS/Email Notifications for PHE Department and also Lab admin panel.
+            </div>
+        </div>
+    </div>
+
     <div class="dashboard-stats">
         <div class="stats-container">
             <div class="stat-header">Assam</div>
             <div class="stat-desc">Status of Tap Water Supply in Rural Homes</div>
             <div class="stat-tile-container">
-                <div class="upper-tile">
-                    <div class="left-tile">
-                        <div class="lt-header">TOTAL NO. OF HOUSEHOLDS</div>
-                        <div class="lt-desc">69,34,57</div>
+                <div class="row-1">
+                    <div class="left-1">
+                        <div class="lt-header">TOTAL NO OF </br> JAL JEEVAN CENTRES AS ON DATE</div>
+                        <div class="lt-desc">693457</div>
                     </div>
-                    <div class="right-tile">
-                        <div class="rt-header">HOUSEHOLD WITH TAP CONNECTIONS AS ON DATE</div>
+                    <div class="right-1">
+                        <div class="rt-header">TOTAL NO OF </br> ACTIVE IOT CENTRES AS ON DATE</div>
+                        <div class="rt-desc">05</div>
+                    </div>
+                </div>
+                <div class="row-2">
+                    <div class="left-2">
+                        <div class="lt-header">TOTAL NO HOUSEHOLDS AS ON DATE</div>
+                        <div class="lt-desc">693457</div>
+                    </div>
+                    <div class="right-2">
+                        <div class="rt-header">HOUSEHOLD WITH TAP CONNECTIONS </br> AS ON DATE</div>
                         <div class="rt-desc">69,34,57</div>
                     </div>
                 </div>
-                <div class="lower-tile">
-                    <div class="lower-header">HOUSEHOLDS PROVIDED WITH TAP WATER CONNECTIONS SINCE ITS LAUNCH</div>
-                    <div class="lower-desc">69,34,57</div>
+                <div class="row-3">
+                    <div class="left-3">
+                        <div class="lt-header">HOUSEHOLDS PROVIDED WITH TAP WATER CONNECTIONS SINCE ITS LAUNCH</div>
+                        <div class="lt-desc">69,34,57</div>
+                    </div>
+                    <div class="right-3">
+                        <div class="rt-header">SCHOOL WITH TAP CONNECTIONS AS ON DATE</div>
+                        <div class="rt-desc">69,34,57</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="footer">
-        <img class="center-fit" src="../images/middle-page/ministers.png">
+        <img class="center-fit" src="../images/Middle-page/ministers.png">
     </div>
+    <script type="text/javascript">
+        //JS function for map
 
+        function LoadMap() {
+            var bounds = new google.maps.LatLngBounds();
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+
+            //Create and open InfoWindow.
+            var infoWindow = new google.maps.InfoWindow();
+            // console.log(markers[1]);
+            var toggleId = sessionStorage.getItem("toggleId") || "0";
+
+            for (var i = 1; i < 36; i++) {
+                var data = districts[i];
+                var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+
+                //extend the bounds to include each marker's position
+                bounds.extend(myLatlng);
+
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: data.title
+                });
+
+                const contentString =
+                    '<div id="popup">' +
+                    '<div id="popup-header">' +
+                    '<div id="popup-place">' +
+                    '<div id="city">' + data.title + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of  Active IOT Centres:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.total + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of  households Connections:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.active + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of  Active Centres:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.iot + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of  Active IOT Centres:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.upcoming + '</div>' +
+                    '</div>' +
+                    '<div id="popup-btn">' + '<a href="../new-dashboard-2/new-dashboard-2.html"><button onclick="storeDistrictId(this)" value=" ' + data.id + ' ">Details</button></a>' + '</div>' +
+
+                    '</div>';
+
+
+                //Attach click event to the marker.
+                (function (marker, data) {
+                    google.maps.event.addListener(marker, 'mouseover', function (e) {
+                        //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                        infoWindow.setContent(contentString);
+                        infoWindow.open(map, marker);
+                        // sessionStorage.districtId = data.id;
+                    });
+                })(marker, data);
+
+                marker.addListener('mouseout', function () {
+                    infowindow.close(map, marker);
+                });
+
+                //now fit the map to the newly inclusive bounds
+                google.maps.event.addListenerOnce(map, 'idle', function () {
+                    map.fitBounds(bounds);
+                });
+            }
+        }
+    </script>
+    <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&callback=LoadMap"></script>
 </body>
+
 </html>
