@@ -80,7 +80,7 @@ a{
 
 .btn-mobile{
     text-align: center !important;
-    background-color: #FFF !important;
+    background-color: #DBC139 !important;
     border-radius: 10px !important;
     margin-left: 1%;
     margin-right: 1%;
@@ -342,5 +342,11 @@ a{
     #btn-back {
         position: relative;
         right: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .top_bar {
+        display: none;
     }
 }

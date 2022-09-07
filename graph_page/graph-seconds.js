@@ -93,7 +93,7 @@ async function getDummySecData_1() {
 		}
 	}
 	catch(err) {
-		alert("No data available for Graph 2");
+		// alert("No data available for Graph 2");
 		secUserDataA_1 = [1,2,3,4,5];
 		secUserDataB_1 = [0,0,0,0,0];
 	}

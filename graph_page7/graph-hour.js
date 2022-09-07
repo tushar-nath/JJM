@@ -91,7 +91,7 @@ async function getDummyHourData_7() {
 		}
 	}
 	catch(err) {
-		alert("No data available for Graph 2");
+		// alert("No data available for Graph 2");
 		hourUserDataA_7 = [1,2,3,4,5];
 		hourUserDataB_7 = [0,0,0,0,0];
 	}

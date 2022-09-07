@@ -90,7 +90,7 @@ async function getDummyBarData_6() {
 
 	}
 	catch (err) {
-		alert("No data available for Bar Graph");
+		// alert("No data available for Bar Graph");
 		barUserWaterDataA_6 = [];
 		barUserWaterDataB_6 = [100];
 	}

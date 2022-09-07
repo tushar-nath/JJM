@@ -99,7 +99,7 @@ async function getDummyBarData_2() {
 		console.log("barDataA_2",barDataB_2);
 	}
 	catch(err) {
-		alert("No data available for Graph 2");
+		// alert("No data available for Graph 2");
 		barUserDataA_2 = [1,2,3,4,5];
 		barUserDataB_2 = [10,30,20,11,12];
 	}
