@@ -1491,6 +1491,12 @@ tbody td:hover:before {
     .graph-container {
         height: 50vw;
     }
+    #table-header {
+        font-size: 4vw;
+    }
+    .desc {
+        font-size: 3vw;
+    }
 }
 
 /* graph style ends here */
