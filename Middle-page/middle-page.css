@@ -678,7 +678,14 @@ p {
         height: 12.5vw;
         margin-bottom: 2%;
     }
-
+    .lt-header {
+        font-size: 1.7vw;
+        margin-bottom: 1%;
+    }
+    .rt-header {
+        font-size: 1.7vw;
+        margin-bottom: 1%;
+    }
     /* Stats ends */
 
     /* map starts */
@@ -724,6 +731,16 @@ p {
     .achievement-tile {
         bottom: 55%;
         left: 50%;
+    }
+
+    .ac-tile-1 {
+        font-size: 1.4vw;
+    }
+    .ac-tile-2 {
+        font-size: 1.4vw;
+    }
+    .ac-tile-3 {
+        font-size: 1.4vw;
     }
 
     .tab {
@@ -812,6 +829,10 @@ p {
         height: 150px;
     }
 
+    .desc-bottom-1 p {
+        font-size: 2.5vw;
+    }
+
     .desc-top-2 {
         height: 150px;
         padding: 0%;
@@ -840,7 +861,9 @@ p {
         border-bottom-left-radius: 25px;
         border-top-left-radius: 25px;
     }
-
+    .desc {
+        font-size: 1.4vw;
+    }
     /* timeline ends */
 }
 
@@ -863,11 +886,16 @@ p {
     top: 45%;
 }
 
+.floating-button:hover {
+    background-color: #F45C20;
+    opacity: 80%;
+}
+
 @media only screen and (max-width: 700px) {
     .floating-button {
         position: absolute;
         height: 60vw;
-        width: 4vw;
+        width: 6vw;
         top: 37%;
     }
     .floating-button img {

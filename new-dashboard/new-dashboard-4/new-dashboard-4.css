@@ -465,6 +465,21 @@ body {
     .stat-desc {
         height: 7vw;
     }
+    .stat-desc {
+        height: 7vw;
+        font-size: 3vw;
+    }
+    .lt-header {
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+    .rt-header {
+        font-size: 2.5vw;
+        line-height: 3.5vw;
+    }
+    .lower-header {
+        font-size: 2.5vw;
+    }
 }
 
 /* stats meadia-query ends */
@@ -835,6 +850,106 @@ h3 {
         padding: 0%;
         height: 20vw;
     }
+    .staus-header p{
+        height: 2vw;
+        font-size: 3vw;
+    }
+    .certifield-state p{
+        margin-top: 1%;
+        font-size: 2vw;
+    }
+    .reported-state p{
+        margin-top: 1%;
+        font-size: 2vw;
+    }
+    .district-header {
+        padding: 1% 0% 1% 0%;
+        font-size: 3vw;
+    }
+    .district-reported h3{
+        font-size: 2.7vw;
+    }
+    .district-reported p{
+        font-size: 2.7vw;
+    }
+    .district-certified h3{
+        font-size: 2.7vw;
+    }
+    .district-certified p{
+        font-size: 2.7vw;
+    }
+    .block-header {
+        padding: 1% 0% 1% 0%;
+        font-size: 3vw;
+    }
+    .block-reported h3{
+        font-size: 2.7vw;
+    }
+    .block-reported p{
+        font-size: 2.7vw;
+    }
+    .block-certified h3{
+        font-size: 2.7vw;
+    }
+    .block-certified p{
+        font-size: 2.7vw;
+    }
+    .panchayats-header {
+        padding: 1% 0% 1% 0%;
+        font-size: 3vw;
+    }
+    .panchayat-reported h3{
+        font-size: 2.7vw;
+    }
+    .panchayat-reported p{
+        font-size: 2.7vw;
+    }
+    .panchayat-certified h3{
+        font-size: 2.7vw;
+    }
+    .panchayat-certified p{
+        font-size: 2.7vw;
+    }
+    .villages-header {
+        padding: 1% 0% 1% 0%;
+        font-size: 3vw;
+    }
+    .village-reported h3{
+        font-size: 2.7vw;
+    }
+    .village-reported p{
+        font-size: 2.7vw;
+    }
+    .village-certified h3{
+        font-size: 2.7vw;
+    }
+    .village-certified p{
+        font-size: 2.7vw;
+    }
+    .district-reported {
+        height: 15.3vw;
+    }
+    .district-certified{
+        height: 15.3vw;
+    }
+    .block-reported {
+        height: 15.3vw;
+    }
+    .block-certified{
+        height: 15.3vw;
+    }
+    .panchayat-certified {
+        height: 15.3vw;
+    }
+    .panchayat-reported {
+        height: 15.3vw;
+    }
+    .village-certified {
+        height: 15.3vw;
+    }
+    .village-reported {
+        height: 15.3vw;
+    }
 }
 
 /* status media-query ends */
@@ -1188,6 +1303,70 @@ h3 {
     .grey-water {
         width: 100%;
         height: 22vw;
+    }
+    .village-dashboard-header {
+        font-size: 4vw;
+    }
+    .village-dashboard-header p {
+        margin: 1% 0% 1% 0%;
+    }
+    .village-dashboard-count {
+        font-size: 3.5vw;
+    }
+    .hh-tap-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .hh-tap-detail p {
+        font-size: 4vw;
+        padding: 0;
+        margin: 3% 0% 3% 0%;
+    }
+    .ws-progress-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .ws-start-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .ws-start-detail p {
+        font-size: 4vw;
+        padding: 0;
+        margin: 3% 0% 3% 0%;
+    }
+    .vwsc-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .vwsc-detail p {
+        font-size: 4vw;
+        padding: 0;
+        margin: 3% 0% 3% 0%;
+    }
+    .plan-made-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .plan-made-detail p {
+        font-size: 4vw;
+        padding: 0;
+        margin: 3% 0% 3% 0%;
+    }
+    .grey-water-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .grey-water-detail p {
+        font-size: 4vw;
+        padding: 0;
+        margin: 3% 0% 3% 0%;
     }
 }
 

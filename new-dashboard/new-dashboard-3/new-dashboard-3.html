@@ -73,17 +73,18 @@
             <div class="stat-tile-container">
                 <div class="upper-tile">
                     <div class="left-tile">
-                        <div class="lt-header">TOTAL NO. OF HOUSEHOLDS</div>
-                        <div class="lt-desc">69,34,57</div>
+                        <div class="lt-header">TOTAL NO. OF HOUSEHOLDS </br> </br> </br> 69,34,57 </div>
+                        <!-- <div class="lt-desc">69,34,57</div> -->
                     </div>
                     <div class="right-tile">
-                        <div class="rt-header">HOUSEHOLD WITH TAP CONNECTIONS AS ON DATE</div>
-                        <div class="rt-desc">69,34,57</div>
+                        <div class="rt-header">HOUSEHOLD WITH TAP CONNECTIONS AS </br> ON DATE </br> </br> 69,34,57</div>
+                        <!-- <div class="rt-desc">69,34,57</div> -->
                     </div>
                 </div>
                 <div class="lower-tile">
-                    <div class="lower-header">HOUSEHOLDS PROVIDED WITH TAP WATER CONNECTIONS SINCE ITS LAUNCH</div>
-                    <div class="lower-desc">69,34,57</div>
+                    <div class="lower-header">HOUSEHOLDS PROVIDED WITH TAP WATER CONNECTIONS SINCE ITS LAUNCH </br> </br>
+                        69,34,57</div>
+                    <!-- <div class="lower-desc">69,34,57</div> -->
                 </div>
             </div>
         </div>
@@ -348,6 +349,12 @@
                             infoWindow.setContent(contentString);
                             infoWindow.open(map, marker);
                             // sessionStorage.areaId = data.id;
+                        });
+                        google.maps.event.addListener(marker, "click", function (e) {
+                            //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                            infoWindow.setContent(contentString);
+                            infoWindow.open(map, marker);
+                            // sessionStorage.districtId = data.id;
                         });
                     })(marker, data);
 
