@@ -789,7 +789,7 @@ h3 {
     }
 
     .status-container {
-        height: 105vw;
+        height: 107vw;
         padding: 1%;
     }
 
@@ -1519,11 +1519,11 @@ tbody td:hover:before {
     .xr-division {
         font-size: 3vw;
     }
-    th {
+    /* th {
         padding: 1% 0% 1% 0%;
         font-size: 2.2vw;
         line-height: 3vw;
-    }
+    } */
 }
 
 @media only screen and (max-width: 300px) {
