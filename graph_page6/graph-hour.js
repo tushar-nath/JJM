@@ -17,8 +17,8 @@ async function dummyChart() {
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "rgba(0, 255, 0, 1)",
-      				borderColor: "rgba(0, 255, 0, 1)",
+					backgroundColor: "#138808",
+					borderColor: "#138808",
 					borderWidth: 1,
 					data: hourUserDataB_6,
 				}
@@ -43,7 +43,7 @@ async function dummyChart() {
 				ticks: { min: 0},
 				scaleLabel: {
 					display: true,
-					labelString: 'Y-AXIS'
+					labelString: 'Water Level'
 				  }
 				}], 
 			},

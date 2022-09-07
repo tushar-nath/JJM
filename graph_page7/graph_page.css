@@ -53,7 +53,8 @@ a{
 
 .btn {
     text-align: center !important;
-    background-color: #FFF !important;
+    /* background-color: #DBC139 !important; */
+    background-color: #DBC139 !important;
     border-radius: 10px !important;
     margin-left: 1%;
     margin-right: 1%;
@@ -72,8 +73,8 @@ a{
 }
 
 .btn:hover {
-    background-color: #DBC139 !important;
-    color: white !important;
+    background-color: white!important;
+    color: black !important;
     cursor: pointer;
 }
 
@@ -182,7 +183,20 @@ a{
 .top-container-graph-info p,
 .top-container-graph-info li
 {
-    font-size: 12px;
+    font-size: 15px;
+}
+
+.top-container-graph-info p {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.top-container-graph-info li:first-child {
+    color: darkgreen;
+}
+
+.top-container-graph-info li:last-child {
+    color: red;
 }
 
 .graphy_1 {
@@ -291,6 +305,42 @@ a{
         position: relative;
         top: 10px;
     }
+
+    .buttons {
+        width: 100%;
+        margin: 0%;
+        display: flex;
+    }
+    a{
+        margin: 0%;
+        padding: 0%;
+    }
+    .buttons {
+        margin-top: 5%;
+        justify-content: center;
+    }
+    #btn-next {
+        position: relative;
+    }
+
+    #btn-back {
+        position: relative;
+        right: 10%;
+        margin-right: 1%;
+    }
 }
 
-
+@media screen and (max-width: 500px) {
+    #btn-next {
+        position: relative;
+        right: 100%;
+    }
+    .buttons a {
+        color: black !important;
+        width: 20%;
+    }
+    #btn-back {
+        position: relative;
+        right: 90%;
+    }
+}

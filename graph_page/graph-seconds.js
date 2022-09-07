@@ -17,19 +17,11 @@ async function dummyChart() {
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "rgba(0, 0, 255, 1)",
-      				borderColor: "rgba(0, 0, 255, 1)",
+      				backgroundColor: "#FF4500",
+      				borderColor: "#FF4500",
 					borderWidth: 1,
 					data: secUserDataB_1,
 				},
-				{
-					fill: false,
-					lineTension: 0,
-      				backgroundColor: "rgba(255, 0, 0, 1)",
-      				borderColor: "rgba(255, 0, 0, 1)",
-					borderWidth: 1,
-					data: [8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5,8.5],
-				}
 			],
 		},
 
@@ -51,7 +43,7 @@ async function dummyChart() {
 					ticks: { min: 0},
 					scaleLabel: {
 						display: true,
-						labelString: 'Y-AXIS'
+						labelString: 'pH Level'
 					}
 				}], 
 			},

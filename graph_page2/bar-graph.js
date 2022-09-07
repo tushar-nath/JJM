@@ -17,8 +17,8 @@ async function dummyChart() {
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "#FFA500",
-      				borderColor: "#FFA500",
+					backgroundColor: "#ABCAE9",
+					borderColor: "#ABCAE9",
 					borderWidth: 1,
 					data: barUserDataB_2,
 				}
@@ -43,7 +43,7 @@ async function dummyChart() {
 				ticks: { min: 0},
 				scaleLabel: {
 					display: true,
-					labelString: 'Y-AXIS'
+					labelString: 'TDS Level'
 				  }
 				}], 
 			},

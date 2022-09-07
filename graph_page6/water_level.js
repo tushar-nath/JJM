@@ -19,8 +19,8 @@ async function dummyChart() {
 					barThickness: 2,
 					fill: false,
 					lineTension: 0,
-					backgroundColor: "#FFA500",
-					borderColor: "#FFA500",
+					backgroundColor: "#00BFFF",
+					borderColor: "#00BFFF",
 					borderWidth: 1,
 					data: barUserWaterDataB_6,
 				}
