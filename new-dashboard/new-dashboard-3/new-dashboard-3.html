@@ -279,6 +279,10 @@
             </div>
         </div>
 
+        <div class="buttons">
+                <button onclick="functionHome()" class="btn-next" type="button" id="btn-next">Back To Home</button>
+        </div>
+
         <img id="footer" width="100%" height="400px" src="../../images/new-dashboard/footer.png">
 
         <script type="text/javascript">
@@ -429,6 +433,12 @@
                 sessionStorage.subAreaId = id;
                 location.href = "../new-dashboard-4/new-dashboard-4.html";
             }
+
+             //JS function for redirecting to Home page 
+            function functionHome() {
+                location.href="../../second-page-view/second-page-view.html"
+            }
+
             //JS function for status header from JSON
             var area = city[1][areaId];
             console.log(area);

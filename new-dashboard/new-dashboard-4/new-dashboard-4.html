@@ -254,6 +254,10 @@
             </div>
         </div>
 
+         <div class="buttons">
+                <button onclick="functionHome()" class="btn-next" type="button" id="btn-next">Back To Home</button>
+        </div>
+
         <img id="footer" width="100%" height="400px" src="../../images/new-dashboard/footer.png">
 
         <script type="text/javascript">
@@ -393,6 +397,12 @@
                 var id = e.getAttribute('value');
                 sessionStorage.areaId = id;
                 location.href = "../new-dashboard-3/new-dashboard-3.html";
+            }
+
+
+             //JS function for redirecting to Home page 
+            function functionHome() {
+                location.href="../../second-page-view/second-page-view.html"
             }
 
         </script>

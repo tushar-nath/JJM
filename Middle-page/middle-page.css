@@ -453,6 +453,28 @@ p {
 
 /* Timeline ends */
 
+/* Timeline-mobile starts */
+
+.timeline-mobile {
+    width: 100%;
+    height: 850px;
+    padding-top: 45px;
+    display: none;
+}
+
+.timeline-mobile-container {
+    width: 90%;
+    margin: auto;
+    height: 800px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 0.5% 0% 0.5% 0%;
+    text-align: center;
+}
+
+/* Timeline-mobile starts */
+
 /* stats designs starts here */
 .dashboard-stats {
     width: 100%;
@@ -865,6 +887,20 @@ p {
         font-size: 1.4vw;
     }
     /* timeline ends */
+
+    /* timeline-mobile starts */
+
+    .timeline-mobile{
+        display: flex;
+    }
+    .timeline{
+        display: none;
+    }
+
+
+
+
+    /* timeline-mobile ends */
 }
 
 /* MEDIA QUERY ENDS */
