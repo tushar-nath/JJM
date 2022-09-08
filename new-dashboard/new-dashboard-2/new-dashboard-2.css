@@ -1567,6 +1567,16 @@ tbody td:hover:before {
     }
 }
 
+@media (min-width: 1920px) and (max-width: 2560px)  {
+    .dashboard-graph {
+        height: 80vw;
+    }
+
+    .graph-container {
+        height: 45vw;
+    }
+}
+
 /* graph style ends here */
 
 /* footer style starts here */
