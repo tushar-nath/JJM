@@ -28,8 +28,8 @@ function afterLoaded(){
     district_data.innerHTML = "DISTRICT : " + loadedData['District'].toUpperCase();
     village_data.innerHTML = "VILLAGE : " + loadedData['Village'].toUpperCase();
     panchayat_data.innerHTML = "PANCHAYAT : " + loadedData['Panchayat'].toUpperCase();
-    inhab_data.innerHTML = "NO OF INHABITANTS: : " + loadedData['Inhabitants'].toUpperCase();
-    served_data.innerHTML = "POPULATION SERVED THROUGH SCHEME : " + loadedData['Served'].toUpperCase();
+    inhab_data.innerHTML = "TOTAL HOUSEHOLDS : " + loadedData['Total Households'].toUpperCase();
+    served_data.innerHTML = "TOTAL HOUSEHOLDS WITH TAP CONNECTIONS : " + loadedData['Total Households with Tap Connections'].toUpperCase();
     scheme_data.innerHTML = "SCHEME : " + loadedData['Scheme'].toUpperCase();
     year_data.innerHTML = "YEAR OF COMMISSION: " + loadedData['Year'].toUpperCase();
     supervisor_data.innerHTML = "SUPERVISOR NAME : : " + loadedData['Supervisor'].toUpperCase();

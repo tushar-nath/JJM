@@ -145,6 +145,35 @@ body {
     background-color: #0A68FF;
 }
 
+@media only screen and (max-width: 700px) {
+    /* .map-container {
+        height: 100vw;
+    }
+    .map-container-box {
+        height: 90vw;
+    }
+    #dvMap {
+        height: 90vw;
+    } */
+    #popup {
+        width: 30vw;
+    }
+    #city {
+        font-size: 1.5vw;
+    }
+    #popup-tile{
+        width: 100%;
+    }
+    #popup-key {
+        position: relative;
+        top: 1vw;
+    }
+    #popup-value {
+        position: relative;
+        top: 1vw;
+    }
+}
+
 
 
 /* Marker Popup Design ends */

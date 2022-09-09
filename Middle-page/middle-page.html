@@ -261,6 +261,12 @@
                         infoWindow.open(map, marker);
                         // sessionStorage.districtId = data.id;
                     });
+                    google.maps.event.addListener(marker, "click", function (e) {
+                        //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                        infoWindow.setContent(contentString);
+                        infoWindow.open(map, marker);
+                        // sessionStorage.districtId = data.id;
+                    });
                 })(marker, data);
 
                 marker.addListener('mouseout', function () {

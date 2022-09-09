@@ -73,7 +73,15 @@ dummyChart();
 async function getDummyBarData_2() {
 	try {
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
-		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=43200`;
+		const districtId = sessionStorage.getItem("districtId") || "1";
+		const cityId = sessionStorage.getItem("cityId") || "1";
+		if(districtId == 2 && cityId == 7) {
+			var apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=43200`;
+
+		} else {
+			var apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${7}&timeInterval=43200`;
+
+		}
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
@@ -100,8 +108,8 @@ async function getDummyBarData_2() {
 	}
 	catch(err) {
 		// alert("No data available for Graph 2");
-		barUserDataA_2 = [1,2,3,4,5];
-		barUserDataB_2 = [10,30,20,11,12];
+		barUserDataA_1 = [1];
+		barUserDataB_1 = [0];
 	}
 }
 
