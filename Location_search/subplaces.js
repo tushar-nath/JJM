@@ -170,7 +170,7 @@ var subplaces = {
     7: {
         1: {
             id: "1",
-            title: "Bamun Chuburi",
+            title: "Parua Harigaon No 1",
             lat: "26.6348",
             lng: "92.7699",
             total: "1515",
@@ -183,7 +183,7 @@ var subplaces = {
         },
         2: {
             id: "2",
-            title: "Majgaon",
+            title: "Majgaon PWSS",
             lat: "26.6487",
             lng: "92.7904",
             total: "1515",
@@ -196,9 +196,9 @@ var subplaces = {
         },
         3: {
             id: "3",
-            title: "Poruwa-1",
-            lat: "26.6487",
-            lng: "92.7904",
+            title: "Deuri-gaon PWSS",
+            lat: "26.650404",
+            lng: "92.769653",
             total: "1515",
             active: "1230",
             iot: "1030",
@@ -209,9 +209,9 @@ var subplaces = {
         },
         4: {
             id: "4",
-            title: "Poruwa-2",
-            lat: "26.6487",
-            lng: "92.7904",
+            title: "Hazarapar PWSS",
+            lat: "26.631664",
+            lng: "92.777665",
             total: "1515",
             active: "1230",
             iot: "1030",
@@ -222,7 +222,7 @@ var subplaces = {
         },
         5: {
             id: "5",
-            title: "Poruwa-3",
+            title: "Poruwa-2",
             lat: "26.6487",
             lng: "92.7904",
             total: "1515",
