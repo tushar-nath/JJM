@@ -46,7 +46,12 @@
         var infoWindow = new google.maps.InfoWindow();
 
         const cityId = sessionStorage.getItem("cityId") || "0";
-        for (var i = 1; i < 3; i++) {
+        if (cityId == 7) {
+            var l = 6;
+        } else {
+            var l = 3;
+        }
+        for (var i = 1; i < l; i++) {
             var data = subplaces[cityId][i];
             var myLatlng = new google.maps.LatLng(data.lat, data.lng);
 

@@ -11,7 +11,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -24,7 +27,10 @@ var subplaces = {
             upcoming: "210",
             tap: "1510",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     2: {
@@ -39,7 +45,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1520",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -52,7 +61,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1530",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     3: {
@@ -67,7 +79,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1540",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -80,7 +95,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     4: {
@@ -95,7 +113,10 @@ var subplaces = {
             upcoming: "210",
             tap: "1510",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -108,7 +129,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1510",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     5: {
@@ -123,7 +147,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -136,7 +163,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     6: {
@@ -151,7 +181,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -164,7 +197,10 @@ var subplaces = {
             upcoming: "210",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     7: {
@@ -179,7 +215,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -192,7 +231,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         3: {
             id: "3",
@@ -205,7 +247,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         4: {
             id: "4",
@@ -218,7 +263,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         5: {
             id: "5",
@@ -231,7 +279,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     8: {
@@ -246,7 +297,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -259,7 +313,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     9: {
@@ -274,7 +331,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -287,7 +347,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1500",
             tapPer: "97%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     10: {
@@ -302,7 +365,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -315,7 +381,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     11: {
@@ -330,7 +399,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -343,7 +415,10 @@ var subplaces = {
             upcoming: "210",
             tap: "1500",
             tapPer: "97%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     12: {
@@ -358,7 +433,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1500",
             tapPer: "97%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -371,7 +449,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "97%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     13: {
@@ -386,7 +467,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1500",
             tapPer: "97%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -399,7 +483,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "97%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     14: {
@@ -414,7 +501,10 @@ var subplaces = {
             upcoming: "210",
             tap: "1500",
             tapPer: "97%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -427,7 +517,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1500",
             tapPer: "97%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     15: {
@@ -442,7 +535,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "97%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -455,7 +551,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1500",
             tapPer: "96%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     16: {
@@ -470,7 +569,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "96%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -483,7 +585,10 @@ var subplaces = {
             upcoming: "210",
             tap: "1500",
             tapPer: "96%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     17: {
@@ -498,7 +603,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1500",
             tapPer: "96%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -511,7 +619,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "96%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     18: {
@@ -526,7 +637,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1500",
             tapPer: "96%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -539,7 +653,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     19: {
@@ -554,11 +671,14 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
-             title: "Hengrabari",
+            title: "Hengrabari",
             lat: "26.1498",
             lng: "91.8011",
             total: "1510",
@@ -567,7 +687,10 @@ var subplaces = {
             upcoming: "210",
             tap: "1510",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     20: {
@@ -582,7 +705,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1520",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -595,7 +721,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1530",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     21: {
@@ -610,7 +739,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1540",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -623,7 +755,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     22: {
@@ -638,7 +773,10 @@ var subplaces = {
             upcoming: "210",
             tap: "1510",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -651,7 +789,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1510",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     23: {
@@ -666,7 +807,10 @@ var subplaces = {
             upcoming: "210",
             tap: "1510",
             tapPer: "100%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -679,7 +823,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1510",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     24: {
@@ -694,7 +841,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -707,7 +857,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     25: {
@@ -722,7 +875,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -735,11 +891,14 @@ var subplaces = {
             upcoming: "210",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     26: {
-       1: {
+        1: {
             id: "1",
             title: "Bamun Chuburi",
             lat: "26.6348",
@@ -750,7 +909,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -763,11 +925,14 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "99%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     27: {
-       1: {
+        1: {
             id: "1",
             title: "Belsiri Pathar",
             lat: "26.8139",
@@ -778,7 +943,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -791,7 +959,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     28: {
@@ -806,7 +977,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -819,7 +993,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     29: {
@@ -834,7 +1011,10 @@ var subplaces = {
             upcoming: "200",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -847,7 +1027,10 @@ var subplaces = {
             upcoming: "220",
             tap: "1500",
             tapPer: "97%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     },
     30: {
@@ -862,7 +1045,10 @@ var subplaces = {
             upcoming: "230",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         },
         2: {
             id: "2",
@@ -875,7 +1061,10 @@ var subplaces = {
             upcoming: "240",
             tap: "1500",
             tapPer: "98%",
-            progress: "100"
+            progress: "100",
+            date: "17/08/2022",
+            ph: "7.56",
+            lpcd: "4.5",
         }
     }
 }
