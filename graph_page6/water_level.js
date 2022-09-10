@@ -47,8 +47,8 @@ async function dummyChart() {
 				yAxes: [{
 					ticks: { min: 0 },
 					scaleLabel: {
-						display: false,
-						labelString: 'Y-AXIS'
+						display: true,
+						labelString: 'Water Level(in cm)'
 					},
 					gridLines: {
 						display: false
