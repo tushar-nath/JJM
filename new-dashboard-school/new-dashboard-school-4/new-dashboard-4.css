@@ -1,0 +1,1470 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* navbar css starts here */
+.nav-bar {
+    width: 100%;
+    display: flex;
+}
+
+.logo {
+    display: flex !important;
+    width: 65% !important;
+    display: table;
+    padding: 1%;
+}
+
+.logo-img {
+    margin-right: 2%;
+    height: 50px;
+    width: 50px;
+}
+
+.logo-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#img-2 {
+    padding-left: 0% !important;
+}
+
+.toggle {
+    height: 14vw;
+    width: 35%;
+    border-radius: 10px;
+    background-color: #EAEBFF;
+}
+
+.toggle-header {
+    height: 2.5vw;
+    font-family: Josefin Sans;
+    padding-left: 2%;
+    padding-top: 2%;
+    font-size: 1.25vw;
+    /* font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em; */
+    text-align: left;
+    color: #3699FF;
+    margin-left: 2.5%;
+}
+
+.school {
+    margin-top: 0%;
+    width: 100%;
+    height: 4.7vw;
+    display: flex;
+    cursor: pointer;
+}
+
+.household {
+    margin-top: 0%;
+    width: 100%;
+    height: 4.7vw;
+    display: flex;
+    cursor: pointer;
+}
+
+.toggle-logo {
+    width: 20%;
+    text-align: center;
+}
+
+
+.toggle-desc {
+    width: 77%;
+    font-family: Josefin Sans;
+    font-size: 1.25vw;
+    /* line-height: 35px;
+    font-weight: 400;
+    letter-spacing: 0em; */
+    text-align: left;
+    margin-left: 3%;
+    color: #F53D1C;
+    margin-top: 2%;
+}
+
+.toggle-active {
+    width: 3%;
+    height: 4.7vw;
+    background-color: #F45C20;
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+.school:hover {
+    background-color: #BCEBC6;
+}
+
+.household:hover {
+    background-color: #BCEBC6;
+}
+
+/* toggle media query starts */
+
+@media only screen and (max-width:1200px) {
+    .toggle-logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .toggle {
+        height: 12vw;
+        border-radius: 4px 0px 0px 4px;
+    }
+    .toggle-header {
+        height: 3vw;
+        padding: 0;
+        margin: 5% 0% 1% 5%;
+    }
+    .household {
+        height: 3vw;
+        margin: 0% 3% 1% 0%;
+        padding-left: 5%;
+        width: 100%
+    }
+    .school {
+        height: 3vw;
+        margin: 0% 3% 1% 0%;
+        padding-left: 5%;
+        width: 100%
+    }
+    .toggle-desc {
+        height: 1vw;
+        margin: 0%;
+        width: 85%;
+    }
+    #toggleHousehold {
+        width: 15%;
+        height: 2vw;
+        border-radius: 1px 0px 0px 1px;
+    }
+    #toggleSchool {
+        width: 15%;
+        height: 2vw;
+        border-radius: 1px 0px 0px 1px;
+    }
+}
+
+/* toggle media query ends */
+
+/* navbar css ends here */
+
+/* MAP CONTAINER STARTS */
+
+.map-container {
+    margin: 2% 0% 2% 0%;
+    width: 100%;
+    height: 850px;
+}
+
+.map-container-box {
+    background: #E7E7E7;
+    width: 75%;
+    height: 700px;
+    margin: auto;
+    background-color: #E7E7E7;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+#dvMap {
+    width: 97%;
+    height: 700px;
+    margin: auto;
+}
+
+/* Marker Popup Design starts */
+
+#popup {
+    width: 340px;
+}
+
+#popup-header {
+    margin: 2% 0% 0% 2%;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 1vw;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#popup-place {
+    display: flex;
+    font-family: Poppins;
+    font-weight: 500;
+
+}
+
+#state {
+    color: rgba(244, 92, 32, 1);
+}
+
+#popup-img {
+    border-radius: 15px;
+    text-align: center;
+    margin: 3% 2% 3% 2%;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#popup-tile {
+    font-size: 0.75vw;
+    display: flex !important;
+    margin: 2%;
+    font-family: Poppins;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #0A68FF;
+    color: white;
+}
+
+#popup-key {
+    width: 80%;
+    padding-left: 3%;
+}
+
+#popup-value {
+    width: 20%;
+    text-align: center;
+    position: relative;
+    top: 13px;
+}
+
+#popup-btn {
+    padding: 3%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+#popup-btn button {
+    cursor: pointer;
+    border-style: none;
+    padding: 2% 5% 2% 5%;
+    border-radius: 7px;
+    color: white;
+    background-color: #0A68FF;
+}
+
+@media only screen and (max-width: 700px) {
+    .map-container {
+        height: 100vw;
+    }
+    .map-container-box {
+        height: 90vw;
+    }
+    #dvMap {
+        height: 90vw;
+    }
+    #popup {
+        width: 30vw;
+    }
+    #city {
+        font-size: 1.5vw;
+    }
+    #popup-tile{
+        width: 100%;
+    }
+    #popup-value {
+        position: relative;
+        top: 1vw;
+    }
+}
+
+/* Marker Popup Design ends */
+
+
+/* MAP CONTAINER ENDS */
+
+
+/* stats designs starts here */
+.dashboard-stats {
+    width: 100%;
+    height: 800px;
+    padding-top: 2%;
+    /* margin-bottom: 10%; */
+}
+
+.stats-container {
+    margin: auto;
+    width: 85%;
+    height: 720px;
+    background-color: #fff;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 25px;
+    padding: 2%;
+}
+
+.stat-header {
+    font-family: Poppins;
+    font-size: 2vw;
+    font-weight: 600;
+    line-height: 57px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #F45C20;
+    margin: 1% 1% 0% 1%;
+}
+
+.stat-desc {
+    font-family: Poppins;
+    font-size: 1.44vw;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0A3170;
+    margin: 0% 1% 5% 1%;
+}
+
+.stat-tile-container {
+    margin: auto;
+    width: 90%;
+    height: 31.25vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-tile {
+    display: flex;
+    height: 15.6vw;
+}
+
+.left-tile {
+    padding: 1%;
+    width: 50%;
+    background-color: #0A68FF;
+    height: 15.6vw;
+}
+
+.right-tile {
+    padding: 1%;
+    width: 50%;
+    background-color: #9D4DB1;
+    height: 15.6vw;
+}
+
+.lower-tile {
+    padding: 1%;
+    height: 15.6vw;
+    background-color: #A2D6A1;
+}
+
+.lt-header {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 1.62vw;
+    font-weight: 600;
+    line-height: 2.2vw;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 2%;
+}
+
+.lt-desc {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 1.62vw;
+    font-weight: 600;
+    line-height: 2.2vw;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 4% 2% 2% 2%;
+}
+
+
+.rt-header {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 1.62vw;
+    font-weight: 600;
+    line-height: 2.2vw;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 2%;
+}
+
+.rt-desc {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 1.62vw;
+    font-weight: 600;
+    line-height: 2.2vw;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 4% 2% 2% 2%;
+}
+
+.lower-header {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 1.62vw;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 2%;
+}
+
+.lower-desc {
+    font-family: Poppins;
+    color: #fff;
+    font-size: 1.62vw;
+    font-weight: 600;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin: 4% 2% 2% 2%;
+}
+
+
+/* stats meadia-query starts */
+
+@media only screen and (min-width: 1600px) {
+    .stats-container {
+        height: 48vw;
+    }
+
+    .dashboard-stats {
+        margin-bottom: 20%;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .dashboard-stats {
+        height: 90vw;
+    }
+
+    .stats-container {
+        height: 80vw;
+    }
+
+    .upper-tile {
+        flex-direction: y;
+        flex-wrap: wrap;
+        height: 35vw;
+    }
+
+    .left-tile {
+        width: 100%;
+    }
+
+    .right-tile {
+        width: 100%;
+    }
+
+    .lower-header {
+        line-height: 13px;
+    }
+
+    .stat-header {
+        height: 7vw;
+    }
+
+    .stat-desc {
+        height: 7vw;
+    }
+    .stat-desc {
+        height: 7vw;
+        font-size: 3vw;
+    }
+    .lt-header {
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+    .rt-header {
+        font-size: 2.5vw;
+        line-height: 3.5vw;
+    }
+    .lower-header {
+        font-size: 2.5vw;
+    }
+}
+
+/* stats meadia-query ends */
+
+/* stat style ends here */
+
+
+
+
+/* status starts */
+
+.dashboard-status {
+    width: 100%;
+    height: 1200px;
+    height: max-content;
+    padding-top: 5%;
+}
+
+.status-container {
+    width: 75%;
+    margin: auto;
+    height: 900px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.status-logo {
+    position: relative;
+    left: 88%;
+    top: 5%;
+}
+
+.staus-header {
+    color: #F45C20;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.56vw;
+    text-align: center;
+}
+
+.certifield-state {
+    font-size: 1.5vw;
+    width: 70%;
+    margin: 1% 10% 1% 15%;
+    font-family: Poppins;
+    font-weight: 500;
+    border: 1px solid black;
+    padding: 0% 0% 1% 1%;
+    border-radius: 5px;
+}
+
+.certifield-state p {
+    margin: 0%;
+    padding: 0%;
+}
+
+.certifield-state:hover {
+    background-color: #F45C20;
+    color: white;
+}
+
+.reported-state {
+    font-size: 1.5vw;
+    width: 70%;
+    margin: 1% 10% 1% 15%;
+    font-family: Poppins;
+    font-weight: 500;
+    border: 1px solid black;
+    padding: 0% 0% 1% 1%;
+    border-radius: 5px;
+}
+
+.reported-state p {
+    margin: 0%;
+    padding: 0%;
+}
+
+.reported-state:hover {
+    background-color: #F45C20;
+    color: white;
+}
+
+.status-ur {
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 0% 1% 0%;
+}
+
+.status-lr {
+    display: flex;
+    justify-content: space-around;
+    margin: 2% 0% 1% 0%;
+}
+
+.district {
+    height: 16vw;
+    width: 35%;
+    background-color: #EAEBFF;
+    /* border: 0.08px solid black; */
+}
+
+.block {
+    height: 16vw;
+    width: 35%;
+    background-color: #FDBC64;
+    /* border: 0.5px solid black; */
+}
+
+.panchayats {
+    height: 16vw;
+    width: 35%;
+    background-color: #F8E5E5;
+    /* border: 0.5px solid black;    */
+}
+
+.villages {
+    height: 16vw;
+    width: 35%;
+    background-color: #BDBDBD;
+    /* border: 0.5px solid black;     */
+}
+
+.district-header {
+    width: 100%;
+    height: 3vw;
+    text-align: center;
+    /* border: 0.5px solid black;   */
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 1.56vw;
+    padding: 5% 0% 1% 0%;
+}
+
+.block-header {
+    width: 100%;
+    height: 3vw;
+    text-align: center;
+    /* border: 0.5px solid black;   */
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 1.56vw;
+    padding: 5% 0% 1% 0%;
+}
+
+.panchayats-header {
+    width: 100%;
+    height: 3vw;
+    text-align: center;
+    /* border: 0.5px solid black;   */
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 1.56vw;
+    padding: 5% 0% 1% 0%;
+}
+
+.villages-header {
+    width: 100%;
+    height: 3vw;
+    text-align: center;
+    /* border: 0.5px solid black;   */
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 1.56vw;
+    padding: 5% 0% 1% 0%;
+}
+
+.district-detail {
+    display: flex;
+}
+
+.block-detail {
+    display: flex;
+}
+
+.panchayats-detail {
+    display: flex;
+}
+
+.village-detail {
+    display: flex;
+}
+
+.district-reported {
+    width: 50%;
+    height: 11vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid solid none none;
+}
+
+.district-reported p {
+    font-size: 1.44vw;
+    font-weight: 400;
+}
+
+.district-certified {
+    width: 50%;
+    height: 11vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid none none none;
+}
+
+.district-certified p {
+    font-size: 1.44vw;
+}
+
+.block-reported {
+    width: 50%;
+    height: 11vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid solid none none;
+}
+
+.block-reported p {
+    font-size: 1.44vw;
+}
+
+.block-certified {
+    width: 50%;
+    height: 11vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid none none none;
+}
+
+.block-certified p {
+    font-size: 1.44vw;
+}
+
+.panchayat-reported {
+    width: 50%;
+    height: 11vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid solid none none;
+}
+
+.panchayat-reported p {
+    font-size: 1.44vw;
+}
+
+.panchayat-certified {
+    width: 50%;
+    height: 11vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid none none none;
+}
+
+.panchayat-certified p {
+    font-size: 1.44vw;
+}
+
+
+.village-reported {
+    width: 50%;
+    height: 11vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid solid none none;
+}
+
+.village-reported p {
+    font-size: 1.44vw;
+}
+
+.village-certified {
+    width: 50%;
+    height: 11vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 2px solid black;
+    border-style: solid none none none;
+}
+
+.village-certified p {
+    font-size: 1.44vw;
+}
+
+h3 {
+    font-size: 1vw;
+}
+
+/* status media-query starts */
+
+@media only screen and (min-width: 1780px) {
+    .status-container {
+        height: 58vw;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .status-logo {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .dashboard-status {
+        height: 120vw;
+    }
+
+    .status-container {
+        height: 110vw;
+        padding: 1%;
+    }
+
+    .status-ur {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 10px;
+        padding: 0%;
+        margin-top: 2%;
+    }
+
+    .status-lr {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 10px;
+        padding: 0%;
+        margin-top: 2%;
+    }
+
+    .district {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+        padding: 0%;
+        height: 20vw;
+        margin-bottom: 2%;
+    }
+
+    .block {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+        padding: 0%;
+        height: 20vw;
+    }
+
+    .panchayats {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+        padding: 0%;
+        height: 20vw;
+        margin-bottom: 2%;
+    }
+
+    .villages {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+        padding: 0%;
+        height: 20vw;
+    }
+    .staus-header p{
+        height: 2vw;
+        font-size: 3vw;
+    }
+    .certifield-state p{
+        margin-top: 1%;
+        font-size: 2vw;
+    }
+    .reported-state p{
+        margin-top: 1%;
+        font-size: 2vw;
+    }
+    .district-header {
+        padding: 1% 0% 1% 0%;
+        font-size: 3vw;
+    }
+    .district-reported h3{
+        font-size: 2.7vw;
+    }
+    .district-reported p{
+        font-size: 2.7vw;
+    }
+    .district-certified h3{
+        font-size: 2.7vw;
+    }
+    .district-certified p{
+        font-size: 2.7vw;
+    }
+    .block-header {
+        padding: 1% 0% 1% 0%;
+        font-size: 3vw;
+    }
+    .block-reported h3{
+        font-size: 2.7vw;
+    }
+    .block-reported p{
+        font-size: 2.7vw;
+    }
+    .block-certified h3{
+        font-size: 2.7vw;
+    }
+    .block-certified p{
+        font-size: 2.7vw;
+    }
+    .panchayats-header {
+        padding: 1% 0% 1% 0%;
+        font-size: 3vw;
+    }
+    .panchayat-reported h3{
+        font-size: 2.7vw;
+    }
+    .panchayat-reported p{
+        font-size: 2.7vw;
+    }
+    .panchayat-certified h3{
+        font-size: 2.7vw;
+    }
+    .panchayat-certified p{
+        font-size: 2.7vw;
+    }
+    .villages-header {
+        padding: 1% 0% 1% 0%;
+        font-size: 3vw;
+    }
+    .village-reported h3{
+        font-size: 2.7vw;
+    }
+    .village-reported p{
+        font-size: 2.7vw;
+    }
+    .village-certified h3{
+        font-size: 2.7vw;
+    }
+    .village-certified p{
+        font-size: 2.7vw;
+    }
+    .district-reported {
+        height: 15.3vw;
+    }
+    .district-certified{
+        height: 15.3vw;
+    }
+    .block-reported {
+        height: 15.3vw;
+    }
+    .block-certified{
+        height: 15.3vw;
+    }
+    .panchayat-certified {
+        height: 15.3vw;
+    }
+    .panchayat-reported {
+        height: 15.3vw;
+    }
+    .village-certified {
+        height: 15.3vw;
+    }
+    .village-reported {
+        height: 15.3vw;
+    }
+}
+
+/* status media-query ends */
+
+
+
+/* status ends */
+
+
+/* village-dashboard starts */
+
+.dashboard-village {
+    width: 100%;
+    height: 1250px;
+    margin: 6% 0% 4% 0%;
+}
+
+.dashboard-village-container {
+    width: 90%;
+    margin: auto;
+    height: 1200px;
+    border-radius: 12px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    flex: wrap;
+}
+
+.village-dashboard-header {
+    padding-top: 2%;
+    color: #F45C20;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 1.5625vw;
+    text-align: center;
+}
+
+.village-dashboard-count {
+    height: 60px;
+    width: 70%;
+    margin: 1% 10% 1% 15%;
+    font-family: Poppins;
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: 1.2% 0% 0% 0%;
+    border-radius: 5px;
+    text-align: center;
+    color: #F45C20;
+    font-size: 1.5625vw;
+}
+
+.village-row-1 {
+    display: flex;
+    justify-content: space-around;
+    margin: 5% 5% 1% 5%;
+}
+
+.village-row-2 {
+    display: flex;
+    justify-content: space-around;
+    margin: 2% 5% 1% 5%;
+}
+
+.village-row-3 {
+    display: flex;
+    justify-content: space-around;
+    margin: 2% 5% 1% 5%;
+}
+
+.hh-tap {
+    height: 250px;
+    width: 35%;
+    background-color: #EAEBFF;
+}
+
+.hh-tap-header {
+    width: 100%;
+    height: 3.75vw;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 1.25vw;
+    padding: 5% 0% 1% 0%;
+}
+
+.hh-tap-detail {
+    width: 100%;
+    height: 8vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 3px solid black;
+    border-style: solid none none none;
+}
+
+.hh-tap-detail p {
+    font-size: 1.5625vw;
+    padding-top: 6%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ws-progress {
+    height: 250px;
+    width: 35%;
+    background-color: #FDBC64;
+
+}
+
+.ws-progress-header {
+    width: 100%;
+    height: 3.75vw;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 1.25vw;
+    padding: 5% 0% 1% 0%;
+}
+
+.ws-progress-detail {
+    width: 100%;
+    height: 8vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 3px solid black;
+    border-style: solid none none none;
+}
+
+.ws-progress-detail p {
+    font-size: 1.5625vw;
+    padding-top: 6%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.ws-start {
+    height: 250px;
+    width: 35%;
+    background-color: #E5F8F6;
+
+}
+
+.ws-start-header {
+    width: 100%;
+    height: 3.75vw;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 1.25vw;
+    padding: 5% 0% 1% 0%;
+}
+
+.ws-start-detail {
+    width: 100%;
+    height: 8vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 3px solid black;
+    border-style: solid none none none;
+}
+
+.ws-start-detail p {
+    font-size: 1.56vw;
+    padding-top: 6%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.vwsc {
+    height: 250px;
+    width: 35%;
+    background-color: #EEDFD8;
+
+}
+
+.vwsc-header {
+    width: 100%;
+    height: 3.75vw;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 1.25vw;
+    padding: 5% 0% 1% 0%;
+}
+
+.vwsc-detail {
+    width: 100%;
+    height: 8vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 3px solid black;
+    border-style: solid none none none;
+}
+
+.vwsc-detail p {
+    font-size: 1.5625vw;
+    padding-top: 6%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.plan-made {
+    height: 250px;
+    width: 35%;
+    background-color: #F8E5E5;
+
+}
+
+.plan-made-header {
+    width: 100%;
+    height: 3.75vw;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 1.25vw;
+    padding: 5% 0% 1% 0%;
+}
+
+.plan-made-detail {
+    width: 100%;
+    height: 8vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 3px solid black;
+    border-style: solid none none none;
+}
+
+.plan-made-detail p {
+    font-size: 1.56vw;
+    padding-top: 6%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.grey-water {
+    height: 250px;
+    width: 35%;
+    background-color: #FFC7CC;
+
+}
+
+.grey-water-header {
+    width: 100%;
+    height: 3.75vw;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 1000;
+    font-size: 1.25vw;
+    padding: 5% 0% 1% 0%;
+}
+
+.grey-water-detail {
+    width: 100%;
+    height: 8vw;
+    font-family: Poppins;
+    text-align: center;
+    border: 3px solid black;
+    border-style: solid none none none;
+}
+
+.grey-water-detail p {
+    font-size: 1.56vw;
+    padding-top: 6%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* village-dashboard media query starts */
+
+@media only screen and (min-width: 1780px) {
+    .dashboard-village-container {
+        height: 75vw;
+    }
+}
+
+@media only screen and (min-width: 2200px) {
+    .hh-tap p {
+        padding-top: 0.4%;
+    }
+
+    .ws-progress p {
+        padding-top: 0.4%;
+    }
+
+    .ws-start p {
+        padding-top: 0.4%;
+    }
+
+    .vwsc p {
+        padding-top: 0.4%;
+    }
+
+    .plan-made p {
+        padding-top: 0.4%;
+    }
+
+    .grey-water p {
+        padding-top: 0.4%;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .dashboard-village {
+        height: 150vw;
+    }
+
+    .dashboard-village-container {
+        height: 170vw;
+    }
+
+    .village-dashboard-count {
+        height: 1vw;
+        box-shadow: none;
+    }
+
+    .village-row-1 {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .village-row-2 {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .village-row-3 {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .hh-tap {
+        width: 100%;
+        height: 22vw;
+        margin-bottom: 2%;
+    }
+
+    .ws-progress {
+        width: 100%;
+        height: 22vw;
+    }
+
+    .ws-start {
+        width: 100%;
+        height: 22vw;
+        margin-bottom: 2%;
+    }
+
+    .vwsc {
+        width: 100%;
+        height: 22vw;
+    }
+
+    .plan-made {
+        width: 100%;
+        height: 22vw;
+        margin-bottom: 2%;
+    }
+
+    .grey-water {
+        width: 100%;
+        height: 22vw;
+    }
+    .village-dashboard-header {
+        font-size: 4vw;
+    }
+    .village-dashboard-header p {
+        margin: 1% 0% 1% 0%;
+    }
+    .village-dashboard-count {
+        font-size: 3.5vw;
+    }
+    .hh-tap-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .hh-tap-detail p {
+        font-size: 4vw;
+        padding: 0;
+        margin: 3% 0% 3% 0%;
+    }
+    .ws-progress-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .ws-start-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .ws-start-detail p {
+        font-size: 4vw;
+        padding: 0;
+        margin: 3% 0% 3% 0%;
+    }
+    .vwsc-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .vwsc-detail p {
+        font-size: 4vw;
+        padding: 0;
+        margin: 3% 0% 3% 0%;
+    }
+    .plan-made-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .plan-made-detail p {
+        font-size: 4vw;
+        padding: 0;
+        margin: 3% 0% 3% 0%;
+    }
+    .grey-water-header {
+        height: 6.5vw;
+        font-size: 2.5vw;
+        padding: 1.5% 0% 1% 0%;
+    }
+    .grey-water-detail p {
+        font-size: 4vw;
+        padding: 0;
+        margin: 3% 0% 3% 0%;
+    }
+}
+
+
+/* village-dashboard media query ends */
+
+/* village-dashboard ends */
+
+
+/* graph style starts here */
+.dashboard-graph {
+    width: 100%;
+    height: 800px;
+    /* background-color: black; */
+    padding-top: 5%;
+}
+
+.graph-container {
+    width: 80%;
+    height: 700px;
+    margin: auto;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media only screen and (max-width: 700px) {
+    .dashboard-graph {
+        height: 70vw;
+    }
+
+    .graph-container {
+        height: 50vw;
+    }
+}
+
+@media (min-width: 1920px) and (max-width: 2560px)  {
+    .dashboard-graph {
+        height: 80vw;
+    }
+
+    .graph-container {
+        height: 45vw;
+    }
+}
+
+/* graph style ends here */
+
+/* footer style starts here */
+#footer {
+    margin: 0% !important;
+    padding: 0% !important;
+    position: relative;
+    top: 1%;
+}
+
+@media only screen and (max-width: 700px) {
+    #footer {
+        height: 40vw;
+    }
+}
+
+/* footer style ends here */
+
+/* home button style */
+.buttons {
+    width: 100%;
+    height: 3vw;
+    text-align: center;
+    padding-top: 2%;
+}
+
+#btn-next {
+    width: 18%;
+    height: 3.5vw;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.8vw;
+    color: #0A68FF;
+    border: 1px solid #0020C2;
+    text-align: center;
+    box-shadow: 0.25vw -0.25vw 0vw 0.1vw  rgba(10,104,255,1);
+    text-align: center;
+    cursor: pointer;
+}

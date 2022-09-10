@@ -39,7 +39,7 @@
                         <img width="70px" height="70px" src="../../images/new-dashboard/home.png">
                     </div>
                     <div class="toggle-desc">Total Water Supply in Households</div>
-                    <div id="toggleHousehold" class="toggle-active" style="display:none;"></div>
+                    <div id="toggleHousehold" class="toggle-active"></div>
                 </div>
             </a>
             <a onclick="ShowSchoolDiv(this)" onclick="ShowHouseholdDiv(this)" value="2">
@@ -174,7 +174,7 @@
         </div>
     </div>
 
-    <div class="dashboard-village">
+    <!-- <div class="dashboard-village">
         <div class="dashboard-village-container">
             <div class="status-logo">
                 <img width="120px" height="55px" src="../../images/new-dashboard/status-logo.png">
@@ -243,7 +243,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
         <div class="dashboard-table">
@@ -297,11 +297,12 @@
                 var toggleId = sessionStorage.getItem("toggleId") || "0";
 
                 for (var i = 1; i < 36; i++) {
-                    if (toggleId == 2) {
-                        var data = schoolDistricts[i];
-                    } else {
-                        var data = districts[i];
-                    }
+                    // if (toggleId == 2) {
+                    //     var data = schoolDistricts[i];
+                    // } else {
+                    //     var data = districts[i];
+                    // }
+                    var data = districts[i];
                     var myLatlng = new google.maps.LatLng(data.lat, data.lng);
 
                     //extend the bounds to include each marker's position
@@ -444,7 +445,7 @@
                 document.getElementById("toggleHousehold").style.display = "none";
                 var id = e.getAttribute('value');
                 sessionStorage.toggleId = id;
-                location.reload()
+                location.href = "../../new-dashboard-school/new-dashboard-school-1/new-dashboard-1.html";
             }
 
             //JS function for storing District ID

@@ -5,16 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="new-dashboard-4.css" />
+    <link rel="stylesheet" href="new-dashboard-2.css" />
     <title>Document</title>
-    <script src="../household-json/subplaces.js"></script>
-    <script src="../household-json/subplaces.js"></script>
-    <script src="../school-json/subplaces.js"></script>
+    <script src="../household-json/division.js"></script>
+    <script src="../household-json/city.js"></script>
+    <script src="../school-json/city.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../household-json/district.js"></script>
     <script src="../school-json/district.js"></script>
-
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
 </head>
 
@@ -42,7 +41,7 @@
                         <img width="70px" height="70px" src="../../images/new-dashboard/home.png">
                     </div>
                     <div class="toggle-desc">Total Water Supply in Households</div>
-                    <div id="toggleHousehold" class="toggle-active"></div>
+                    <div id="toggleHousehold" class="toggle-active" style="display:none;"></div>
                 </div>
             </a>
             <a onclick="ShowSchoolDiv(this)" onclick="ShowHouseholdDiv(this)" value="2">
@@ -51,7 +50,7 @@
                         <img width="70px" height="70px" src="../../images/new-dashboard/school .png">
                     </div>
                     <div class="toggle-desc">Total Water Supply in Schools</div>
-                    <div id="toggleSchool" class="toggle-active" style="display:none;"></div>
+                    <div id="toggleSchool" class="toggle-active"></div>
                 </div>
             </a>
         </div>
@@ -67,21 +66,21 @@
 
     <div class="dashboard-stats">
         <div class="stats-container">
-            <div id="stat-header" class="stat-header">Assam</div>
+            <div class="stat-header">Assam</div>
             <div class="stat-desc">Status of Tap Water Supply in Rural Homes</div>
             <div class="stat-tile-container">
                 <div class="upper-tile">
                     <div class="left-tile">
-                        <div class="lt-header">TOTAL NO. OF HOUSEHOLDS </br> </br> </br> 69,34,57 </div>
+                        <div class="lt-header">TOTAL NO. OF TAP CONNECTIONS IN SCHOOLS </br> </br> </br> 69,34,57 </div>
                         <!-- <div class="lt-desc">69,34,57</div> -->
                     </div>
                     <div class="right-tile">
-                        <div class="rt-header">HOUSEHOLD WITH TAP CONNECTIONS AS </br> ON DATE </br> </br> 69,34,57</div>
+                        <div class="rt-header">TOTAL NO. OF TAP CONNECTIONS IN ANGAWADIS (AWCs) </br> ON DATE </br> </br> 69,34,57</div>
                         <!-- <div class="rt-desc">69,34,57</div> -->
                     </div>
                 </div>
                 <div class="lower-tile">
-                    <div class="lower-header">HOUSEHOLDS PROVIDED WITH TAP WATER CONNECTIONS SINCE ITS LAUNCH </br> </br>
+                    <div class="lower-header">TOTAL NO. OF TAP CONNECTIONS IN GPs / CHCs etc. </br> </br>
                         69,34,57</div>
                     <!-- <div class="lower-desc">69,34,57</div> -->
                 </div>
@@ -108,7 +107,9 @@
                     <div class="status-ur">
                         <div class="district">
                             <div class="district-header">
-                                NO. OF PEOPLE EMPLOYED
+                                Tap water
+                                supply in
+                                toilets
                             </div>
                             <div class="district-detail">
                                 <div class="district-reported">
@@ -123,7 +124,8 @@
                         </div>
                         <div class="block">
                             <div class="block-header">
-                                BLOCKS
+                                Taps for
+                                hand washing
                             </div>
                             <div class="block-detail">
                                 <div class="block-reported">
@@ -140,7 +142,9 @@
                     <div class="status-lr">
                         <div class="panchayats">
                             <div class="panchayats-header">
-                                PANCHAYATS
+                                Provision of
+                                rainwater
+                                harvesting
                             </div>
                             <div class="panchayats-detail">
                                 <div class="panchayat-reported">
@@ -155,7 +159,9 @@
                         </div>
                         <div class="villages">
                             <div class="villages-header">
-                                VILLAGES
+                                Provision of
+                                grey water
+                                reuse
                             </div>
                             <div class="village-detail">
                                 <div class="village-reported">
@@ -248,13 +254,76 @@
             </div>
         </div> -->
 
+
+        <div class="dashboard-table">
+            <div class="table-header-main">
+                <div class="table-header">
+                    <div id="table-header1" class="title"></div>
+                    <div class="desc">Status of Total Household Connections</div>
+                    <div class="xr-division">
+                        DIVISION 1
+                    </div>
+                </div>
+                <div class="table-division">
+                    <p>DIVISION 1</p>
+                </div>
+            </div>
+            <div class="container">
+                <table id="table1">
+                    <thead>
+                        <tr>
+                            <th>DISTRICTS</th>
+                            <th>TOTAL SCHOOL/AWC</th>
+                            <th>SCHOOL/AWC WITH TAP WATER SUPPLY</th>
+                            <th>SCHOOL/AWC WITH TAP WATER SUPPLY %</th>
+                            <th>PROGRESS TILL DATE</th>
+                        </tr>
+                    </thead>
+                    <tbody id="buildDivOne">
+                        <!-- Populate the table from a JSON file -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="dashboard-table">
+            <div class="table-header-main">
+                <div class="table-header">
+                    <div id="table-header2" class="title"></div>
+                    <div class="desc">Status of Total Household Connections</div>
+                    <div class="xr-division">
+                        DIVISION 2
+                    </div>
+                </div>
+                <div class="table-division">
+                    <p>DIVISION 2</p>
+                </div>
+            </div>
+            <div class="container">
+                <table id="table2">
+                    <thead>
+                        <tr>
+                           <th>DISTRICTS</th>
+                            <th>TOTAL SCHOOL/AWC</th>
+                            <th>SCHOOL/AWC WITH TAP WATER SUPPLY</th>
+                            <th>SCHOOL/AWC WITH TAP WATER SUPPLY %</th>
+                            <th>PROGRESS TILL DATE</th>
+                        </tr>
+                    </thead>
+                    <tbody id="buildDivTwo">
+                        <!-- Populate the table from a JSON file -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
         <div class="dashboard-graph">
             <div class="graph-container">
                 <canvas id="myChart"></canvas>
             </div>
         </div>
 
-         <div class="buttons">
+        <div class="buttons">
                 <button onclick="functionHome()" class="btn-next" type="button" id="btn-next">Back To Home</button>
         </div>
 
@@ -273,100 +342,155 @@
                 //Create and open InfoWindow.
                 var infoWindow = new google.maps.InfoWindow();
                 var toggleId = sessionStorage.getItem("toggleId") || "0";
-                var areaId = sessionStorage.getItem("areaId") || "0";
-                var subAreaId = sessionStorage.getItem("subAreaId") || "0";
-                console.log(subplaces[areaId][subAreaId]);
+                var districtId = sessionStorage.getItem("districtId") || "0";
 
+                for (var i = 1; i < 7; i++) {
+                    // if (toggleId == 2) {
+                    //     var data = schoolCity[districtId][i];
+                    // } else {
+                    //     var data = city[districtId][i];
+                    // }
+                    var data = city[districtId][i];
+                    var myLatlng = new google.maps.LatLng(data.lat, data.lng);
 
-                // if (toggleId == 2) {
-                //     var data = schoolSubplaces[areaId][subAreaId];
-                // } else {
-                //     var data = subplaces[areaId][subAreaId];
-                // }
+                    //extend the bounds to include each marker's position
+                    bounds.extend(myLatlng);
 
-                var data = subplaces[areaId][subAreaId];
-                var myLatlng = new google.maps.LatLng(data.lat, data.lng);
-
-                //extend the bounds to include each marker's position
-                bounds.extend(myLatlng);
-
-                var marker = new google.maps.Marker({
-                    position: myLatlng,
-                    map: map,
-                    title: data.title
-                });
-
-                const contentString =
-                    '<div id="popup">' +
-                    '<div id="popup-header">' +
-                    '<div id="popup-place">' +
-                    '<div id="city">' + data.title + '</div>' +
-                    '</div>' +
-                    '</div>' +
-                    '<div id="popup-tile">' +
-                    '<div id="popup-key">' + '<p>Total number of  Active IOT Centres:</p>' + '</div>' +
-                    '<div id="popup-value">' + data.total + '</div>' +
-                    '</div>' +
-                    '<div id="popup-tile">' +
-                    '<div id="popup-key">' + '<p>Total number of  households Connections:</p>' + '</div>' +
-                    '<div id="popup-value">' + data.active + '</div>' +
-                    '</div>' +
-                    '<div id="popup-tile">' +
-                    '<div id="popup-key">' + '<p>Total number of  Active Centres:</p>' + '</div>' +
-                    '<div id="popup-value">' + data.iot + '</div>' +
-                    '</div>' +
-                    '<div id="popup-tile">' +
-                    '<div id="popup-key">' + '<p>Total number of  Active IOT Centres:</p>' + '</div>' +
-                    '<div id="popup-value">' + data.upcoming + '</div>' +
-                    '</div>' +
-                    '</div>';
-
-
-                //Attach click event to the marker.
-                (function (marker, data) {
-                    google.maps.event.addListener(marker, 'mouseover', function (e) {
-                        //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
-                        infoWindow.setContent(contentString);
-                        infoWindow.open(map, marker);
-                        // sessionStorage.areaId = data.id;
+                    var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        title: data.title
                     });
-                    google.maps.event.addListener(marker, "click", function (e) {
+
+                    const contentString =
+                        '<div id="popup">' +
+                        '<div id="popup-header">' +
+                        '<div id="popup-place">' +
+                        '<div id="city">' + data.title + '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div id="popup-tile">' +
+                        '<div id="popup-key">' + '<p>Total number of  Active IOT Centres:</p>' + '</div>' +
+                        '<div id="popup-value">' + data.total + '</div>' +
+                        '</div>' +
+                        '<div id="popup-tile">' +
+                        '<div id="popup-key">' + '<p>Total number of  households Connections:</p>' + '</div>' +
+                        '<div id="popup-value">' + data.active + '</div>' +
+                        '</div>' +
+                        '<div id="popup-tile">' +
+                        '<div id="popup-key">' + '<p>Total number of  Active Centres:</p>' + '</div>' +
+                        '<div id="popup-value">' + data.iot + '</div>' +
+                        '</div>' +
+                        '<div id="popup-tile">' +
+                        '<div id="popup-key">' + '<p>Total number of  Active IOT Centres:</p>' + '</div>' +
+                        '<div id="popup-value">' + data.upcoming + '</div>' +
+                        '</div>' +
+                        '</div>';
+
+
+                    //Attach click event to the marker.
+                    (function (marker, data) {
+                        google.maps.event.addListener(marker, 'mouseover', function (e) {
                             //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
                             infoWindow.setContent(contentString);
                             infoWindow.open(map, marker);
                             // sessionStorage.districtId = data.id;
                         });
-                })(marker, data);
+                        google.maps.event.addListener(marker, "click", function (e) {
+                            //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                            infoWindow.setContent(contentString);
+                            infoWindow.open(map, marker);
+                            // sessionStorage.districtId = data.id;
+                        });
+                    })(marker, data);
 
-                marker.addListener('mouseout', function () {
-                    infowindow.close(map, marker);
-                });
+                    marker.addListener('mouseout', function () {
+                        infowindow.close(map, marker);
+                    });
 
-                //now fit the map to the newly inclusive bounds
-                google.maps.event.addListenerOnce(map, 'idle', function () {
-                    map.fitBounds(bounds);
-                });
+                    //now fit the map to the newly inclusive bounds
+                    google.maps.event.addListenerOnce(map, 'idle', function () {
+                        map.fitBounds(bounds);
+                    });
+                }
             }
 
-            var areaId = sessionStorage.getItem("areaId") || "0";
+            var districtId = sessionStorage.getItem("districtId") || "0";
 
-            var area = subplaces;
-            // console.log(areaId);
-            // console.log(area[areaId]);
-            // JS function to build the subplaces 1 table
-            buildTable(area[areaId]);
-            function buildTable(data) {
+            var cities = division;
+            // console.log(districtId);
+            // console.log(cities[districtId]);
+            // JS function to build the division 1 table
+            buildDivOne(cities[districtId][1]);
+            function buildDivOne(data) {
                 // console.log(data);
-                var table = document.getElementById("buildTable");
-                for (var i = 1; i < 3; i++) {
-                    var row = `<tr bgcolor="#1E90FF" onclick="storeAreaId(this)" value="${data[i].id}">
+                var table = document.getElementById("buildDivOne");
+                for (var i = 1; i < 4; i++) {
+                    if (i == 1) {
+                        var row = `<tr bgcolor="#1E90FF" onclick="storeAreaId(this)" value="${data[i].id}">
                                             <td>${data[i].title}</td>
                                             <td>${data[i].total}</td>
                                             <td>${data[i].tap}</td>
                                             <td><span>${data[i].tapPer}</span></td>
                                             <td>${data[i].progress}</td>
                                         </tr>`;
-                    table.innerHTML += row;
+                        table.innerHTML += row;
+                    } else if (i == 2) {
+                        var row = `<tr bgcolor="#00BFFF" onclick="storeAreaId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                        table.innerHTML += row;
+                    } else {
+                        var row = `<tr bgcolor="#87CEEB" onclick="storeAreaId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                        table.innerHTML += row;
+                    }
+                }
+            }
+
+            // JS function to build the division 2 table
+            buildDivTwo(cities[districtId][2]);
+            function buildDivTwo(data) {
+                // console.log(data);
+                var table = document.getElementById("buildDivTwo");
+                for (var i = 1; i < 4; i++) {
+                    if (i == 1) {
+                        var row = `<tr bgcolor="#1E90FF" onclick="storeAreaId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                        table.innerHTML += row;
+                    } else if (i == 2) {
+                        var row = `<tr bgcolor="#00BFFF" onclick="storeAreaId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                        table.innerHTML += row;
+                    } else {
+                        var row = `<tr bgcolor="#87CEEB" onclick="storeAreaId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                        table.innerHTML += row;
+                    }
                 }
             }
 
@@ -382,31 +506,37 @@
                 document.getElementById("toggleSchool").style.display = "none";
                 var id = e.getAttribute('value');
                 sessionStorage.toggleId = id;
-                location.reload()
+                location.href = "../../new-dashboard/new-dashboard-1/new-dashboard-1.html";
             }
             function ShowSchoolDiv(e) {
                 document.getElementById("toggleSchool").style.display = "";
                 document.getElementById("toggleHousehold").style.display = "none";
                 var id = e.getAttribute('value');
                 sessionStorage.toggleId = id;
-                location.href = "../../new-dashboard-school/new-dashboard-school-1/new-dashboard-1.html";
+                location.reload()
             }
 
             //JS function for storing District ID
             function storeAreaId(e) {
                 var id = e.getAttribute('value');
                 sessionStorage.areaId = id;
-                location.href = "../new-dashboard-3/new-dashboard-3.html";
+                location.href = "../../new-dashboard-school/new-dashboard-school-3/new-dashboard-3.html";
             }
-
 
              //JS function for redirecting to Home page 
             function functionHome() {
                 location.href="../../second-page-view/second-page-view.html"
             }
 
+            //JS function for status header from JSON
+            var district = districts[districtId];
+            document.querySelector("#stat-header").innerHTML = district.title + " | Assam";
+            document.querySelector("#table-header1").innerHTML = district.title;
+            document.querySelector("#table-header2").innerHTML = district.title;
+
         </script>
         <script>
+            //JS function for Chart JS
             var ctx = document.getElementById('myChart').getContext("2d");
 
             var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);

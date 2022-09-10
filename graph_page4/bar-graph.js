@@ -1,8 +1,20 @@
-var barUserDataA_4 = [], barUserDataB_4 = [];
-var barDataA_4, barDataB_4, barDataDay_4, barDataDate_4;
+var barUserDataA_1 = [], barUserDataB_1 = [];
+var barDataA_1, barDataB_1, barDataDay_1, barDataDate_1;
+const barData = [0.156, 0.157, 0.158, 0.129, 0.17, 0.15, 0.166, 0.147, 0.1401, 0.1597];
+barUserDataA_1 = [0];
+var bar;
+
+const sensorId = sessionStorage.getItem("sensorId") || "1";
+const districtId = sessionStorage.getItem("districtId") || "1";
+const cityId = sessionStorage.getItem("cityId") || "1";
+if (districtId == 2 && cityId == 7) {
+	bar = barData;
+} else {
+	bar = barDataA_1;
+}
 
 async function dummyChart() {
-	await getDummyBarData_4();
+	await getDummyBarData_1();
 
 	const ctx = document.getElementById("myChart-2").getContext("2d");
 
@@ -12,15 +24,15 @@ async function dummyChart() {
 
 		// The data for our dataset
 		data: {
-			labels: barUserDataA_4,
+			labels: barDataDay_1,
 			datasets: [
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "#ABCAE9",
-      				borderColor: "#ABCAE9",
+					backgroundColor: "#ABCAE9",
+					borderColor: "#ABCAE9",
 					borderWidth: 1,
-					data: barUserDataB_4,
+					data: bar,
 				}
 			],
 		},
@@ -28,7 +40,7 @@ async function dummyChart() {
 		// Configuration options go here
 		options: {
 			maintainAspectRatio: false,
-			legend: {display: false},
+			legend: { display: false },
 			tooltips: {
 				mode: "index",
 			},
@@ -40,28 +52,28 @@ async function dummyChart() {
 					},
 				}],
 				yAxes: [{
-				ticks: { min: 0},
-				scaleLabel: {
-					display: true,
-					labelString: 'Residual Chlorine'
-				  }
-				}], 
+					ticks: { min: 0 },
+					scaleLabel: {
+						display: true,
+						labelString: 'pH Level'
+					}
+				}],
 			},
 		},
 	});
 	function updateChart() {
-		getDummyBarData_4()
-		barUserDataA_4.push(barDataDay_4.pop());
-		barUserDataB_4.push(barDataB_4.pop());
-		if (barUserDataB_4.length > 10) {
-			barUserDataA_4.shift();
-			barUserDataB_4.shift();
+		getDummyBarData_1()
+		barUserDataA_1.push(barDataDay_1.pop());
+		barUserDataB_1.push(barDataB_1.pop());
+		if (barUserDataB_1.length > 10) {
+			barDataDay_1.shift();
+			barUserDataB_1.shift();
 		}
-		console.log(barUserDataA_4);
-		console.log(barUserDataB_4);
+		console.log(barUserDataA_1);
+		console.log(barUserDataB_1);
 		chart.update();
-		setTimeout(updateChart, 43200000);
-	} 
+		setTimeout(updateChart, 600000);
+	}
 
 	updateChart();
 }
@@ -70,41 +82,43 @@ dummyChart();
 
 //Fetch Data from API
 
-async function getDummyBarData_4() {
+async function getDummyBarData_1() {
 	try {
 		const sensorId = sessionStorage.getItem("sensorId") || "1";
 		const districtId = sessionStorage.getItem("districtId") || "1";
 		const cityId = sessionStorage.getItem("cityId") || "1";
-		if(districtId == 2 && cityId == 7) {
+		if (districtId == 2 && cityId == 7) {
 			var apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=43200`;
 		} else {
 			var apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${7}&timeInterval=43200`;
 		}
 
+
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
-		
-		const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-		barDataA_4 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
-		barDataDate_4 = barChatData.data.map((x) => (x.time).slice(0, 9));
-		barDataDay_4 = barChatData.data.map((x) => weekday[(new Date(x.time)).getDay()]);
+		const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-    	barDataB_4 = barChatData.data.map((x) => x.b);
+		barDataA_1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
+		barDataDate_1 = barChatData.data.map((x) => (x.time).slice(0, 9));
+		barDataDay_1 = barChatData.data.map((x) => weekday[(new Date(x.time)).getDay()]);
 
-		if (barUserDataA_4.length == 0 && barUserDataB_4.length == 0) {
-			barUserDataA_4 = barDataDay_4;
-			barUserDataB_4 = barDataB_4;
+		barDataB_1 = barChatData.data.map((x) => x.x);
+
+		if (barUserDataA_1.length == 0 && barUserDataB_1.length == 0) {
+			barUserDataA_1 = barDataDay_1;
+			barUserDataB_1 = barDataB_1;
 		}
-		while(barDataDay_4.length > 10 || barDataB_4.length > 10) {
-			barDataDay_4.shift();
-			barDataB_4.shift();
+		while (barDataDay_1.length > 10 || barDataB_1.length > 10) {
+			barDataDay_1.shift();
+			barDataB_1.shift();
 		}
-		
-		console.log("barDataDay_4",barDataDay_4);
-		console.log("barDataA_4",barDataB_4);
+
+		console.log("barDataDay_1", barDataDay_1);
+		console.log("barDataDay_1", barDataB_1);
 	}
-	catch(err) {
+	catch (err) {
+		console.log(err);
 		// alert("No data available for Graph 2");
 		barUserDataA_1 = [1];
 		barUserDataB_1 = [0];

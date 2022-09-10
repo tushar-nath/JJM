@@ -42,7 +42,7 @@
                         <img width="70px" height="70px" src="../../images/new-dashboard/home.png">
                     </div>
                     <div class="toggle-desc">Total Water Supply in Households</div>
-                    <div id="toggleHousehold" class="toggle-active"></div>
+                    <div id="toggleHousehold" class="toggle-active" style="display:none;"></div>
                 </div>
             </a>
             <a onclick="ShowSchoolDiv(this)" onclick="ShowHouseholdDiv(this)" value="2">
@@ -51,7 +51,7 @@
                         <img width="70px" height="70px" src="../../images/new-dashboard/school .png">
                     </div>
                     <div class="toggle-desc">Total Water Supply in Schools</div>
-                    <div id="toggleSchool" class="toggle-active" style="display:none;"></div>
+                    <div id="toggleSchool" class="toggle-active"></div>
                 </div>
             </a>
         </div>
@@ -67,21 +67,21 @@
 
     <div class="dashboard-stats">
         <div class="stats-container">
-            <div id="stat-header" class="stat-header">Assam</div>
+            <div class="stat-header">Assam</div>
             <div class="stat-desc">Status of Tap Water Supply in Rural Homes</div>
             <div class="stat-tile-container">
                 <div class="upper-tile">
                     <div class="left-tile">
-                        <div class="lt-header">TOTAL NO. OF HOUSEHOLDS </br> </br> </br> 69,34,57 </div>
+                        <div class="lt-header">TOTAL NO. OF TAP CONNECTIONS IN SCHOOLS </br> </br> </br> 69,34,57 </div>
                         <!-- <div class="lt-desc">69,34,57</div> -->
                     </div>
                     <div class="right-tile">
-                        <div class="rt-header">HOUSEHOLD WITH TAP CONNECTIONS AS </br> ON DATE </br> </br> 69,34,57</div>
+                        <div class="rt-header">TOTAL NO. OF TAP CONNECTIONS IN ANGAWADIS (AWCs) </br> ON DATE </br> </br> 69,34,57</div>
                         <!-- <div class="rt-desc">69,34,57</div> -->
                     </div>
                 </div>
                 <div class="lower-tile">
-                    <div class="lower-header">HOUSEHOLDS PROVIDED WITH TAP WATER CONNECTIONS SINCE ITS LAUNCH </br> </br>
+                    <div class="lower-header">TOTAL NO. OF TAP CONNECTIONS IN GPs / CHCs etc. </br> </br>
                         69,34,57</div>
                     <!-- <div class="lower-desc">69,34,57</div> -->
                 </div>
@@ -89,7 +89,7 @@
         </div>
     </div>
 
-    <div class="dashboard-status">
+    <!-- <div class="dashboard-status">
         <div class="status-container">
             <div class="status-logo">
                 <img width="120px" height="55px" src="../../images/new-dashboard/status-logo.png">
@@ -108,7 +108,7 @@
                     <div class="status-ur">
                         <div class="district">
                             <div class="district-header">
-                                NO. OF PEOPLE EMPLOYED
+                                DISTRICTS
                             </div>
                             <div class="district-detail">
                                 <div class="district-reported">
@@ -175,7 +175,7 @@
 
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- <div class="dashboard-village">
         <div class="dashboard-village-container">
@@ -284,6 +284,7 @@
                 //     var data = subplaces[areaId][subAreaId];
                 // }
 
+                // console.log(data);
                 var data = subplaces[areaId][subAreaId];
                 var myLatlng = new google.maps.LatLng(data.lat, data.lng);
 
@@ -372,6 +373,7 @@
 
             //JS function for toggling between Household and School
             var toggleId = sessionStorage.getItem("toggleId") || "0";
+            document.getElementById("toggleSchool").style.display = "";
             // if (toggleId == 2) {
             //     document.getElementById("toggleSchool").style.display = "";
             // } else {
@@ -382,21 +384,21 @@
                 document.getElementById("toggleSchool").style.display = "none";
                 var id = e.getAttribute('value');
                 sessionStorage.toggleId = id;
-                location.reload()
+                location.href = "../../new-dashboard/new-dashboard-1/new-dashboard-1.html";
             }
             function ShowSchoolDiv(e) {
                 document.getElementById("toggleSchool").style.display = "";
                 document.getElementById("toggleHousehold").style.display = "none";
                 var id = e.getAttribute('value');
                 sessionStorage.toggleId = id;
-                location.href = "../../new-dashboard-school/new-dashboard-school-1/new-dashboard-1.html";
+                location.reload()
             }
 
             //JS function for storing District ID
             function storeAreaId(e) {
                 var id = e.getAttribute('value');
                 sessionStorage.areaId = id;
-                location.href = "../new-dashboard-3/new-dashboard-3.html";
+                 location.href = "../../new-dashboard-school/new-dashboard-school-4/new-dashboard-4.html";
             }
 
 

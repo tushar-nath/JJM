@@ -41,7 +41,7 @@
                         <img width="70px" height="70px" src="../../images/new-dashboard/home.png">
                     </div>
                     <div class="toggle-desc">Total Water Supply in Households</div>
-                    <div id="toggleHousehold" class="toggle-active" style="display:none;"></div>
+                    <div id="toggleHousehold" class="toggle-active"></div>
                 </div>
             </a>
             <a onclick="ShowSchoolDiv(this)" onclick="ShowHouseholdDiv(this)" value="2">
@@ -338,12 +338,12 @@
                 var districtId = sessionStorage.getItem("districtId") || "0";
 
                 for (var i = 1; i < 7; i++) {
-                    if (toggleId == 2) {
-                        var data = schoolCity[districtId][i];
-                    } else {
-                        var data = city[districtId][i];
-                    }
-
+                    // if (toggleId == 2) {
+                    //     var data = schoolCity[districtId][i];
+                    // } else {
+                    //     var data = city[districtId][i];
+                    // }
+                    var data = city[districtId][i];
                     var myLatlng = new google.maps.LatLng(data.lat, data.lng);
 
                     //extend the bounds to include each marker's position
@@ -489,11 +489,11 @@
 
             //JS function for toggling between Household and School
             var toggleId = sessionStorage.getItem("toggleId") || "0";
-            if (toggleId == 2) {
-                document.getElementById("toggleSchool").style.display = "";
-            } else {
-                document.getElementById("toggleHousehold").style.display = "";
-            }
+            // if (toggleId == 2) {
+            //     document.getElementById("toggleSchool").style.display = "";
+            // } else {
+            //     document.getElementById("toggleHousehold").style.display = "";
+            // }
             function ShowHouseholdDiv(e) {
                 document.getElementById("toggleHousehold").style.display = "";
                 document.getElementById("toggleSchool").style.display = "none";
@@ -506,7 +506,7 @@
                 document.getElementById("toggleHousehold").style.display = "none";
                 var id = e.getAttribute('value');
                 sessionStorage.toggleId = id;
-                location.reload()
+                location.href = "../../new-dashboard-school/new-dashboard-school-1/new-dashboard-1.html";
             }
 
             //JS function for storing District ID
