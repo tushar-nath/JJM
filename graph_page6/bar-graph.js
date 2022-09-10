@@ -55,7 +55,7 @@ async function dummyChart() {
 					ticks: { min: 0 },
 					scaleLabel: {
 						display: true,
-						labelString: 'pH Level'
+						labelString: 'Water Level'
 					}
 				}],
 			},
