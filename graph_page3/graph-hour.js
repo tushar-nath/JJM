@@ -20,7 +20,7 @@ async function dummyChart() {
 					backgroundColor: "#138808",
 					borderColor: "#138808",
 					borderWidth: 1,
-					data: hourUserDataB_3,
+					data: [101, 103, 97, 96, 98, 102, 102.5, 101.7, 104, 101,101, 103, 97, 96, 98, 102, 102.5, 101.7, 104, 101],
 				}
 			],
 		},
@@ -60,7 +60,7 @@ async function dummyChart() {
 		console.log(hourUserDataA_3);
 		console.log(hourUserDataB_3);
 		chart.update();
-		setTimeout(updateChart, 600000);
+		setTimeout(updateChart, 7200000);
 	} 
 
 	updateChart();
