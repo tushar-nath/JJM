@@ -20,7 +20,7 @@ async function dummyChart() {
       				backgroundColor: "#138808",
       				borderColor: "#138808",
 					borderWidth: 1,
-					data: hourUserDataB_1,
+					data: [7.41, 7.52, 7.53, 7.61, 7.77, 7.81, 7.83, 7.48, 7.76, 7.69, 7.41, 7.52, 7.53, 7.61, 7.77, 7.81, 7.83, 7.48, 7.76, 7.69, 7.32],
 				}
 			],
 		},
