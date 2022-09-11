@@ -60,7 +60,7 @@ async function dummyChart() {
 		console.log(secUserDataA_5);
 		console.log(secUserDataB_5);
 		chart.update();
-		setTimeout(updateChart, 30000);
+		setTimeout(updateChart, 3000);
 	} 
 
 	updateChart();
