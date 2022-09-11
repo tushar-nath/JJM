@@ -62,7 +62,7 @@ async function dummyChart() {
 		barUserWaterDataB_6.push(barWaterDataB_6.pop());
 		console.log("This is water data in function: ", barUserWaterDataB_6);
 		chart.update();
-		setTimeout(updateChart, 43200000);
+		setTimeout(updateChart, 30000);
 	}
 
 	updateChart();
