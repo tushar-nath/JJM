@@ -20,7 +20,7 @@ async function dummyChart() {
 					backgroundColor: "#FF4500",
 					borderColor: "#FF4500",
 					borderWidth: 1,
-					data: secUserDataB_5,
+					data: secUserDataB_5.reverse(),
 				}
 			],
 		},
