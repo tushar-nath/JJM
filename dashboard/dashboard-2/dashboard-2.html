@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard-2.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+    <script src="../../map-view-screen/data.js"></script>
+    <script src="../../Location_search/markers.js"></script>
+    <script src="subplaces.js"></script>
+</head>
+
+<body>
+    <div class="logo">
+        <div class="logo-img" id="img-1">
+            <img src="../../images/starting-page/logo-1.png" alt="" width="100" height="87">
+        </div>
+        <div class="logo-img" id="img-2">
+            <img src="../../images/starting-page/logo-5.png" alt="" width="110" height="88">
+        </div>
+        <div class="logo-img" id="img-3">
+            <img src="../../images/starting-page/logo-3.png" alt="" width="100" height="82">
+        </div>
+        <div class="logo-img" id="img-4">
+            <img src="../../images/starting-page/logo-4.png" alt="" width="80" height="90">
+        </div>
+    </div>
+
+    <div class="map-container">
+        <div id="dvMap">
+        </div>
+        <div class="map-place">Select Place</div>
+        <div class="drop">
+            <div class="dropdown">
+                <div id="dropdown">
+                    <!-- Dynamic data from JSON file -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-container">
+        <div class="box-row">
+            <div class="left-box">
+                <div class="box-header">
+                    <div class="box-header-key">TOTAL CENTRES</div>
+                </div>
+                <div class="box-para">These are the centres where sensors are actively working.</div>
+                <div id="total" class="box-header-value"></div>
+                <div class="box-button">
+                    <a href="#">
+                        <img src="./icon.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="box-header">
+                    <div class="box-header-key">ACTIVE IOT CENTRES</div>
+                </div>
+                <div class="box-para">These are the centres where sensors are actively working.</div>
+                <div id="active" class="box-header-value"></div>
+                <div class="box-button">
+                    <a href="#">
+                        <img src="./icon.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box-row">
+            <div class="left-box">
+                <div class="box-header">
+                    <div class="box-header-key">HOUSEHOLD CONNECTIONS</div>
+                </div>
+                <div class="box-para">These are the centres where sensors are actively working.</div>
+                <div id="household" class="box-header-value"></div>
+                <div class="box-button">
+                    <a href="#">
+                        <img src="./icon.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="box-header">
+                    <div class="box-header-key">UPCOMING CENTRES</div>
+                </div>
+                <div class="box-para">These are the centres where sensors are actively working.</div>
+                <div id="upcoming" class="box-header-value"></div>
+                <div class="box-button">
+                    <a href="#">
+                        <img src="./icon.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box-row">
+            <div class="left-box">
+                <div class="box-header">
+                    <div class="box-header-key">CURRENT PH VALUE</div>
+                </div>
+                <div class="box-para">These are the centres where sensors are actively working.</div>
+                <div id="current-ph" class="box-header-value"></div>
+                <div class="box-button">
+                    <a href="#">
+                        <img src="./icon.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="box-header">
+                    <div class="box-header-key">RESIDUAL CHLORINE</div>
+                </div>
+                <div class="box-para">These are the centres where sensors are actively working.</div>
+                <div id="residual-chlorine" class="box-header-value"></div>
+                <div class="box-button">
+                    <a href="#">
+                        <img src="./icon.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="box-row">
+            <div class="left-box">
+                <div class="box-header">
+                    <div class="box-header-key">TDS</div>
+                </div>
+                <div class="box-para">These are the centres where sensors are actively working.</div>
+                <div id="tds" class="box-header-value"></div>
+                <div class="box-button">
+                    <a href="#">
+                        <img src="./icon.png" />
+                    </a>
+                </div>
+            </div>
+            <div class="right-box">
+                <div class="box-header">
+                    <div class="box-header-key">WATER FLOW</div>
+                </div>
+                <div class="box-para">These are the centres where sensors are actively working.</div>
+                <div id="water-flow" class="box-header-value"></div>
+                <div class="box-button">
+                    <a href="#">
+                        <img src="./icon.png" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <div class="back-btn">
+            <a href="../dashboard-1/dashboard-1.html">
+                <button class="btn btn-primary" type="submit">Back</button>
+            </a>
+        </div>
+        <div class="next-btn">
+            <a href="../../second-page-view/second-page-view.html">
+                <button class="btn btn-primary" type="submit">Home</button>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img class="center-fit" src="../../images/dashboard/dashboard-footer-img.png">
+    </div>
+
+    <script src="../../Location_search/markers.js"></script>
+
+</body>
+
+
+
+<script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&sensor=false&callback=initialize"></script>
+<script type="text/javascript">
+
+    window.onload = function () {
+        LoadMap();
+    }
+    function LoadMap() {
+        const cityId = sessionStorage.getItem("cityId") || "0";
+        var data = markers[cityId - 1];
+        console.log(data.lat);
+        var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+        var mapOptions = {
+            // mapTypeId: google.maps.MapTypeId.ROADMAP,
+            zoom: 12,
+            center: myLatlng
+        };
+        var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            title: data.title
+        });
+
+        marker.setMap(map);
+
+    }
+
+    const cityId = sessionStorage.getItem("cityId") || "0";
+    var pointers = city[cityId];
+    dropItem()
+    function dropItem(data) {
+        var containerElm = document.getElementById("dropdown");
+        var str = '';
+        for (var i = 0; i < pointers.length; i++) {
+            var divStr = '<a id="link">' +
+                '<button onclick="storeAreaId(this);" value="' + (i + 1) + '">' + pointers[i].title + '</button>' +
+                '</a>';
+            str = str + divStr;
+        }
+        containerElm.innerHTML = str;
+    }
+
+    function storeAreaId(e) {
+        var id = e.getAttribute('value');
+        sessionStorage.areaId = id;
+        location.reload();
+    }
+
+    fetch("subplaces.json")
+        .then((response) => response.json())
+        .then((data) => {
+            var areaId = sessionStorage.getItem("areaId") || "0";
+            console.log(data[cityId][areaId-1]);
+            document.querySelector("#total").innerText = data[cityId][areaId-1].total;
+            document.querySelector("#active").innerText = data[cityId][areaId-1].iot;
+            document.querySelector("#household").innerText = data[cityId][areaId-1].household;
+            document.querySelector("#upcoming").innerText = data[cityId][areaId-1].upcoming;
+            document.querySelector("#current-ph").innerText = data[cityId][areaId-1].ph;
+            document.querySelector("#residual-chlorine").innerText = data[cityId][areaId-1].chlorine;
+            document.querySelector("#tds").innerText = data[cityId][areaId-1].lpcd;
+            document.querySelector("#water-flow").innerText = data[cityId][areaId-1].waterflow;
+        }
+    )
+
+
+</script>
+
+</html>

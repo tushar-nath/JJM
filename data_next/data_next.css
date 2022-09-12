@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-image: url(../images/starting-page/new-bg.jpg) !important;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.navbar {
+    background-color: #0a68ff;
+    width: 100%;
+    /* height: 51px; */
+}
+
+.logo {
+    display: flex !important;
+    /* height: 116.5px; */
+    width: 100%;
+    display: table;
+    padding: 1%;
+    margin-bottom: 2%;
+}
+
+.logo-img {
+    margin-right: 2rem;
+    height: 50px;
+    width: 50px;
+}
+
+.logo-img img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#img-2 {
+    padding-left: 0% !important;
+}
+
+.upper-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container-1 {
+    width: 45%;
+    height: 250px;
+    margin-top: 3%;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgba(10, 104, 255, 1);
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: white;
+    display: inline-block;
+}
+
+.container-2 {
+    display: block;
+    position: relative;
+    width: 45%;
+    height: 250px;
+    margin: 3%;
+    border-style: solid;
+    border-color: rgba(10, 104, 255, 1);
+    border-width: 2px;
+    border-radius: 20px;
+    background-color: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.container-3 {
+    /* display: inline-block; */
+    position: relative;
+    width: 50%;
+    height: 250px;
+    margin: auto;
+    border-style: solid;
+    border-color: rgba(10, 104, 255, 1);
+    border-width: 2px;
+    border-radius: 20px;
+    background-color: #ffff;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.uc-lc-upper {
+    display: flex;
+    padding-left: 2%;
+    padding-top: 3%;
+}
+
+.uc-lc-mid {
+    display: flex;
+    padding-left: 2%;
+}
+
+.uc-lc-lower {
+    height: 36px;
+    display: flex;
+    font-family: Poppins;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    text-align: center;
+
+}
+
+.lower-container-col1{
+    display: flex;
+    font-family:'Poppins';
+    font-size: 10px;
+    font-weight: 600;
+    padding-left: 3%;
+    padding-top: 2%;
+    
+}
+
+.lower-container-col2{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+ 
+}
+
+.lower-container-col3{
+    width: 60%;
+    font-family: Poppins;
+    font-weight: 200;
+    justify-content: right;
+}
+
+ul{
+    list-style: none;
+    font-family: 'Lato';
+    font-style: normal;
+}
+ul li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
+
+#lc-dropdown{
+    margin-left: 65%;
+    padding: 2.7%;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+}
+
+#dlc-dropdown{
+    margin-left: 65%;
+    padding: 2.7%;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+}
+
+
+#uc-lc-caption {
+    font-family: 'Poppins';
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+#uc-lc-desc {
+    margin-top: 2.3%;
+    margin-left: 3%;
+    font-family: 'Poppins';
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    text-align: left;
+}
+
+#uc-lc-dropdown {
+    margin-top: 1.9%;
+    height: 22px;
+    margin-left: 3%;
+    margin-right: 3%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+
+}
+
+#uc-lc-water {
+    background-color: white;
+    height: 20px;
+    margin-top: 1.9%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#uc-lc-date {
+    margin-left: 39%;
+}
+
+#uc-lc-litres {
+    margin-left: 11%;
+}
+
+.lc-image {
+    width: 100%;
+    height: 180px;
+}
+.lc-image img {
+    max-width: auto;
+    height: 180px;
+    padding-left: 5%;
+}
+
+.rc-ur {
+    display: flex;
+    /* background-color: white; */
+}
+
+.rc-ur-1 {
+    width: 50%;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding-left: 2%;
+    padding-top: 1%;
+}
+
+.rc-ur-2 {
+    width: 50%;
+}
+
+
+#rc-dropdown {
+    margin-left: 65%;
+    margin-top: 2.5%;
+    padding: 2.7%;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+}
+
+.rc-lr {
+    /* width: 100%; */
+    /* height: 370px; */
+}
+
+.rc-lr img {
+    padding-left: 15%;
+    max-width: auto;
+    height: 360px;
+}
+
+.rc-lr canvas {
+    
+}
+
+#btn {
+    width: 100px;
+    height: 30px;
+    right: 5%;
+    bottom: 5%;
+    position: absolute;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #0A68FF;
+    text-align: left;
+    padding-left: 1%;
+    box-shadow: 5px -5px 0px 2px rgba(10,104,255,1);
+}
+
+
+#btn:hover {
+    cursor: pointer;
+    color: rgba(12,100,52);
+    box-shadow: 5px -5px 0px 2px rgba(12,100,52);
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .upper-container{
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+    }
+    .container-1 , .container-2 , .container-3 {
+        width: 95%;
+        height: auto;
+        margin-top: 50px;
+    }
+    #lc-dropdown{
+        margin-left: auto;
+    }
+
+    #btn{
+        position: relative;
+        margin:40px  40%;
+    }
+    .lower-container-col1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        }
+    .lower-container-col3{
+        display: flex;
+        justify-content: right;
+        margin-right: 5%;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+}

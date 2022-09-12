@@ -14,44 +14,207 @@ body{
       
 #container {
     position: absolute;
-    top:60.7%;
+    top:80%;
     left:25%;
     width: 806px;
-    height: 290px;
-    background-color: white;
+    height: 172px;
+    background-color: grey;
+    opacity: 85%;
     overflow-y: scroll;
-   
+    border-radius: 15px;
 }
 
 .tile{
-background-color: transparent;
-width: auto;
-height: 60px;
-text-align: left;
-/* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-font-weight: 100;
+    background-color: white;
+    width: auto;
+    height: 60px;
+    text-align: left;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-weight: 100;
 
 
-margin-left: 8%;
-margin-right: 8%;
-margin-top: 2%;
-margin-bottom: 2%;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 
-padding-top: 2%;
-padding-bottom: 5%;
-padding-right: 1.5%;
-padding-left: 3%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+    padding-right: 1.5%;
+    padding-left: 3%;
 
-font-family: 'Roboto';
-font-style: normal;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
 
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
 
 .btn{
     float: right;
-    
-
 }
 
+#dvMap {
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+#popup {
+    width: 100%;
+}
+
+#popup-header {
+    margin: 2% 0% 0% 0%;
+    font-family: Poppins;
+    font-size: 17px;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+#popup-place {
+    display: flex;
+}
+
+#state {
+    color: rgba(244, 92, 32, 1);
+}
+
+/* #popup-img {
+    border-radius: 15px;
+    text-align: center;
+    margin: 3% 2% 3% 2%;
+    padding: 2%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} */
+
+#popup-tile {
+    opacity: 50%;
+    font-size: 12px;
+    display: flex !important;
+    margin: 2%;
+    font-family: Poppins;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#popup-key {
+    width: 70%;
+    padding-left: 3%;
+    position: relative;
+    top: 9px;
+}
+
+#popup-value {
+    width: 30%;
+    text-align: center;
+    position: relative;
+    top: 9px;
+}
+
+#popup-btn {
+    padding: 3%;
+    margin-top: 4%;
+    text-align: center;
+}
+
+#popup-btn button {
+    cursor: pointer;
+    border-style: none;
+    padding: 2% 5% 2% 5%;
+    border-radius: 7px;
+    color: white;
+    background-color: #0A68FF;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding: 1%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    padding: 1%;
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  #modal-text {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 20px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+#btn1 {
+    position: absolute ;
+    top: 20px;
+}
+
+#btn2 {
+    position: absolute ;
+    top: 50px;
+}
+
+#btn3 {
+    position: absolute ;
+    top: 70px;
+}
+
+@media screen and (max-width: 1250px) {
+    #container {
+        position: absolute;
+        top:60.7%;
+        left:12%;
+        width: 806px;
+        height: 290px;
+        background-color: white;
+        overflow-y: scroll;
+       
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    #container {
+        position: absolute;
+        top:60.7%;
+        left:6%;
+        width: 80%;
+        height: 290px;
+        background-color: white;
+        overflow-y: scroll;
+       
+    }
+}

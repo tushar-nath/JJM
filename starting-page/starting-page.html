@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" media="only screen and (max-device-width: 780px)" href="sm-starting-page.css" />
     <link rel="stylesheet" href="starting-page.css" />
+
+
     <title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="navbar"></div>
@@ -14,7 +18,7 @@
             <img src="../images/starting-page/logo-1.png" alt=""  width="100" height="87">
         </div>
         <div class="logo-img" id="img-2">
-            <img src="../images/starting-page/logo-2.png" alt=""  width="110" height="88">
+            <img src="../images/starting-page/logo-5.png" alt=""  width="110" height="88">
         </div>
         <div class="logo-img" id="img-3">
             <img src="../images/starting-page/logo-3.png" alt=""  width="100" height="82">
@@ -24,103 +28,133 @@
         </div>
     </div>
 
+	<div class="hindi-text">
+		<img src="/images/starting-page/hindi.jpg" class="hindi-img" alt="">
+	</div>
+
     <div class="info-tab">
         
-      <div class="map-container">
-        <div class="map">
-			<div style="width: 100%"><iframe width="100%" height="242" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=242&amp;hl=en&amp;q=Tezpur+(My%20Business%20Name)&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe></div>
-        </div>
-        <div class="map-details">
+		<div class="map-container">
+			<div class="map">
+				<div style="width: 100%"><iframe width="100%" height="282" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=242&amp;hl=en&amp;q=Tezpur+(My%20Business%20Name)&amp;t=&amp;z=10&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe></div>
+			</div>
+
+			<div class="map-details">
 
 
-			<div class="map-row">
-				<div class="map-row-col">
-				
-					<ul>
-					<li>PH level</li>
-					<li>TDS</li>
-					<li>Chlorine</li>
-          	</ul>
-				</div>
-				<div class="map-row-col">
-					<ul>
-              <li>Electric Consumption</li>
-              <li>Daily Water Flow</li>
-              <li>Nitrate</li>
-
-          </ul>
-				</div>
-				<div class="map-row-col">
-					<ul>
-              <li>Pressure</li>
-              <li>Nitrate</li>
-
-          </ul>
+				<div class="map-row">
+					<div class="map-row-col">
+						<ul>
+							<li>PH level</li>
+							<li>TDS</li>
+							<li>Chlorine</li>
+						</ul>
+					</div>
+					<div class="map-row-col">
+						<ul>
+							<li>Electric Consumption</li>
+							<li>Daily Water Flow</li>
+							<li>Nitrate</li>
+						</ul>
+					</div>
+					<div class="map-row-col">
+						<ul>
+							<li>Pressure</li>
+							<li>Nitrate</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
-      </div>
-
       
-      <div class="form">
-        <div class="form-header"><h3>Basic Information</h3></div>
-        <div class="form-block-container">
+      	<div class="form">
+			<div class="form-header"><h3>Basic Information</h3></div>
+			<div class="form-block-container">
 
 
-    <div class="form-field">
-                <div class="double-field">
-				            <div id="first" class="double-field-item">
-					              <p>BLOCK : PORUWA CHARIALI</p>
-				            </div>
-				          <div id="second" class="double-field-item">
-					             <p>DISTRICT:SONITPUR</p>
-				           </div>
-			          </div>
+				<div class="form-field">
+					<div class="double-field">
+						<div id="first" class="double-field-item">
+							<p id="block_data">BLOCK : PORUWA CHARIALI</p>
+						</div>
+						<div id="second" class="double-field-item">
+							<p id="district_data">DISTRICT:SONITPUR</p>
+						</div>
+					</div>
 
 
-			  <div class="double-field">
-				    <div id="first" class="double-field-item">
-					      <p>VILLAGE : PORUWA CHARIALI</p>
-				    </div>
-				    <div id="second" class="double-field-item ">
-					      <p>PANCHAYAT : PORUWA CHARIALI</p>
-				    </div>
-			  </div>
+					<div class="double-field">
+						<div id="first" class="double-field-item">
+							<p id="village_data">VILLAGE : PORUWA CHARIALI</p>
+						</div>
+						<div id="second" class="double-field-item ">
+							<p id="panchayat_data">PANCHAYAT : PORUWA CHARIALI</p>
+						</div>
+					</div>
 
 
-			  <div class="double-field">
-				    <div id="first" class="double-field-item">
-					      <p>NO OF INHABITANTS: 2500</p>
-				    </div>
-				    <div id="second" id="empty" class="double-field-item empty">
-					      
-				    </div>
-			  </div>
+					<div class="double-field">
+						<div id="first" class="double-field-item">
+							<p id="inhab_data">NO OF INHABITANTS: 2500</p>
+						</div>
+						<div id="second" id="empty" class="double-field-item empty">
+							
+						</div>
+					</div>
 
 
-			<div class="field">
-				<p>POPULATION  SERVED THROUGH SCHEME: 2500</p>
+					<div class="field">
+						<p id="served_data">POPULATION  SERVED THROUGH SCHEME: 2500</p>
+					</div>
+					<div class="field">
+						<p id="served_data">POPULATION  SERVED THROUGH SCHEME: 2500</p>
+					</div>
+					<div class="field">
+						<p id="scheme_data">SCHEME : JAL JEEVAN MISSION ASSAM UNDER BJP ASSAM GOVERMENT </p>
+					</div>
+					<div class="field">
+						<p id="year_data">YEAR OF COMMISION : 2022-2023</p>
+					</div>
+					<div class="field">
+						<p id="supervisor_data">SUPERVISOR NAME : HAREN DAS</p> 
+					</div>
+				</div>
 			</div>
-			<div class="field">
-				<p>POPULATION  SERVED THROUGH SCHEME: 2500</p>
-			</div>
-			<div class="field">
-				<p>SCHEME : JAL JEEVAN MISSION ASSAM UNDER BJP ASSAM GOVERMENT </p>
-			</div>
-			<div class="field">
-				<p>YEAR OF COMMISION : 2022-2023</p>
-			</div>
-			<div class="field">
-				<p>SUPERVISOR NAME : HAREN DAS</p> 
-			</div>
-  </div>
+  		</div>
 
 			  
 
         </div>
     </div>
 
+	<div class="data-container">
+		<div class="uc-lc-upper">
+			<p id="uc-lc-caption">TOTAL WATER SUPPLY : </p>
+			<p id="uc-lc-desc">55 LPCD</p>
+		</div>
+		<div class="uc-lc-mid">
+			<p id="uc-lc-caption">AVERAGE WATER SUPPLY (LPCD): </p>
+			<select class="dropdown" id="uc-lc-dropdown">
+				<option value="days">By Days</option>
+				<option value="hour">By Hour</option>
+				<option value="minute">By Minute</option>
+				<option value="months">By Months</option>
+				<option value="year">By Year</option>
+			</select>
+			<button id="uc-lc-water">Water Consumption</button>
+		</div>
+		<div class="uc-lc-lower">
+			<p id="uc-lc-date">17 July - 24 July</p>
+			<p id="uc-lc-litres">212.4L</p>
+		</div>
+	</div>
 
-    
+	<div>
+		<a href="/graph_page/graph_page.html">
+				<button type="button" id="btn">Next &#10230;</button>
+		</a>
+	</div>
+	<script src="data.json"></script>
+	<script src ="data_load.js"></script>
   </body>
 </html>

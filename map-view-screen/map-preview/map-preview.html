@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="map-preview.css" />
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/6c0f35acb6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="logo">
+        <div class="logo-img" id="img-1">
+            <img src="../../images/starting-page/logo-1.png" alt="" width="100" height="87" />
+        </div>
+        <div class="logo-img" id="img-2">
+            <img src="../../images/starting-page/logo-5.png" alt="" width="110" height="88" />
+        </div>
+        <div class="logo-img" id="img-3">
+            <img src="../../images/starting-page/logo-3.png" alt="" width="100" height="82" />
+        </div>
+        <div class="logo-img" id="img-4">
+            <img src="../../images/starting-page/logo-4.png" alt="" width="80" height="90" />
+        </div>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="center-panel">
+            <div class="center-circle">
+                <svg id="arrow-up" onclick="scrollDownButton()" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                    <path
+                        d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+                </svg>
+
+                <div class="ball-container">
+                    <ul id="scroll" class="ul-class">
+                    <li class="items">
+                        <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white" value="3" 
+                            href="../mapViewScreen.html">Nalbari</a>
+                    </li>
+                    <li class="items">
+                        <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white" value="4" 
+                            href="../mapViewScreen.html">Dibrugarh</a>
+                    </li>
+                    <li class="active items">
+                        <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white" value="1" 
+                            href="../mapViewScreen.html" value="1">Kamrup</a>
+                    </li>
+                    <li class="items">
+                        <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white" value="2" 
+                            href="../mapViewScreen.html" value="2" >Sonitpur</a>
+                    </li>
+                    <li class="items">
+                        <a onclick="storeDistrictId(this);" style="text-decoration: none; color: white" value="5" 
+                            href="../mapViewScreen.html">Baksa</a>
+                    </li>
+                </ul>
+                </div>
+
+                
+
+                <svg id="arrow-down" onclick="scrollUpButton()"  xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img class="center-fit" src="../../images/dashboard/dashboard-footer-img.png" />
+    </div>
+
+    <script>
+            function storeDistrictId(e) {
+            var id = e.getAttribute('value');
+            sessionStorage.districtId = id;
+        }
+    </script>
+
+    <script src="container.js"></script>
+</body>
+
+</html>

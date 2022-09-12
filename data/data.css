@@ -8,28 +8,38 @@ body{
     box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;
+    background-image: url(../images/starting-page/new-bg.jpg) !important; 
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
 }
 
 
 .navbar {
     background-color: #0a68ff;
     width: 100%;
-    height: 51px;
+    /* height: 51px; */
 }
 
 .logo {
     display: flex !important;
-    height: 116.5px;
+    /* height: 116.5px; */
     width: 100%;
     display: table;
-    padding-left: 1%;
+    padding: 1%;
     margin-bottom: 2%;
 }
 
 .logo-img {
-    padding: 2%;
-    height: 100px;
-    width: 100px;
+    margin-right: 2rem;
+    height: 50px;
+    width: 50px;
 }
 
 .logo-img img {
@@ -43,11 +53,27 @@ body{
 
 .upper-container {
     display: flex;
+    justify-content: space-evenly;
 }
 
-.left-container {
-    width: 40%;
-    height: 169px;
+.container-1 {
+    width: 47%;
+    height: 250px;
+    margin-top: 3%;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgba(10, 104, 255, 1);
+    border-width: 2px;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: #ffff;
+    display: inline-block;
+}
+
+.container-2 {
+    display: block;
+    position: relative;
+    width: 45%;
+    height: 250px;
     margin: 3%;
     border-style: solid;
     border-color: rgba(10, 104, 255, 1);
@@ -57,23 +83,12 @@ body{
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-.right-container {
-    width: 45%;
-    height: 412px;
-    margin-top: 3%;
-    border-radius: 20px;
-    border-style: solid;
-    border-color: rgba(10, 104, 255, 1);
-    border-width: 2px;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-}
-
-.lower-container {
+.container-3 {
+    /* display: inline-block; */
     position: relative;
-    bottom: 250px;
-    width: 40%;
-    height: 370px;
-    margin: 3%;
+    width: 50%;
+    height: 250px;
+    margin: auto;
     border-style: solid;
     border-color: rgba(10, 104, 255, 1);
     border-width: 2px;
@@ -152,6 +167,14 @@ ul li::before {
     border: none;
 }
 
+#dlc-dropdown{
+    margin-left: 65%;
+    padding: 2.7%;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: none;
+}
+
 
 #uc-lc-caption {
     font-family: 'Poppins';
@@ -220,6 +243,7 @@ ul li::before {
 
 .rc-ur {
     display: flex;
+    /* background-color: white; */
 }
 
 .rc-ur-1 {
@@ -250,11 +274,86 @@ ul li::before {
 
 .rc-lr {
     width: 100%;
-    height: 370px;
+    /* height: 370px; */
 }
 
 .rc-lr img {
     padding-left: 15%;
     max-width: auto;
     height: 360px;
+}
+
+.rc-lr canvas {
+    
+}
+
+#btn {
+    width: 100px;
+    height: 30px;
+    right: 5%;
+    bottom: 5%;
+    position: absolute;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #0A68FF;
+    text-align: left;
+    padding-left: 1%;
+    box-shadow: 5px -5px 0px 2px rgba(10,104,255,1);
+    border: 1px solid #0A68FF;
+}
+
+
+#btn:hover {
+    cursor: pointer;
+    color: rgba(12,100,52);
+    box-shadow: 5px -5px 0px 2px rgba(12,100,52);
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    .upper-container{
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+    }
+    .container-1 , .container-2 , .container-3 {
+        width: 95%;
+        height: auto;
+        margin-top: 50px;
+    }
+    #lc-dropdown{
+        margin-left: auto;
+    }
+
+    #btn{
+        position: relative;
+        margin:40px  40%;
+    }
+    .lower-container-col1{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        }
+    .lower-container-col3{
+        display: flex;
+        justify-content: right;
+        margin-right: 5%;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
 }

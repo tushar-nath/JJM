@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new-dashboard-4.css" />
+    <title>Document</title>
+    <script src="../household-json/subplaces.js"></script>
+    <script src="../household-json/subplaces.js"></script>
+    <script src="../school-json/subplaces.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../household-json/district.js"></script>
+    <script src="../school-json/district.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="logo">
+            <div class="logo-img" id="img-1">
+                <img src="../../images/starting-page/logo-1.png" alt="" width="100" height="87" />
+            </div>
+            <div class="logo-img" id="img-2">
+                <img src="../../images/starting-page/logo-5.png" alt="" width="110" height="88" />
+            </div>
+            <div class="logo-img" id="img-3">
+                <img src="../../images/starting-page/logo-3.png" alt="" width="100" height="82" />
+            </div>
+            <div class="logo-img" id="img-4">
+                <img src="../../images/starting-page/logo-4.png" alt="" width="80" height="90" />
+            </div>
+        </div>
+        <div class="toggle">
+            <div class="toggle-header">JAL JEEVAN MISSION ASSAM</div>
+            <a onclick="ShowHouseholdDiv(this)" value="1">
+                <div class="household">
+                    <div class="toggle-logo">
+                        <img width="70px" height="70px" src="../../images/new-dashboard/home.png">
+                    </div>
+                    <div class="toggle-desc">Total Water Supply in Households</div>
+                    <div id="toggleHousehold" class="toggle-active"></div>
+                </div>
+            </a>
+            <a onclick="ShowSchoolDiv(this)" onclick="ShowHouseholdDiv(this)" value="2">
+                <div class="school">
+                    <div class="toggle-logo">
+                        <img width="70px" height="70px" src="../../images/new-dashboard/school .png">
+                    </div>
+                    <div class="toggle-desc">Total Water Supply in Schools</div>
+                    <div id="toggleSchool" class="toggle-active" style="display:none;"></div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <div class="map-container-box">
+            <div id="dvMap">
+                <!-- MAP from JSON -->
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-stats">
+        <div class="stats-container">
+            <div id="stat-header" class="stat-header">Assam</div>
+            <div class="stat-desc">Status of Tap Water Supply in Rural Homes</div>
+            <div class="stat-tile-container">
+                <div class="upper-tile">
+                    <div class="left-tile">
+                        <div class="lt-header">TOTAL NO. OF HOUSEHOLDS </br> </br> </br> 69,34,57 </div>
+                        <!-- <div class="lt-desc">69,34,57</div> -->
+                    </div>
+                    <div class="right-tile">
+                        <div class="rt-header">HOUSEHOLD WITH TAP CONNECTIONS AS </br> ON DATE </br> </br> 69,34,57</div>
+                        <!-- <div class="rt-desc">69,34,57</div> -->
+                    </div>
+                </div>
+                <div class="lower-tile">
+                    <div class="lower-header">HOUSEHOLDS PROVIDED WITH TAP WATER CONNECTIONS SINCE ITS LAUNCH </br> </br>
+                        69,34,57</div>
+                    <!-- <div class="lower-desc">69,34,57</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-status">
+        <div class="status-container">
+            <div class="status-logo">
+                <img width="120px" height="55px" src="../../images/new-dashboard/status-logo.png">
+            </div>
+            <div class="status-state">
+                <div class="staus-header">
+                    <p>HAR GHAR JAL STATUS</p>
+                </div>
+                <div class="certifield-state">
+                    <p>Certified States : Assam</p>
+                </div>
+                <div class="reported-state">
+                    <p>Reported States : Assam</p>
+                </div>
+                <div class="status-components">
+                    <div class="status-ur">
+                        <div class="district">
+                            <div class="district-header">
+                                NO. OF PEOPLE EMPLOYED
+                            </div>
+                            <div class="district-detail">
+                                <div class="district-reported">
+                                    <h3>Reported</h3>
+                                    <p>1245</p>
+                                </div>
+                                <div class="district-certified">
+                                    <h3>Certified</h3>
+                                    <p>1345</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block">
+                            <div class="block-header">
+                                BLOCKS
+                            </div>
+                            <div class="block-detail">
+                                <div class="block-reported">
+                                    <h3>Reported</h3>
+                                    <p>1445</p>
+                                </div>
+                                <div class="block-certified">
+                                    <h3>Certified</h3>
+                                    <p>1545</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status-lr">
+                        <div class="panchayats">
+                            <div class="panchayats-header">
+                                PANCHAYATS
+                            </div>
+                            <div class="panchayats-detail">
+                                <div class="panchayat-reported">
+                                    <h3>Reported</h3>
+                                    <p>1645</p>
+                                </div>
+                                <div class="panchayat-certified">
+                                    <h3>Certified</h3>
+                                    <p>1745</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="villages">
+                            <div class="villages-header">
+                                VILLAGES
+                            </div>
+                            <div class="village-detail">
+                                <div class="village-reported">
+                                    <h3>Reported</h3>
+                                    <p>1845</p>
+                                </div>
+                                <div class="village-certified">
+                                    <h3>Certified</h3>
+                                    <p>1945</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="status-component">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="dashboard-village">
+        <div class="dashboard-village-container">
+            <div class="status-logo">
+                <img width="120px" height="55px" src="../../images/new-dashboard/status-logo.png">
+            </div>
+            <div class="status-state">
+                <div class="village-dashboard-header">
+                    <p>Status of progress in Villages</p>
+                </div>
+                <div class="village-dashboard-count">
+                    Total Villages: 10,346
+                </div>
+                <div class="village-dashboard-components">
+                    <div class="village-row-1">
+                        <div class="hh-tap">
+                            <div class="hh-tap-header">
+                                Villages with 100% </br> HH Tap Connections
+                            </div>
+                            <div class="hh-tap-detail">
+                                <p>789</p>
+                            </div>
+                        </div>
+                        <div class="ws-progress">
+                            <div class="ws-progress-header">
+                                Villages where WS </br> Work in Progress
+                            </div>
+                            <div class="hh-tap-detail">
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="village-row-2">
+                        <div class="ws-start">
+                            <div class="ws-start-header">
+                                Villages where WS </br> Work yet to start
+                            </div>
+                            <div class="ws-start-detail">
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="vwsc">
+                            <div class="vwsc-header">
+                                Villages where VWSC </br> are formed
+                            </div>
+                            <div class="vwsc-detail">
+                                <p>7,329</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="village-row-3">
+                        <div class="plan-made">
+                            <div class="plan-made-header">
+                                Villages action </br> plan made
+                            </div>
+                            <div class="plan-made-detail">
+                                <p>0</p>
+                            </div>
+                        </div>
+                        <div class="grey-water">
+                            <div class="grey-water-header">
+                                Villages with grey water </br> management system
+                            </div>
+                            <div class="grey-water-detail">
+                                <p>0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="dashboard-graph">
+            <div class="graph-container">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+
+         <div class="buttons">
+                <button onclick="functionHome()" class="btn-next" type="button" id="btn-next">Back To Home</button>
+        </div>
+
+        <img id="footer" width="100%" height="400px" src="../../images/new-dashboard/footer.png">
+
+        <script type="text/javascript">
+            //JS function for map
+
+            function LoadMap() {
+                var bounds = new google.maps.LatLngBounds();
+                var mapOptions = {
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+
+                //Create and open InfoWindow.
+                var infoWindow = new google.maps.InfoWindow();
+                var toggleId = sessionStorage.getItem("toggleId") || "0";
+                var areaId = sessionStorage.getItem("areaId") || "0";
+                var subAreaId = sessionStorage.getItem("subAreaId") || "0";
+                console.log(subplaces[areaId][subAreaId]);
+
+
+                // if (toggleId == 2) {
+                //     var data = schoolSubplaces[areaId][subAreaId];
+                // } else {
+                //     var data = subplaces[areaId][subAreaId];
+                // }
+
+                var data = subplaces[areaId][subAreaId];
+                var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+
+                //extend the bounds to include each marker's position
+                bounds.extend(myLatlng);
+
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: data.title
+                });
+
+                const contentString =
+                    '<div id="popup">' +
+                    '<div id="popup-header">' +
+                    '<div id="popup-place">' +
+                    '<div id="city">' + data.title + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of  Active IOT Centres:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.total + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of  households Connections:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.active + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of  Active Centres:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.iot + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of  Active IOT Centres:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.upcoming + '</div>' +
+                    '</div>' +
+                    '</div>';
+
+
+                //Attach click event to the marker.
+                (function (marker, data) {
+                    google.maps.event.addListener(marker, 'mouseover', function (e) {
+                        //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                        infoWindow.setContent(contentString);
+                        infoWindow.open(map, marker);
+                        // sessionStorage.areaId = data.id;
+                    });
+                    google.maps.event.addListener(marker, "click", function (e) {
+                            //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                            infoWindow.setContent(contentString);
+                            infoWindow.open(map, marker);
+                            // sessionStorage.districtId = data.id;
+                        });
+                })(marker, data);
+
+                marker.addListener('mouseout', function () {
+                    infowindow.close(map, marker);
+                });
+
+                //now fit the map to the newly inclusive bounds
+                google.maps.event.addListenerOnce(map, 'idle', function () {
+                    map.fitBounds(bounds);
+                });
+            }
+
+            var areaId = sessionStorage.getItem("areaId") || "0";
+
+            var area = subplaces;
+            // console.log(areaId);
+            // console.log(area[areaId]);
+            // JS function to build the subplaces 1 table
+            buildTable(area[areaId]);
+            function buildTable(data) {
+                // console.log(data);
+                var table = document.getElementById("buildTable");
+                for (var i = 1; i < 3; i++) {
+                    var row = `<tr bgcolor="#1E90FF" onclick="storeAreaId(this)" value="${data[i].id}">
+                                            <td>${data[i].title}</td>
+                                            <td>${data[i].total}</td>
+                                            <td>${data[i].tap}</td>
+                                            <td><span>${data[i].tapPer}</span></td>
+                                            <td>${data[i].progress}</td>
+                                        </tr>`;
+                    table.innerHTML += row;
+                }
+            }
+
+            //JS function for toggling between Household and School
+            var toggleId = sessionStorage.getItem("toggleId") || "0";
+            // if (toggleId == 2) {
+            //     document.getElementById("toggleSchool").style.display = "";
+            // } else {
+            //     document.getElementById("toggleHousehold").style.display = "";
+            // }
+            function ShowHouseholdDiv(e) {
+                document.getElementById("toggleHousehold").style.display = "";
+                document.getElementById("toggleSchool").style.display = "none";
+                var id = e.getAttribute('value');
+                sessionStorage.toggleId = id;
+                location.reload()
+            }
+            function ShowSchoolDiv(e) {
+                document.getElementById("toggleSchool").style.display = "";
+                document.getElementById("toggleHousehold").style.display = "none";
+                var id = e.getAttribute('value');
+                sessionStorage.toggleId = id;
+                location.href = "../../new-dashboard-school/new-dashboard-school-1/new-dashboard-1.html";
+            }
+
+            //JS function for storing District ID
+            function storeAreaId(e) {
+                var id = e.getAttribute('value');
+                sessionStorage.areaId = id;
+                location.href = "../new-dashboard-3/new-dashboard-3.html";
+            }
+
+
+             //JS function for redirecting to Home page 
+            function functionHome() {
+                location.href="../../second-page-view/second-page-view.html"
+            }
+
+        </script>
+        <script>
+            var ctx = document.getElementById('myChart').getContext("2d");
+
+            var gradientStroke = ctx.createLinearGradient(500, 0, 100, 0);
+            gradientStroke.addColorStop(0, '#87CEFA');
+            gradientStroke.addColorStop(1, '#87CEFA');
+
+            var gradientFill = ctx.createLinearGradient(500, 0, 100, 0);
+            gradientFill.addColorStop(0, "rgba(30, 144, 255, 0.7)");
+            gradientFill.addColorStop(1, "rgba(0, 191, 255, 0.3)");
+
+            var myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL"],
+                    datasets: [{
+                        label: "PROGRESS WITH TAP WATER SUPPLY IN HH'S",
+                        borderColor: gradientStroke,
+                        pointBorderColor: gradientStroke,
+                        pointBackgroundColor: gradientStroke,
+                        pointHoverBackgroundColor: gradientStroke,
+                        pointHoverBorderColor: gradientStroke,
+                        pointBorderWidth: 10,
+                        pointHoverRadius: 10,
+                        pointHoverBorderWidth: 1,
+                        pointRadius: 3,
+                        fill: true,
+                        backgroundColor: gradientFill,
+                        borderWidth: 4,
+                        data: [100, 120, 150, 170, 180, 170, 160]
+                    }]
+                },
+                options: {
+                    animation: {
+                        easing: "easeInOutBack"
+                    },
+                    legend: {
+                        position: "bottom"
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                fontColor: "rgba(0,0,0,0.5)",
+                                fontStyle: "bold",
+                                beginAtZero: true,
+                                maxTicksLimit: 5,
+                                padding: 20
+                            },
+                            gridLines: {
+                                drawTicks: false,
+                                display: false
+                            }
+
+                        }],
+                        xAxes: [{
+                            gridLines: {
+                                zeroLineColor: "transparent"
+                            },
+                            ticks: {
+                                padding: 20,
+                                fontColor: "rgba(0,0,0,0.5)",
+                                fontStyle: "bold"
+                            }
+                        }]
+                    }
+                }
+            });
+        </script>
+        <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&callback=LoadMap"></script>
+</body>
+
+</html>

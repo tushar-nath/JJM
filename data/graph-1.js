@@ -1,7 +1,8 @@
-var userDataA = [], userDataB = [];
+var userDataA1 = [], userDataB1 = [];
+var dataA1, dataB1;
 
 async function dummyChart() {
-	await getDummyData();
+	await getDummyData1();
 
 	const ctx = document.getElementById("myChart-1").getContext("2d");
 
@@ -11,56 +12,90 @@ async function dummyChart() {
 
 		// The data for our dataset
 		data: {
-			labels: userDataA,
+			labels: userDataA1,
 			datasets: [
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "rgba(0,0,255,1.0)",
-      				borderColor: "rgba(0,0,255,0.1)",
-					data: userDataB,
+					backgroundColor: "rgba(255, 0, 0, 1)",
+					borderColor: 'rgba(255, 0, 0, 1)',
+					borderWidth: 1,
+					data: userDataB1,
 				}
 			],
 		},
 
 		// Configuration options go here
 		options: {
+			maintainAspectRatio: false,
 			legend: {display: false},
 			tooltips: {
 				mode: "index",
 			},
 			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: "Time",
+					},
+				}],
 				yAxes: [{
-				ticks: { min: 0},
+					ticks: { min: 0},
+					scaleLabel: {
+						display: true,
+						labelString: 'Y-AXIS'
+					  }
 				}], 
 			},
 		},
 	});
+	function updateChart() {
+		getDummyData1()
+		userDataA1.push(dataA1.pop());
+		userDataB1.push(dataB1.pop());
+		if (userDataB1.length > 30) {
+			userDataA1.shift();
+			userDataB1.shift();
+		}
+		console.log(userDataA1);
+		chart.update();
+		setTimeout(updateChart, 30000);
+	}
+
+	updateChart();
 }
 
 dummyChart();
 
 //Fetch Data from API
 
-async function getDummyData() {
+async function getDummyData1() {
 	try {
-		const apiUrl = "https://mocki.io/v1/e5430db8-d183-4682-8c18-bd27dc749ccc";
+		timeInterval1 = sessionStorage.getItem("timeinterval1") || "30";
+		const sensorId = sessionStorage.getItem("sensorId") || "1";
+		// console.log(sensorId);
+		console.log(timeInterval1);
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=30`;
+		console.log("This is Graph-1: ", apiUrl);
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
+		
+		dataA1 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-		const dataA = barChatData.data.map((x) => x.a);
-		console.log(dataA);
-		const dataB = barChatData.data.map((x) => x.b);
+    	dataB1 = barChatData.data.map((x) => x.y);
 
-		userDataA = dataA;
-		userDataB = dataB;
+		if (userDataA1.length == 0 && userDataB1.length == 0) {
+			userDataA1 = dataA1;
+			userDataB1 = dataB1;
+		}
+
 	}
 	catch(err) {
 		alert("No data available for Graph 1");
-		userDataA = [1,2,3,4,5];
-		userDataB = [0,0,0,0,0];
+		userDataA1 = [1,2,3,4,5];
+		userDataB1 = [0.8,0,0,0,0];
 	}
 }
 
-window.setInterval(getDummyData(), 30000);
+// window.setInterval(getDummyData(), 30000);

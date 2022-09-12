@@ -1,0 +1,79 @@
+[
+    {
+        "Block":"Poruwa Harigaon No 1",
+        "District": "Sonitpur",
+        "Village": "Poruwa",
+        "Panchayat": "Poruwa",
+        "Total Households":"2500",
+        "Total Households with Tap Connections" : "2500",
+        "Scheme" : "Jal Jeevan Mission Assam Under BJP Assam Government",
+        "Year" : "2022-2023",
+        "Supervisor" : "Hitendra Saikia"
+    },
+    {
+        "Block":"Majgaon PWSS",
+        "District": "Sonitpur",
+        "Village": "Majgaon",
+        "Panchayat": "Majgaon",
+        "Total Households":"2500",
+        "Total Households with Tap Connections" : "2500",
+        "Scheme" : "Jal Jeevan Mission Assam Under BJP Assam Government",
+        "Year" : "2022-2023",
+        "Supervisor" : "Haren Das"
+    },
+    {
+        "Block":"Deuri-gaon PWSS",
+        "District": "Sonitpur",
+        "Village": "Deuri-gaon",
+        "Panchayat": "Deuri-gaon",
+        "Total Households":"2500",
+        "Total Households with Tap Connections" : "2500",
+        "Scheme" : "Jal Jeevan Mission Assam Under BJP Assam Government",
+        "Year" : "2022-2023",
+        "Supervisor" : "Haren Das"
+    },
+    {
+        "Block":"Hazarapar PWSS",
+        "District": "Sonitpur",
+        "Village": "Hazarapar",
+        "Panchayat": "Hazarapar",
+        "Total Households":"2500",
+        "Total Households with Tap Connections" : "2500",
+        "Scheme" : "Jal Jeevan Mission Assam Under BJP Assam Government",
+        "Year" : "2022-2023",
+        "Supervisor" : "Haren Das"
+    },
+    {
+        "Block":"Poruwa-2",
+        "District": "Sonitpur",
+        "Village": "Poruwa Chariali",
+        "Panchayat": "Poruwa Chariali",
+        "Total Households":"2500",
+        "Total Households with Tap Connections" : "2500",
+        "Scheme" : "Jal Jeevan Mission Assam Under BJP Assam Government",
+        "Year" : "2022-2023",
+        "Supervisor" : "Haren Das"
+    },
+    {
+        "Block":"..........6",
+        "District": "Sonitpur",
+        "Village": "Poruwa Chariali",
+        "Panchayat": "Poruwa Chariali",
+        "Total Households":"2500",
+        "Total Households with Tap Connections" : "2500",
+        "Scheme" : "Jal Jeevan Mission Assam Under BJP Assam Government",
+        "Year" : "2022-2023",
+        "Supervisor" : "Haren Das"
+    },
+    {
+        "Block":"............7",
+        "District": "Sonitpur",
+        "Village": "Poruwa Chariali",
+        "Panchayat": "Poruwa Chariali",
+        "Total Households":"2500",
+        "Total Households with Tap Connections" : "2500",
+        "Scheme" : "Jal Jeevan Mission Assam Under BJP Assam Government",
+        "Year" : "2022-2023",
+        "Supervisor" : "Haren Das"
+    }
+]

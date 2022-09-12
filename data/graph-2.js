@@ -1,7 +1,8 @@
-var userDataA = [], userDataB = [];
+var userDataA2 = [], userDataB2 = [];
+var dataA2, dataB2;
 
 async function dummyChart() {
-	await getDummyData();
+	await getDummyData2();
 
 	const ctx = document.getElementById("myChart-2").getContext("2d");
 
@@ -11,55 +12,88 @@ async function dummyChart() {
 
 		// The data for our dataset
 		data: {
-			labels: userDataA,
+			labels: userDataA2,
 			datasets: [
 				{
 					fill: false,
 					lineTension: 0,
-      				backgroundColor: "rgba(0,0,255,1.0)",
-      				borderColor: "rgba(0,0,255,0.1)",
-					data: userDataB,
+      				backgroundColor: "rgba(255, 0, 0, 1)",
+      				borderColor: "rgba(255, 0, 0, 1)",
+					borderWidth: 1,
+					data: userDataB2,
 				}
 			],
 		},
 
 		// Configuration options go here
 		options: {
+			maintainAspectRatio: false,
 			legend: {display: false},
 			tooltips: {
 				mode: "index",
 			},
 			scales: {
+				xAxes: [{
+					scaleLabel: {
+						display: true,
+						labelString: "Time",
+					},
+				}],
 				yAxes: [{
 				ticks: { min: 0},
+				scaleLabel: {
+					display: true,
+					labelString: 'Y-AXIS'
+				  }
 				}], 
 			},
 		},
 	});
+	function updateChart() {
+		getDummyData2()
+		userDataA2.push(dataA2.pop());
+		userDataB2.push(dataB2.pop());
+		if (userDataB2.length > 30) {
+			userDataA2.shift();
+			userDataB2.shift();
+		}
+		console.log(userDataA2);
+		chart.update();
+		setTimeout(updateChart, 30000);
+	}
+
+	updateChart();
 }
 
 dummyChart();
 
 //Fetch Data from API
 
-async function getDummyData() {
+async function getDummyData2() {
 	try {
-		const apiUrl = "https://mocki.io/v1/be7d9952-7760-44ca-a5ac-8968e2040268";
+		const timeInterval2 = sessionStorage.getItem("timeinterval2") || "30";
+		console.log(timeInterval2);
+		const sensorId = sessionStorage.getItem("sensorId") || "1";
+		const apiUrl = `http://api-env.eba-2mhqamyx.us-east-1.elasticbeanstalk.com/fetch?api_key=tPmAT5Ab3j7F9&sensor=${sensorId}&timeInterval=3600`;
+		console.log("This is Graph-2: ", apiUrl);
 
 		const response = await fetch(apiUrl);
 		const barChatData = await response.json();
+		
 
-		const dataA = barChatData.data.map((x) => x.a);
-		console.log(dataA);
-		const dataB = barChatData.data.map((x) => x.b);
+		dataA2 = barChatData.data.map((x) => (new Date(x.time)).toTimeString().slice(0, 8));
 
-		userDataA = dataA;
-		userDataB = dataB;
+    	dataB2 = barChatData.data.map((x) => x.y);
+
+		if (userDataA2.length == 0 && userDataB2.length == 0) {
+			userDataA2 = dataA2;
+			userDataB2 = dataB2;
+		}
 	}
 	catch(err) {
 		alert("No data available for Graph 2");
-		userDataA = [1,2,3,4,5];
-		userDataB = [0,0,0,0,0];
+		userDataA2 = [1,2,3,4,5];
+		userDataB2 = [0,0,0,0,0];
 	}
 }
 

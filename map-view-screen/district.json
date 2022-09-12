@@ -1,0 +1,317 @@
+{
+  "Kamrup Metropolitan": {
+    "id": 1,
+    "lat": "26.0794",
+    "lng": "91.6372",
+    "total": "1500",
+    "active": "1200",
+    "iot": "1000",
+    "upcoming": "200"
+  },
+  "Sonitpur": {
+    "id": 2,
+    "lat": "26.6739",
+    "lng": "92.8577",
+    "total": "1510",
+    "active": "1210",
+    "iot": "1010",
+    "upcoming": "210"
+  },
+  "Nalbari": {
+    "id": 3,
+    "lat": "26.3660",
+    "lng": "91.3276",
+    "total": "1520",
+    "active": "1220",
+    "iot": "1020",
+    "upcoming": "220"
+  },
+  "Dibrugarh": {
+    "id": 4,
+    "lat": "27.4096",
+    "lng": "95.1015",
+    "total": "1530",
+    "active": "1230",
+    "iot": "1030",
+    "upcoming": "230"
+  },
+  "Baksa": {
+    "id": 5,
+    "lat": "26.6935",
+    "lng": "91.5984",
+    "total": "1540",
+    "active": "1240",
+    "iot": "1040",
+    "upcoming": "240"
+  },
+  "Barpeta": {
+    "id": 1,
+    "lat": "26.3216",
+    "lng": "90.9821",
+    "total": "1500",
+    "active": "1200",
+    "iot": "1000",
+    "upcoming": "200"
+  },
+  "Biswanath": {
+    "id": 2,
+    "lat": "26.7267",
+    "lng": "93.1479",
+    "total": "1510",
+    "active": "1210",
+    "iot": "1010",
+    "upcoming": "210"
+  },
+  "Bongaigaon": {
+    "id": 3,
+    "lat": "26.3708",
+    "lng": "90.6394",
+    "total": "1520",
+    "active": "1220",
+    "iot": "1020",
+    "upcoming": "220"
+  },
+  "Bajali": {
+    "id": 4,
+    "lat": "26.543956",
+    "lng": "91.187",
+    "total": "1530",
+    "active": "1230",
+    "iot": "1030",
+    "upcoming": "230"
+  },
+  "Cachar": {
+    "id": 5,
+    "lat": "24.7821",
+    "lng": "92.8577",
+    "total": "1540",
+    "active": "1240",
+    "iot": "1040",
+    "upcoming": "240"
+  },
+  "Charaideo": {
+    "id": 1,
+    "lat": "27.0259",
+    "lng": "95.0189",
+    "total": "1500",
+    "active": "1200",
+    "iot": "1000",
+    "upcoming": "200"
+  },
+  "Chirang": {
+    "id": 2,
+    "lat": "26.6539",
+    "lng": "90.6394",
+    "total": "1510",
+    "active": "1210",
+    "iot": "1010",
+    "upcoming": "210"
+  },
+  "Darrang": {
+    "id": 3,
+    "lat": "26.4523",
+    "lng": "92.0273",
+    "total": "1520",
+    "active": "1220",
+    "iot": "1020",
+    "upcoming": "220"
+  },
+  "Dhemaji": {
+    "id": 4,
+    "lat": "27.6087",
+    "lng": "94.7692",
+    "total": "1530",
+    "active": "1230",
+    "iot": "1030",
+    "upcoming": "230"
+  },
+  "Dhubri": {
+    "id": 5,
+    "lat": "26.1359",
+    "lng": "89.9253",
+    "total": "1540",
+    "active": "1240",
+    "iot": "1040",
+    "upcoming": "240"
+  },
+  "Dima Hasao": {
+    "id": 1,
+    "lat": "25.3478",
+    "lng": "93.0176",
+    "total": "1500",
+    "active": "1200",
+    "iot": "1000",
+    "upcoming": "200"
+  },
+  "Goalpara": {
+    "id": 2,
+    "lat": "26.0876",
+    "lng": "90.5636",
+    "total": "1510",
+    "active": "1210",
+    "iot": "1010",
+    "upcoming": "210"
+  },
+  "Golaghat": {
+    "id": 3,
+    "lat": "26.3185",
+    "lng": "94.0907",
+    "total": "1520",
+    "active": "1220",
+    "iot": "1020",
+    "upcoming": "220"
+  },
+  "Hailakandi": {
+    "id": 4,
+    "lat": "24.6811",
+    "lng": "92.5638",
+    "total": "1530",
+    "active": "1230",
+    "iot": "1030",
+    "upcoming": "230"
+  },
+  "Hojai": {
+    "id": 5,
+    "lat": "26.0017",
+    "lng": "92.8477",
+    "total": "1540",
+    "active": "1240",
+    "iot": "1040",
+    "upcoming": "240"
+  },
+  "Kamrup(Rural)": {
+    "id": 1,
+    "lat": "26.3161",
+    "lng": "91.5984",
+    "total": "1500",
+    "active": "1200",
+    "iot": "1000",
+    "upcoming": "200"
+  },
+  "Jorhat": {
+    "id": 2,
+    "lat": "26.7509",
+    "lng": "94.2037",
+    "total": "1510",
+    "active": "1210",
+    "iot": "1010",
+    "upcoming": "210"
+  },
+  "Karbi Anglong": {
+    "id": 3,
+    "lat": "25.8457",
+    "lng": "93.4378",
+    "total": "1520",
+    "active": "1220",
+    "iot": "1020",
+    "upcoming": "220"
+  },
+  "Karimganj": {
+    "id": 4,
+    "lat": "24.8649",
+    "lng": "92.3592",
+    "total": "1530",
+    "active": "1230",
+    "iot": "1030",
+    "upcoming": "230"
+  },
+  "Kokrajhar": {
+    "id": 5,
+    "lat": "26.4014",
+    "lng": "90.2667",
+    "total": "1540",
+    "active": "1240",
+    "iot": "1040",
+    "upcoming": "240"
+  },
+  "Lakhimpur": {
+    "id": 1,
+    "lat": "27.9462",
+    "lng": "80.7787",
+    "total": "1500",
+    "active": "1200",
+    "iot": "1000",
+    "upcoming": "200"
+  },
+  "Majuli": {
+    "id": 2,
+    "lat": "27.0016",
+    "lng": "94.2243",
+    "total": "1510",
+    "active": "1210",
+    "iot": "1010",
+    "upcoming": "210"
+  },
+  "Morigaon": {
+    "id": 3,
+    "lat": "26.2529",
+    "lng": "92.3370",
+    "total": "1520",
+    "active": "1220",
+    "iot": "1020",
+    "upcoming": "220"
+  },
+  "Nagaon": {
+    "id": 4,
+    "lat": "26.3480",
+    "lng": "92.6838",
+    "total": "1530",
+    "active": "1230",
+    "iot": "1030",
+    "upcoming": "230"
+  },
+  "Sivasagar": {
+    "id": 5,
+    "lat": "26.9826",
+    "lng": "94.6425",
+    "total": "1540",
+    "active": "1240",
+    "iot": "1040",
+    "upcoming": "240"
+  },
+  "South Salmara-Mankachar": {
+    "id": 1,
+    "lat": "25.5355",
+    "lng": "89.8622",
+    "total": "1500",
+    "active": "1200",
+    "iot": "1000",
+    "upcoming": "200"
+  },
+  "Tinsukia": {
+    "id": 2,
+    "lat": "27.4886",
+    "lng": "95.3558",
+    "total": "1510",
+    "active": "1210",
+    "iot": "1010",
+    "upcoming": "210"
+  },
+  "Tamulpur": {
+    "id": 3,
+    "lat": "26.6437",
+    "lng": "91.5766",
+    "total": "1520",
+    "active": "1220",
+    "iot": "1020",
+    "upcoming": "220"
+  },
+  "Udalguri": {
+    "id": 4,
+    "lat": "26.7460",
+    "lng": "92.0959",
+    "total": "1530",
+    "active": "1230",
+    "iot": "1030",
+    "upcoming": "230"
+  },
+  "West Karbi Anglong": {
+    "id": 5,
+    "lat": "25.8457",
+    "lng": "93.4378",
+    "total": "1540",
+    "active": "1240",
+    "iot": "1040",
+    "upcoming": "240"
+  }
+}

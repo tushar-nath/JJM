@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="middle-page.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="../new-dashboard/household-json/district.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <a href="../second-page-view/second-page-view.html">
+        <div class="floating-button">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/arrow.png"/>
+        </div>
+    </a>
+    <div class="nav-bar">
+        <div class="logo">
+            <div class="logo-img" id="img-1">
+                <img src="../../images/starting-page/logo-1.png" alt="" width="100" height="87">
+            </div>
+            <div class="logo-img" id="img-2">
+                <img src="../../images/starting-page/logo-5.png" alt="" width="110" height="88">
+            </div>
+            <div class="logo-img" id="img-3">
+                <img src="../../images/starting-page/logo-3.png" alt="" width="100" height="82">
+            </div>
+            <div class="logo-img" id="img-4">
+                <img src="../../images/starting-page/logo-4.png" alt="" width="80" height="90">
+            </div>
+        </div>
+        <!-- <div class="button">
+            <a href="../second-page-view/second-page-view.html" class="btn btn-primary" role="button"
+                aria-pressed="true">Next Page
+            </a>
+        </div> -->
+    </div>
+
+    <div class="map-container">
+        <div class="map-container-box">
+            <div id="dvMap">
+                <!-- MAP from JSON -->
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-container">
+            <div class="bar">
+                <div class="section-1">
+                    <div class="desc-top-1"></div>
+                    <div class="tile-1"></div>
+                    <div class="desc-bottom-1">
+                        <p>
+                            The Jal Jeevan Mission was launched in 2019 by our Honorable Prime Minsiter Narendra Modi with a vision to supply clean drinking water to
+                            all the rural hosueholds and schools across India.
+                        </p>
+                        </br>
+                        <h2 style="color:#C1CDE3;font-family: Poppins;font-weight: 600;">2019</h2>
+                    </div>
+                </div>
+                <div class="section-2">
+                    <div class="desc-top-2">
+                        <h2 style="color:#F45C20; font-family: Poppins;font-weight: 600;">2021</h2>
+                        </br>
+                        <p>
+                            Till August 2021 Assam had provided tap water connections to only 17.49 per cent of rural
+                            households. Of the total 63.35 lakh rural households in the State, 11.08 lakh households
+                            were provided with the tap water connections. 
+
+                    </div>
+                    <div class="tile-2"></div>
+                    <div class="desc-bottom-2">
+                        <img src="../images/Middle-page/timeline-2.png" width="100%">
+                    </div>
+                </div>
+                <div class="section-3">
+                    <div class="desc-top-3">
+                        <img src="../images/Middle-page/timeline-3.png" width="100%">
+                    </div>
+                    <div class="tile-3">
+
+                    </div>
+                    <div class="desc-bottom-3">
+                        <h2 style="color:#CC0A11;font-family: Poppins;font-weight: 600;">2022</h2>
+                        <p>
+                           Shri Jayanta Malla Baruah sworns in as the Minister of PHE, Tourism, Skill, Employment and Entrepreneurship and announced the project of
+                            digitizing the complete Jal Jeevan Mission scheme of Assam.
+                        </p>
+
+                    </div>
+                </div>
+                <div class="section-4">
+                    <div class="desc-top-4"></div>
+                    <div class="tile-4"></div>
+                    <div class="desc-bottom-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="timeline-mobile">
+        <div class="timeline-mobile-container">
+            <img height="720" width="333" src="../images/Middle-page/DESIGN.jpg">
+        </div>
+    </div>
+
+    <div class="achievement-container">
+        <!-- <div class="tab">
+            <div class="tab-container">
+                <img src="../images/Middle-page/tab.png" alt="" width="394" height="200">
+            </div>
+        </div> -->
+        <div class="detail">
+            <div class="header">JAL JEEVAN MISSION </br> ASSAM</div>
+            <div class="desc">
+                Jal Jeevan Mission, is envisioned to provide safe and adequate drinking water through individual
+                household tap connections by 2024 to all households in rural India.
+            </div>
+        </div>
+        <div class="tap">
+            <div class="bg">
+                <img src="../images/Middle-page/tap.png" alt="" width="100%">
+            </div>
+        </div>
+        <div class="achievement-tile">
+            <div class="ac-header">
+                ACHIEVEMENTS
+                <hr class="hr">
+            </div>
+            <div class="ac-tile-1">Assam will be the first state to implement 20,000+ Active IOT Centres with advance
+                management water quality system.</div>
+            <div class="ac-tile-2">
+                Dedicated portal for the public, PHE higher officials and the PHE Labs to monitor and manage all acitivities related to JJM.
+            </div>
+            <div class="ac-tile-3">
+                SMS/Email Notifications for the PHE departments to get a instant update regarding any issues in the schemes.
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-stats">
+        <div class="stats-container">
+            <div class="stat-header">Assam</div>
+            <div class="stat-desc">Status of Tap Water Supply in Rural Homes</div>
+            <div class="stat-tile-container">
+                <div class="row-1">
+                    <div class="left-1">
+                        <div class="lt-header">TOTAL NO OF </br> JAL JEEVAN CENTRES AS ON DATE</div>
+                        <div class="lt-desc">693457</div>
+                    </div>
+                    <div class="right-1">
+                        <div class="rt-header">TOTAL NO OF </br> ACTIVE IOT CENTRES AS ON DATE</div>
+                        <div class="rt-desc">05</div>
+                    </div>
+                </div>
+                <div class="row-2">
+                    <div class="left-2">
+                        <div class="lt-header">TOTAL NO OF </br> RURAL HOUSEHOLDS </div>
+                        <div class="lt-desc">693457</div>
+                    </div>
+                    <div class="right-2">
+                        <div class="rt-header">HOUSEHOLD WITH TAP CONNECTIONS </br> AS ON DATE</div>
+                        <div class="rt-desc">69,34,57</div>
+                    </div>
+                </div>
+                <div class="row-3">
+                    <div class="left-3">
+                        <div class="lt-header">TOTAL TAP WATER </br> CONNECTIONS</div>
+                        <div class="lt-desc">69,34,57</div>
+                    </div>
+                    <div class="right-3">
+                        <div class="rt-header">SCHOOL WITH TAP CONNECTIONS</br> AS ON DATE</div>
+                        <div class="rt-desc">69,34,57</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img class="center-fit" src="../images/Middle-page/ministers.png">
+    </div>
+    <script type="text/javascript">
+        //JS function for map
+
+        function LoadMap() {
+            var bounds = new google.maps.LatLngBounds();
+            var mapOptions = {
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+
+            //Create and open InfoWindow.
+            var infoWindow = new google.maps.InfoWindow();
+            // console.log(markers[1]);
+            var toggleId = sessionStorage.getItem("toggleId") || "0";
+
+            for (var i = 1; i < 36; i++) {
+                var data = districts[i];
+                var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+
+                //extend the bounds to include each marker's position
+                bounds.extend(myLatlng);
+
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: data.title
+                });
+
+                const contentString =
+                    '<div id="popup">' +
+                    '<div id="popup-header">' +
+                    '<div id="popup-place">' +
+                    '<div id="city">' + data.title + '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of Households:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.total + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of  households with tap connections:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.active + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of Schemes:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.iot + '</div>' +
+                    '</div>' +
+                    '<div id="popup-tile">' +
+                    '<div id="popup-key">' + '<p>Total number of  Active IOT Schemes:</p>' + '</div>' +
+                    '<div id="popup-value">' + data.upcoming + '</div>' +
+                    '</div>' +
+                    // '<div id="popup-btn">' + '<a href="../new-dashboard-2/new-dashboard-2.html"><button onclick="storeDistrictId(this)" value=" ' + data.id + ' ">Details</button></a>' + '</div>' +
+
+                    '</div>';
+
+
+                //Attach click event to the marker.
+                (function (marker, data) {
+                    google.maps.event.addListener(marker, 'mouseover', function (e) {
+                        //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                        infoWindow.setContent(contentString);
+                        infoWindow.open(map, marker);
+                        // sessionStorage.districtId = data.id;
+                    });
+                    google.maps.event.addListener(marker, "click", function (e) {
+                        //Wrap the content inside an HTML DIV in order to set height and width of InfoWindow.
+                        infoWindow.setContent(contentString);
+                        infoWindow.open(map, marker);
+                        // sessionStorage.districtId = data.id;
+                    });
+                })(marker, data);
+
+                marker.addListener('mouseout', function () {
+                    infowindow.close(map, marker);
+                });
+
+                //now fit the map to the newly inclusive bounds
+                google.maps.event.addListenerOnce(map, 'idle', function () {
+                    map.fitBounds(bounds);
+                });
+            }
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9eZSv0tYx-w_JFwer5_SCNGwpRCNGb00&callback=LoadMap"></script>
+</body>
+
+</html>

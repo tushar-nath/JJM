@@ -1,6 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
+	  
+
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,7 +19,7 @@
             <img src="../images/starting-page/logo-1.png" alt=""  width="100" height="87">
         </div>
         <div class="logo-img" id="img-2">
-            <img src="../images/starting-page/logo-2.png" alt=""  width="110" height="88">
+            <img src="../images/starting-page/logo-5.png" alt=""  width="110" height="88">
         </div>
         <div class="logo-img" id="img-3">
             <img src="../images/starting-page/logo-3.png" alt=""  width="100" height="82">
@@ -27,78 +30,102 @@
     </div>
 
     <div class="upper-container">
-        <div class="left-container">
-            <div class="uc-lc-upper">
-                <p id="uc-lc-caption">TOTAL WATER SUPPLY : </p>
-                <p id="uc-lc-desc">1500LT</p>
-            </div>
-            <div class="uc-lc-mid">
-                <p id="uc-lc-caption">AVERAGE WATER SUPPLY (LPCD): </p>
-                <select class="dropdown" id="uc-lc-dropdown">
-                    <option value="days">By Days</option>
-                    <option value="hour">By Hour</option>
-                    <option value="minute">By Minute</option>
-                    <option value="months">By Months</option>
-                    <option value="year">By Year</option>
-                </select>
-                <button id="uc-lc-water">Water Consumption</button>
-            </div>
-            <div class="uc-lc-lower">
-                <p id="uc-lc-date">17 July - 24 July</p>
-                <p id="uc-lc-litres">212.4L</p>
-            </div>
-        </div>
 
-        <div class="right-container">
-            <div class="rc-ur">
-                <div class="rc-ur-1">
+        <div class="container-1">
+            <div class="lower-container-col1">
+                <div>
                     <p> DAILY WATER SUPPLY TREND (LPCD)</p>
                 </div>
-                <div class="rc-ur-2">
-                    <select class="rc-dropdown" id="rc-dropdown">
-                        <option value="30-secs">30 Secs</option>
-                        <option value="1-min">1 Min</option>
-                        <option value="30-min">30 Mins</option>
-                        <option value="1-hour">1 hour</option>
+                <div class="lower-container-col2">
+                    <ul>
+                        <li>Minimum limit:0.02Mg/L</li>
+                        <li>Permisible limit:1.00Mg/L</li>
+                      </ul>
+                </div>
+                <div class="lower-container-col3">
+                    <select class="lc-dropdown" onchange="dropDownChange1()" id="lc-dropdown">
+                        <option value="30">30 Secs</option>
+                        <option value="60">1 Min</option>
+                        <option value="1800">30 Mins</option>
+                        <option value="3600">1 hour</option>
                     </select>
                 </div>
             </div>
 
-            <div class="rc-lr">
-                    
-                    <canvas id="myChart-1" ></canvas>
+            <div class="rc-lr">    
+                <canvas id="myChart-1"></canvas>
+            </div>
+        </div>
+
+        <div class="container-2">
+
+            <div class="lower-container-col1">
+                <div>
+                    <p>RESIDUAL CHLORINE</br>(mg/l)</p>
+                </div>
+                <div class="lower-container-col2">
+                    <ul>
+                        <li>Minimum limit:0.02Mg/L</li>
+                        <li>Permisible limit:1.00Mg/L</li>
+                      </ul>
+                </div>
+                <div class="lower-container-col3">
+                    <select class="lc-dropdown" onchange="dropDownChange2()" id="lc-dropdown">
+                        <option value="30">30 Secs</option>
+                        <option value="60">1 Min</option>
+                        <option value="1800">30 Mins</option>
+                        <option value="3600">1 hour</option>
+                    </select>
+                </div>
+            </div>
+            <div class="lc-image">
+                <canvas id="myChart-2" ></canvas>
             </div>
         </div>
     </div>
 
-    <div class="lower-container">
+    <div class="container-3">
 
         <div class="lower-container-col1">
             <div>
-                <p>RESIDUAL CHLORINE</br>(mg/l)</p>
+                <p>Period Data by Month</p>
             </div>
             <div class="lower-container-col2">
                 <ul>
-					<li>Minimum limit:0.02Mg/L</li>
-					<li>Permisible limit:1.00Mg/L</li>
-          	    </ul>
+                    <li>Minimum limit:0.02Mg/L</li>
+                    <li>Permisible limit:1.00Mg/L</li>
+                  </ul>
             </div>
             <div class="lower-container-col3">
-                <select class="lc-dropdown" id="lc-dropdown">
-                    <option value="30-secs">30 Secs</option>
-                    <option value="1-min">1 Min</option>
-                    <option value="30-min">30 Mins</option>
-                    <option value="1-hour">1 hour</option>
+                <select class="lc-dropdown" onchange="dropDownChange3()" id="lc-dropdown">
+                    <option value="30">30 Secs</option>
+                    <option value="60">1 Min</option>
+                    <option value="1800">30 Mins</option>
+                    <option value="3600">1 hour</option>
                 </select>
             </div>
         </div>
         <div class="lc-image">
-            <canvas id="myChart-2" ></canvas>
+            <canvas id="myChart-3" ></canvas>
         </div>
     </div>
+
+    <div>
+		<a href="/data_next/data_next.html">
+			<button type="button" id="btn">Next &#10230;</button>
+		</a>
+	</div>
+
+    <script>
+        // setInterval(function(){
+        //     window.location.reload();
+        // }, 60000);
+    </script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="dropdown.js"></script>
 <script src="graph-1.js"></script>
 <script src="graph-2.js"></script>
+<script src="graph-3.js"></script>
 
 
   </body>
